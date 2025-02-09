@@ -22,8 +22,19 @@
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/grass,
 /area/rogue)
+"cl" = (
+/obj/structure/fluff/railing/border,
+/obj/structure/fluff/walldeco/customflag{
+	pixel_y = 32
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue)
 "cB" = (
 /obj/structure/mineral_door/wood/donjon,
+/turf/open/floor/rogue/cobble,
+/area/rogue)
+"dh" = (
+/obj/machinery/light/rogue/torchholder/l,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
 "dD" = (
@@ -51,6 +62,12 @@
 /area/rogue)
 "eZ" = (
 /turf/open/floor/rogue/blocks/paving/vert,
+/area/rogue)
+"fk" = (
+/obj/machinery/light/rogue/torchholder/c{
+	pixel_y = -32
+	},
+/turf/open/floor/rogue/grass,
 /area/rogue)
 "fD" = (
 /turf/closed/wall/mineral/rogue/stone/window,
@@ -147,6 +164,10 @@
 /obj/effect/spawner/roguemap/stump,
 /turf/open/floor/rogue/grass,
 /area/rogue)
+"nq" = (
+/obj/machinery/light/rogue/torchholder/c,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue)
 "ns" = (
 /obj/structure/bars,
 /turf/open/transparent/openspace,
@@ -241,6 +262,12 @@
 "um" = (
 /turf/closed/wall/mineral/rogue/wooddark/horizontal,
 /area/rogue)
+"vz" = (
+/obj/structure/fluff/walldeco/customflag{
+	pixel_y = 32
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue)
 "vD" = (
 /obj/structure/fluff/railing/border{
 	dir = 9
@@ -294,6 +321,12 @@
 "Bx" = (
 /obj/structure/roguemachine/mail,
 /turf/open/floor/rogue/ruinedwood,
+/area/rogue)
+"Bz" = (
+/obj/structure/lever/wall{
+	pixel_x = 10
+	},
+/turf/open/floor/rogue/cobble,
 /area/rogue)
 "BT" = (
 /obj/structure/mineral_door/bars,
@@ -356,6 +389,16 @@
 /obj/item/grown/log/tree/stake,
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue)
+"HI" = (
+/obj/structure/fluff/walldeco/customflag{
+	pixel_y = -32
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue)
+"Id" = (
+/obj/machinery/light/rogue/firebowl/stump,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue)
 "Ik" = (
 /obj/structure/bed/rogue/wool,
 /turf/open/floor/rogue/ruinedwood,
@@ -402,6 +445,10 @@
 /obj/item/burial_shroud,
 /obj/item/burial_shroud,
 /turf/open/floor/rogue/ruinedwood,
+/area/rogue)
+"MF" = (
+/obj/structure/lever,
+/turf/open/floor/rogue/cobble,
 /area/rogue)
 "Ob" = (
 /obj/structure/bars/cemetery,
@@ -24997,7 +25044,7 @@ Uh
 Uh
 Uh
 Uh
-Uh
+Id
 Uh
 jc
 jc
@@ -50762,7 +50809,7 @@ Uh
 Uh
 Uh
 bg
-bg
+BY
 bg
 bg
 bg
@@ -65659,7 +65706,7 @@ bg
 bg
 cB
 tJ
-tJ
+dh
 gy
 wI
 wI
@@ -65818,14 +65865,14 @@ bg
 bg
 bg
 bg
-bg
+HI
 wI
+Bz
 tJ
-tJ
-tJ
+MF
 wI
 wI
-Bs
+cl
 jo
 Ku
 bT
@@ -65980,14 +66027,14 @@ bg
 bg
 bg
 bg
-bg
+fk
 wI
 wI
 mh
 mh
 wI
 wI
-Uh
+nq
 bg
 bg
 bg
@@ -66628,14 +66675,14 @@ bg
 bg
 bg
 bg
-bg
+fk
 wI
 wI
 wI
 wI
 wI
 wI
-Uh
+nq
 Uh
 bg
 bg
@@ -66790,14 +66837,14 @@ bg
 bg
 bg
 bg
-bg
+HI
 wI
 wI
 wI
 wI
 wI
 wI
-bg
+vz
 bg
 bg
 bg
@@ -75552,7 +75599,7 @@ KI
 KI
 bg
 bg
-Uh
+Id
 Uh
 Uh
 Uh
