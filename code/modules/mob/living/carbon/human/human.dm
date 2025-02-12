@@ -37,7 +37,8 @@
 	if(user == src)
 		if(get_num_arms(FALSE) < 1)
 			return
-		/* // No undies removing
+		if(!can_do_sex())	//STONEKEEP EDIT START
+			return
 		if(user.zone_selected == BODY_ZONE_PRECISE_GROIN)
 			if(get_location_accessible(src, BODY_ZONE_PRECISE_GROIN, skipundies = TRUE))
 				if(underwear == "Nude")
@@ -52,11 +53,13 @@
 					else
 						U = new/obj/item/undies/f(get_turf(src))
 					U.color = underwear_color
-					user.put_in_hands(U)
-		*/
+					user.put_in_hands(U)	//STONEKEEP EDIT END
 #endif
 
 /mob/living/carbon/human/Initialize()
+#ifdef MATURESERVER	//STONEKEEP EDIT START
+	sexcon = new /datum/sex_controller(src)
+#endif	//STONEKEEP EDIT END
 	// verbs += /mob/living/proc/mob_sleep
 	verbs += /mob/living/proc/lay_down
 
@@ -132,6 +135,7 @@
 		AddComponent(/datum/component/mood)
 
 /mob/living/carbon/human/Destroy()
+	QDEL_NULL(sexcon)	//STONEKEEP EDIT
 	STOP_PROCESSING(SShumannpc, src)
 	QDEL_NULL(physiology)
 	GLOB.human_list -= src
@@ -280,6 +284,12 @@
 		dat += "<tr><td><A href='byond://?src=[REF(src)];item=[SLOT_SHOES]'>[(shoes && !(shoes.item_flags & ABSTRACT)) ? shoes : "<font color=grey>Boots</font>"]</A></td></tr>"
 
 	dat += "<tr><td><hr></td></tr>"
+
+#ifdef MATURESERVER	//STONEKEEP EDIT START
+	if(get_location_accessible(src, BODY_ZONE_PRECISE_GROIN, skipundies = TRUE))
+		if(can_do_sex())
+			dat += "<tr><td><BR><B>Underwear:</B> <A href='?src=[REF(src)];undiesthing=1'>[underwear == "Nude" ? "Nothing" : "Remove"]</A></td></tr>"
+#endif	//STONEKEEP EDIT END
 
 	dat += {"</table>"}
 

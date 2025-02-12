@@ -236,3 +236,16 @@
 	worn_x_dimension = 64
 	worn_y_dimension = 64
 	armor = ARMOR_PLATE_BAD
+
+/* * * * * * * * * * * **
+ *						*
+ *		 Underwear		*
+ *						*
+ *						*
+ * * * * * * * * * * * **/
+
+/obj/item/undies
+	body_parts_covered = GROIN
+
+/obj/item/undies/f
+	body_parts_covered = CHEST|GROIN

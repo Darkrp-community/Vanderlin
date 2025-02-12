@@ -105,7 +105,15 @@
 #define TRAIT_MATTHIOS_CURSE "Matthios' Curse"
 #define TRAIT_BAOTHA_CURSE "Baotha's Curse"
 
+//STONEKEEP TRAITS
+#define TRAIT_GOODLOVER	"Fabled Lover"
+
+#define TRAIT_LIMPDICK "limp_dick"
+#define TRAIT_MINCED "minced"
+#define TRAIT_SEXPASS "sexpass"
+
 GLOBAL_LIST_INIT(roguetraits, list(
+	TRAIT_GOODLOVER = span_love("It's a lucky thing to share my bed."), //STONEKEEP EDIT
 	TRAIT_WEBWALK = "I can move freely between webs.",
 	TRAIT_NOSTINK = span_dead("My nose is numb to the smell of decay."),
 	TRAIT_ZJUMP = "Time to reach a new height.",
