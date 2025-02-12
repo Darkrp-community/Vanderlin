@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/consort
 	title = "Consort"
 	flag = CONSORT
@@ -206,3 +207,4 @@
 	accept_message = "I serve the Crown!"
 	refuse_message = "I refuse."
 	charge_max = 100
+*/

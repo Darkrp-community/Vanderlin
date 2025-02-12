@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/miner
 	title = "Miner"
 	tutorial = "Hardy people who ceaselessly toil at the mines for ores and salt, \
@@ -59,3 +60,4 @@
 		H.cmode_music = 'sound/music/cmode/combat_dwarf.ogg'
 	else
 		beltr = /obj/item/flashlight/flare/torch/lantern
+*/

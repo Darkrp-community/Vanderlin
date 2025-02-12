@@ -1,3 +1,4 @@
+/*
 //dagger and huntknife
 /datum/advclass/combat/gravedigger
 	name = "Treasure Hunter"
@@ -58,3 +59,4 @@
 		ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_GRAVEROBBER, TRAIT_GENERIC)
+*/

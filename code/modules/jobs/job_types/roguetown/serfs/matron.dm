@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/matron
 	title = "Matron"
 	flag = JESTER
@@ -65,3 +66,4 @@
 		backr = /obj/item/storage/backpack/rogue/satchel
 		cloak = /obj/item/clothing/cloak/matron
 		backpack_contents = list(/obj/item/rogueweapon/knife/dagger/steel = 1, /obj/item/key/matron = 1)
+*/

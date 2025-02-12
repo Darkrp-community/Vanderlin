@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/dungeoneer
 	title = "Dungeoneer"
 	flag = DUNGEONEER
@@ -63,3 +64,4 @@
 		if(H.dna.species.id == "human")
 			H.dna.species.soundpack_m = new /datum/voicepack/male/warrior()
 	H.verbs |= /mob/living/carbon/human/proc/torture_victim
+*/

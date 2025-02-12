@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown
 	display_order = JOB_DISPLAY_ORDER_CAPTAIN
 
@@ -83,3 +84,4 @@
 		var/datum/triumph_buy/thing = SStriumphs.post_equip_calls[list_key]
 		thing.on_activate(H)
 	return
+*/

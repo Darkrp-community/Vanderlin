@@ -1,4 +1,5 @@
-/datum/job/roguetown/cook
+
+/*/datum/job/roguetown/cook
 	title = "Cook"
 	flag = COOK
 	department_flag = PEASANTS
@@ -57,3 +58,4 @@
 		shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
 		neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 		H.change_stat("constitution", 2)
+*/

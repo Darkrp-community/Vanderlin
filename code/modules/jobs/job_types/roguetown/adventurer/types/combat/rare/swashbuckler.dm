@@ -1,3 +1,4 @@
+/*
 //rapier/sabre
 
 /datum/advclass/combat/swashbuckler
@@ -58,3 +59,4 @@
 	H.change_stat("constitution", 1)
 	H.change_stat("endurance", 3)
 	H.change_stat("speed", 2)
+*/

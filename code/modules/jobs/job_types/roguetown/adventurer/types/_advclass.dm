@@ -1,3 +1,4 @@
+/*
 /datum/advclass
 	var/name
 	var/outfit
@@ -116,3 +117,4 @@
 
 //Final proc in the set for really dumb shit
 ///datum/advclass/proc/extra_slop_proc_ending(mob/living/carbon/human/H)
+*/

@@ -1,4 +1,4 @@
-/*
+
 GLOBAL_LIST_EMPTY(exp_to_update)
 GLOBAL_PROTECT(exp_to_update)
 
@@ -273,4 +273,3 @@ GLOBAL_PROTECT(exp_to_update)
 	qdel(flags_read)
 	return TRUE
 
-*/

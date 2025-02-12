@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/guardsman
 	title = "Garrison Guard"
 	flag = GUARDSMAN
@@ -225,3 +226,4 @@ Design philosphy:
 	set category = "Noises"
 	emote("haltyell")
 
+*/

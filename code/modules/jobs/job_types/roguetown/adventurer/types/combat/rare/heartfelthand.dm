@@ -1,3 +1,4 @@
+/*
 /datum/advclass/combat/heartfelthand
 	name = "Hand of Heartfelt"
 	tutorial = "You serve your lord as hand, taking care of diplomatic actions within your realm, \
@@ -41,3 +42,4 @@
 		H.change_stat("intelligence", 3)
 	ADD_TRAIT(H, TRAIT_SEEPRICES, type)
 	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
+*/

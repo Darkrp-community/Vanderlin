@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/adept
 	title = "Adept"
 	flag = MONK
@@ -149,3 +150,4 @@
 		H.advsetup = 1
 		H.invisibility = INVISIBILITY_MAXIMUM
 		H.become_blind("advsetup")
+*/

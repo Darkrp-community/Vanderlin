@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/armorsmith
 	title = "Armorer"
 	flag = BLACKSMITH
@@ -126,3 +127,4 @@
 		H.change_stat("strength", 1)
 		H.change_stat("endurance", 2)
 		H.change_stat("speed", -1)
+*/

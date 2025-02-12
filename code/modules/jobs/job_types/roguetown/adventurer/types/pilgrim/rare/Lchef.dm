@@ -1,3 +1,4 @@
+/*
 //master chef
 
 /datum/advclass/pilgrim/rare/masterchef
@@ -59,3 +60,4 @@
 			backpack_contents = list(/obj/item/kitchen/rollingpin = 1, /obj/item/flint = 1, /obj/item/kitchen/spoon = 1, /obj/item/natural/cloth = 1, /obj/item/reagent_containers/peppermill = 1, /obj/item/reagent_containers/powder/flour = 2, /obj/item/reagent_containers/food/snacks/rogue/truffles = 2, /obj/item/reagent_containers/powder/salt = 1, /obj/item/reagent_containers/food/snacks/butter = 1, /obj/item/reagent_containers/food/snacks/rogue/meat/salami = 1, /obj/item/reagent_containers/food/snacks/rogue/handpie = 1, /obj/item/book/rogue/yeoldecookingmanual = 1)
 		if("Bacon")
 			backpack_contents = list(/obj/item/kitchen/rollingpin = 1, /obj/item/flint = 1, /obj/item/kitchen/spoon = 1, /obj/item/natural/cloth = 1, /obj/item/reagent_containers/peppermill = 1, /obj/item/reagent_containers/powder/flour = 2, /obj/item/reagent_containers/food/snacks/rogue/meat/bacon = 2, /obj/item/reagent_containers/powder/salt = 1, /obj/item/reagent_containers/food/snacks/butter = 1, /obj/item/reagent_containers/food/snacks/rogue/meat/salami = 1, /obj/item/reagent_containers/food/snacks/rogue/handpie = 1, /obj/item/book/rogue/yeoldecookingmanual = 1)
+*/

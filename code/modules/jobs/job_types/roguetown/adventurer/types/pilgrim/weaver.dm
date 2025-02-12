@@ -1,3 +1,4 @@
+/*
 /datum/advclass/pilgrim/weaver
 	name = "Weaver"
 	allowed_sexes = list(MALE, FEMALE)
@@ -35,3 +36,4 @@
 	H.change_stat("intelligence", 2)
 	H.change_stat("speed", 2)
 	H.change_stat("perception", 1)
+*/

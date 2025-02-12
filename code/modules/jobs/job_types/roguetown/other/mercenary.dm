@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/mercenary
 	title = "Mercenary"
 	flag = GRAVETENDER
@@ -44,3 +45,4 @@
 /datum/outfit/job/roguetown/mercenary/post_equip(mob/living/carbon/human/H)
 	..()
 	to_chat(H, tutorial)
+*/

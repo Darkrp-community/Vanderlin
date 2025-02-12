@@ -1,3 +1,4 @@
+/*
 /datum/advclass/pilgrim/rare/grenzelhoft
 	name = "Grenzelhoft Count"
 	tutorial = "A Count hailing from the Grenzelhoft Imperiate, here on an official visit to the Isle of the Enigma."
@@ -60,3 +61,4 @@
 		H.change_stat("endurance", 2)
 		ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
+*/

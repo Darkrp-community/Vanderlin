@@ -1,3 +1,4 @@
+/*
 /datum/advclass/combat/assassin
 	name = "Assassin"
 	tutorial = "From a young age you have been drawn to blood, to hurting others. Eventually you found others like you, and a god who would bless your actions. Your cursed dagger has never led you astray, and with every stab you feel a little less empty."
@@ -228,3 +229,4 @@
 			H.dna.species.soundpack_m = new /datum/voicepack/male/assassin()
 		else
 			H.dna.species.soundpack_f = new /datum/voicepack/female/assassin()
+*/

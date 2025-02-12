@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/skeleton
 	title = "Skeleton"
 	flag = SKELETON
@@ -151,3 +152,4 @@
 	var/datum/antagonist/new_antag = new /datum/antagonist/skeleton()
 	H.mind.add_antag_datum(new_antag)
 
+*/

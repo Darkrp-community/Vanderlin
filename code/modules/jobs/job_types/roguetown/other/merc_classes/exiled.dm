@@ -1,3 +1,4 @@
+/*
 /datum/advclass/mercenary/exiled
 	name = "Exiled Warrior"
 	tutorial = "A barbarian - you're a brute, and you're a long way from home. You took more of a liking to the blade than your elders wanted - in truth, they did not have to even deliberate to banish you. You will drown in ale, and your enemies in blood."
@@ -52,3 +53,4 @@
 	ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
 	if(H.dna?.species)
 		H.dna.species.soundpack_m = new /datum/voicepack/male/warrior()
+*/

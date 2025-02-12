@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/adventurer/courtagent
 	title = "Court Agent"
 	total_positions = 2
@@ -17,3 +18,4 @@
 			var/mob/living/carbon/human/H = L
 			GLOB.roundstart_court_agents += H.real_name
 			..()
+*/

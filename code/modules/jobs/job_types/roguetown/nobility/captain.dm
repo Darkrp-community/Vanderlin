@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/captain
 	title = "Captain"
 	flag = CAPTAIN
@@ -168,3 +169,4 @@
 	if(!.)
 		return
 	recruit.verbs |= /mob/proc/haltyell
+*/

@@ -1,3 +1,4 @@
+/*
 /datum/advclass/combat/monk
 	name = "Monk"
 	allowed_sexes = list(MALE, FEMALE)
@@ -52,3 +53,4 @@
 		ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 
 
+*/

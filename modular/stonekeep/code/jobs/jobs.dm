@@ -1,4 +1,4 @@
-/*
+
 GLOBAL_LIST_INIT(noble_positions, list(
 	"Monarch",
 	"Consort",
@@ -148,4 +148,4 @@ GLOBAL_PROTECT(exp_specialmap)
 		if(J.title == job_title)
 			return J.department_head //this is a list
 
-*/
+

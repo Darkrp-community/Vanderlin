@@ -1,3 +1,4 @@
+/*
 /datum/advclass/combat/paladin
 	name = "Paladin"
 	tutorial = "Paladins are former noblemen and clerics who have dedicated themselves to great combat prowess. Often, they were promised redemption for past sins if they crusaded in the name of the gods."

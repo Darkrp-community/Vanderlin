@@ -1,3 +1,4 @@
+/*
 /datum/advclass/pilgrim/physicker
 	name = "Physicker"
 	tutorial =  "Those who fail their studies, or are exiled from the towns they take \
@@ -48,3 +49,4 @@
 	ADD_TRAIT(H, TRAIT_EMPATH, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
 	H?.mind?.AddSpell(new /obj/effect/proc_holder/spell/invoked/diagnose/secular)
+*/

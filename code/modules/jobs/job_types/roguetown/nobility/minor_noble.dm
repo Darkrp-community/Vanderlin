@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/minor_noble
 	title = "Noble"
 	tutorial = "The blood of a noble family runs through your veins. You are the living proof that the minor houses \
@@ -73,3 +74,4 @@
 		beltl = /obj/item/ammo_holder/quiver/arrows
 		backpack_contents = list(/obj/item/reagent_containers/glass/bottle/rogue/wine = 1, /obj/item/reagent_containers/glass/cup/silver = 1)
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
+*/

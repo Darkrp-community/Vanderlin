@@ -1,4 +1,5 @@
 /*
+/*
 /datum/job/roguetown/nitemaiden
 	title = "Nitemaiden"
 	flag = JESTER
@@ -132,3 +133,4 @@
 
 
 
+*/

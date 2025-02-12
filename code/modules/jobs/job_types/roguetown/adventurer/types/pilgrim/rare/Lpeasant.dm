@@ -1,3 +1,4 @@
+/*
 //master farmer
 
 /datum/advclass/pilgrim/rare/farmermaster
@@ -62,3 +63,4 @@
 	H.change_stat("intelligence", -1)
 	ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)	//Peasants probably smell terrible. (:
 	ADD_TRAIT(H, TRAIT_SEEDKNOW, TRAIT_GENERIC)
+*/

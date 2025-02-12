@@ -1,3 +1,4 @@
+/*
 /datum/advclass/combat/mage
 	name = "Mage"
 	tutorial = "Mages are usually grown-up apprentices of wizards. They are seeking adventure, using their arcyne knowledge to aid other adventurers."
@@ -52,3 +53,4 @@
 		H.mind.adjust_spellpoints(7)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/learnspell)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
+*/

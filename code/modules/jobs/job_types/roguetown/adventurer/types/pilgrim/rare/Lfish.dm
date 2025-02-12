@@ -1,3 +1,4 @@
+/*
 //human, master fisher
 
 /datum/advclass/pilgrim/rare/fishermaster
@@ -81,3 +82,4 @@
 				H.mind?.adjust_skillrank(/datum/skill/combat/polearms, 1, TRUE)
 			H.change_stat("constitution", 2)
 			H.change_stat("perception", 2)
+*/

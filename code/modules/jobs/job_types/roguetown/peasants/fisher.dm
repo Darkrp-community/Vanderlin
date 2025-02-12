@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/fisher
 	title = "Fisher"
 	tutorial = "Simple folk with an affinity for catching fish out of any body of water, \
@@ -66,3 +67,4 @@
 		beltr = /obj/item/cooking/pan
 		beltl = /obj/item/flint
 		backpack_contents = list(/obj/item/rogueweapon/knife/hunting = 1, /obj/item/natural/worms = 1, /obj/item/rogueweapon/shovel/small = 1)
+*/

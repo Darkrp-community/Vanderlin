@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/pilgrim
 	title = "Pilgrim"
 	flag = ADVENTURER
@@ -27,3 +28,4 @@
 		var/mob/living/carbon/human/H = L
 		if(advclass_cat_rolls)
 			hugboxify_for_class_selection(H)
+*/

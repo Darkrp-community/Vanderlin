@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/hunter
 	title = "Hunter"
 	f_title = "Huntress"
@@ -65,3 +66,4 @@
 		else
 			H.change_stat("intelligence", 1)
 			H.change_stat("perception", 3)
+*/

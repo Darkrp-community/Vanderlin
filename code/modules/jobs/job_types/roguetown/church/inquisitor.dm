@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/inquisitor
 	title = "Inquisitor"
 	flag = PURITAN
@@ -304,3 +305,4 @@
 	to_chat(src, span_good("I resist the torture!"))
 	say(pick(innocent_lines), spans = list("torture"))
 	return
+*/

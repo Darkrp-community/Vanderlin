@@ -1,3 +1,4 @@
+/*
 //dwarf, master mason
 
 /datum/advclass/pilgrim/rare/grandmastermason
@@ -47,3 +48,4 @@
 
 	if(H.dna.species.name == "Dwarf")
 		head = /obj/item/clothing/head/roguetown/helmet/leather/minershelm
+*/

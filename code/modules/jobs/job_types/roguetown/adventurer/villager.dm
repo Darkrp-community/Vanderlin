@@ -1,4 +1,4 @@
-
+/*
 /datum/job/roguetown/villager
 	title = "Towner"
 	flag = ADVENTURER
@@ -40,3 +40,4 @@
 		peopleiknow += X
 	for(var/X in GLOB.noble_positions)
 		peopleiknow += X
+*/

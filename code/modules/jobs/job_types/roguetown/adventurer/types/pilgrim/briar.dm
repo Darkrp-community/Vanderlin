@@ -1,3 +1,4 @@
+/*
 /datum/advclass/pilgrim/briar
 	name = "Briar"
 	allowed_sexes = list(MALE, FEMALE)
@@ -259,3 +260,4 @@
 	else
 		to_chat(user, span_warning("Dendor finds me unworthy..."))
 	qdel(src)
+*/

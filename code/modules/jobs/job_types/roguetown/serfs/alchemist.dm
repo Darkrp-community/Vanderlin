@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/alchemist
 	title = "Alchemist"
 	flag = ALCHEMIST
@@ -51,3 +52,4 @@
 		beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
 		cloak = /obj/item/clothing/cloak/apron/brown
 
+*/

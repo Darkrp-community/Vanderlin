@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/jester
 	title = "Jester"
 	flag = JESTER
@@ -144,3 +145,4 @@
 
 	var/japery = pick(japery_list)
 	return japery
+*/

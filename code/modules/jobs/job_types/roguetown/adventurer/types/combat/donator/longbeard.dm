@@ -1,3 +1,4 @@
+/*
 //dwarf tank with 2h axe or 2h hammer
 //old only
 
@@ -46,3 +47,4 @@
 	neck = /obj/item/clothing/neck/roguetown/chaincoif
 	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC) // Nothing fazes a longbeard
+*/

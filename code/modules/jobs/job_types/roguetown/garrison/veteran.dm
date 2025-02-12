@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/veteran
 	title = "Veteran"
 	flag = GUARDSMAN
@@ -426,3 +427,4 @@
 	H.verbs |= /mob/proc/haltyell
 	ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
+*/

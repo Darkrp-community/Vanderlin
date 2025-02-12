@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/steward
 	title = "Steward"
 	flag = STEWARD
@@ -53,3 +54,4 @@
 		H.change_stat("constitution", -2)
 		H.change_stat("speed", -2)
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
+*/
