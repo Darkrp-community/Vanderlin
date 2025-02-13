@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/carpenter
 	title = "Carpenter"
 	tutorial = "Woodsmen and women that dedicate their lives to chopping wood \
@@ -61,3 +62,4 @@
 	H.change_stat("intelligence", 1)
 	H.change_stat("constitution", 1)
 	H.change_stat("speed", -1)
+*/

@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/mayor
 	title = "Town Elder"
 	flag = MAYOR
@@ -87,3 +88,4 @@
 	total_positions = 0
 	spawn_positions = 0
 	display_order = JDO_GARRISONGUARD
+*/

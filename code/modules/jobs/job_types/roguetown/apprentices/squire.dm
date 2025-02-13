@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/squire
 	title = "Squire"
 	flag = SQUIRE
@@ -154,3 +155,4 @@
 	if(H.gender == MALE && H.dna?.species)
 		H.dna.species.soundpack_m = new /datum/voicepack/male/squire()
 	ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
+*/

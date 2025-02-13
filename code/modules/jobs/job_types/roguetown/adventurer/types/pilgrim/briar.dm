@@ -1,3 +1,4 @@
+/*
 /datum/advclass/pilgrim/briar
 	name = "Briar"
 	allowed_sexes = list(MALE, FEMALE)
@@ -121,7 +122,7 @@
 /datum/crafting_recipe/dendor/sacrifice_growing
 	name = "green sacrifice to Dendor (unique)"
 	structurecraft = /obj/structure/fluff/psycross/crafted/shrine/dendor_gote
-	reqs = list(/obj/item/reagent_containers/food/snacks/grub/silk = 1,
+	reqs = list(/obj/item/natural/worms/grub_silk = 1,
 				/obj/item/reagent_containers/food/snacks/produce/swampweed = 1,
 				/obj/item/reagent_containers/food/snacks/produce/poppy = 1)
 	result = /obj/item/blessing_of_dendor_growing
@@ -259,3 +260,4 @@
 	else
 		to_chat(user, span_warning("Dendor finds me unworthy..."))
 	qdel(src)
+*/

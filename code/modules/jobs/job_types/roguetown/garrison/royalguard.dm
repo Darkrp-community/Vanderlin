@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/royalguard
 	title = "Royal Knight"
 	flag = GUARDSMAN
@@ -90,3 +91,4 @@
 	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_KNOWBANDITS, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
+*/

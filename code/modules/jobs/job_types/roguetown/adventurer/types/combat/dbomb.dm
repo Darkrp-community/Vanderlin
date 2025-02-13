@@ -1,3 +1,4 @@
+/*
 /datum/advclass/combat/dbomb
 	name = "Dwarven Bombardier"
 	tutorial = "Tinkering Dwarves that like to blow things up."
@@ -38,3 +39,4 @@
 			shoes = /obj/item/clothing/shoes/roguetown/boots/leather
 		if (2)
 			shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
+*/

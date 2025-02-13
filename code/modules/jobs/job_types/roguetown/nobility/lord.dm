@@ -1,3 +1,4 @@
+/*
 GLOBAL_VAR(lordsurname)
 GLOBAL_LIST_EMPTY(lord_titles)
 
@@ -236,3 +237,4 @@ GLOBAL_LIST_EMPTY(lord_titles)
 	recruiter.say("I HEREBY GRANT YOU, [uppertext(recruit.name)], NOBILITY!")
 	ADD_TRAIT(recruit, TRAIT_NOBLE, TRAIT_GENERIC)
 	return TRUE
+*/

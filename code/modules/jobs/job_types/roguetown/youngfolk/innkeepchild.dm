@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/innkeep_son
 	title = "Innkeepers Son"
 	f_title = "Innkeepers Daughter"
@@ -45,3 +46,4 @@
 		cloak = /obj/item/clothing/cloak/apron/waist
 	else
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress
+*/

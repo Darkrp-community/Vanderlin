@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/deathknight
 	title = "Death Knight"
 	flag = DEATHKNIGHT
@@ -126,3 +127,4 @@
 
 /obj/item/clothing/under/roguetown/platelegs/blk/death
 	color = CLOTHING_SOOT_BLACK
+*/

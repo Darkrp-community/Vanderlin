@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/templar
 	title = "Templar"
 	department_flag = CHURCHMEN
@@ -120,3 +121,4 @@
 	if(H.dna?.species)
 		if(H.dna.species.id == "humen")
 			H.dna.species.soundpack_m = new /datum/voicepack/male/knight()
+*/

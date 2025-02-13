@@ -1,3 +1,4 @@
+/*
 /datum/advclass/sawbones // doctor class. like the pilgrim, but more evil
 	name = "Sawbones"
 	tutorial = "It was an accident! Your patient wasn't using his second kidney, anyway. After an unfortunate 'misunderstanding' with the town and your medical practice, you know practice medicine on the run with your new associates. Business has never been better!"
@@ -39,3 +40,4 @@
 		H.change_stat("intelligence", 1)
 		H.change_stat("perception", 1)
 	H?.mind?.AddSpell(new /obj/effect/proc_holder/spell/invoked/diagnose/secular)
+*/

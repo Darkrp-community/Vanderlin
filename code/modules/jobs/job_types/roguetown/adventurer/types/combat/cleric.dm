@@ -1,3 +1,4 @@
+/*
 //shield
 /datum/advclass/combat/cleric
 	name = "Cleric"
@@ -105,3 +106,4 @@
 	C.grant_spells_cleric(H)
 	H.verbs += list(/mob/living/carbon/human/proc/devotionreport, /mob/living/carbon/human/proc/clericpray)
 
+*/

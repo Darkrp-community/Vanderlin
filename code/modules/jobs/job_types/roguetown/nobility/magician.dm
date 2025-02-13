@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/magician
 	title = "Court Magician"
 	flag = WIZARD
@@ -120,4 +121,5 @@
 	desc = "<span class='nicegreen'>My hat deflects mind-clouding rays of Zizo...</span>\n"
 	icon = 'icons/mob/actions/roguespells.dmi'
 	icon_state = ""
+*/
 */

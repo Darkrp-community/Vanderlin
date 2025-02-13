@@ -1,3 +1,4 @@
+/*
 /datum/advclass
 	var/name
 	var/outfit
@@ -90,7 +91,8 @@
 		return FALSE
 
 	if(length(allowed_races) && !(H.dna.species.name in allowed_races))
-		return FALSE
+		if(!(H.client.triumph_ids.Find("race_all")))
+			return FALSE
 
 	if(length(allowed_ages) && !(H.age in allowed_ages))
 		return FALSE
@@ -116,3 +118,4 @@
 
 //Final proc in the set for really dumb shit
 ///datum/advclass/proc/extra_slop_proc_ending(mob/living/carbon/human/H)
+*/

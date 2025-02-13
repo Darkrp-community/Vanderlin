@@ -1,3 +1,4 @@
+/*
 GLOBAL_LIST_EMPTY(billagerspawns)
 
 GLOBAL_VAR_INIT(adventurer_hugbox_duration, 30 SECONDS)
@@ -38,3 +39,4 @@ GLOBAL_VAR_INIT(adventurer_hugbox_duration_still, 3 MINUTES)
 		var/mob/living/carbon/human/H = L
 		if(advclass_cat_rolls)
 			hugboxify_for_class_selection(H)
+*/

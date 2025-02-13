@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/farmer
 	title = "Soilson"
 	flag = FARMER
@@ -90,3 +91,4 @@
 		belt = /obj/item/storage/belt/rogue/leather/rope
 		beltr = /obj/item/key/soilson
 		beltl = /obj/item/rogueweapon/knife/villager
+*/

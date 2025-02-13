@@ -1,3 +1,4 @@
+/*
 //dwarf, master miner
 
 /datum/advclass/pilgrim/rare/minermaster
@@ -46,3 +47,4 @@
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
 		H.change_stat("perception", 1)
+*/

@@ -1,4 +1,4 @@
-
+/*
 /datum/job/roguetown/priest
 	title = "Priest"
 	flag = PRIEST
@@ -268,3 +268,4 @@
 	var/datum/devotion/cleric_holder/C = new /datum/devotion/cleric_holder(recruit, recruit.patron)
 	C.grant_spells_churchling(recruit)
 	recruit.verbs += list(/mob/living/carbon/human/proc/devotionreport, /mob/living/carbon/human/proc/clericpray)
+*/

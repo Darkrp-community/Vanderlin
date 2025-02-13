@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/captain
 	title = "Captain"
 	flag = CAPTAIN
@@ -11,6 +12,7 @@
 		"Humen",
 		"Elf",
 		"Half-Elf",
+		"Aasimar",
 		"Dwarf"
 	)
 	allowed_sexes = list(MALE, FEMALE)
@@ -168,3 +170,4 @@
 	if(!.)
 		return
 	recruit.verbs |= /mob/proc/haltyell
+*/

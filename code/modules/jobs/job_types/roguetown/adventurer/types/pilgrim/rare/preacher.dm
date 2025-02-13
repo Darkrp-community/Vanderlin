@@ -1,3 +1,4 @@
+/*
 /datum/advclass/pilgrim/rare/preacher
 	name = "Preacher"
 	tutorial = "A devout follower of Psydon, you came to this land with nothing more than the clothes on your back and the faith in your heart. Sway these nonbelievers to the right path!"
@@ -34,3 +35,4 @@
 			H.grant_language(/datum/language/oldpsydonic)
 			to_chat(H, "<span class='info'>I can speak Old Psydonic with ,m before my speech.</span>")
 		H.set_patron(/datum/patron/psydon)
+*/

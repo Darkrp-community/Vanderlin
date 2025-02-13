@@ -1,3 +1,4 @@
+/*
 /datum/advclass/pilgrim/rare/zybantine
 	name = "Zybantine Emir"
 	tutorial = "An Emir hailing from the Zybantu Ziggurat, here on business for the Mercator's Guild to the Isle of the Enigma."
@@ -67,3 +68,4 @@
 		H.change_stat("endurance", 2)
 		ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
+*/

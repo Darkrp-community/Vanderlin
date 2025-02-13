@@ -1,4 +1,4 @@
-
+/*
 /datum/job/roguetown/vagrant
 	title = "Beggar"
 	flag = APPRENTICE
@@ -72,3 +72,4 @@
 
 /datum/outfit/job/roguetown/vagrant
 	name = "Beggar"
+*/

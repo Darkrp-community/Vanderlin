@@ -1,3 +1,4 @@
+/*
 /datum/advclass/mercenary/boltslinger
 	name = "Boltslinger"
 	tutorial = "A cutthroat and a soldier of fortune, your mastery of the crossbow has brought you to many battlefields, all in pursuit of mammon."
@@ -58,3 +59,4 @@
 		H.change_stat("endurance", 1)
 		H.change_stat("strength", 1)
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
+*/

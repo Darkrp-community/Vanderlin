@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/butler
 	title = "Butler"
 	flag = BUTLER
@@ -66,3 +67,4 @@
 		beltr = /obj/item/storage/keyring/butler
 		beltl = /obj/item/storage/belt/rogue/pouch/coins/mid
 		backr = /obj/item/storage/backpack/rogue/satchel
+*/

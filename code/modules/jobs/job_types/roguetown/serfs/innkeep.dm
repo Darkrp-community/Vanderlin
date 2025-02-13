@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/innkeep
 	title = "Innkeep"
 	flag = INNKEEP
@@ -54,3 +55,4 @@
 		beltr = /obj/item/reagent_containers/glass/bottle/rogue/beer/blackgoat
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
+*/

@@ -1,3 +1,4 @@
+/*
 //master smith
 
 /datum/advclass/pilgrim/rare/masterblacksmith
@@ -71,3 +72,4 @@
 		shoes = /obj/item/clothing/shoes/roguetown/shortboots
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/random
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
+*/

@@ -1,3 +1,4 @@
+/*
 /datum/advclass/mercenary/blackoak
 	name = "Black Oak's Guardian"
 	tutorial = "A shady guardian of the Black Oaks, a mercenary band in all but offical name. Commonly taking caravan contracts through the thickest of forests."
@@ -42,3 +43,4 @@
 		H.change_stat("endurance", 2)
 		H.change_stat("strength", 1)
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
+*/

@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/tester
 	title = "Tester"
 	flag = GRAVETENDER
@@ -61,3 +62,4 @@
 		H.mind?.adjust_skillrank(/datum/skill/combat/knives, rand(1,5), TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/misc/reading, rand(1,5), TRUE)
 		H.change_stat("strength", 1)
+*/

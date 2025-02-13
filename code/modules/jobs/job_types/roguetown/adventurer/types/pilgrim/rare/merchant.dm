@@ -1,3 +1,4 @@
+/*
 /datum/advclass/pilgrim/rare/merchant
 	name = "Travelling Merchant"
 	tutorial = "You are a travelling merchant, possibly either of local origin or from far away lands. \
@@ -49,7 +50,7 @@
 	var/merchtype = pickweight(list("FOOD" = 4, "HEAL" = 2, "SILK" = 1, "GEMS" = 1))
 	switch(merchtype)
 		if("FOOD")		// Travelling food peddler
-			backpack_contents = list(/obj/item/reagent_containers/food/snacks/rogue/meat/salami = 1, /obj/item/reagent_containers/food/snacks/rogue/meat/coppiette = 1, /obj/item/reagent_containers/food/snacks/rogue/cheddar = 1, /obj/item/reagent_containers/food/snacks/rogue/saltfish = 1, /obj/item/reagent_containers/food/snacks/rogue/crackerscooked = 1)
+			backpack_contents = list(/obj/item/reagent_containers/food/snacks/rogue/meat/salami = 1, /obj/item/reagent_containers/food/snacks/cooked/coppiette = 1, /obj/item/reagent_containers/food/snacks/rogue/cheddar = 1, /obj/item/reagent_containers/food/snacks/saltfish = 1, /obj/item/reagent_containers/food/snacks/hardtack = 1)
 			H.mind?.adjust_skillrank(/datum/skill/craft/cooking, 2, TRUE)
 		if("HEAL")		// Travelling potion seller (If only we had snake oil..)
 			backpack_contents = list(/obj/item/reagent_containers/glass/bottle/rogue/healthpot, /obj/item/reagent_containers/glass/bottle/rogue/healthpot, /obj/item/reagent_containers/glass/bottle/rogue/healthpot, /obj/item/reagent_containers/glass/bottle/rogue/manapot)
@@ -62,3 +63,4 @@
 			H.mind?.adjust_skillrank(/datum/skill/craft/blacksmithing, 1, TRUE)
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_SEEPRICES, TRAIT_GENERIC)
+*/

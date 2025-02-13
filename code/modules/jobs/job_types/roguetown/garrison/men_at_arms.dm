@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/men_at_arms
 	title = "Men-at-arms"
 	flag = WATCHMAN
@@ -118,3 +119,4 @@
 		H.verbs |= /mob/proc/haltyell
 		ADD_TRAIT(H, TRAIT_KNOWBANDITS, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
+*/

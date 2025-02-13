@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/bogwarden
 	title = "Warden of the Terrorbog"
 	tutorial = ""
@@ -67,3 +68,4 @@
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 	armor = /obj/item/clothing/suit/roguetown/shirt/rags
 	shoes = /obj/item/clothing/shoes/roguetown/boots
+*/

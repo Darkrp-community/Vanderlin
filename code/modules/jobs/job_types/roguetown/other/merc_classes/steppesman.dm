@@ -1,3 +1,4 @@
+/*
 /datum/advclass/mercenary/steppesman
 	name = "Steppesman"
 	tutorial = "A mercenary from hailing from the wild frontier steppes. There are three things you value most; saigas, freedom, and coin."
@@ -51,3 +52,4 @@
 	H.change_stat("constitution", 1)
 	H.change_stat("speed", 1)
 	ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
+*/

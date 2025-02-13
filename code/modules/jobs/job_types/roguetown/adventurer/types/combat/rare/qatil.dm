@@ -1,3 +1,4 @@
+/*
 /datum/advclass/adventurer/qatil
 	name = "Qatil"
 	tutorial = "Hailing from Zybantine lands, you are a killer for hire that is trained both in murdering unseen and seen with your trusty knife."
@@ -54,3 +55,4 @@
 
 	ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
+*/

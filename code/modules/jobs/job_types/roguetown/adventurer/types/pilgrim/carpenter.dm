@@ -1,3 +1,4 @@
+/*
 /datum/advclass/carpenter
 	name = "Carpenter"
 	tutorial = "As a woodsmen or women, you have dedicated your life to both felling \
@@ -52,3 +53,4 @@
 	H.change_stat("intelligence", 1)
 	H.change_stat("constitution", 1)
 	H.change_stat("speed", -1)
+*/

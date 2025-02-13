@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/hand
 	title = "Hand"
 	flag = HAND
@@ -179,3 +180,4 @@
 
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
 	H.verbs |= /mob/living/carbon/human/proc/torture_victim
+*/

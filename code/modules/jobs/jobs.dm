@@ -1,3 +1,4 @@
+/*
 GLOBAL_LIST_INIT(noble_positions, list(
 	"Monarch",
 	"Consort",
@@ -146,3 +147,5 @@ GLOBAL_PROTECT(exp_specialmap)
 	for(var/datum/job/J in SSjob.occupations)
 		if(J.title == job_title)
 			return J.department_head //this is a list
+
+*/

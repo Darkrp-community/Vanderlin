@@ -1,3 +1,4 @@
+/*
 /datum/advclass/combat/dranger
 	name = "Ranger"
 	tutorial = "Dwarfish rangers, much like their humen counterparts, \
@@ -45,3 +46,4 @@
 	H.change_stat("perception", 3)
 	H.change_stat("speed", 1) // Fast... for a dwarf
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC) // Dwarf rangers are no good at dodging, but can wear heavier armor than typical rangers
+*/
