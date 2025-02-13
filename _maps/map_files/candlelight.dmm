@@ -697,6 +697,8 @@
 /obj/item/flint{
 	pixel_x = -1
 	},
+/obj/item/reagent_containers/food/snacks/hardtack,
+/obj/item/reagent_containers/food/snacks/hardtack,
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/outdoors/rtfield/safe)
 "pk" = (
@@ -947,6 +949,7 @@
 "vh" = (
 /obj/item/trash/applecore,
 /obj/structure/fluff/clodpile,
+/obj/item/reagent_containers/food/snacks/rotten/breadslice,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/rtfield/safe)
 "vi" = (
@@ -1117,6 +1120,7 @@
 "zx" = (
 /obj/structure/fluff/clodpile,
 /obj/item/reagent_containers/food/snacks/smallrat,
+/obj/item/reagent_containers/food/snacks/rotten/breadslice,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/rtfield/safe)
 "zC" = (
@@ -1388,9 +1392,6 @@
 /area/rogue/outdoors/rtfield/safe)
 "Gs" = (
 /obj/structure/closet/crate/chest/wicker,
-/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
-/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
-/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
 /turf/open/floor/rogue/ruinedwood/turned/darker,
 /area/rogue/outdoors/rtfield/safe)
 "Gt" = (
@@ -1456,8 +1457,6 @@
 	pixel_y = 9
 	},
 /obj/item/grown/log/tree/stake,
-/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
-/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/outdoors/rtfield/safe)
 "Hu" = (
@@ -1646,7 +1645,6 @@
 /area/rogue/outdoors/rtfield)
 "Mv" = (
 /obj/structure/fluff/nest,
-/obj/item/reagent_containers/food/snacks/rotten/bun,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/rtfield/safe)
 "Mw" = (
@@ -1769,12 +1767,13 @@
 	dir = 4
 	},
 /obj/structure/fluff/clodpile,
-/obj/item/reagent_containers/food/snacks/rotten/bun,
+/obj/item/reagent_containers/food/snacks/rotten/breadslice,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/rtfield/safe)
 "OK" = (
 /obj/structure/fluff/clodpile,
 /obj/item/reagent_containers/food/snacks/rotten/chickenleg,
+/obj/item/reagent_containers/food/snacks/rotten/breadslice,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/rtfield/safe)
 "OO" = (
@@ -2138,6 +2137,11 @@
 /obj/item/roguecoin/copper,
 /turf/open/floor/rogue/twig,
 /area/rogue/outdoors/rtfield/safe)
+"Ye" = (
+/obj/item/natural/dirtclod,
+/obj/item/reagent_containers/food/snacks/rotten/mince,
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/rtfield/safe)
 "Yg" = (
 /obj/item/natural/dirtclod,
 /obj/effect/decal/cleanable/blood/gibs/old,
@@ -2226,10 +2230,9 @@
 /area/rogue/outdoors/rtfield/safe)
 "ZQ" = (
 /obj/structure/closet/crate/chest/wicker,
-/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
-/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
-/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
-/obj/item/reagent_containers/food/snacks/rogue/bun,
+/obj/item/reagent_containers/food/snacks/hardtack,
+/obj/item/reagent_containers/food/snacks/hardtack,
+/obj/item/reagent_containers/food/snacks/bun,
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/outdoors/rtfield)
 "ZR" = (
@@ -76332,7 +76335,7 @@ at
 at
 Xy
 vF
-Oe
+Ye
 Ji
 at
 qj
