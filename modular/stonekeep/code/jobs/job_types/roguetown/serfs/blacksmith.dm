@@ -54,7 +54,6 @@
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/random
 	if(H.dna.species.id == "dwarf")
 		H.mind.adjust_skillrank(/datum/skill/craft/weaponsmithing, 1, TRUE)
-		H.cmode_music = 'sound/music/combat_dwarf.ogg'
 	H.change_stat("strength", 1)
 	H.change_stat("endurance", 2)
 	H.change_stat("speed", -1)
