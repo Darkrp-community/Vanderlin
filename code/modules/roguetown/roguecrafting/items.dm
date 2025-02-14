@@ -1,7 +1,7 @@
 /datum/crafting_recipe/roguetown
 	always_availible = TRUE
 	skillcraft = /datum/skill/craft/crafting
-
+/*
 /datum/crafting_recipe/roguetown/blowgun
 	name = "blowgun"
 	result = /obj/item/gun/ballistic/revolver/grenadelauncher/blowgun
@@ -550,3 +550,4 @@
 	reqs = list(/obj/item/natural/fibers = 1, /obj/item/grown/log/tree/stick = 2)
 	craftdiff = 1
 	skillcraft = /datum/skill/craft/crafting
+*/

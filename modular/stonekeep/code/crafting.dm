@@ -52,3 +52,116 @@
 	name = "Crusher (+Chain, +Small Log)"
 	recipe_name = "a two-handed flail"
 
+/datum/anvil_recipe/weapons/copper/cbludgeon
+	name = "Studded club (+Club)"
+	recipe_name = "a Studded Club"
+	appro_skill = /datum/skill/craft/weaponsmithing
+	req_bar = /obj/item/ingot/copper
+	additional_items = list(/obj/item/rogueweapon/mace/woodclub)
+	created_item = /obj/item/rogueweapon/mace/copperbludgeon
+	craftdiff = 0
+
+
+// Disabled?
+/datum/anvil_recipe/tools/hoe/copper
+	name = "Copper Hoe (+Stick x2)"
+	recipe_name = "a gardening Hoe"
+	req_bar = /obj/item/natural/stoneblock
+	additional_items = list(/obj/item/grown/log/tree/stick,/obj/item/grown/log/tree/stick)
+	created_item = /obj/item/rogueweapon/hoe/copper
+	i_type = "Tools"
+
+/datum/anvil_recipe/tools/sickle/copper
+	name = "Copper Sickle (+Stick)"
+	recipe_name = "a Sickle"
+	req_bar = /obj/item/natural/stoneblock
+	additional_items = list(/obj/item/grown/log/tree/stick)
+	created_item = /obj/item/rogueweapon/sickle/copper
+	i_type = "Tools"
+
+/datum/anvil_recipe/tools/pitchfork/copper
+	name = "Copper Pitchfork (+Stick x2)"
+	recipe_name = "a Pitchfork"
+	req_bar = /obj/item/natural/stoneblock
+	additional_items = list(/obj/item/grown/log/tree/stick,/obj/item/grown/log/tree/stick)
+	created_item = /obj/item/rogueweapon/pitchfork/copper
+	i_type = "Tools"
+
+/datum/anvil_recipe/tools/pick/copper
+	name = "Copper Pick (+Stick)"
+	recipe_name = "a digging Pick"
+	req_bar = /obj/item/natural/stoneblock
+	additional_items = list(/obj/item/grown/log/tree/stick)
+	created_item = /obj/item/rogueweapon/pick/copper
+	i_type = "Tools"
+
+/datum/anvil_recipe/tools/hammer/copper
+	name = "Copper Hammer (+Stick)"
+	req_bar = /obj/item/natural/stoneblock
+	recipe_name = "a blacksmithing Hammer"
+	additional_items = list(/obj/item/grown/log/tree/stick)
+	created_item = /obj/item/rogueweapon/hammer/copper
+	i_type = "Tools"
+
+
+/datum/crafting_recipe/roguetown/woodflail
+	name = "wooden flail x2"
+	skillcraft = /datum/skill/craft/carpentry
+	reqs = list(/obj/item/rogueweapon/flail/towner = 1,
+			/obj/item/ingot/iron = 10)
+	tools = list(/obj/item/rogueweapon/hammer)
+	req_table = TRUE
+	craftdiff = 2
+
+/datum/crafting_recipe/roguetown/militia_flail
+	name = "militia flail"
+	skillcraft = /datum/skill/craft/carpentry
+	reqs = list(/obj/item/rogueweapon/flail/towner = 1, /obj/item/ingot/iron = 10)
+	tools = list(/obj/item/rogueweapon/hammer)
+	req_table = TRUE
+	craftdiff = 3
+
+
+
+/datum/anvil_recipe/tools/iron/handsaw
+	name = "Handsaw (+1 Stick)"
+	recipe_name = "a saw for woodworking"
+	req_bar = /obj/item/ingot/iron
+	additional_items = list(/obj/item/grown/log/tree/stick)
+	created_item = /obj/item/rogueweapon/handsaw
+	i_type = "Tools"
+
+/datum/anvil_recipe/tools/iron/chisel
+	name = "Chisel"
+	recipe_name = "a chisel for stoneworking"
+	req_bar = /obj/item/ingot/iron
+	created_item = /obj/item/rogueweapon/chisel
+	i_type = "Tools"
+
+
+/datum/anvil_recipe/armor/iron/splint_legs
+	name = "Splint Chausses (+ 2 hide)"
+	recipe_name = "a pair of Splint Chausses"
+	req_bar = /obj/item/ingot/iron
+	additional_items = list(/obj/item/ingot/iron, /obj/item/natural/hide, /obj/item/natural/hide)
+	created_item = /obj/item/clothing/under/roguetown/splintlegs
+	craftdiff = 2
+
+
+/datum/anvil_recipe/armor/iron/splint_arms
+	name = "Splint Vambraces (+ 2 hide)"
+	recipe_name = "a pair of Splint Vambraces"
+	req_bar = /obj/item/ingot/iron
+	additional_items = list(/obj/item/ingot/iron, /obj/item/natural/hide, /obj/item/natural/hide)
+	created_item = /obj/item/clothing/wrists/roguetown/bracers/splint
+	craftdiff = 2
+
+
+/datum/anvil_recipe/armor/steel/brigadine
+	name = "Platemail Chausses (+Bar)"
+	recipe_name = "a pair of Platemail Chausses"
+	req_bar = /obj/item/ingot/steel
+	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel)
+	created_item = /obj/item/clothing/under/roguetown/chainlegs/reinforced
+	craftdiff = 3
+
