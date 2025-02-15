@@ -34,13 +34,14 @@
 	beltl = /obj/item/rogueweapon/pick
 	backr = /obj/item/rogueweapon/shovel
 	backl = /obj/item/storage/backpack/rogue/backpack
-	backpack_contents = list(/obj/item/flint = 1, /obj/item/rogueweapon/knife/villager = 1)
+	backpack_contents = list(/obj/item/flint = 1, /obj/item/rogueweapon/knife/villager = 1, /obj/item/rogueweapon/chisel = 1)
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/labor/mining, 4, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
+		H.mind?.adjust_skillrank(/datum/skill/craft/masonry, 3, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)

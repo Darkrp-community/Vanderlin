@@ -35,8 +35,8 @@
 	sleeved = 'modular/stonekeep/icons/onmob/drakon_onmob.dmi'
 	icon_state = "drakonb"
 
-/obj/item/clothing/shoes/roguetown/boots/leather/advanced/drakon
-	color = "#755a81"
+/obj/item/clothing/shoes/roguetown/boots/leather/hardened/drakon
+	color = "#c69dd7"
 /obj/item/clothing/gloves/roguetown/leather/advanced/drakon
 	color = "#745980"
 /obj/item/clothing/cloak/cape/drakon

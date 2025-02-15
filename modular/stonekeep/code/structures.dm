@@ -97,6 +97,52 @@
 /obj/structure/bed/rogue/sleepingbag
 	icon = 'modular/stonekeep/icons/structure.dmi'
 
+// Temple pillars. Default is offset to north
+/obj/structure/fluff/walldeco/pillar
+	icon = 'modular/stonekeep/icons/temple.dmi'
+	icon_state = "sandstone"
+	pixel_y = 32
 
+/obj/structure/fluff/walldeco/pillar/doric
+	icon_state = "doric"
+/obj/structure/fluff/walldeco/pillar/aztec
+	icon_state = "aztec"
+/obj/structure/fluff/walldeco/pillar/ionic
+	icon_state = "ionic"
+/obj/structure/fluff/walldeco/pillar/solomon
+	icon_state = "solomon"
+/obj/structure/fluff/walldeco/pillar/solomonalt
+	icon_state = "solomon2"
+/obj/structure/fluff/walldeco/pillar/egypt
+	icon_state = "egypt"
+/obj/structure/fluff/walldeco/pillar/nordic
+	icon_state = "nordic"
 
+// Placeholder shrines. Migth get better code at some point but use for now
+/obj/machinery/light/rogue/wallfire/candle/lamp/temple
+	icon = 'modular/stonekeep/icons/temple.dmi'
+
+/obj/machinery/light/rogue/wallfire/candle/lamp/temple/noc
+	icon_state = "noc1"
+	base_state = "noc"
+/obj/machinery/light/rogue/wallfire/candle/lamp/temple/pestra
+	icon_state = "pestra1"
+	base_state = "pestra"
+/obj/machinery/light/rogue/wallfire/candle/lamp/temple/xylix
+	icon_state = "xylix1"
+	base_state = "xylix"
+/obj/machinery/light/rogue/wallfire/candle/lamp/temple/eora
+	icon_state = "eora1"
+	base_state = "eora"
+/obj/machinery/light/rogue/wallfire/candle/lamp/temple/malum
+	icon_state = "malum1"
+	base_state = "malum"
+/obj/machinery/light/rogue/wallfire/candle/lamp/temple/ravox
+	icon_state = "ravox1"
+	base_state = "ravox"
+
+// Sandstone brick wall
+/turf/closed/wall/mineral/rogue/stonebrick/sandstone
+	name = "sandstone wall"
+	icon = 'modular/stonekeep/icons/sandstonebrick.dmi'
 

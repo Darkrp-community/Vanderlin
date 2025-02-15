@@ -28,7 +28,7 @@
 	backpack_contents = list(/obj/item/rogueweapon/pick = 1, /obj/item/rogueweapon/knife/hunting = 1, /obj/item/lockpickring/mundane)
 	gloves = /obj/item/clothing/gloves/roguetown/fingerless
 	cloak = /obj/item/clothing/cloak/raincloak/mortus
-	armor = /obj/item/clothing/suit/roguetown/armor/leather
+	armor = /obj/item/clothing/suit/roguetown/armor/leather/basic
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
 	beltr = /obj/item/flashlight/flare/torch/lantern
 	beltl = /obj/item/rogueweapon/whip // You know why.

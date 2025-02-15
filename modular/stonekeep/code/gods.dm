@@ -25,7 +25,7 @@
 	desc = "The Firstborn of the Forgotten God, twin of Astrata, gifted mankind divine wisdom."
 	flaws = "Cynical, Isolationist, Unfiltered Honesty"
 	worshippers = "Magic Practitioners, Scholars, Scribes"
-	sins = "Suppressing Truth, Burning Books, Censorship"
+	sins = "Suppressing Truth, Indulging Lust, Destroying Books"
 	boons = "You learn and teach apprentices slightly better."
 	added_traits = list(TRAIT_TUTELAGE)
 	t0 = /obj/effect/proc_holder/spell/invoked/lesser_heal
@@ -41,7 +41,7 @@
 /datum/patron/divine/dendor
 	name = "Dendor"
 	domain = "God of Nature and Beasts"
-	desc = "The manifestation of the unchanged natural world. Driven mad with time."
+	desc = "The manifestation of the Force of the chaotic natural world. Driven mad with time."
 	flaws = "Madness, Rebelliousness, Disorderliness"
 	worshippers = "Druids, Beasts, Madmen"
 	sins = "Deforestation, Overhunting, Disrespecting Nature"
@@ -103,8 +103,8 @@
 
 /datum/patron/divine/ravox
 	name = "Ravox"
-	domain = "God of Warfare, Struggle, and Chivalry"
-	desc = "The blade of the Pantheon, a patron of all who struggle in warfare."
+	domain = "Saint of Warfare, Struggle, and Chivalry"
+	desc = "The blade of the Pantheon, a patron of all who have to face their fears in the maelstrom of battle."
 	flaws = "Careless, Aggressive, Prideful"
 	worshippers = "Warriors, Sellswords, Guardsmen"
 	sins = "Cowardice, Hesitation, Stagnation"
@@ -122,8 +122,8 @@
 
 /datum/patron/divine/xylix
 	name = "Xylix"
-	domain = "God of Trickery, Freedom, and Inspiration"
-	desc = "Perhaps the greatest Jester to have ever lived. Some say the greatest trick he ever pulled was making the world believe he never existed."
+	domain = "Saint of Trickery, Freedom, and Inspiration"
+	desc = "Perhaps the strangest Jester to have ever lived. Some say the greatest trick he ever pulled was making the world believe he never existed."
 	flaws = "Petulance, Deception, Gambling-Prone"
 	worshippers = "Cheats, Performers, The Hopeless"
 	sins = "Boredom, Predictability, Routine"
@@ -167,7 +167,7 @@
 /datum/patron/divine/malum
 	name = "Malum"
 	domain = "Saint of Toil, Industry, and Skill"
-	desc = "The perfect dwarf, said to have become a God after dying while still working at the anvil despite having become blind from age half a century earlier."
+	desc = "The perfect dwarf, said to have died while still working at the anvil, despite having become blind from age half a century earlier."
 	flaws = "Obsessive, Exacting, Overbearing"
 	worshippers = "Smiths, Miners, Sculptors"
 	sins = "Cheating, Shoddy Work, Suicide"
@@ -185,7 +185,7 @@
 
 /datum/patron/divine/eora
 	name = "Eora"
-	domain = "God of Love, Life, and Beauty"
+	domain = "Saint of Love, Life, and Beauty"
 	desc = "The Mother, devoted to love and beauty. Bonds forged by love is truer than any steel."
 	flaws= "Naive, Impulsive, Ignorant"
 	worshippers = "Mothers, Artists, Married Couples"
@@ -210,7 +210,7 @@
 	flaws = "Secretive, Judgemental, Self-Sacrificing"
 	worshippers = "Grenzelhofters, Inquisitors, Heroes"
 	sins = "Apostasy, Demon Worship, Betraying thy Father"
-	boons = "None."
+	boons = "None. True strength comes from within."
 	associated_faith = /datum/faith/psydon
 	confess_lines = list(
 		"THERE IS ONLY ONE GOD!",
@@ -250,9 +250,9 @@
 	name = "Zizo"
 	domain = "The Eternal Beast of Chaos"
 	desc = "Z-Who-Must-Not-Be-Named, the true creator and force behind all reality!"
-	flaws = "Hubris, Superiority, Fury"
+	flaws = "Insanity"
 	worshippers = "Apostates, Anarchists, Psychopaths"
-	sins = "Weakness"
+	sins = "None, Zizo welcomes all to see the truth."
 	boons = "You know other followers of Zizo when you see them."
 	added_traits = list(TRAIT_CABAL)
 	confess_lines = list(
@@ -265,7 +265,7 @@
 	name = "Graggar"
 	domain = "The Dark Sini-Star of Murder, Defilement, and Hatred"
 	desc = "The Father of Orcs and Goblins, a brutal tyrant bent to destruction."
-	flaws = "Rage, Hatred, Bloodthirst"
+	flaws = "Rage, Hatred, Bloodthirsty"
 	worshippers = "Greenskins, The Revenge-Driven, Sadists"
 	sins = "Compassion, Frailty, Servility"
 	boons = "You are drawn to the flavour of raw flesh and organs, and may consume without worry."
@@ -279,7 +279,7 @@
 /datum/patron/inhumen/matthios
 	name = "Matthios"
 	domain = "God of Thievery, Ill-Gotten Gains, and Highwaymen"
-	desc = "Said to have stolen a spark of the divine, taking fire from the jealous gods and giving it to humenkind. Gifted his lessons of thievery and subversion to his devoted followers."
+	desc = "Said to have stolen a spark of the divine, taking fire from the jealous gods and giving it to humenkind. Gifted his lessons of thievery and subversion to his devoted followers, his influence on the world tangible."
 	flaws = "Pride, Greed, Reckless"
 	worshippers = "Outlaws, Noble-Haters, Downtrodden Peasantry"
 	sins = "Clumsiness, Hesitation, Humility"
@@ -292,17 +292,4 @@
 	)
 
 /datum/patron/inhumen/baotha
-	name = "Baotha"
-	domain = "Goddess of Envy, Murder, and Mindless pleasure"
-	desc = "A powerful succubus grown fat with the river of sins her followers have fed her. Will bless the evil deeds of those who cannot stand to see other be happier or more fortunate!'"
-	flaws = "Degenerate, Self-Destructive, Cruel"
-	worshippers = "Addicts, Poisoners, the Motherless and Maidenless"
-	sins = "Sobriety, Feeling inferior, Regret "
-	boons = "You will never overdose on drugs."
-	added_traits = list(TRAIT_CRACKHEAD)
-	confess_lines = list(
-		"BAOTHA, MAKE THEM SUFFER INSTEAD OF ME!",
-		"LET MY MIND DROWN IN BAOTHA'S BLISS!",
-		"I WILL LEARN TO ENJOY THIS AGONY IN TIME OH BAOTHA!",
-	)
 	non_faith = TRUE
