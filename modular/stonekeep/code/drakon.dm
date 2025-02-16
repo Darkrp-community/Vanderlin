@@ -19,13 +19,14 @@
 	worn_x_dimension = 64
 	worn_y_dimension = 64
 
-/obj/item/rogueweapon/polearm/halberd/bardiche/drakon
+/obj/item/rogueweapon/polearm/halberd/bardiche/warcutter/drakon
 	name = "culling axe"
 	desc = "Once, mounds made of humen skulls marked the boundaries of ancient evil. For such work this was made."
 	icon = 'modular/stonekeep/icons/onmob/drakon_64.dmi'
-	wbalance = EASY_TO_DODGE
+	wbalance = DODGE_CHANCE_NORMAL
 	max_blade_int = 300
 	max_integrity = INTEGRITY_STRONGEST
+	smeltresult = /obj/item/ingot/blacksteel
 
 /obj/item/clothing/wrists/roguetown/bracers/drakon
 	name = "drakon order bracers"
@@ -37,8 +38,8 @@
 
 /obj/item/clothing/shoes/roguetown/boots/leather/heavy/drakon
 	color = "#c69dd7"
-/obj/item/clothing/gloves/roguetown/leather/advanced/drakon
-	color = "#745980"
+/obj/item/clothing/gloves/roguetown/fencer/drakon
+	color = "#9377a0"
 /obj/item/clothing/cloak/cape/drakon
 	color = CLOTHING_BLOOD_RED
 

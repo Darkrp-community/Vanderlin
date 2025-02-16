@@ -24,7 +24,6 @@
 	H.mind?.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/craft/tanning, 1, TRUE)
 	neck = /obj/item/storage/belt/rogue/pouch/pdarts
-	backl = /obj/item/rogueweapon/polearm/spear
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow
 	belt = /obj/item/storage/belt/rogue/leather/rope
 	beltl = /obj/item/gun/ballistic/revolver/grenadelauncher/blowgun
@@ -33,6 +32,7 @@
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	armor = /obj/item/clothing/suit/roguetown/armor/amazon_chainkini
 	shoes = /obj/item/clothing/shoes/roguetown/boots
+	r_hand = /obj/item/rogueweapon/polearm/spear
 	H.change_stat("strength", 2)
 	H.change_stat("intelligence", -1)
 	H.change_stat("endurance", 2)
@@ -42,3 +42,4 @@
 	ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_CRITICAL_RESISTANCE, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NOPAINSTUN, TRAIT_GENERIC)
+

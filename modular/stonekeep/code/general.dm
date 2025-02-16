@@ -5,11 +5,28 @@
  *						*
  * * * * * * * * * * * **/
 
-#define NORMAL_TOWNER_RACES 	list("Humen","Elf","Half-Elf","Dwarf")
-#define EXPANDED_TOWNER_RACES 	list("Humen","Elf","Aasimar","Half-Elf","Dwarf")
-#define PEASANT_RACES 			list("Humen","Aasimar","Half-Elf","Dwarf")
-
 // =================================================================================
+//////////////////////////////////////////////
+//											//
+//					BATHTUB					//
+//											//
+//////////////////////////////////////////////
+/obj/structure/table/wood/bathtub
+	name = "bathtub"
+	desc = "A relaxing bath in hot water, or a endurance test in freezing water, depending on how lazy you are when warming water."
+	icon = 'modular/stonekeep/icons/pews.dmi'
+	icon_state = "bathtub"
+	resistance_flags = FLAMMABLE
+	climb_offset = 0
+	climb_time = 30
+	climb_sound = 'sound/foley/waterwash (1).ogg'
+
+/obj/structure/table/wood/bathtub/Initialize()
+	. = ..()
+	add_overlay(mutable_appearance(icon, "bathtub_bathing", ABOVE_MOB_LAYER, GAME_PLANE_UPPER))
+
+
+
 // -------------- SOAP -----------------
 /obj/item/soap
 	name = "soap"
@@ -25,13 +42,16 @@
 	grind_results = list(/datum/reagent/lye = 10)
 	cleanspeed = 35 //slower than mop
 	uses = 10
+	grid_width = 32
+	grid_height = 32
 
 /obj/item/soap/attack(mob/living/carbon/human/target, mob/living/carbon/user)
 	user.changeNext_move(CLICK_CD_MELEE)
 	var/turf/bathspot = get_turf(target)				// Checks for being in a bath and being undressed
 	if(!istype(bathspot, /turf/open/water/bath))
-		to_chat(user, span_warning("They must be in the bath water!"))
-		return
+		if((!locate(/obj/structure/table/wood/bathtub) in target.loc))
+			to_chat(user, span_warning("They must be in the bath water!"))
+			return
 	if(!ishuman(target))
 		to_chat(user, span_warning("They don't want to be soaped..."))
 		return
@@ -111,9 +131,13 @@
 	info = "Makers! The northern dwarves delivery of steele is much delayed this yil. Make do or go get it from them, the Guild cannot do more to solve this."
 
 /obj/item/paper/feldsher_certificate
+	icon = 'modular/stonekeep/icons/misc.dmi'
+	icon_state = "certificate"
 	name = "feldsher health certificate"
 	info = "The wearer hath passed the feldshers monthly inspection as mandated by the pestilence laws, and is not a bearer of maladies to infect our towne.   \
 	Thus they are allowede legally to ply the nitemaidens trade. I so swear on this date. (signed by the town feldsher, the date is a few weeks ago)"
+	grid_width = 32
+	grid_height = 32
 /obj/item/paper/feldsher_certificate/expired
 	info = "The wearer hath passed the feldshers monthly inspection as mandated by the pestilence laws, and is not a bearer of maladies to infect our towne.   \
 	Thus they are allowede legally to ply the nitemaidens trade. I so swear on this date.  (signed by the town feldsher, the date is half a year ago)"
@@ -124,6 +148,14 @@
 	..()
 	icon = 'modular/stonekeep/icons/misc.dmi'
 	icon_state = "certificate"
+/obj/item/paper/feldsher_certificate/maybe/New()
+	. = ..()
+	if(prob(50))
+		info = "The wearer hath passed the feldshers monthly inspection as mandated by the pestilence laws, and is not a bearer of maladies to infect our towne.   \
+	Thus they are allowede legally to ply the nitemaidens trade. I so swear on this date. (signed by the town feldsher, the date is a few weeks ago)"
+	else
+		info = "The wearer hath passed the feldshers monthly inspection as mandated by the pestilence laws, and is not a bearer of maladies to infect our towne.   \
+	Thus they are allowede legally to ply the nitemaidens trade. I so swear on this date.  (signed by the town feldsher, the date is half a year ago)"
 
 
 // =================================================================================
@@ -183,6 +215,10 @@
 /obj/machinery/light/rogue/torchholder
 	brightness = 7
 
+
+// =============================================================================
+// ========================		WEATHER EDITS		============================
+
 // braziers, magic fire, lamps etc are rain resistant, standing fires and torch holders are not
 /obj/machinery/light/rogue/torchholder/Initialize()
 	. = ..()
@@ -207,12 +243,6 @@
 	. = ..()
 	GLOB.weather_act_upon_list -= src
 
-
-
-// =================================================================================
-/*---------------\
-| Weather tweaks |
-\---------------*/
 /obj/item/flashlight/flare/torch/Initialize()
 	. = ..()
 	GLOB.weather_act_upon_list += src
@@ -247,7 +277,8 @@
 
 
 
-
+// =============================================================================
+// ========================		BLOOD PREMAPPED		============================
 /*	..................   For premapped blood skipping timers, diseases etc   ................... */
 /obj/effect/decal/cleanable/blood_neu
 	name = "blood"
@@ -547,8 +578,8 @@
 	head = /obj/item/clothing/head/roguetown/helmet/leather/minershelm
 
 
-
-// ======================================================================
+// =============================================================================
+// ==============================	FLORA	====================================
 
 /*	..................   Pigflowers   ................... */
 /obj/structure/flora/rogueflower // ausbushes recolored
@@ -604,8 +635,27 @@
 /obj/structure/flora/roguegrass/stalky/update_icon()
 	dir = pick(GLOB.cardinals)
 
+/*	..................   Bear pelt better   ................... */
+/obj/structure/bearpelt
+	icon = 'modular/stonekeep/icons/bear.dmi'
+	alpha = 240
+	color = "#e9e7d7"
 
-// ===================================================================================
+// makes barrels climbable, its really weird they arent.
+/obj/structure/fermenting_barrel
+	climbable = TRUE
+	climb_offset = 16
+
+
+/datum/supply_pack/rogue/narcotics/soap	// correct soap now
+	name = "Herbal Soap"
+	cost = 20
+	contains = /obj/item/soap
+
+
+// =============================================================================
+// ============================		LANDMARKS	================================
+
 /*	..................   Dwarf Outpost   ................... */
 /obj/effect/landmark/map_load_mark/dwarf_outpost
 	name = "Dwarf Outpost"
@@ -638,11 +688,9 @@
 	mappath = "_maps/map_files/templates/stonehamlet/roadblock_2.dmm"
 
 
+// =============================================================================
+// ========================		MORNING STUBBLE		============================
 
-/obj/structure/bearpelt
-	icon = 'modular/stonekeep/icons/bear.dmi'
-	alpha = 240
-	color = "#e9e7d7"
 /datum/sprite_accessory/facial_hair/stubble
 	name = "Stubble"
 	icon = 'modular/stonekeep/icons/facial.dmi'
@@ -678,7 +726,10 @@
 		to_chat(src, span_warning("My face itches."))
 		update_hair()
 
-// Darkling debuffs
+
+// =============================================================================
+// ================		DARK ELF DARKLING SYSTEM		========================
+
 /datum/status_effect/debuff/darkling_glare
 	id = "darkling_glare"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/darkling_glare
@@ -776,6 +827,8 @@
 	eat_effect = /datum/status_effect/debuff/uncookedfood
 	list_reagents = list(/datum/reagent/consumable/nutriment = 1)
 
+// =================================================================
+// ================		TEMPLE FLUFF		========================
 
 /*	..................   Astrata Shrine   ................... */
 /obj/structure/fluff/psycross/crafted/shrine/astrata
@@ -859,7 +912,38 @@
 			else
 				H.apply_status_effect(/datum/status_effect/buff/craft_buff)
 
-// makes barrels climbable, its really weird they arent.
-/obj/structure/fermenting_barrel
-	climbable = TRUE
-	climb_offset = 8
+
+/obj/structure/chair/pew
+	icon = 'modular/stonekeep/icons/pews.dmi'
+
+/obj/structure/chair/pew/left/proc/GetLeftPewArmrest()
+	return mutable_appearance('modular/stonekeep/icons/pews.dmi', "pewend_left_armrest")
+
+/obj/structure/chair/pew/right/proc/GetRightPewArmrest()
+	return mutable_appearance('modular/stonekeep/icons/pews.dmi', "pewend_right_armrest")
+
+
+
+/obj/structure/fermenting_barrel/distillery
+	name = "distillery"
+	desc = "Copper vat that turns produce into hard liquor."
+	icon = 'modular/stonekeep/icons/distillery.dmi'
+	icon_state = "distillery"
+	anchored = TRUE
+	layer = ABOVE_MOB_LAYER
+	plane = GAME_PLANE_UPPER
+	var/datum/looping_sound/distillery/soundloop
+
+/datum/looping_sound/distillery
+	mid_sounds = list('modular/stonekeep/sound/distillery.ogg'=1)
+	mid_length = 7 SECONDS
+	volume = 80
+
+/obj/structure/fermenting_barrel/distillery/Initialize()
+	. = ..()
+	soundloop = new(src, FALSE)
+	soundloop.start()
+
+/obj/structure/fermenting_barrel/distillery/Destroy()
+	explosion(src.loc,-1,-1,2, flame_range = 4)	// small explosion, plus a very large fireball.
+	return ..()

@@ -604,6 +604,9 @@
 			L.update_inv_armor()
 */
 
+/obj/item/clothing/suit/roguetown/shirt/dress/gen/sexy/Initialize()
+	color = pick( CLOTHING_ROYAL_MAJENTA, CLOTHING_MAGE_BLUE, CLOTHING_ROYAL_PURPLE	, CLOTHING_SALMON)
+	..()
 
 
 // ==============================	GLOVES	====================================
