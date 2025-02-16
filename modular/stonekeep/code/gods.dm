@@ -285,6 +285,10 @@
 	sins = "Clumsiness, Hesitation, Humility"
 	boons = "You can see the most expensive item someone is carrying."
 	added_traits = list(TRAIT_MATTHIOS_EYES)
+	t0 = /obj/effect/proc_holder/spell/invoked/lesser_heal
+	t1 = /obj/effect/proc_holder/spell/invoked/slowdown_spell_aoe
+	t2 = null
+	t3 = null
 	confess_lines = list(
 		"MATTHIOS STEAL MY PAIN!",
 		"MATTHIOS WILL SAVE ME!",

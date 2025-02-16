@@ -110,7 +110,7 @@
 #define TRAIT_LIMPDICK "limp_dick"
 #define TRAIT_MINCED "minced"
 #define TRAIT_SEXPASS "sexpass"
-
+#define TRAIT_DARKLING "Darkling"
 GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_GOODLOVER = span_love("It's a lucky thing to share my bed."), //STONEKEEP EDIT
 	TRAIT_WEBWALK = "I can move freely between webs.",
@@ -174,7 +174,8 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_APRICITY = "The warmth of the sun rejuvenates me, allowing me to regain my stamina quicker.",
 	TRAIT_BLACKLEG = "I can cheat by rigging coin and dice, and peek at cards.",
 	TRAIT_MATTHIOS_EYES = span_notice("I have a sense for what the most valuable item someone has is."),
-	TRAIT_CRATEMOVER = "I am able to drag heavy objects without any difficulty."
+	TRAIT_CRATEMOVER = "I am able to drag heavy objects without any difficulty.",
+	TRAIT_DARKLING = span_info("I am a creature of the dark and am sensitive to the light. The hateful sun is especially harsh on my eyes, and I prefer to sleep during the dae."),
 	))
 
 // trait accessor defines

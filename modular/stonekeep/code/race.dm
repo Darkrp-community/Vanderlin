@@ -115,6 +115,7 @@
 	Now, the Elves have integrated into the multiple races realms in the known world, \
 	some forming relationships and strong bonds."
 
+	mutanteyes = /obj/item/organ/eyes
 	specstats = list("strength" = -1, "perception" = 1, "intelligence" = 1, "constitution" = -1, "endurance" = 0, "speed" = 2, "fortune" = 0)
 	specstats_f = list("strength" = -2, "perception" = 2, "intelligence" = 2, "constitution" = -1, "endurance" = -1, "speed" = 2, "fortune" = 0)
 
@@ -216,6 +217,7 @@
 	Due to their heritage, Half-Elves tend to gain racial traits depending on how strong their fathers, or mothers, genes were. \
 	Half-Elves also typically try to find identity, in a world that sees them primarly as perversions."
 
+	mutanteyes = /obj/item/organ/eyes
 	specstats = list("strength" = 0, "perception" = 1, "intelligence" = 0, "constitution" = 0, "endurance" = 0, "speed" = 1, "fortune" = 0)
 	specstats_f = list("strength" = -1, "perception" = 2, "intelligence" = 0, "constitution" = -1, "endurance" = 0, "speed" = 1, "fortune" = 0)
 

@@ -20,7 +20,7 @@
 /turf/open/floor/rogue/woodturned/nosmooth/saiga
 	smooth_icon = 'modular/stonekeep/icons/wood_turned.dmi'
 
-/turf/open/floor/rogue/tile
+/turf/open/floor/rogue/hexstone
 	icon = 'modular/stonekeep/icons/turfs.dmi'
 
 /turf/open/floor/rogue/cobble

@@ -1893,6 +1893,7 @@
 #include "modular\stonekeep\code\character_flaw.dm"
 #include "modular\stonekeep\code\clothes.dm"
 #include "modular\stonekeep\code\crafting.dm"
+#include "modular\stonekeep\code\darkling.dm"
 #include "modular\stonekeep\code\drakon.dm"
 #include "modular\stonekeep\code\general.dm"
 #include "modular\stonekeep\code\gods.dm"

@@ -47,3 +47,12 @@ GLOBAL_LIST_INIT(sex_actions, build_sex_actions())
 
 /mob/living
 	var/datum/sex_controller/sexcon
+
+
+// borrow some space here ROGTODO
+#define RACES_WITH_BEARD_GROWTH list(\
+	/datum/species/human/northern,\
+	/datum/species/human/halfelf,\
+	/datum/species/dwarf/mountain,\
+	/datum/species/tieberian,\
+)
