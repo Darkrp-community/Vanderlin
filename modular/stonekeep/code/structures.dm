@@ -146,3 +146,7 @@
 	name = "sandstone wall"
 	icon = 'modular/stonekeep/icons/sandstonebrick.dmi'
 
+// Trellises
+/obj/structure/trellise
+	icon = 'modular/stonekeep/icons/structure.dmi'
+	icon_state = "trellise_empty"
