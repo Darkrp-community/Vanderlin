@@ -313,10 +313,6 @@
 /obj/structure/well/climb_up,
 /turf/open/water/cleanshallow,
 /area/rogue/under)
-"cw" = (
-/obj/structure/roguemachine/scomm/l,
-/turf/open/floor/rogue/church,
-/area/rogue/indoors/town/church)
 "cz" = (
 /obj/effect/landmark/hammer/dev_text{
 	name = "Stone vault door"
@@ -747,6 +743,10 @@
 	},
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors/town)
+"gy" = (
+/obj/structure/roguemachine/scomm/r,
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/exposed/church)
 "gE" = (
 /obj/structure/fluff/psycross,
 /obj/structure/fluff/railing/wood{
@@ -777,6 +777,10 @@
 	dir = 8
 	},
 /area/rogue/outdoors/rtfield/safe)
+"ha" = (
+/obj/structure/roguemachine/scomm/l,
+/turf/open/floor/rogue/church,
+/area/rogue/indoors/town/church)
 "hf" = (
 /obj/structure/stairs/stone{
 	dir = 1
@@ -797,6 +801,10 @@
 /obj/machinery/light/rogue/torchholder/l,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave)
+"hr" = (
+/obj/structure/roguemachine/scomm,
+/turf/open/floor/rogue/church,
+/area/rogue/indoors/town/church/chapel)
 "ht" = (
 /obj/structure/chair/wood/rogue{
 	dir = 8
@@ -1460,12 +1468,6 @@
 	},
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/indoors/town/church/chapel)
-"mS" = (
-/obj/structure/roguemachine/scomm{
-	pixel_y = -32
-	},
-/turf/open/floor/rogue/hexstone,
-/area/rogue/indoors/town/church)
 "mU" = (
 /turf/open/floor/rogue/greenstone,
 /area/rogue/under)
@@ -2180,6 +2182,15 @@
 "tp" = (
 /turf/closed/wall/mineral/rogue/decostone,
 /area/rogue/indoors/town/church/chapel)
+"tr" = (
+/obj/structure/chair/bench/church/smallbench{
+	dir = 1
+	},
+/obj/structure/roguemachine/scomm{
+	pixel_y = -32
+	},
+/turf/open/floor/rogue/church,
+/area/rogue/indoors/town/church)
 "tt" = (
 /obj/structure/closet/crate/chest/crate,
 /obj/item/burial_shroud,
@@ -2493,6 +2504,9 @@
 /obj/machinery/light/rogue/torchholder/c,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/rtfield/safe)
+"wb" = (
+/turf/closed/mineral/rogue,
+/area/rogue/under)
 "wd" = (
 /obj/structure/fluff/railing/border{
 	dir = 8
@@ -2622,10 +2636,6 @@
 /obj/structure/table/wood/plain_alt,
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/town/church)
-"xu" = (
-/obj/structure/roguemachine/scomm/r,
-/turf/open/floor/rogue/dirt,
-/area/rogue/outdoors/exposed/church)
 "xw" = (
 /obj/structure/closet/crate/chest/crate,
 /obj/item/reagent_containers/food/snacks/rogue/meat/steak,
@@ -3113,6 +3123,12 @@
 /obj/structure/bars,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave)
+"CF" = (
+/obj/structure/roguemachine/scomm{
+	pixel_y = -32
+	},
+/turf/open/floor/rogue/hexstone,
+/area/rogue/indoors/town/church)
 "CG" = (
 /obj/machinery/light/rogue/torchholder/l,
 /turf/open/floor/rogue/wood,
@@ -3328,15 +3344,6 @@
 /obj/machinery/light/rogue/firebowl,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave)
-"Fl" = (
-/obj/structure/chair/bench/church/smallbench{
-	dir = 1
-	},
-/obj/structure/roguemachine/scomm{
-	pixel_y = -32
-	},
-/turf/open/floor/rogue/church,
-/area/rogue/indoors/town/church)
 "Fm" = (
 /obj/structure/bed/rogue/shit,
 /obj/effect/landmark/start/vagrant{
@@ -3442,10 +3449,6 @@
 "Gl" = (
 /turf/open/water/swamp,
 /area/rogue/outdoors/rtfield/safe)
-"Gq" = (
-/obj/structure/roguemachine/scomm,
-/turf/open/floor/rogue/ruinedwood/spiralfade,
-/area/rogue/indoors/town/church)
 "Gs" = (
 /obj/structure/closet/crate/chest/wicker,
 /turf/open/floor/rogue/ruinedwood/turned/darker,
@@ -3582,6 +3585,10 @@
 	},
 /turf/open/floor/rogue/churchrough,
 /area/rogue/outdoors/town)
+"Hm" = (
+/obj/structure/roguemachine/scomm,
+/turf/open/floor/rogue/ruinedwood/spiralfade,
+/area/rogue/indoors/town/church)
 "Hn" = (
 /turf/open/floor/rogue/plank,
 /area/rogue/outdoors/rtfield/safe)
@@ -4099,10 +4106,6 @@
 /obj/item/flint,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under)
-"Mm" = (
-/obj/structure/roguemachine/scomm,
-/turf/open/floor/rogue/church,
-/area/rogue/indoors/town/church/chapel)
 "Mn" = (
 /obj/structure/plough,
 /turf/open/floor/rogue/grass,
@@ -44964,12 +44967,12 @@ qg
 qg
 qg
 qg
-qg
-qg
-qg
-qg
-qg
-qg
+wb
+wb
+wb
+wb
+wb
+wb
 qg
 Gj
 Gj
@@ -45124,14 +45127,14 @@ KB
 sg
 sg
 qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
 qg
 Gj
 Gj
@@ -45286,14 +45289,14 @@ KB
 sg
 sg
 qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
 qg
 Gj
 Gj
@@ -45448,14 +45451,14 @@ qg
 qg
 qg
 qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
 qg
 Gj
 Gj
@@ -45608,16 +45611,16 @@ Kl
 qg
 qg
 qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
 qg
 Gj
 Gj
@@ -45770,16 +45773,16 @@ oZ
 oZ
 qg
 qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
 qg
 Gj
 Gj
@@ -45932,16 +45935,16 @@ oZ
 oZ
 pV
 qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
 qg
 Gj
 Gj
@@ -46094,16 +46097,16 @@ oZ
 Hs
 uL
 qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
 qg
 Gj
 Gj
@@ -46256,16 +46259,16 @@ oZ
 oZ
 up
 qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
 qg
 Gj
 Gj
@@ -46418,16 +46421,16 @@ oZ
 oZ
 sS
 qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
 qg
 Gj
 Gj
@@ -46580,14 +46583,14 @@ oZ
 CW
 qg
 qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
 qg
 qg
 qg
@@ -46741,15 +46744,15 @@ qg
 qg
 qg
 qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
 qg
 Gj
 cm
@@ -46900,18 +46903,18 @@ Gj
 Gj
 Gj
 qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
 qg
 Gj
 Gj
@@ -47062,18 +47065,18 @@ Gj
 Gj
 Gj
 qg
-qg
+wb
 Uc
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
 qg
 Gj
 Gj
@@ -47227,15 +47230,15 @@ qg
 Uc
 ct
 Uc
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
 qg
 Gj
 Gj
@@ -47388,16 +47391,16 @@ Gj
 Tw
 Uc
 Uc
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
 qg
 Gj
 Gj
@@ -47549,17 +47552,17 @@ Gj
 Ss
 Gj
 qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
 qg
 Gj
 Gj
@@ -47711,17 +47714,17 @@ Gj
 Gj
 Gj
 qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
 qg
 Gj
 Gj
@@ -47874,15 +47877,15 @@ Gj
 Gj
 qg
 qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
 qg
 qg
 Gj
@@ -48036,15 +48039,15 @@ Gj
 Gj
 Gj
 qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
+wb
 qg
 Gj
 cm
@@ -48199,13 +48202,13 @@ Gj
 Gj
 qg
 qg
-qg
-qg
-qg
-qg
-qg
-qg
-qg
+wb
+wb
+wb
+wb
+wb
+wb
+wb
 qg
 qg
 Gj
@@ -48363,10 +48366,10 @@ Gj
 qg
 qg
 qg
-qg
-qg
-qg
-qg
+wb
+wb
+wb
+wb
 qg
 qg
 Gj
@@ -48526,9 +48529,9 @@ Gj
 Gj
 qg
 qg
-qg
-qg
-qg
+wb
+wb
+wb
 qg
 Gj
 cm
@@ -48688,8 +48691,8 @@ Gj
 Ss
 Gj
 qg
-qg
-qg
+wb
+wb
 qg
 qg
 Gj
@@ -70068,7 +70071,7 @@ BU
 Ll
 aq
 BU
-Mm
+hr
 GT
 GT
 GT
@@ -71520,7 +71523,7 @@ dI
 Ec
 SX
 gj
-Fl
+tr
 Ec
 ar
 RG
@@ -72508,7 +72511,7 @@ gj
 av
 gd
 gd
-mS
+CF
 Ec
 ar
 Ec
@@ -95181,7 +95184,7 @@ sl
 sl
 OI
 Rr
-Gq
+Hm
 OY
 ph
 GL
@@ -96629,7 +96632,7 @@ kQ
 kQ
 kQ
 RG
-cw
+ha
 gj
 Rr
 VE
@@ -99881,7 +99884,7 @@ GD
 qN
 qN
 Iv
-xu
+gy
 Wp
 Nc
 JZ
