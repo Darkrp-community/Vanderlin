@@ -1,10 +1,10 @@
 /datum/job/roguetown/butler
-	title = "Butler"
+	title = "Servant"
 	flag = BUTLER
 	department_flag = PEASANTS
 	faction = "Station"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 
 	f_title = "Maid"
 	allowed_races = list(
@@ -16,19 +16,18 @@
 		"Dark Elf",
 		"Aasimar"
 	)
-	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL)
+	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL)
 	tutorial = "Your blade is a charcuterie of artisanal cheeses and meat, your armor wit and classical training. You are part of the royal family now, and hold a distinguished position as the head of the royal household staff. You wear their colors and have a semblance of dignity, for without you and the servants under your command the court would have all starved to death."
 	outfit = /datum/outfit/job/roguetown/butler
 	display_order = JDO_BUTLER
 	bypass_lastclass = TRUE
-	min_pq = -10
-	give_bank_account = 30 // Along with the pouch, enough to purchase some ingredients from the farm and give hard working servants a silver here and there. Still need the assistance of the crown's coffers to do anything significant
+	min_pq = -25
+	give_bank_account = 15
 	cmode_music = 'sound/music/cmode/towner/CombatInn.ogg'
 
 /datum/outfit/job/roguetown/butler/pre_equip(mob/living/carbon/human/H)
 	..()
 	backpack_contents = list(/obj/item/book/rogue/manners = 1)
-	mask = /obj/item/clothing/mask/rogue/spectacles
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE) // A well educated head of servants should at least have skilled literacy level
@@ -53,9 +52,10 @@
 		shoes = /obj/item/clothing/shoes/roguetown/nobleboot
 		belt = /obj/item/storage/belt/rogue/leather/plaquesilver
 		beltr = /obj/item/storage/keyring/butler
-		beltl = /obj/item/storage/belt/rogue/pouch/coins/mid
+		beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
 		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/butler
 		backr = /obj/item/storage/backpack/rogue/satchel
+		mask = /obj/item/clothing/mask/rogue/spectacles
 
 	else
 		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/maid
@@ -64,5 +64,5 @@
 		cloak = /obj/item/clothing/cloak/apron
 		belt = /obj/item/storage/belt/rogue/leather/cloth/lady
 		beltr = /obj/item/storage/keyring/butler
-		beltl = /obj/item/storage/belt/rogue/pouch/coins/mid
+		beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
 		backr = /obj/item/storage/backpack/rogue/satchel

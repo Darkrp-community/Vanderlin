@@ -38,9 +38,6 @@
 	backl = /obj/item/rogueweapon/polearm/woodstaff
 	shoes = /obj/item/clothing/shoes/roguetown/shortboots
 	backpack_contents = list(/obj/item/scrying = 1, /obj/item/reagent_containers/glass/bottle/rogue/killersice = 1)
-	if(H.mind)
-		if(!(H.patron == /datum/patron/divine/noc || /datum/patron/inhumen/zizo))
-			H.set_patron(/datum/patron/divine/noc)
 
 		H.mind?.adjust_skillrank(/datum/skill/misc/reading, 6, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/magic/arcane, pick(6,5), TRUE)
@@ -63,7 +60,6 @@
 					armor = /obj/item/clothing/suit/roguetown/shirt/robe/wizard
 					H.dna.species.soundpack_m = new /datum/voicepack/male/wizard()
 		ADD_TRAIT(H, TRAIT_SEEPRICES, TRAIT_GENERIC)
-		ADD_TRAIT(H, TRAIT_LEGENDARY_ALCHEMIST, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
 		H.virginity = TRUE
 		H.change_stat("strength", -2)
