@@ -30,6 +30,10 @@
 	backl = /obj/item/gun/ballistic/revolver/grenadelauncher/bow
 	backr = /obj/item/storage/backpack/rogue/satchel
 	backpack_contents = list(/obj/item/rogueweapon/knife/hunting = 1)
+	if(HAS_TRAIT(H, TRAIT_KAIZOKU))
+		backl = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/hankyu
+		beltr = /obj/item/rogueweapon/sword/sabre/piandao
+		wrists = /obj/item/clothing/wrists/roguetown/bracers/leather/khudagach
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/bows, 3, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)

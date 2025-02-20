@@ -66,3 +66,6 @@
 		H.change_stat("intelligence", 1)
 		H.change_stat("speed", 1)
 	ADD_TRAIT(H, TRAIT_CRATEMOVER, type)
+	if(HAS_TRAIT(H, TRAIT_KAIZOKU))
+		if(H.patron == /datum/patron/divine/abyssor) //Abyssanctum have combative edge as well, but only for those culturally bound to fog islands. The gods are the same, but the religion is not.
+			H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)

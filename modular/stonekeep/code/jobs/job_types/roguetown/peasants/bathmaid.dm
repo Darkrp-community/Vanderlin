@@ -37,6 +37,18 @@ It´s pretty good. Also extra good mood boost for sex, but still a bit barebones
 	beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
 	r_hand = /obj/item/paper/feldsher_certificate/maybe
 	l_hand = /obj/item/soap
+	if(H.dna.species?.id == "abyssariad")
+		mask = /obj/item/clothing/mask/rogue/kaizoku/facemask/dishonor
+		H.burakumin = TRUE
+		to_chat(H, "<span class='userdanger'>In pursuit of hedonism and vices, I forfeited my honor and values of the Abyssal Tide. My soul can no longer claim the essence of an Abyssariad.</span>")
+		if(H.patron == /datum/patron/divine/abyssor)
+			H.patron = GLOB.patronlist[/datum/patron/divine/eora]
+			to_chat(H, "<span class='warning'>The waters I once revered now scorn me - the rivers blistering my impure skin. I've failed Abyssor as his champion, and now I've bonded with [H.patron].")
+
+		if(H.wear_mask)
+			if(istype(H.wear_mask, /obj/item/clothing/mask/rogue/eyepatch || /obj/item/clothing/mask/rogue/eyepatch/left))
+				qdel(H.wear_mask)
+				mask = /obj/item/clothing/mask/rogue/kaizoku/facemask/dishonor
 
 	ADD_TRAIT(H, TRAIT_GOODLOVER, TRAIT_GENERIC)
 

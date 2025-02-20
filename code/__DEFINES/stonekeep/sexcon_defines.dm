@@ -56,3 +56,13 @@ GLOBAL_LIST_INIT(sex_actions, build_sex_actions())
 	/datum/species/dwarf/mountain,\
 	/datum/species/tieberian,\
 )
+
+#define TRAIT_KAIZOKU					"Foglander Cultured"
+
+/mob/living/carbon/human
+	// Another Boolean. But this time entirely for Kaizoku content to define those whom Abyssariads considers 'impure', and for champions.
+	var/burakumin = FALSE
+	var/champion = FALSE
+
+	//a var used for a rather niched power.
+	var/purification = FALSE

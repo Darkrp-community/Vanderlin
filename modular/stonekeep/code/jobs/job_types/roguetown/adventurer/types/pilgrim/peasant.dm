@@ -44,6 +44,26 @@
 	armor = /obj/item/clothing/suit/roguetown/armor/gambeson/light/striped
 	beltl = /obj/item/rogueweapon/sickle
 	beltr = /obj/item/flint
+	if(HAS_TRAIT(H, TRAIT_KAIZOKU)) //Heartfelt humens.
+		wrists = /obj/item/clothing/wrists/roguetown/bracers/leather/khudagach
+		gloves = /obj/item/clothing/gloves/roguetown/fingerless/yugake
+		if(H.gender == FEMALE)
+			shirt = /obj/item/clothing/suit/roguetown/shirt/tunic/kimono
+		else
+			shirt = /obj/item/clothing/suit/roguetown/shirt/looseshirt
+			pants = /obj/item/clothing/under/roguetown/trou/tobi
+		var/helmettype = pickweight(list("Gasa" = 1, "Roningasa" = 1, "Sandogasa" = 1, "Takuhatsugasa" = 1, "Torioigasa" = 1))
+		switch(helmettype)
+			if("Gasa")
+				head = /obj/item/clothing/head/roguetown/tengai/gasa
+			if("Roningasa")
+				head = /obj/item/clothing/head/roguetown/tengai/roningasa
+			if("Sandogasa")
+				head = /obj/item/clothing/head/roguetown/tengai/sandogasa
+			if("Takuhatsugasa")
+				head = /obj/item/clothing/head/roguetown/takuhatsugasa
+			if("Torioigasa")
+				head =/obj/item/clothing/head/roguetown/tengai/torioigasa
 	var/obj/item/rogueweapon/pitchfork/P = new()
 	H.put_in_hands(P, forced = TRUE)
 	if(H.gender == FEMALE)

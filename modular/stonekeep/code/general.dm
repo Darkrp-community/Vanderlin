@@ -1043,3 +1043,128 @@
 			if("onbelt")
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
+
+/obj/item/reagent_containers/glass/cup/attackby(obj/item/I, mob/living/user, params)
+	. = ..()
+	user.changeNext_move(CLICK_CD_MELEE)
+	if(!reagents.total_volume)
+		if(istype(I,/obj/item/natural/cloth))
+			if(do_after(user, 3 SECONDS, src))
+				user.visible_message("<span class='notice'>[user] cleans [src] with a rag.</span>")
+
+/obj/item/perfume
+	dropshrink = 0.5
+
+
+
+/datum/sprite_accessory/facial_hair
+	icon = 'icons/roguetown/mob/facial.dmi'
+	gender = MALE
+
+/datum/sprite_accessory/facial_hair/none
+	name = "None"
+	icon_state = ""
+	gender = FEMALE
+	specuse = ALL_RACES_LIST
+
+/datum/sprite_accessory/facial_hair/shaved
+	name = "None"
+	icon_state = "facial_shaven"
+	gender = MALE
+	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
+
+/datum/sprite_accessory/facial_hair/brew
+	name = "Brew"
+	icon_state = "facial_moonshiner"
+	gender = MALE
+	specuse = list("human", "dwarf", "elf", "tiefling", "halforc")
+
+/datum/sprite_accessory/facial_hair/chops
+	name = "Choppe"
+	icon_state = "facial_muttonmus"
+	gender = MALE
+	specuse = list("human", "dwarf", "elf", "tiefling", "halforc")
+
+/datum/sprite_accessory/facial_hair/chin
+	name = "Clean Chin"
+	icon_state = "facial_chin"
+	gender = MALE
+	specuse = list("human", "dwarf", "elf", "tiefling", "halforc")
+
+/datum/sprite_accessory/facial_hair/braided
+	name = "Dignitary"
+	icon_state = "braided"
+	gender = MALE
+	specuse = list("dwarf")
+
+/datum/sprite_accessory/facial_hair/manly
+	name = "Drinker"
+	icon_state = "facial_manly"
+	gender = MALE
+	specuse = list("human", "dwarf", "elf", "tiefling", "halforc")
+
+/datum/sprite_accessory/facial_hair/fullbeard
+	name = "Full Beard"
+	icon_state = "facial_fullbeard"
+	gender = MALE
+	specuse = list("human", "dwarf", "elf", "tiefling", "halforc")
+
+/datum/sprite_accessory/facial_hair/cousin
+	name = "Fullest Beard"
+	icon_state = "facial_brokenman"
+	gender = MALE
+	specuse = list("human", "dwarf", "elf", "tiefling", "halforc")
+
+/datum/sprite_accessory/facial_hair/knightly
+	name = "Knightly"
+	icon_state = "facial_knightly"
+	gender = MALE
+	specuse = list("human", "dwarf", "elf", "tiefling", "halforc")
+
+/datum/sprite_accessory/facial_hair/know
+	name = "Knowledge"
+	icon_state = "facial_wise"
+	gender = MALE
+	specuse = list("human", "dwarf", "elf", "tiefling", "halforc")
+
+/datum/sprite_accessory/facial_hair/fiveoclockm
+	name = "Mustache"
+	icon_state = "facial_5oclockmoustache"
+	gender = MALE
+	specuse = list("human", "dwarf", "elf", "tiefling", "halforc")
+
+/datum/sprite_accessory/facial_hair/pick
+	name = "Pick"
+	icon_state = "facial_longbeard"
+	gender = MALE
+	specuse = list("human", "dwarf", "elf", "tiefling", "halforc")
+
+/datum/sprite_accessory/facial_hair/pipe
+	name = "Pipesmoker"
+	icon_state = "facial_pipe"
+	gender = MALE
+	specuse = list("human", "dwarf", "elf", "tiefling", "halforc")
+
+/datum/sprite_accessory/facial_hair/viking
+	name = "Raider"
+	icon_state = "facial_viking"
+	gender = MALE
+	specuse = list("human", "dwarf", "elf", "tiefling", "halforc")
+
+/datum/sprite_accessory/facial_hair/ranger
+	name = "Ranger"
+	icon_state = "facial_dwarf"
+	gender = MALE
+	specuse = list("human", "dwarf", "elf", "tiefling", "halforc")
+
+/datum/sprite_accessory/facial_hair/vandyke
+	name = "Rumata"
+	icon_state = "facial_vandyke"
+	gender = MALE
+	specuse = list("human", "dwarf", "elf", "tiefling", "halforc")
+
+/datum/sprite_accessory/facial_hair/burns
+	name = "Sideburns"
+	icon_state = "facial_burns"
+	gender = MALE
+	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")

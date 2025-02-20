@@ -14,7 +14,11 @@
 		"Dwarf",
 		"Tiefling",
 		"Dark Elf",
-		"Aasimar"
+		"Aasimar",
+		"Changeling",
+		"Skylancer",
+		"Ogrun",
+		"Undine"
 	)
 	outfit = /datum/outfit/job/roguetown/adventurer/bard
 	category_tags = list(CTAG_PILGRIM)
@@ -52,7 +56,14 @@
 	beltr = /obj/item/rogueweapon/knife/dagger/steel/special
 	beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
 	backpack_contents = list(/obj/item/flint)
-
+	if(H.dna?.species?.id == "abyssariad"|| H.dna.species.name == "Undine")
+		cloak = /obj/item/clothing/cloak/raincloak/guardiancloak/red
+		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/kaizoku
+		shoes = /obj/item/clothing/shoes/roguetown/shortboots/cloudhead
+		head = /obj/item/clothing/head/roguetown/bardhat/bloodhunter
+		beltr = /obj/item/rogueweapon/knife/kaiken
+		shirt = /obj/item/clothing/suit/roguetown/shirt/looseshirt
+		gloves = /obj/item/clothing/gloves/roguetown/fingerless/yugake
 	var/instruments = list(
 		"Harp" = /obj/item/rogue/instrument/harp,
 		"Lute" = /obj/item/rogue/instrument/lute,
@@ -61,7 +72,8 @@
 		"Flute" = /obj/item/rogue/instrument/flute,
 		"Drum" = /obj/item/rogue/instrument/drum,
 		"Hurdy-Gurdy" = /obj/item/rogue/instrument/hurdygurdy,
-		"Viola" = /obj/item/rogue/instrument/viola)
+		"Viola" = /obj/item/rogue/instrument/viola,
+		"Shamisen" = /obj/item/rogue/instrument/shamisen )
 	var/instrument_choice = input("Choose your instrument.", "XYLIX") as anything in instruments
 	H.set_blindness(0)
 	if(instrument_choice && instruments[instrument_choice])

@@ -216,3 +216,4 @@
 /obj/structure/trellise
 	icon = 'modular/stonekeep/icons/structure.dmi'
 	icon_state = "trellise_empty"
+

@@ -10,7 +10,9 @@
 		"Dwarf",
 		"Tiefling",
 		"Dark Elf",
-		"Aasimar"
+		"Aasimar",
+		"Ogrun"
+
 	)
 	outfit = /datum/outfit/job/roguetown/adventurer/carpenter
 
@@ -51,3 +53,5 @@
 	H.change_stat("intelligence", 1)
 	H.change_stat("constitution", 1)
 	H.change_stat("speed", -1)
+	if(H.dna.species.id == "dwarf")
+		H.cmode_music = 'sound/music/cmode/combat_dwarf.ogg'

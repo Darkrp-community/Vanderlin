@@ -11,7 +11,8 @@
 		"Dwarf",
 		"Tiefling",
 		"Dark Elf",
-		"Aasimar"
+		"Aasimar",
+		"Ogrun"
 	)
 	outfit = /datum/outfit/job/roguetown/adventurer/miner
 	category_tags = list(CTAG_PILGRIM)
@@ -50,6 +51,8 @@
 
 	if(H.dna.species.id == "dwarf")
 		head = /obj/item/clothing/head/roguetown/helmet/leather/minershelm
+		id = /obj/item/clothing/ring/silver/makers_guild
+		beltr = /obj/item/key/blacksmith
 		H.cmode_music = 'sound/music/cmode/combat_dwarf.ogg'
 	else
 		beltr = /obj/item/flashlight/flare/torch/lantern

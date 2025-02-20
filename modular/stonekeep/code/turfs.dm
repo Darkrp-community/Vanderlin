@@ -109,16 +109,42 @@
 	landsound = 'sound/foley/jumpland/grassland.wav'
 	slowdown = 0
 
-/turf/open/floor/rogue/dirt/sand // Shut up.
-	name = "sand"
-	desc = "Precursor to glass, ancestor to rocks."
-	icon = 'modular/stonekeep/icons/turfs.dmi'
-	gender = PLURAL
-	icon_state = "sand"
-	smooth = SMOOTH_TRUE | SMOOTH_MORE
-	canSmoothWith = list(/turf/open/floor/rogue, /turf/closed/mineral, /turf/closed/wall/mineral)
-	neighborlay = "sandedge"
 
-/turf/open/floor/rogue/dirt/sand/Initialize()
+/*	..................   Kaizoku Sand   ................... */
+/turf/open/floor/rogue/sand
+	icon = 'modular/stonekeep/icons/turfs.dmi'
+	icon_state = "sand1"
+	footstep = FOOTSTEP_SAND
+	barefootstep = FOOTSTEP_SOFT_BAREFOOT
+	clawfootstep = FOOTSTEP_SAND
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	landsound = 'sound/foley/jumpland/dirtland.wav'
+	neighborlay = "sandedges"
+	smooth = SMOOTH_TRUE
+	canSmoothWith = list(
+		/turf/closed/mineral/rogue,
+		/turf/closed/mineral,
+		/turf/closed/wall/mineral/rogue/stonebrick,
+		/turf/closed/wall/mineral/rogue/wood,
+		/turf/closed/wall/mineral/rogue/wooddark,
+		/turf/closed/wall/mineral/rogue/stone,
+		/turf/closed/wall/mineral/rogue/stone/moss,
+		/turf/open/floor/rogue/cobble,
+		/turf/open/floor/rogue/dirt,
+		/turf/open/floor/rogue/grass,
+		/turf/open/floor/rogue/grass/red,
+		/turf/open/floor/rogue/grass/yel,
+		/turf/open/floor/rogue/grass/cold,
+		/turf/open/floor/rogue/snow,
+		/turf/open/floor/rogue/snow/patchy,
+		/turf/open/floor/rogue/snow/rough
+	)
+
+/turf/open/floor/rogue/sand/cardinal_smooth(adjacencies)
+	// Apply custom smoothing for sand turfs
+	roguesmooth(adjacencies)
+
+/turf/open/floor/rogue/sand/Initialize()
 	dir = pick(GLOB.cardinals)
 	. = ..()
+

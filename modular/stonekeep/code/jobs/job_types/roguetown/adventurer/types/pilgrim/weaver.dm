@@ -2,11 +2,15 @@
 	name = "Weaver"
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = list("Humen",
-	"Elf",
-	"Half-Elf",
-	"Dwarf",
-	"Tiefling",
-	"Aasimar"
+		"Elf",
+		"Half-Elf",
+		"Dwarf",
+		"Tiefling",
+		"Aasimar",
+		"Changeling",
+		"Skylancer",
+		"Ogrun",
+		"Undine"
 	)
 	outfit = /datum/outfit/job/roguetown/adventurer/seamstress
 	category_tags = list(CTAG_DISABLED)
