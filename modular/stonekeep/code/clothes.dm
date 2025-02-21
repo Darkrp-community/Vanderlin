@@ -52,7 +52,7 @@
 	item_state = "deserthood"
 /obj/item/clothing/head/roguetown/roguehood/hierophant/Initialize()
 	. = ..()
-	color = RANDOM_NOBLE_DYES
+	color = pick_assoc(GLOB.noble_dyes)
 
 
 //................ Malum Acolyte Helmet ............... //
@@ -76,7 +76,7 @@
 	item_state = "monkhood"
 /obj/item/clothing/head/roguetown/roguehood/pontifex/Initialize()
 	. = ..()
-	color = RANDOM_PEASANT_DYES
+	color = pick(GLOB.peasant_dyes)
 
 /obj/item/clothing/head/roguetown/inqhat
 	name = "inquisitorial hat"
@@ -387,7 +387,7 @@
 	nodismemsleeves = TRUE
 
 /obj/item/clothing/cloak/cape/silk/random/Initialize()
-	color = RANDOM_NOBLE_DYES
+	color = pick_assoc(GLOB.noble_dyes)
 	add_overlay(mutable_appearance('modular/stonekeep/icons/clothing.dmi', "clasp"))
 	..()
 
@@ -689,7 +689,7 @@
 	armor = ARMOR_WEAK
 /obj/item/clothing/under/roguetown/trou/baggy/Initialize()
 	. = ..()
-	color = RANDOM_NOBLE_DYES
+	color = pick_assoc(GLOB.noble_dyes)
 /obj/item/clothing/under/roguetown/trou/leather
 	salvage_result = /obj/item/natural/hide/cured
 	armor =  ARMOR_LEATHER_BAD
@@ -790,7 +790,7 @@
 	flags_inv = null
 
 /obj/item/clothing/under/roguetown/tights/stockings/random/Initialize()
-	color = RANDOM_PEASANT_DYES
+	color = pick(GLOB.peasant_dyes)
 	..()
 /obj/item/clothing/under/roguetown/tights/stockings/white
 	color = CLOTHING_WHITE
@@ -810,7 +810,7 @@
 	icon_state = "silk"
 
 /obj/item/clothing/under/roguetown/tights/stockings/silk/random/Initialize()
-	color = RANDOM_NOBLE_DYES
+	color = pick_assoc(GLOB.noble_dyes)
 	..()
 /obj/item/clothing/under/roguetown/tights/stockings/silk/white
 	color = CLOTHING_CHALK_WHITE
@@ -836,7 +836,7 @@
 	adjustable = FALSE
 
 /obj/item/clothing/under/roguetown/pantaloons/random/Initialize()
-	color = RANDOM_NOBLE_DYES
+	color = pick_assoc(GLOB.noble_dyes)
 	..()
 
 /obj/item/clothing/under/roguetown/pantaloons/dark

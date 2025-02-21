@@ -38,7 +38,7 @@
 	sleeved = 'modular/stonekeep/kaizoku/icons/helpers/sleeves_armor.dmi'
 
 /obj/item/clothing/suit/roguetown/armor/leather/vest/muneate/random/Initialize()
-	color = RANDOM_PEASANT_DYES
+	color = pick(GLOB.peasant_dyes)
 	..()
 
 /obj/item/clothing/suit/roguetown/armor/leather/vest/muneate/kappa
@@ -241,7 +241,7 @@
 	color = CLOTHING_EIDOLON
 
 /obj/item/clothing/suit/roguetown/armor/leather/splint/kikko/rich/Initialize()
-	color = RANDOM_NOBLE_DYES
+	color = pick_assoc(GLOB.noble_dyes)
 	..()
 
 /obj/item/clothing/suit/roguetown/armor/leather/studded/kikko/AdjustClothes(mob/user)
@@ -297,7 +297,7 @@
 	sleeved = 'modular/stonekeep/kaizoku/icons/helpers/sleeves_armor.dmi'
 
 /obj/item/clothing/suit/roguetown/armor/leather/jacket/haori/random/Initialize()
-	color = RANDOM_PEASANT_DYES
+	color = pick(GLOB.peasant_dyes)
 	..()
 
 /obj/item/clothing/suit/roguetown/armor/leather/jacket/haori/dark
@@ -397,12 +397,12 @@
 
 // Randomized color Hitatare
 /obj/item/clothing/suit/roguetown/armor/gambeson/light/hitatare/random/Initialize()
-	color = RANDOM_PEASANT_DYES
+	color = pick(GLOB.peasant_dyes)
 	..()
 
 // Randomized color Hitatare
 /obj/item/clothing/suit/roguetown/armor/gambeson/light/hitatare/rich/Initialize()
-	color = RANDOM_NOBLE_DYES
+	color = pick_assoc(GLOB.noble_dyes)
 	..()
 
 // Ronin Hitatare
@@ -528,7 +528,7 @@
 	color = CLOTHING_SOOT_BLACK
 
 /obj/item/clothing/cloak/raincloak/guardiancloak/random/Initialize()
-	color = RANDOM_PEASANT_DYES
+	color = pick(GLOB.peasant_dyes)
 	..()
 
 /obj/item/clothing/cloak/raincloak/guardiancloak/red
@@ -972,8 +972,8 @@
 	color = CLOTHING_STORM
 
 /obj/item/clothing/head/roguetown/soheicloth/ocean
-	name = "ocean sohei coverings"
-	color = CLOTHING_OCEAN
+	name = "sea sohei coverings"
+	color = CLOTHING_SEA
 
 /obj/item/clothing/head/roguetown/soheicloth/island
 	name = "island sohei coverings"
@@ -1183,9 +1183,9 @@
 	color = CLOTHING_STORM
 
 /obj/item/clothing/head/roguetown/helmet/kaizoku/hachigane/ocean
-	name = "ocean hachi-gane"
-	desc = "Simple, lamellar head protection. Marked in light blue for the expeditionary magicians and monks of Abyssanctum's faith, long married to the ocean."
-	color = CLOTHING_OCEAN
+	name = "sea hachi-gane"
+	desc = "Simple, lamellar head protection. Marked in light blue for the expeditionary magicians and monks of Abyssanctum's faith, long married to the seas."
+	color = CLOTHING_SEA
 
 /obj/item/clothing/head/roguetown/helmet/kaizoku/hachigane/island
 	name = "island hachi-gane"
@@ -1327,8 +1327,8 @@
 	color = CLOTHING_STORM
 
 /obj/item/clothing/head/roguetown/wizhat/onmyoji/ocean
-	name = "ocean onmyoji warhat"
-	color = CLOTHING_OCEAN
+	name = "sea onmyoji warhat"
+	color = CLOTHING_SEA
 
 /obj/item/clothing/head/roguetown/wizhat/onmyoji/island
 	name = "island onmyoji warhat"
@@ -1352,7 +1352,7 @@
 	bloody_icon_state = "helmetblood_big"
 
 /obj/item/clothing/head/roguetown/wizhat/onmyoji/eboshi/Initialize()
-	color = RANDOM_NOBLE_DYES
+	color = pick_assoc(GLOB.noble_dyes)
 	..()
 
 /obj/item/clothing/head/roguetown/rare/myrmidon
@@ -1798,7 +1798,7 @@
 	sleeved = 'modular/stonekeep/kaizoku/icons/helpers/sleeves_pants.dmi'
 
 /obj/item/clothing/under/roguetown/trou/tobi/random/Initialize()
-	color = RANDOM_PEASANT_DYES
+	color = pick(GLOB.peasant_dyes)
 	..()
 
 /obj/item/clothing/under/roguetown/trou/tobi/thunder
@@ -1810,8 +1810,8 @@
 	color = CLOTHING_STORM
 
 /obj/item/clothing/under/roguetown/trou/tobi/ocean
-	name = "ocean tobi pants"
-	color = CLOTHING_OCEAN
+	name = "sea tobi pants"
+	color = CLOTHING_SEA
 
 /obj/item/clothing/under/roguetown/trou/tobi/island
 	name = "island tobi pants"
@@ -1837,7 +1837,7 @@
 	sleeved = 'modular/stonekeep/kaizoku/icons/helpers/sleeves_pants.dmi'
 
 /obj/item/clothing/under/roguetown/trou/leather/fur/random/Initialize()
-	color = RANDOM_PEASANT_DYES
+	color = pick(GLOB.peasant_dyes)
 	..()
 
 /obj/item/clothing/under/roguetown/trou/leather/fur/dragonslayer
@@ -1854,7 +1854,7 @@
 	sleeved = 'modular/stonekeep/kaizoku/icons/helpers/sleeves_pants.dmi'
 
 /obj/item/clothing/under/roguetown/tights/hakama/random/Initialize()
-	color = RANDOM_PEASANT_DYES
+	color = pick(GLOB.peasant_dyes)
 	..()
 
 /obj/item/clothing/under/roguetown/tights/hakama/eidolon
@@ -1958,7 +1958,7 @@
 	l_sleeve_status = SLEEVE_NORMAL
 
 /obj/item/clothing/suit/roguetown/shirt/tunic/kimono/random/Initialize()
-	color = RANDOM_PEASANT_DYES
+	color = pick(GLOB.peasant_dyes)
 	..()
 
 /obj/item/clothing/suit/roguetown/shirt/tunic/kimono/ronin
@@ -1984,7 +1984,7 @@
 	body_parts_covered = CHEST|ARMS|VITALS
 
 /obj/item/clothing/suit/roguetown/shirt/rags/monkgarb/random/Initialize()
-	color = RANDOM_PEASANT_DYES
+	color = pick(GLOB.peasant_dyes)
 	..()
 
 /obj/item/clothing/suit/roguetown/shirt/tunic/kamishimo //I know this is actually a Kataginu, but it is know more as 'Kamishimo', even if lacking a Hakama. Because HAKAMA is its own thing here.
@@ -2001,7 +2001,7 @@
 	body_parts_covered = CHEST|VITALS
 
 /obj/item/clothing/suit/roguetown/shirt/tunic/kamishimo/random/Initialize()
-	color = RANDOM_PEASANT_DYES
+	color = pick(GLOB.peasant_dyes)
 	..()
 
 /obj/item/clothing/suit/roguetown/shirt/tunic/kamishimo/ronin
@@ -2025,7 +2025,7 @@
 	body_parts_covered = CHEST|ARMS|VITALS
 
 /obj/item/clothing/suit/roguetown/shirt/looseshirt/Initialize()
-	color = RANDOM_PEASANT_DYES
+	color = pick(GLOB.peasant_dyes)
 	..()
 
 /obj/item/clothing/suit/roguetown/shirt/looseshirt/shinobi
@@ -2068,7 +2068,7 @@
 	color = CLOTHING_SOOT_BLACK
 
 /obj/item/clothing/suit/roguetown/shirt/robe/wizard/guardian/random/Initialize()
-	color = RANDOM_NOBLE_DYES
+	color = pick_assoc(GLOB.noble_dyes)
 	..()
 
 /obj/item/clothing/suit/roguetown/shirt/robe/wizard/guardian/thunder
@@ -2082,9 +2082,9 @@
 	color = CLOTHING_STORM
 
 /obj/item/clothing/suit/roguetown/shirt/robe/wizard/guardian/ocean
-	name = "ocean onmyoji's warfare garb"
-	desc = "The garbs used by Abyssariad magicians during times of warfare.  Marked in light blue for the expeditionary magicians and monks of Abyssanctum's faith, long married to the ocean."
-	color = CLOTHING_OCEAN
+	name = "sea onmyoji's warfare garb"
+	desc = "The garbs used by Abyssariad magicians during times of warfare.  Marked in light blue for the expeditionary magicians and monks of Abyssanctum's faith, long married to the seas."
+	color = CLOTHING_SEA
 
 /obj/item/clothing/suit/roguetown/shirt/robe/wizard/guardian/island
 	name = "island onmyoji's warfare garb"
@@ -2108,7 +2108,7 @@
 	color = null
 
 /obj/item/clothing/suit/roguetown/shirt/kaizoku/robe/Initialize()
-	color = RANDOM_PEASANT_DYES
+	color = pick(GLOB.peasant_dyes)
 	..()
 
 
@@ -2125,7 +2125,7 @@
 	mob_overlay_icon ='modular/stonekeep/kaizoku/icons/clothing/belts.dmi'
 
 /obj/item/storage/belt/rogue/kaizoku/leather/daisho/random/Initialize()
-	color = RANDOM_PEASANT_DYES
+	color = pick(GLOB.peasant_dyes)
 	..()
 
 /obj/item/storage/belt/rogue/kaizoku/leather/daisho/ninja/PopulateContents()
@@ -2142,8 +2142,8 @@
 	color = CLOTHING_STORM
 
 /obj/item/storage/belt/rogue/kaizoku/leather/daisho/ocean
-	name = "ocean daisho belt"
-	color = CLOTHING_OCEAN
+	name = "sea daisho belt"
+	color = CLOTHING_SEA
 
 /obj/item/storage/belt/rogue/kaizoku/leather/daisho/island
 	name = "island daisho belt"
