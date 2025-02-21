@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/jailor
 	title = "Jailor"
 	flag = JAILOR
@@ -52,3 +53,4 @@
 	H.change_stat("intelligence", pick(-4,-5,-6)) // He's stupid
 	H.change_stat("perception", pick(-3,-3,-4)) // Yeah he's stupid- he's not going to notice small things
 	H.verbs |= /mob/living/carbon/human/proc/torture_victim // I don't think they need it, but here we go anyways.
+*/

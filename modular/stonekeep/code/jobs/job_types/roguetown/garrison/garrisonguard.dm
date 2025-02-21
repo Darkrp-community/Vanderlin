@@ -1,6 +1,6 @@
 // ==========	Updated to new Kaizoku garrison	====================
 /datum/job/roguetown/guardsman
-	title = "Garrison Guard"
+	title = "Ashigaru"
 	flag = GUARDSMAN
 	department_flag = GARRISON
 	faction = "Station"

@@ -6,7 +6,7 @@ GLOBAL_LIST_EMPTY(lord_titles)
 	flag = LORD
 	department_flag = NOBLEMEN
 	faction = "Station"
-	total_positions = 0
+	total_positions = 1
 	spawn_positions = 1
 
 	spells = list(
@@ -15,7 +15,9 @@ GLOBAL_LIST_EMPTY(lord_titles)
 	)
 
 	allowed_races = list(
-		"Humen"
+		"Humen",
+		"Elf",
+		"Dwarf"
 	)
 	outfit = /datum/outfit/job/roguetown/lord
 	display_order = JDO_LORD

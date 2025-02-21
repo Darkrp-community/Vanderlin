@@ -16,12 +16,14 @@
 	outfit = /datum/outfit/job/roguetown/hand
 	advclass_cat_rolls = list(CTAG_HAND = 20)
 	display_order = JDO_HAND
-	tutorial = "You owe everything to your liege. Once, you were just a humble friend- now you are one of the most important men within the kingdom itself."
+	tutorial = "Who else can claim more responsibility for the continued survival of Rockhill than you? \
+				You are not only the great and noble monarch's chief advisor, you are their voice, their desire made into action. \
+				Let none blame you for the current hard times of the great city, as you have plans, not only for yourself but for all of Enigma."
 	bypass_lastclass = TRUE
 	whitelist_req = FALSE
 	give_bank_account = 120
 	min_pq = 0
-	cmode_music = 'sound/music/combat_noble.ogg'
+	cmode_music = 'sound/music/cmode/nobility/combat_noble.ogg'
 
 /*
 /datum/job/roguetown/hand/special_job_check(mob/dead/new_player/player)
@@ -37,7 +39,7 @@
 
 /datum/outfit/job/roguetown/hand
 	shoes = /obj/item/clothing/shoes/roguetown/boots
-	belt = /obj/item/storage/belt/rogue/leather/hand
+	belt = /obj/item/storage/belt/rogue/leather/steel
 
 /datum/job/roguetown/hand/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	. = ..()
@@ -56,6 +58,7 @@
 
 //Duelist start. Basically brings back OG Hand before nerf.
 /datum/outfit/job/roguetown/hand/duelist/pre_equip(mob/living/carbon/human/H)
+	..()
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/guard
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/jacket/hand
 	pants = /obj/item/clothing/under/roguetown/tights/black
@@ -87,6 +90,7 @@
 
 //Spymaster start. More similar to the rogue adventurer - loses heavy armor and sword skills for more sneaky stuff.
 /datum/outfit/job/roguetown/hand/spymaster/pre_equip(mob/living/carbon/human/H)
+	..()
 	cloak = /obj/item/clothing/cloak/raincloak/mortus //cool spymaster cloak
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/guard
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/jacket/hand
@@ -112,7 +116,7 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/lockpicking, 4, TRUE) // not like they're gonna break into the vault.
 	H.change_stat(STATKEY_STR, -1)
 	H.change_stat(STATKEY_PER, 3)
-	H.change_stat(SATTKEY_SPD, 2)
+	H.change_stat(STATKEY_SPD, 2)
 	H.change_stat(STATKEY_INT, 1)
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
@@ -126,6 +130,7 @@
 
 //Tutor start. Trades combat skills for more knowledge and skills - for older hands, hands that don't do combat - people who wanna play old advisors.
 /datum/outfit/job/roguetown/hand/tutor/pre_equip(mob/living/carbon/human/H)
+	..()
 	head = /obj/item/clothing/head/roguetown/fancyhat
 	mask = /obj/item/clothing/mask/rogue/spectacles/golden
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/guard

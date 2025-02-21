@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/servant
 	title = "Servant"
 	flag = SERVANT
@@ -101,3 +102,4 @@
 	..()
 	if(H.mind)
 		neck = /obj/item/key/matron
+*/

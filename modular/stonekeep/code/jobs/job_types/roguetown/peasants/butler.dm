@@ -1,10 +1,10 @@
 /datum/job/roguetown/butler
-	title = "Servant"
+	title = "Butler"
 	flag = BUTLER
 	department_flag = PEASANTS
 	faction = "Station"
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 1
+	spawn_positions = 1
 
 	f_title = "Maid"
 	allowed_races = list(
@@ -12,12 +12,12 @@
 		"Elf",
 		"Half-Elf",
 		"Dwarf",
-		"Tiefling",
-		"Dark Elf",
 		"Aasimar"
 	)
-	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL)
-	tutorial = "Your blade is a charcuterie of artisanal cheeses and meat, your armor wit and classical training. You are part of the royal family now, and hold a distinguished position as the head of the royal household staff. You wear their colors and have a semblance of dignity, for without you and the servants under your command the court would have all starved to death."
+	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL)
+	tutorial = "You are one of the last remaining loyal to your lord and master, the Psyrant. \
+				In yils past you led a veritable host of servants for your honored liege, more and more being let go over the past decade. Now it is just you. \
+				Even in such dire times, upholding the standards of service and decorum within the palace is a duty worth dying for."
 	outfit = /datum/outfit/job/roguetown/butler
 	display_order = JDO_BUTLER
 	bypass_lastclass = TRUE

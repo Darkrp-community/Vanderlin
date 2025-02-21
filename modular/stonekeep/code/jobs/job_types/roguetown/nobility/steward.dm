@@ -1,5 +1,5 @@
 /datum/job/roguetown/steward
-	title = "Treasurer"
+	title = "Banker"
 	flag = STEWARD
 	department_flag = NOBLEMEN
 	faction = "Station"
