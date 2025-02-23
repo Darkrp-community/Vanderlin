@@ -96,7 +96,6 @@
 #define NOBLEMEN		(1<<0)
 
 #define LORD		(1<<0)
-#define CONSORT		(1<<1)
 #define HAND		(1<<2)
 #define STEWARD		(1<<3)
 #define WIZARD		(1<<4)
@@ -105,17 +104,11 @@
 #define MERCHANT	(1<<7)
 #define FELDSHER    (1<<8)
 #define NIGHTMAN    (1<<9)
-#define MINOR_NOBLE	(1<<10)
 
 #define GARRISON		(1<<1)
 
 #define GUARDSMAN	(1<<0)
-#define WATCHMAN	(1<<1)
-#define JAILOR	    (1<<2)
-#define DUNGEONEER	(1<<3)
 #define MAYOR       (1<<4)
-#define FORWARDEN   (1<<5)
-#define FORGUARD    (1<<6)
 
 #define CHURCHMEN		(1<<2)
 
@@ -129,13 +122,9 @@
 
 #define INNKEEP		(1<<0)
 #define BLACKSMITH	(1<<1)
-#define ALCHEMIST	(1<<2)
 #define MASON		(1<<3)
 #define TAILOR		(1<<4)
-#define ARTIFICER	(1<<5)
-#define MATRON 		(1<<6)
 #define PHYSICKER	(1<<7)
-#define SCRIBE		(1<<8)
 
 #define PEASANTS		(1<<4)
 
@@ -150,22 +139,15 @@
 #define ADVENTURER	(1<<9)
 #define COOK		(1<<10)
 #define GRABBER		(1<<11)
-#define BARD		(1<<12)
-#define CHEESEMAKER (1<<13)
 #define MIGRANT		(1<<16)
 #define BANDIT		(1<<17)
+#define VAGRANT		(1<<18)
 
 #define APPRENTICES		(1<<5)
 
-#define APPRENTICE	(1<<0)
-#define SQUIRE		(1<<1)
+#define MAPPRENTICE	(1<<0)
 #define SERVANT		(1<<2)
 #define PRINCE		(1<<3)
-
-#define YOUNGFOLK           (1<<6)
-#define INNKEEPCHILD    (1<<1)
-#define CHURCHLING      (1<<2)
-#define ORPHAN		    (1<<3)
 
 #define UNDEAD		(1<<10)
 
@@ -182,11 +164,9 @@
 // job display orders //
 
 #define JDO_LORD 1
-#define JDO_CONSORT 1.1
-#define JDO_PRINCE 1.2
 #define JDO_HAND 2
 #define JDO_STEWARD 3
-#define JDO_MINOR_NOBLE 3.5
+#define JDO_CHIEF 3.1
 
 #define JDO_MAGICIAN 4
 #define JDO_WAPP 5
@@ -197,59 +177,37 @@
 #define JDO_CAPTAIN 7
 #define JDO_VET 7.1
 #define JDO_ROYALGUARD 7.2
-#define JDO_MENATARMS 8
-#define JDO_CITYWATCHMEN 8.1
-#define JDO_DUNGEONEER 9
-#define JDO_JAILOR 9.1
-#define JDO_SQUIRE 10
-#define JDO_FORWARDEN 11
-#define JDO_FORGUARD 11.1
+#define JDO_CITYWATCHMEN 8
 
 #define JDO_PRIEST 12
 #define JDO_CLERIC 13
 #define JDO_MONK 14
 #define JDO_GRAVETENDER 15
-#define JDO_CHURCHLING 15.1
 
 #define JDO_PURITAN 16
 #define JDO_SHEPHERD 17
 #define JDO_TEMPLAR 17.1
 
 #define JDO_MERCHANT 18
-#define JDO_TAILOR 18.1
 #define JDO_GRABBER 19
 
 #define JDO_ARMORER 20
 #define JDO_WSMITH 21
-#define JDO_BAPP 22
-#define JDO_ARTIFICER 23
-
+#define JDO_TAILOR 21.1
 #define JDO_MASON 24
+#define JDO_MAPP 25
 
 #define JDO_BUTLER 25
-#define JDO_SERVANT 26
 
 #define JDO_INNKEEP 27
-#define JDO_INNKEEP_CHILD 27.5
 #define JDO_COOK 28
-
-#define JDO_BUTCHER 28.1
 #define JDO_SOILSON 28.2
 #define JDO_FISHER 28.3
 #define JDO_HUNTER 28.4
-#define JDO_CARPENTER 28.6
-#define JDO_CHEESEMAKER 28.7
-#define JDO_MINER 28.8
-#define JDO_MATRON 28.9
-#define JDO_GRAVEMAN 29
-
-#define JDO_APOTHECARY 29.1
 
 #define JDO_JESTER 30
 #define JDO_BARD 30.1
 #define JDO_PRISONER 31
-
-#define JDO_CHIEF 32
 
 #define JDO_ADVENTURER 33
 #define JDO_PILGRIM 34.2
@@ -258,5 +216,7 @@
 
 #define JDO_MERCENARY 35
 
+#define JDO_NITEMAN 35.1
+#define JDO_NITEMAIDEN 35.2
 #define JDO_VAGRANT 36
 #define JDO_ORPHAN 37

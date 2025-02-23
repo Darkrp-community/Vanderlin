@@ -115,10 +115,12 @@
 				HL.job = "Ex-Monarch"
 				var/datum/job/J = SSjob.GetJobType(/datum/job/roguetown/lord)
 				J?.remove_spells(HL)
+			/* Stonekeep
 			if(HL.job == "Consort")
 				HL.job = "Ex-Consort"
 				var/datum/job/J = SSjob.GetJobType(/datum/job/roguetown/consort)
 				J?.remove_spells(HL)
+			*/
 		switch(HU.gender)
 			if("male")
 				HU.mind.assigned_role = "Monarch"

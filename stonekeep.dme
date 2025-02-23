@@ -2038,6 +2038,7 @@
 #include "modular\stonekeep\code\jobs\job_types\roguetown\serfs\carpenter.dm"
 #include "modular\stonekeep\code\jobs\job_types\roguetown\serfs\innkeep.dm"
 #include "modular\stonekeep\code\jobs\job_types\roguetown\serfs\matron.dm"
+#include "modular\stonekeep\code\jobs\job_types\roguetown\serfs\physicker.dm"
 #include "modular\stonekeep\code\jobs\job_types\roguetown\serfs\scribe.dm"
 #include "modular\stonekeep\code\jobs\job_types\roguetown\serfs\tailor.dm"
 #include "modular\stonekeep\code\jobs\job_types\roguetown\youngfolk\churchling.dm"

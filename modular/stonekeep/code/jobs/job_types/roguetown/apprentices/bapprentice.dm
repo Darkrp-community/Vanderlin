@@ -1,6 +1,6 @@
 /datum/job/roguetown/mapprentice
 	title = "Maker's Apprentice"
-	flag = APPRENTICE
+	flag = MAPPRENTICE
 	department_flag = APPRENTICES
 	faction = "Station"
 	total_positions = 2
@@ -14,7 +14,7 @@
 				One dae you will craft your own masterwork, pay your remaining dues and have your own apprentices to torment."
 
 	outfit = /datum/outfit/job/roguetown/mapprentice
-	display_order = JDO_BAPP
+	display_order = JDO_MAPP
 	give_bank_account = TRUE
 	min_pq = -50
 	bypass_lastclass = TRUE

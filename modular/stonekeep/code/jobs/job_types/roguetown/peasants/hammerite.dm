@@ -7,9 +7,9 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = ALL_PLAYER_RACES_BY_NAME
 	outfit = /datum/outfit/job/roguetown/hammerite
-	flag = MINER
+	flag = MASON
 	department_flag = PEASANTS
-	display_order = JDO_MINER
+	display_order = JDO_MASON
 	give_bank_account = 30
 	total_positions = 2
 	spawn_positions = 2

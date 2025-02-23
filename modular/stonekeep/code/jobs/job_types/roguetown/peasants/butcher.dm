@@ -1,3 +1,4 @@
+/*
 /datum/job/roguetown/butcher
 	title = "Butcher"
 	flag = BEASTMASTER
@@ -62,3 +63,4 @@
 		H.mind?.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/labor/butchering, 5, TRUE)
 
+*/
