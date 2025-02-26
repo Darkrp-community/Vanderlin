@@ -52,6 +52,6 @@
 	H.change_stat("speed", 2)
 	H.change_stat("perception", 1)
 	H.change_stat("strength", -1)
-	if(!H.has_language(/datum/language/dwarvish))
+	if(!H.has_language(/datum/language/dwarvish) && H.dna.species.id != ("Dark Elf" || "Elf"))
 		H.grant_language(/datum/language/dwarvish)
 		to_chat(H, "<span class='info'>My life has been shaped by working for the Dwarf-dominated Maker's Guild. I can speak Dwarvish with ,d before my speech.</span>")

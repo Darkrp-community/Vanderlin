@@ -62,7 +62,7 @@
 		H.change_stat("constitution", 1)
 		H.change_stat("speed", 1)
 		ADD_TRAIT(H, TRAIT_MALUMFIRE, TRAIT_GENERIC)
-		if(!H.has_language(/datum/language/dwarvish))
+		if(!H.has_language(/datum/language/dwarvish) && H.dna.species.id != ("Dark Elf" || "Elf"))
 			H.grant_language(/datum/language/dwarvish)
 			to_chat(H, "<span class='info'>My life has been shaped by working for the Dwarf-dominated Maker's Guild. I can speak Dwarvish with ,d before my speech.</span>")
 

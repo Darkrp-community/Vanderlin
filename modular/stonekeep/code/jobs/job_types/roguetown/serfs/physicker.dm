@@ -50,4 +50,7 @@
 	ADD_TRAIT(H, TRAIT_EMPATH, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
 	H?.mind?.AddSpell(new /obj/effect/proc_holder/spell/invoked/diagnose/secular)
+	if(!H.has_language(/datum/language/elvish) && H.dna.species.id != ("Dwarf"))
+		H.grant_language(/datum/language/elvish)
+		to_chat(H, "<span class='info'>My life has been shaped by study, including learning from the venerable elven corpus. I can speak Elvish with ,e before my speech.</span>")
 

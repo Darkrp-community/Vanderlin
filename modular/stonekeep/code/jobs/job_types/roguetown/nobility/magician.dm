@@ -72,6 +72,9 @@
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/ethereal_jaunt)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/learnspell)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
+		if(!H.has_language(/datum/language/elvish) && H.dna.species.id != ("Dwarf"))
+			H.grant_language(/datum/language/elvish)
+			to_chat(H, "<span class='info'>My life has been shaped by study, including learning from the venerable elven corpus. I can speak Elvish with ,e before my speech.</span>")
 
 //............... Unique Court Mage Stuff ...........................
 /*

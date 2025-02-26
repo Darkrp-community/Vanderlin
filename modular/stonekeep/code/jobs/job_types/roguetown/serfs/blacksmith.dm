@@ -48,16 +48,11 @@
 	backl =	/obj/item/rogueweapon/hammer/sledgehammer
 	beltr = /obj/item/storage/keyring/armorsmith
 	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/makers
-	switch(H.patron?.type)
-		if(/datum/patron/divine/malum)
-			neck = /obj/item/clothing/neck/roguetown/psycross/silver/malum_steel
-			backpack_contents = list(/obj/item/storage/belt/rogue/pouch/coins/mid)
-		else
-			neck = /obj/item/storage/belt/rogue/pouch/coins/mid
+	neck = /obj/item/storage/belt/rogue/pouch/coins/mid
 	H.change_stat("strength", 1)
 	H.change_stat("endurance", 2)
 	H.change_stat("speed", -1)
-	if(!H.has_language(/datum/language/dwarvish))
+	if(!H.has_language(/datum/language/dwarvish) && H.dna.species.id != ("Dark Elf" || "Elf"))
 		H.grant_language(/datum/language/dwarvish)
 		to_chat(H, "<span class='info'>My life has been shaped by working for the Dwarf-dominated Maker's Guild. I can speak Dwarvish with ,d before my speech.</span>")
 /*
