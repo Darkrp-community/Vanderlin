@@ -67,8 +67,8 @@ Future plan:
 	// Qualities: +Dense muscles ; higher fast-twitch fiber
 	// =>Disadvantage: -Lower Stationary Acuity; They are better at noticing movements, bad at noticing stationary objects. Bad with bows by nature. Foxes have that IRL because of nightvision. At least they have more reason to have it than Dark Elves.
 	// -Low fat mass, high muscle mass. Streamlined body structure that minimizes resistance and maximizes intense muscular movements.
-	specstats = list("strength" = 1, "perception" = -2, "intelligence" = 2, "constitution" = -1, "endurance" = 1, "speed" = 1, "fortune" = 0) // Don't even bother making each gender different. Abyssariads are equals in championage.
-	specstats_f = list("strength" = 1, "perception" = -2, "intelligence" = 2, "constitution" = -1, "endurance" = 1, "speed" = 1, "fortune" = 0)
+	specstats = list("strength" = 1, "perception" = -2, "intelligence" = 2, "constitution" = -1, "endurance" = 2, "speed" = 0, "fortune" = 0) // Don't even bother making each gender different. Abyssariads are equals in championage.
+	specstats_f = list("strength" = 1, "perception" = -2, "intelligence" = 2, "constitution" = -1, "endurance" = 2, "speed" = 0, "fortune" = 0)
 	enflamed_icon = "widefire"
 	mutanttongue = /obj/item/organ/tongue/kitsune
 //	minrace_pq = 0
