@@ -10,10 +10,9 @@
 		"Humen",
 		"Elf",
 		"Half-Elf",
-		"Dwarf",
-		"Aasimar"
+		"Dwarf"
 	)
-	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD, AGE_IMMORTAL)
+	allowed_ages = list(AGE_MIDDLEAGED, AGE_OLD)
 	allowed_sexes = list(MALE, FEMALE)
 	display_order = JDO_MAGICIAN
 	tutorial = "Dream interpreter, soothsayer, astrologer and valued courtier. A scholar of Noc, or a secret worshipper of Zizo. \
