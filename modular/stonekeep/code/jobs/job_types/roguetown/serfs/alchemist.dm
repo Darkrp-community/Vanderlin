@@ -1,4 +1,4 @@
-/datum/job/roguetown/alchemist
+/datum/job/alchemist
 	title = "Alchemist"
 	flag = ALCHEMIST
 	department_flag = SERFS
@@ -16,16 +16,16 @@
 
 	tutorial = "You came to Vanderlin either to seek knowledge or riches."
 
-	outfit = /datum/outfit/job/roguetown/alchemist
+	outfit = /datum/outfit/job/alchemist
 	display_order = 6
 	give_bank_account = 12
 	bypass_lastclass = TRUE
 
-/datum/outfit/job/roguetown/alchemist
+/datum/outfit/job/alchemist
 	name = "Alchemist"
-	jobtype = /datum/job/roguetown/alchemist
+	jobtype = /datum/job/alchemist
 
-/datum/outfit/job/roguetown/alchemist/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/alchemist/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
@@ -37,17 +37,17 @@
 			H.mind?.adjust_skillrank(/datum/skill/craft/alchemy, pick(4,6), TRUE)
 //Requires a lot of sprites, so this is just a placeholder
 	if(H.gender == MALE)
-		pants = /obj/item/clothing/under/roguetown/trou
-		shoes = /obj/item/clothing/shoes/roguetown/boots/leather
-		shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt
-		belt = /obj/item/storage/belt/rogue/leather
-		beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
+		pants = /obj/item/clothing/pants/trou
+		shoes = /obj/item/clothing/shoes/boots/leather
+		shirt = /obj/item/clothing/shirt/shortshirt
+		belt = /obj/item/storage/belt/leather
+		beltl = /obj/item/storage/belt/pouch/coins/poor
 		cloak = /obj/item/clothing/cloak/apron/brown
 	else
-		pants = /obj/item/clothing/under/roguetown/trou
-		shoes = /obj/item/clothing/shoes/roguetown/boots/leather
-		shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt
-		belt = /obj/item/storage/belt/rogue/leather
-		beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
+		pants = /obj/item/clothing/pants/trou
+		shoes = /obj/item/clothing/shoes/boots/leather
+		shirt = /obj/item/clothing/shirt/shortshirt
+		belt = /obj/item/storage/belt/leather
+		beltl = /obj/item/storage/belt/pouch/coins/poor
 		cloak = /obj/item/clothing/cloak/apron/brown
 

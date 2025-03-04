@@ -1,4 +1,4 @@
-/datum/job/roguetown/jaegward
+/datum/job/jaegward
 	title = "Jaegward"
 	f_title = "Jaegwardess"
 	tutorial = "In the olden daes your profession guarded pilgrims and slew great beasts in the Murderwoods, \
@@ -17,7 +17,7 @@
 		"Dark Elf",
 		"Aasimar"
 	)
-	outfit = /datum/outfit/job/roguetown/jaegward
+	outfit = /datum/outfit/job/jaegward
 	min_pq = -25
 	give_bank_account = 15
 	display_order = JDO_HUNTER
@@ -25,22 +25,22 @@
 	spawn_positions = 2
 	apprentice_name = "Hunter"
 
-/datum/outfit/job/roguetown/jaegward/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/jaegward/pre_equip(mob/living/carbon/human/H)
 	..()
-	pants = /obj/item/clothing/under/roguetown/tights/provisoner
-	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/provisoner
-	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
-	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
-	head = /obj/item/clothing/head/roguetown/brimmed
+	pants = /obj/item/clothing/pants/tights/provisoner
+	shirt = /obj/item/clothing/shirt/shortshirt/provisoner
+	shoes = /obj/item/clothing/shoes/boots/leather
+	neck = /obj/item/storage/belt/pouch/coins/poor
+	head = /obj/item/clothing/head/brimmed
 	cloak = /obj/item/clothing/cloak/raincloak/furcloak/brown
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/hide
+	armor = /obj/item/clothing/armor/leather/hide
 	backr = /obj/item/ammo_holder/quiver/arrows
 	backl = /obj/item/gun/ballistic/revolver/grenadelauncher/bow
-	belt = /obj/item/storage/belt/rogue/leather
-	beltr = /obj/item/rogueweapon/axe/iron
+	belt = /obj/item/storage/belt/leather
+	beltr = /obj/item/weapon/axe/iron
 	beltl = /obj/item/storage/meatbag
-	backpack_contents = list(/obj/item/flint = 1, /obj/item/bait = 1, /obj/item/rogueweapon/knife/hunting = 1, /obj/item/flashlight/flare/torch/lantern = 1)
-	gloves = /obj/item/clothing/gloves/roguetown/leather
+	backpack_contents = list(/obj/item/flint = 1, /obj/item/bait = 1, /obj/item/weapon/knife/hunting = 1, /obj/item/flashlight/flare/torch/lantern = 1)
+	gloves = /obj/item/clothing/gloves/leather
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/craft/tanning, 3, TRUE)

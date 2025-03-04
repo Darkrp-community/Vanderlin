@@ -11,14 +11,14 @@
 		"Dark Elf",
 		"Aasimar"
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/ranger
+	outfit = /datum/outfit/job/adventurer/ranger
 	min_pq = -10
 	category_tags = list(CTAG_ADVENTURER)
 	cmode_music = 'sound/music/cmode/adventurer/CombatWarrior.ogg'
 
-/datum/outfit/job/roguetown/adventurer/ranger/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/ranger/pre_equip(mob/living/carbon/human/H)
 	..()
-	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
+	shoes = /obj/item/clothing/shoes/boots/leather
 	H.mind?.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/combat/bows, 3, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/craft/tanning, 2, TRUE)
@@ -35,27 +35,27 @@
 	H.mind?.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
 	if(H.gender == MALE)
-		pants = /obj/item/clothing/under/roguetown/trou/leather
-		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
+		pants = /obj/item/clothing/pants/trou/leather
+		shirt = /obj/item/clothing/shirt/undershirt
 	else
-		pants = /obj/item/clothing/under/roguetown/tights
+		pants = /obj/item/clothing/pants/tights
 		if(prob(50))
-			pants = /obj/item/clothing/under/roguetown/tights/black
-		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
+			pants = /obj/item/clothing/pants/tights/black
+		shirt = /obj/item/clothing/shirt/undershirt
 	if(prob(23))
-		gloves = /obj/item/clothing/gloves/roguetown/leather
+		gloves = /obj/item/clothing/gloves/leather
 	else
-		gloves = /obj/item/clothing/gloves/roguetown/fingerless
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	belt = /obj/item/storage/belt/rogue/leather
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/hide
+		gloves = /obj/item/clothing/gloves/fingerless
+	wrists = /obj/item/clothing/wrists/bracers/leather
+	belt = /obj/item/storage/belt/leather
+	armor = /obj/item/clothing/armor/leather/hide
 	cloak = /obj/item/clothing/cloak/raincloak/brown
 	if(prob(33))
 		cloak = /obj/item/clothing/cloak/raincloak/green
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow
-	backl = /obj/item/storage/backpack/rogue/satchel
+	backl = /obj/item/storage/backpack/satchel
 	beltr = /obj/item/flashlight/flare/torch/lantern
-	backpack_contents = list(/obj/item/bait = 1, /obj/item/rogueweapon/knife/hunting = 1)
+	backpack_contents = list(/obj/item/bait = 1, /obj/item/weapon/knife/hunting = 1)
 	beltl = /obj/item/ammo_holder/quiver/arrows
 	H.change_stat("perception", 2)
 	H.change_stat("endurance", 1)

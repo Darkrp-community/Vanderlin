@@ -126,7 +126,7 @@
 		fov_blocker
 
 		var/icon/new_blocker = icon("icon"='icons/mob/vision_cone.dmi', "icon_state"=hud_used.fov_blocker.icon_state)
-		var/icon/the_mob = icon("icon"='icons/mob/clothing/under/masking_helpers.dmi', "icon_state"="[(type == FEMALE_UNIFORM_FULL) ? "female_full" : "female_top"]")
+		var/icon/the_mob = icon("icon"='icons/mob/clothing/pants/masking_helpers.dmi', "icon_state"="[(type == FEMALE_UNIFORM_FULL) ? "female_full" : "female_top"]")
 		female_clothing_icon.Blend(female_s, ICON_MULTIPLY)
 */
 

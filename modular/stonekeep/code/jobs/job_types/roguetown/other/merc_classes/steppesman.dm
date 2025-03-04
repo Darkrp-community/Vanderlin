@@ -7,33 +7,33 @@
 		"Half-Elf",
 		"Aasimar"
 	)
-	outfit = /datum/outfit/job/roguetown/mercenary/steppesman
+	outfit = /datum/outfit/job/mercenary/steppesman
 	category_tags = list(CTAG_MERCENARY)
 	maximum_possible_slots = 5
 
 	cmode_music = 'sound/music/cmode/adventurer/CombatOutlander2.ogg'
 
-/datum/outfit/job/roguetown/mercenary/steppesman/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/mercenary/steppesman/pre_equip(mob/living/carbon/human/H)
 	..()
-	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
-	head = /obj/item/clothing/head/roguetown/papakha
-	gloves = /obj/item/clothing/gloves/roguetown/leather
-	belt = /obj/item/storage/belt/rogue/leather/mercenary/black
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/splint
+	shoes = /obj/item/clothing/shoes/boots/leather
+	head = /obj/item/clothing/head/papakha
+	gloves = /obj/item/clothing/gloves/leather
+	belt = /obj/item/storage/belt/leather/mercenary/black
+	armor = /obj/item/clothing/armor/leather/splint
 	cloak = /obj/item/clothing/cloak/raincloak/furcloak
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	beltr = /obj/item/rogueweapon/sword/sabre
+	wrists = /obj/item/clothing/wrists/bracers/leather
+	beltr = /obj/item/weapon/sword/sabre
 	beltl= /obj/item/ammo_holder/quiver/arrows
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
-	pants = /obj/item/clothing/under/roguetown/tights/red
-	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
+	shirt = /obj/item/clothing/shirt/undershirt
+	pants = /obj/item/clothing/pants/tights/red
+	neck = /obj/item/storage/belt/pouch/coins/poor
 	backl = /obj/item/gun/ballistic/revolver/grenadelauncher/bow
-	backr = /obj/item/storage/backpack/rogue/satchel
-	backpack_contents = list(/obj/item/rogueweapon/knife/hunting = 1)
+	backr = /obj/item/storage/backpack/satchel
+	backpack_contents = list(/obj/item/weapon/knife/hunting = 1)
 	if(HAS_TRAIT(H, TRAIT_KAIZOKU))
 		backl = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/hankyu
-		beltr = /obj/item/rogueweapon/sword/sabre/piandao
-		wrists = /obj/item/clothing/wrists/roguetown/bracers/leather/khudagach
+		beltr = /obj/item/weapon/sword/sabre/piandao
+		wrists = /obj/item/clothing/wrists/bracers/leather/khudagach
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/bows, 3, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)

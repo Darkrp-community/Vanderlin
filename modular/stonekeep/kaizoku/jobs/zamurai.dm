@@ -12,30 +12,30 @@
 	"Changeling",
 	"Skylancer",
 	"Ogrun")
-	outfit = /datum/outfit/job/roguetown/adventurer/abyssariad/zamurai
+	outfit = /datum/outfit/job/adventurer/abyssariad/zamurai
 	maximum_possible_slots = 0
 	pickprob = 0
 	tutorial = "A lower-ranking zamurai serving the warrior caste that became adrift during a expedition, \
 	keeping their trusty steed. They are expected to uphold their oficial duties and following the strict \
 	martial code of the Abyssal Tide, at least on paper."
 	category_tags = list(CTAG_ADVENTURER)
-	horse = /mob/living/simple_animal/hostile/retaliate/rogue/saiga/horse/tame/saddled
+	horse = /mob/living/simple_animal/hostile/retaliate/saiga/horse/tame/saddled
 
 /datum/advclass/combat/abyssariad/zamurai/equipme(mob/living/carbon/human/H)
 	if(H.gender == FEMALE)
-		horse = /mob/living/simple_animal/hostile/retaliate/rogue/saiga/horse/tame/saddled
+		horse = /mob/living/simple_animal/hostile/retaliate/saiga/horse/tame/saddled
 	return ..()
 
-/datum/outfit/job/roguetown/adventurer/abyssariad/zamurai/pre_equip(mob/living/carbon/human/H)
-	pants = /obj/item/clothing/under/roguetown/trou/tobi/random //Fully intended to give them Haidate Tatami, but the armor is strong enough already.
-	shoes = /obj/item/clothing/shoes/roguetown/boots/armor/suneate
-	gloves = /obj/item/clothing/gloves/roguetown/leather/abyssal //kote already protects the hands.
-	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/random
-	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/light/hitatare/zamurai //weaker gambeson. Has way more DRIP. (Doesn't matter for balance, shutup)
-	armor = /obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt/abyssariad //Paying off for 4 swordskill instead of 5.
-	head = /obj/item/clothing/head/roguetown/helmet/visored/zunari //fucking-shit-up knight helmet tier. Sacrificed some to keep that one.
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/kote //Cooler Bracer that protects the hands.
-	neck = /obj/item/clothing/neck/roguetown/chaincoif/karuta_zukin/military
+/datum/outfit/job/adventurer/abyssariad/zamurai/pre_equip(mob/living/carbon/human/H)
+	pants = /obj/item/clothing/pants/trou/tobi/random //Fully intended to give them Haidate Tatami, but the armor is strong enough already.
+	shoes = /obj/item/clothing/shoes/boots/armor/suneate
+	gloves = /obj/item/clothing/gloves/leather/abyssal //kote already protects the hands.
+	belt = /obj/item/storage/belt/kaizoku/leather/daisho/random
+	shirt = /obj/item/clothing/armor/gambeson/light/hitatare/zamurai //weaker gambeson. Has way more DRIP. (Doesn't matter for balance, shutup)
+	armor = /obj/item/clothing/armor/medium/surcoat/heartfelt/abyssariad //Paying off for 4 swordskill instead of 5.
+	head = /obj/item/clothing/head/helmet/visored/zunari //fucking-shit-up knight helmet tier. Sacrificed some to keep that one.
+	wrists = /obj/item/clothing/wrists/bracers/kote //Cooler Bracer that protects the hands.
+	neck = /obj/item/clothing/neck/chaincoif/karuta_zukin/military
 
 	to_chat(H, span_warning( "<span class='userdanger'>I am a noble storm-hardened warrior in lacquered armor whom lands I own and control. Yet, here I stand in unfamiliar lands no different of my own.</span>"))
 
@@ -71,7 +71,7 @@
 	switch(specialization)
 		if("Odashibushi(Melee)") //Not as sword-specialized as Swordmaster, but have better armor.
 			H.set_blindness(0)
-			backr = /obj/item/rogueweapon/sword/long/greatsword/odachi
+			backr = /obj/item/weapon/sword/long/greatsword/odachi
 			ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 			if(H.mind)
 				H.mind.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE) //4 instead of 5. Abyssariads with 5 are champions only.
@@ -85,7 +85,7 @@
 			H.set_blindness(0)
 			backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/long/yumi
 			beltl = /obj/item/ammo_holder/quiver/arrows
-			beltr = /obj/item/rogueweapon/sword/uchigatana
+			beltr = /obj/item/weapon/sword/uchigatana
 			if(H.mind)
 				H.mind.adjust_skillrank(/datum/skill/combat/bows, 4, TRUE)
 				H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)

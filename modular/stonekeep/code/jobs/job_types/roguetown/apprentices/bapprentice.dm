@@ -1,4 +1,4 @@
-/datum/job/roguetown/mapprentice
+/datum/job/mapprentice
 	title = "Maker's Apprentice"
 	flag = APPRENTICE
 	department_flag = APPRENTICES
@@ -13,7 +13,7 @@
 				processing ore, porting components and backbreaking labor has been your daily life. \
 				One dae you will craft your own masterwork, pay your remaining dues and have your own apprentices to torment."
 
-	outfit = /datum/outfit/job/roguetown/mapprentice
+	outfit = /datum/outfit/job/mapprentice
 	display_order = JDO_BAPP
 	give_bank_account = TRUE
 	min_pq = -50
@@ -21,7 +21,7 @@
 
 	can_have_apprentices = FALSE
 
-/datum/outfit/job/roguetown/mapprentice/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/mapprentice/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 2, TRUE)
@@ -41,21 +41,21 @@
 		H.mind?.adjust_skillrank(/datum/skill/craft/engineering, 1, TRUE)
 
 		id = /obj/item/clothing/ring/silver/makers_guild
-		shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/makers
-		pants = /obj/item/clothing/under/roguetown/tights/makers
-		shoes = /obj/item/clothing/shoes/roguetown/shortboots
-		belt = /obj/item/storage/belt/rogue/leather/rope
-		backr = /obj/item/storage/backpack/rogue/satchel
-		gloves = /obj/item/clothing/gloves/roguetown/leather
+		shirt = /obj/item/clothing/shirt/shortshirt/makers
+		pants = /obj/item/clothing/pants/tights/makers
+		shoes = /obj/item/clothing/shoes/shortboots
+		belt = /obj/item/storage/belt/leather/rope
+		backr = /obj/item/storage/backpack/satchel
+		gloves = /obj/item/clothing/gloves/leather
 		beltr = /obj/item/storage/keyring/armorsmith
-		beltl = /obj/item/rogueweapon/hammer/iron
+		beltl = /obj/item/weapon/hammer/iron
 
 		switch(H.patron?.type)
 			if(/datum/patron/divine/malum)
-				neck = /obj/item/clothing/neck/roguetown/psycross/silver/malum_steel
-				backpack_contents = list(/obj/item/storage/belt/rogue/pouch/coins/poor)
+				neck = /obj/item/clothing/neck/psycross/silver/malum_steel
+				backpack_contents = list(/obj/item/storage/belt/pouch/coins/poor)
 			else
-				neck = /obj/item/storage/belt/rogue/pouch/coins/poor
+				neck = /obj/item/storage/belt/pouch/coins/poor
 
 
 		H.change_stat("endurance", 1)

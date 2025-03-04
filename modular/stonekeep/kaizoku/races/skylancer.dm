@@ -38,8 +38,8 @@
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | RACE_SWAP | SLIME_EXTRACT
 	limbs_icon_m = 'modular/stonekeep/kaizoku/icons/abyssariad_bodies/male/mtan.dmi'
 	limbs_icon_f = 'modular/stonekeep/kaizoku/icons/abyssariad_bodies/female/ftan.dmi'
-	dam_icon = 'icons/roguetown/mob/bodies/dam/dam_male.dmi'
-	dam_icon_f = 'icons/roguetown/mob/bodies/dam/dam_female.dmi'
+	dam_icon = 'icons/mob/bodies/dam/dam_male.dmi'
+	dam_icon_f = 'icons/mob/bodies/dam/dam_female.dmi'
 	hairyness = ""
 	mutant_bodyparts = list("ears","tail_human")
 	use_f = TRUE
@@ -58,7 +58,7 @@
 	specstats = list("strength" = -1, "perception" = 2, "intelligence" = 0, "constitution" = -2, "endurance" = 2, "speed" = 2, "fortune" = 0)
 	specstats_f = list("strength" = -1, "perception" = 2, "intelligence" = 0, "constitution" = -2, "endurance" = 2, "speed" = 2, "fortune" = 0) // Don't even bother making each gender different. Abyssariads are equals in championage.
 	enflamed_icon = "widefire"
-	mutanteyes = /obj/item/organ/eyes/rogue/tengu
+	mutanteyes = /obj/item/organ/eyes/tengu
 //	minrace_pq = 0
 
 	customizers = list(

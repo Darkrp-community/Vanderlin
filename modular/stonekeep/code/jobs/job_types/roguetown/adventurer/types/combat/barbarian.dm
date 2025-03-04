@@ -7,15 +7,15 @@
 		"Half-Elf",
 		"Tiefling"
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/barbarian
+	outfit = /datum/outfit/job/adventurer/barbarian
 	min_pq = -10
 	category_tags = list(CTAG_ADVENTURER)
 	cmode_music = 'sound/music/cmode/adventurer/CombatOutlander2.ogg'
 
-/datum/outfit/job/roguetown/adventurer/barbarian
+/datum/outfit/job/adventurer/barbarian
 	allowed_patrons = list(/datum/patron/divine/ravox, /datum/patron/divine/abyssor, /datum/patron/divine/necra, /datum/patron/divine/dendor, /datum/patron/godless, /datum/patron/inhumen/graggar)
 
-/datum/outfit/job/roguetown/adventurer/barbarian/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/barbarian/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 1, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
@@ -31,11 +31,11 @@
 	H.mind?.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
 	H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/barbrage)
-	belt = /obj/item/storage/belt/rogue/leather
-	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+	belt = /obj/item/storage/belt/leather
+	shoes = /obj/item/clothing/shoes/boots/leather
+	wrists = /obj/item/clothing/wrists/bracers/leather
 	if(prob(50))
-		backr = /obj/item/storage/backpack/rogue/satchel
+		backr = /obj/item/storage/backpack/satchel
 	H.change_stat("strength", 3)
 	H.change_stat("endurance", 2)
 	H.change_stat("constitution", 2)
@@ -46,18 +46,18 @@
 		if("Cloak")
 			cloak = /obj/item/clothing/cloak/raincloak/furcloak/brown
 		if("Hide")
-			armor = /obj/item/clothing/suit/roguetown/armor/leather/hide
+			armor = /obj/item/clothing/armor/leather/hide
 		if("Helmet")
-			head = /obj/item/clothing/head/roguetown/helmet/horned
+			head = /obj/item/clothing/head/helmet/horned
 	switch(weapontype)
 		if("Sword")
-			beltr = /obj/item/rogueweapon/sword/iron
+			beltr = /obj/item/weapon/sword/iron
 			H.mind?.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
 		if("Club")
-			beltr = /obj/item/rogueweapon/mace/woodclub
+			beltr = /obj/item/weapon/mace/woodclub
 			H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 2, TRUE)
 		if("Axe")
-			beltr = /obj/item/rogueweapon/axe/iron
+			beltr = /obj/item/weapon/axe/iron
 			H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 2, TRUE)
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)

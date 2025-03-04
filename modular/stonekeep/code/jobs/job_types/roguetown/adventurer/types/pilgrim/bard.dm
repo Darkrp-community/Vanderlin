@@ -20,11 +20,11 @@
 		"Ogrun",
 		"Undine"
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/bard
+	outfit = /datum/outfit/job/adventurer/bard
 	category_tags = list(CTAG_PILGRIM)
 	apprentice_name = "Aspiring Bard"
 
-/datum/outfit/job/roguetown/adventurer/bard/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/bard/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.mind?.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
@@ -41,45 +41,45 @@
 	H.mind?.adjust_skillrank(/datum/skill/misc/music, 4, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
 	H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/mockery)
-	head = /obj/item/clothing/head/roguetown/bardhat
-	shoes = /obj/item/clothing/shoes/roguetown/boots
-	pants = /obj/item/clothing/under/roguetown/tights/random
-	shirt = /obj/item/clothing/suit/roguetown/shirt/tunic/noblecoat
+	head = /obj/item/clothing/head/bardhat
+	shoes = /obj/item/clothing/shoes/boots
+	pants = /obj/item/clothing/pants/tights/random
+	shirt = /obj/item/clothing/shirt/tunic/noblecoat
 	if(prob(30))
-		gloves = /obj/item/clothing/gloves/roguetown/fingerless
-	belt = /obj/item/storage/belt/rogue/leather
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest
+		gloves = /obj/item/clothing/gloves/fingerless
+	belt = /obj/item/storage/belt/leather
+	armor = /obj/item/clothing/armor/leather/vest
 	cloak = /obj/item/clothing/cloak/raincloak/blue
 	if(prob(50))
 		cloak = /obj/item/clothing/cloak/raincloak/red
-	backl = /obj/item/storage/backpack/rogue/satchel
-	beltr = /obj/item/rogueweapon/knife/dagger/steel/special
-	beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
+	backl = /obj/item/storage/backpack/satchel
+	beltr = /obj/item/weapon/knife/dagger/steel/special
+	beltl = /obj/item/storage/belt/pouch/coins/poor
 	backpack_contents = list(/obj/item/flint)
 	if(H.dna?.species?.id == "abyssariad"|| H.dna.species.name == "Undine")
 		cloak = /obj/item/clothing/cloak/raincloak/guardiancloak/red
-		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/kaizoku
-		shoes = /obj/item/clothing/shoes/roguetown/shortboots/cloudhead
-		head = /obj/item/clothing/head/roguetown/bardhat/bloodhunter
-		beltr = /obj/item/rogueweapon/knife/kaiken
-		shirt = /obj/item/clothing/suit/roguetown/shirt/looseshirt
-		gloves = /obj/item/clothing/gloves/roguetown/fingerless/yugake
+		armor = /obj/item/clothing/armor/leather/vest/kaizoku
+		shoes = /obj/item/clothing/shoes/shortboots/cloudhead
+		head = /obj/item/clothing/head/bardhat/bloodhunter
+		beltr = /obj/item/weapon/knife/kaiken
+		shirt = /obj/item/clothing/shirt/looseshirt
+		gloves = /obj/item/clothing/gloves/fingerless/yugake
 	var/instruments = list(
-		"Harp" = /obj/item/rogue/instrument/harp,
-		"Lute" = /obj/item/rogue/instrument/lute,
-		"Accordion" = /obj/item/rogue/instrument/accord,
-		"Guitar" = /obj/item/rogue/instrument/guitar,
-		"Flute" = /obj/item/rogue/instrument/flute,
-		"Drum" = /obj/item/rogue/instrument/drum,
-		"Hurdy-Gurdy" = /obj/item/rogue/instrument/hurdygurdy,
-		"Viola" = /obj/item/rogue/instrument/viola,
-		"Shamisen" = /obj/item/rogue/instrument/shamisen )
+		"Harp" = /obj/item/instrument/harp,
+		"Lute" = /obj/item/instrument/lute,
+		"Accordion" = /obj/item/instrument/accord,
+		"Guitar" = /obj/item/instrument/guitar,
+		"Flute" = /obj/item/instrument/flute,
+		"Drum" = /obj/item/instrument/drum,
+		"Hurdy-Gurdy" = /obj/item/instrument/hurdygurdy,
+		"Viola" = /obj/item/instrument/viola,
+		"Shamisen" = /obj/item/instrument/shamisen )
 	var/instrument_choice = input("Choose your instrument.", "XYLIX") as anything in instruments
 	H.set_blindness(0)
 	if(instrument_choice && instruments[instrument_choice])
 		backr = instruments[instrument_choice]
 	else
-		backr = /obj/item/rogue/instrument/lute
+		backr = /obj/item/instrument/lute
 	if(H.dna?.species?.id == "dwarf")
 		H.cmode_music = 'sound/music/cmode/combat_dwarf.ogg'
 	ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)

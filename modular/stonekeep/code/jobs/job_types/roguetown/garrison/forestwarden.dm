@@ -1,4 +1,4 @@
-/datum/job/roguetown/forestwarden
+/datum/job/forestwarden
 	title = "Forest Warden"
 	flag = FORWARDEN
 	department_flag = GARRISON
@@ -20,28 +20,28 @@
 	whitelist_req = FALSE
 	bypass_lastclass = TRUE
 	selection_color = "#0d6929"
-	outfit = /datum/outfit/job/roguetown/forestwarden
+	outfit = /datum/outfit/job/forestwarden
 	give_bank_account = 45
 	min_pq = 5
 	cmode_music = 'sound/music/cmode/garrison/CombatForestGarrison.ogg'
 
-/datum/outfit/job/roguetown/forestwarden/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/forestwarden/pre_equip(mob/living/carbon/human/H)
 	..()
 	cloak = /obj/item/clothing/cloak/raincloak/furcloak
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/splint
-	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail/iron
-	pants = /obj/item/clothing/under/roguetown/trou/leather
-	shoes = /obj/item/clothing/shoes/roguetown/boots/furlinedboots
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	head = /obj/item/clothing/head/roguetown/helmet/kettle/slit
-	gloves = /obj/item/clothing/gloves/roguetown/leather
-	neck = /obj/item/clothing/neck/roguetown/bevor
-	belt = /obj/item/storage/belt/rogue/leather
-	beltl = /obj/item/rogueweapon/axe/iron
-	beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
-	backr = /obj/item/rogueweapon/polearm/halberd/bardiche/woodcutter
-	backl = /obj/item/storage/backpack/rogue/satchel
-	backpack_contents = list(/obj/item/rogueweapon/knife/hunting = 1, /obj/item/rope/chain = 1, /obj/item/key/forrestgarrison = 1, /obj/item/signal_horn = 1)
+	armor = /obj/item/clothing/armor/leather/splint
+	shirt = /obj/item/clothing/armor/chainmail/iron
+	pants = /obj/item/clothing/pants/trou/leather
+	shoes = /obj/item/clothing/shoes/boots/furlinedboots
+	wrists = /obj/item/clothing/wrists/bracers/leather
+	head = /obj/item/clothing/head/helmet/kettle/slit
+	gloves = /obj/item/clothing/gloves/leather
+	neck = /obj/item/clothing/neck/bevor
+	belt = /obj/item/storage/belt/leather
+	beltl = /obj/item/weapon/axe/iron
+	beltr = /obj/item/storage/belt/pouch/coins/rich
+	backr = /obj/item/weapon/polearm/halberd/bardiche/woodcutter
+	backl = /obj/item/storage/backpack/satchel
+	backpack_contents = list(/obj/item/weapon/knife/hunting = 1, /obj/item/rope/chain = 1, /obj/item/key/forrestgarrison = 1, /obj/item/signal_horn = 1)
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 4, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/bows, 4, TRUE)

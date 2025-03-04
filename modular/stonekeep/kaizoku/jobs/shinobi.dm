@@ -18,11 +18,11 @@
 		"Ogrun",
 		"Undine"
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/abyssariad/shinobi
+	outfit = /datum/outfit/job/adventurer/abyssariad/shinobi
 	category_tags = list(CTAG_ADVENTURER)
 	pickprob = 100
 
-/datum/outfit/job/roguetown/adventurer/abyssariad/shinobi/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/abyssariad/shinobi/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
@@ -41,53 +41,53 @@
 	H.mind.adjust_skillrank(/datum/skill/misc/lockpicking, 4, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/craft/engineering, 2, TRUE) //Shinobis produces bombs.
 	if(prob(70))
-		beltl = /obj/item/clothing/gloves/roguetown/leather
+		beltl = /obj/item/clothing/gloves/leather
 	else
-		beltl = /obj/item/clothing/gloves/roguetown/fingerless
-	backl = /obj/item/storage/backpack/rogue/satchel/ninja
-	neck = /obj/item/clothing/neck/roguetown/gorget
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather/khudagach
-	pants = /obj/item/clothing/under/roguetown/trou/leather/shinobizubon
-	shoes = /obj/item/clothing/shoes/roguetown/boots/jikatabi/shinobi
+		beltl = /obj/item/clothing/gloves/fingerless
+	backl = /obj/item/storage/backpack/satchel/ninja
+	neck = /obj/item/clothing/neck/gorget
+	wrists = /obj/item/clothing/wrists/bracers/leather/khudagach
+	pants = /obj/item/clothing/pants/trou/leather/shinobizubon
+	shoes = /obj/item/clothing/shoes/boots/jikatabi/shinobi
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/hankyu
-	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/ninja
+	belt = /obj/item/storage/belt/kaizoku/leather/daisho/ninja
 	if(prob(40))
-		beltl = /obj/item/rogueweapon/knife/steel/tanto
+		beltl = /obj/item/weapon/knife/steel/tanto
 	else
-		beltl = /obj/item/rogueweapon/knife/kaiken
+		beltl = /obj/item/weapon/knife/kaiken
 
 	if(H.dna.species.name == "Undine")
 		to_chat(H, "<span class='warning'>Living in the Fog island's waterways, I've been trained and fed by the many Abyssariad monks. From their will, I am a branch of their skills.")
 		var/TMNT = pickweight(list("Donatello" = 1, "Leonardo" = 1, "Michelangelo" = 1, "Raphael" = 1)) // is this a reference...?
 		H.become_blind("TRAIT_GENERIC")
-		pants = /obj/item/clothing/under/roguetown/kaizoku/tribal
-		armor = /obj/item/clothing/suit/roguetown/armor/leather/splint/ninjakappa
+		pants = /obj/item/clothing/pants/kaizoku/tribal
+		armor = /obj/item/clothing/armor/leather/splint/ninjakappa
 		switch(TMNT) //I'm fucking autistic
 			if("Donatello")
-				mask = /obj/item/clothing/mask/rogue/kaizoku/eyeband/donatello
-				backr = /obj/item/rogueweapon/polearm/woodstaff/quarterstaff/bostaff
+				mask = /obj/item/clothing/face/kaizoku/eyeband/donatello
+				backr = /obj/item/weapon/polearm/woodstaff/quarterstaff/bostaff
 				H.mind.adjust_skillrank(/datum/skill/combat/polearms, 4, TRUE) //worst weapon, good skill.
 			if("Michelangelo")
-				mask = /obj/item/clothing/mask/rogue/kaizoku/eyeband/michelangelo
-				beltr = /obj/item/rogueweapon/flail/nunchaku
-				beltl = /obj/item/rogueweapon/flail/nunchaku
+				mask = /obj/item/clothing/face/kaizoku/eyeband/michelangelo
+				beltr = /obj/item/weapon/flail/nunchaku
+				beltl = /obj/item/weapon/flail/nunchaku
 				H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 3, TRUE)
 			if("Raphael")
-				mask = /obj/item/clothing/mask/rogue/kaizoku/eyeband/raphael
-				beltr = /obj/item/rogueweapon/knife/hunting/sai
-				beltl = /obj/item/rogueweapon/knife/hunting/sai
+				mask = /obj/item/clothing/face/kaizoku/eyeband/raphael
+				beltr = /obj/item/weapon/knife/hunting/sai
+				beltl = /obj/item/weapon/knife/hunting/sai
 			if("Leonardo")
-				mask = /obj/item/clothing/mask/rogue/kaizoku/eyeband/leonardo
-				beltr = /obj/item/rogueweapon/sword/short/wakizashi
-				beltl = /obj/item/rogueweapon/sword/short/wakizashi
+				mask = /obj/item/clothing/face/kaizoku/eyeband/leonardo
+				beltr = /obj/item/weapon/sword/short/wakizashi
+				beltl = /obj/item/weapon/sword/short/wakizashi
 	else
-		head = /obj/item/clothing/head/roguetown/shinobi_zukin
-		pants = /obj/item/clothing/under/roguetown/trou/leather/shinobizubon
-		shirt = /obj/item/clothing/suit/roguetown/shirt/looseshirt/shinobi
-		belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/ninja
-		armor = /obj/item/clothing/suit/roguetown/armor/leather/hide/shozoku
+		head = /obj/item/clothing/head/shinobi_zukin
+		pants = /obj/item/clothing/pants/trou/leather/shinobizubon
+		shirt = /obj/item/clothing/shirt/looseshirt/shinobi
+		belt = /obj/item/storage/belt/kaizoku/leather/daisho/ninja
+		armor = /obj/item/clothing/armor/leather/hide/shozoku
 		beltr = /obj/item/ammo_holder/quiver/arrows
-		beltl = /obj/item/rogueweapon/knife/kaiken
+		beltl = /obj/item/weapon/knife/kaiken
 		backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/hankyu
 
 		ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)

@@ -374,7 +374,7 @@
 	var/broke = FALSE
 	var/datum/looping_sound/clockloop/soundloop
 	drag_slowdown = 3
-	metalizer_result = /obj/item/roguegear/metal/bronze
+	metalizer_result = /obj/item/gear/metal/bronze
 
 /obj/structure/fluff/clock/Initialize()
 	soundloop = new(src, FALSE)
@@ -461,7 +461,7 @@
 	attacked_sound = 'sound/combat/hits/onglass/glasshit.ogg'
 	var/broke = FALSE
 	pixel_y = 32
-	metalizer_result = /obj/item/roguegear/metal/bronze
+	metalizer_result = /obj/item/gear/metal/bronze
 
 /obj/structure/fluff/wallclock/Destroy()
 	if(soundloop)
@@ -854,13 +854,11 @@
 		if(user.mind)
 			if(user.mind.special_role == "Dark Elf")
 				playsound(loc,'sound/misc/eat.ogg', rand(30,60), TRUE)
-				if(SSticker.mode)
-					var/datum/game_mode/chaosmode/C = SSticker.mode
-					C.delfcontrib += 1
-					if(C.delfcontrib >= C.delfgoal)
-						say("YOU HAVE DONE WELL, MY CHILD.",language = /datum/language/elvish)
-					else
-						say("BRING ME [C.delfgoal-C.delfcontrib] MORE. I HUNGER.",language = /datum/language/elvish)
+				SSmapping.retainer.delf_contribute += 1
+				if(SSmapping.retainer.delf_contribute >= SSmapping.retainer.delf_goal)
+					say("YOU HAVE DONE WELL, MY CHILD.",language = /datum/language/elvish)
+				else
+					say("BRING ME [SSmapping.retainer.delf_goal - SSmapping.retainer.delf_contribute] MORE. I HUNGER.",language = /datum/language/elvish)
 				qdel(W)
 				return TRUE
 	..()
@@ -875,11 +873,11 @@
 	if(user.mind)
 		var/datum/antagonist/bandit/B = user.mind.has_antag_datum(/datum/antagonist/bandit)
 		if(B)
-			if(istype(W, /obj/item/roguecoin) || istype(W, /obj/item/roguegem) || istype(W, /obj/item/reagent_containers/glass/cup/silver) || istype(W, /obj/item/reagent_containers/glass/cup/golden) || istype(W, /obj/item/reagent_containers/glass/carafe) || istype(W, /obj/item/clothing/ring) || istype(W, /obj/item/clothing/head/roguetown/crown/circlet) || istype(W, /obj/item/roguestatue))
+			if(istype(W, /obj/item/coin) || istype(W, /obj/item/gem) || istype(W, /obj/item/reagent_containers/glass/cup/silver) || istype(W, /obj/item/reagent_containers/glass/cup/golden) || istype(W, /obj/item/reagent_containers/glass/carafe) || istype(W, /obj/item/clothing/ring) || istype(W, /obj/item/clothing/head/crown/circlet) || istype(W, /obj/item/statue))
 				if(B.tri_amt >= 10)
 					to_chat(user, "<span class='warning'>The mouth doesn't open.</span>")
 					return
-				if(!istype(W, /obj/item/roguecoin))
+				if(!istype(W, /obj/item/coin))
 					B.contrib += (W.get_real_price() / 2) //sell jewerly and other fineries, though at a lesser price compared to fencing them first
 				else
 					B.contrib += W.get_real_price()
@@ -890,64 +888,30 @@
 					var/obj/item/I
 					switch(B.tri_amt)
 						if(1)
-							I = new /obj/item/reagent_containers/glass/bottle/rogue/healthpot(user.loc)
+							I = new /obj/item/reagent_containers/glass/bottle/healthpot(user.loc)
 						if(2)
-							if(HAS_TRAIT(user, TRAIT_DODGEEXPERT))
-								I = new /obj/item/clothing/wrists/roguetown/bracers/leather/hardened(user.loc)
 							if(HAS_TRAIT(user, TRAIT_MEDIUMARMOR))
-								I = new /obj/item/clothing/neck/roguetown/chaincoif/iron(user.loc)
-							if(HAS_TRAIT(user, TRAIT_HEAVYARMOR))
-								I = new /obj/item/clothing/head/roguetown/helmet/heavy/ironplate(user.loc)
-						if(3)
-							if(user.mind.get_skill_level(/datum/skill/magic/arcane) > 2)
-								I = new /datum/reagent/medicine/strongmana(user.loc)
+								I = new /obj/item/clothing/armor/medium/scale(user.loc)
 							else
-								I = new /obj/item/reagent_containers/powder/moondust(user.loc)
+								I = new /obj/item/clothing/armor/chainmail/iron(user.loc)
 						if(4)
-							if(user.mind.get_skill_level(/datum/skill/combat/bows) > 3)
-								I = new /obj/item/gun/ballistic/revolver/grenadelauncher/bow/long(user.loc)
-							else if(user.mind.get_skill_level(/datum/skill/combat/crossbows) > 3)
-								I = new /obj/item/rogueweapon/knife/dagger/steel(user.loc)
-							else if(user.mind.get_skill_level(/datum/skill/combat/axesmaces) > 3)
-								I = new /obj/item/rogueweapon/axe/battle(user.loc)
-							else if(user.mind.get_skill_level(/datum/skill/combat/polearms) > 3)
-								I = new /obj/item/rogueweapon/polearm/eaglebeak/lucerne(user.loc)
-							else if(user.mind.get_skill_level(/datum/skill/combat/shields) > 3)
-								I = new /obj/item/rogueweapon/sword/sabre(user.loc)
-							else if(user.mind.get_skill_level(/datum/skill/combat/whipsflails) > 3)
-								I = new /obj/item/rogueweapon/flail/sflail(user.loc)
-							else if(user.mind.get_skill_level(/datum/skill/misc/medicine) > 4)
-								I = new /obj/item/rogueweapon/knife/cleaver/combat(user.loc)
-							else if(user.mind.get_skill_level(/datum/skill/magic/arcane) > 2)
-								I = new /obj/item/rogueweapon/polearm/woodstaff/quarterstaff/steel(user.loc)
-						if(5)
-							if(HAS_TRAIT(user, TRAIT_DODGEEXPERT))
-								I = new /obj/item/clothing/under/roguetown/leather/heavy(user.loc)
-							if(HAS_TRAIT(user, TRAIT_MEDIUMARMOR))
-								I = new /obj/item/clothing/wrists/roguetown/bracers(user.loc)
-							if(HAS_TRAIT(user, TRAIT_HEAVYARMOR))
-								I = new /obj/item/clothing/wrists/roguetown/bracers/leather/hardened(user.loc)
+							I = new /obj/item/clothing/head/helmet/horned(user.loc)
 						if(6)
-							if(HAS_TRAIT(user, TRAIT_DODGEEXPERT))
-								I = new /obj/item/clothing/suit/roguetown/armor/leather/splint(user.loc)
-							if(HAS_TRAIT(user, TRAIT_MEDIUMARMOR))
-								I = new /obj/item/clothing/suit/roguetown/armor/medium/scale(user.loc)
-							if(HAS_TRAIT(user, TRAIT_HEAVYARMOR))
-								I = new /obj/item/clothing/suit/roguetown/armor/plate/rust(user.loc)
-						if(7)
-							if(user.mind.get_skill_level(/datum/skill/combat/bows) > 3)
-								I = new /obj/item/ammo_casing/caseless/rogue/arrow/poison/potent(user.loc)
-							else if(user.mind.get_skill_level(/datum/skill/combat/crossbows) > 3)
-								I = new /obj/item/ammo_casing/caseless/rogue/bolt/poison/potent(user.loc)
+							if(user.mind.get_skill_level(/datum/skill/combat/polearms) > 2)
+								I = new /obj/item/weapon/polearm/spear/billhook(user.loc)
+							else if(user.mind.get_skill_level(/datum/skill/combat/bows) > 2)
+								I = new /obj/item/gun/ballistic/revolver/grenadelauncher/bow/long(user.loc)
+							else if(user.mind.get_skill_level(/datum/skill/combat/swords) > 2)
+								I = new /obj/item/weapon/sword/long(user.loc)
 							else
-								I = new /obj/item/reagent_containers/glass/bottle/rogue/healthpot(user.loc)
+								I = new /obj/item/weapon/mace/steel(user.loc)
 						if(8)
-							I = new /obj/item/clothing/ring/gold/protection(user.loc)
+							I = new /obj/item/clothing/pants/chainlegs(user.loc)
 					if(I)
 						I.sellprice = 0
-					playsound(loc,'sound/items/carvgood.ogg', 50, TRUE)
+					playsound(loc,'sound/items/matidol2.ogg', 50, TRUE)
 				else
-					playsound(loc,'sound/items/carvty.ogg', 50, TRUE)
+					playsound(loc,'sound/items/matidol1.ogg', 50, TRUE)
 				playsound(loc,'sound/misc/eat.ogg', rand(30,60), TRUE)
 				qdel(W)
 				return

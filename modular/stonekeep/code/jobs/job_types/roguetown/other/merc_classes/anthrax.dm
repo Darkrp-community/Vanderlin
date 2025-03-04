@@ -3,19 +3,19 @@
 	tutorial = "With the brutal dismantlement of drow society, the talents of the redeemed Anthraxi were no longer needed. Yet where one door closes, another opens - the decadent mortals of the overworld clamber over each other to bid for your blade. Show them your craft."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = list("Dark Elf")
-	outfit = /datum/outfit/job/roguetown/mercenary/anthrax
+	outfit = /datum/outfit/job/mercenary/anthrax
 	category_tags = list(CTAG_MERCENARY)
 	maximum_possible_slots = 5
 
 	cmode_music = 'sound/music/cmode/adventurer/CombatOutlander3.ogg'
 
-/datum/outfit/job/roguetown/mercenary/anthrax/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/mercenary/anthrax/pre_equip(mob/living/carbon/human/H)
 	..()
-	shoes = /obj/item/clothing/shoes/roguetown/boots
-	belt = /obj/item/storage/belt/rogue/leather/black
-	pants = /obj/item/clothing/under/roguetown/trou/shadowpants
-	backl = /obj/item/storage/backpack/rogue/satchel
-	backpack_contents = list(/obj/item/key/mercenary, /obj/item/storage/belt/rogue/pouch/coins/poor, /obj/item/rogueweapon/knife/dagger/steel/dirk)
+	shoes = /obj/item/clothing/shoes/boots
+	belt = /obj/item/storage/belt/leather/black
+	pants = /obj/item/clothing/pants/trou/shadowpants
+	backl = /obj/item/storage/backpack/satchel
+	backpack_contents = list(/obj/item/key/mercenary, /obj/item/storage/belt/pouch/coins/poor, /obj/item/weapon/knife/dagger/steel/dirk)
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
@@ -31,13 +31,13 @@
 		H.verbs |= /mob/living/carbon/human/proc/torture_victim //Secret police training owing to their origins.
 
 		if(H.gender == FEMALE) //Melee defense-oriented brute, heavy lean towards non-lethal takedowns and capture.
-			armor = /obj/item/clothing/suit/roguetown/armor/cuirass/iron/shadowplate
-			gloves = /obj/item/clothing/gloves/roguetown/chain/iron/shadowgauntlets
-			wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-			mask = /obj/item/clothing/mask/rogue/facemask/shadowfacemask
-			neck = /obj/item/clothing/neck/roguetown/gorget
-			backr = /obj/item/rogueweapon/shield/tower/spidershield
-			beltr = /obj/item/rogueweapon/whip/spiderwhip
+			armor = /obj/item/clothing/armor/cuirass/iron/shadowplate
+			gloves = /obj/item/clothing/gloves/chain/iron/shadowgauntlets
+			wrists = /obj/item/clothing/wrists/bracers/leather
+			mask = /obj/item/clothing/face/facemask/shadowfacemask
+			neck = /obj/item/clothing/neck/gorget
+			backr = /obj/item/weapon/shield/tower/spidershield
+			beltr = /obj/item/weapon/whip/spiderwhip
 
 			H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 2, TRUE)
 			H.mind?.adjust_skillrank(/datum/skill/combat/whipsflails, 3, TRUE)
@@ -52,15 +52,15 @@
 			ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 
 		if(H.gender == MALE) //Squishy hit-and-runner assassin.
-			shirt = /obj/item/clothing/suit/roguetown/shirt/shadowshirt
-			armor = /obj/item/clothing/suit/roguetown/armor/gambeson/shadowrobe
+			shirt = /obj/item/clothing/shirt/shadowshirt
+			armor = /obj/item/clothing/armor/gambeson/shadowrobe
 			cloak = /obj/item/clothing/cloak/half/shadowcloak
-			gloves = /obj/item/clothing/gloves/roguetown/fingerless/shadowgloves
-			mask = /obj/item/clothing/mask/rogue/shepherd/shadowmask
-			neck = /obj/item/clothing/neck/roguetown/chaincoif/iron
+			gloves = /obj/item/clothing/gloves/fingerless/shadowgloves
+			mask = /obj/item/clothing/face/shepherd/shadowmask
+			neck = /obj/item/clothing/neck/chaincoif/iron
 			backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve //Coupled with the racial PER malus, abysmal damage, but good for poison arrows.
 			beltr = /obj/item/ammo_holder/quiver/arrows
-			beltl = /obj/item/rogueweapon/sword/sabre/stalker
+			beltl = /obj/item/weapon/sword/sabre/stalker
 
 			H.mind?.adjust_skillrank(/datum/skill/misc/climbing, 1, TRUE)
 			H.mind?.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)

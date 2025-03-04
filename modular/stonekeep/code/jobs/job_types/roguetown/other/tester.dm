@@ -1,4 +1,4 @@
-/datum/job/roguetown/tester
+/datum/job/tester
 	title = "Tester"
 	flag = GRAVETENDER
 	department_flag = PEASANTS
@@ -22,29 +22,29 @@
 		"Aasimar"
 	)
 	tutorial = ""
-	outfit = /datum/outfit/job/roguetown/tester
+	outfit = /datum/outfit/job/tester
 	plevel_req = 0
 	display_order = JDO_MERCENARY
 
-/datum/outfit/job/roguetown/tester/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/tester/pre_equip(mob/living/carbon/human/H)
 	..()
-	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
-	wrists = /obj/item/clothing/wrists/roguetown/bracers
-	belt = /obj/item/storage/belt/rogue/leather
-	armor = /obj/item/clothing/suit/roguetown/armor/gambeson/arming
+	shoes = /obj/item/clothing/shoes/boots/leather
+	wrists = /obj/item/clothing/wrists/bracers
+	belt = /obj/item/storage/belt/leather
+	armor = /obj/item/clothing/armor/gambeson/arming
 	if(prob(50))
-		armor = /obj/item/clothing/suit/roguetown/armor/gambeson
+		armor = /obj/item/clothing/armor/gambeson
 	neck = /obj/item/key/mercenary
-	beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
-	beltr = /obj/item/rogueweapon/sword/sabre
+	beltl = /obj/item/storage/belt/pouch/coins/poor
+	beltr = /obj/item/weapon/sword/sabre
 	if(prob(50))
-		beltr = /obj/item/rogueweapon/sword/arming
-	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/merc
-	pants = /obj/item/clothing/under/roguetown/trou/leather
-	neck = /obj/item/clothing/neck/roguetown/gorget
+		beltr = /obj/item/weapon/sword/arming
+	shirt = /obj/item/clothing/shirt/shortshirt/merc
+	pants = /obj/item/clothing/pants/trou/leather
+	neck = /obj/item/clothing/neck/gorget
 	if(H.gender == FEMALE)
-		pants = /obj/item/clothing/under/roguetown/tights/black
-		beltr = /obj/item/rogueweapon/sword/sabre
+		pants = /obj/item/clothing/pants/tights/black
+		beltr = /obj/item/weapon/sword/sabre
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/misc/swimming, rand(1,5), TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/misc/climbing, rand(1,5), TRUE)

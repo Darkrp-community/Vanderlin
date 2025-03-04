@@ -193,7 +193,7 @@
 /obj/structure/closet/crate/roguecloset/inn/chest,
 /obj/item/clothing/neck/roguetown/coif,
 /obj/item/storage/belt/rogue/pouch/coins/poor,
-/obj/item/clothing/suit/roguetown/shirt/undershirt/priest,
+/obj/item/clothing/roguetown/shirt/undershirt/priest,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors/shelter/rtfield)
 "Ft" = (
@@ -234,7 +234,7 @@
 /area/rogue/indoors/shelter/rtfield)
 "ON" = (
 /obj/structure/closet/crate/chest/old_crate,
-/obj/item/clothing/suit/roguetown/armor/gambeson,
+/obj/item/clothing/roguetown/armor/gambeson,
 /obj/item/reagent_containers/powder/salt,
 /obj/item/reagent_containers/powder/spice,
 /turf/open/floor/rogue/dirt/road,

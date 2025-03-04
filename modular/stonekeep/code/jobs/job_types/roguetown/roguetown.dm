@@ -2,7 +2,7 @@
 /datum/job/roguetown
 	display_order = JOB_DISPLAY_ORDER_CAPTAIN
 
-/datum/job/roguetown/New()
+/datum/job/New()
 	. = ..()
 	if(give_bank_account)
 		for(var/X in GLOB.peasant_positions)
@@ -40,7 +40,7 @@
 	/// Default patron in case the patron is not allowed
 	var/datum/patron/default_patron
 
-/datum/outfit/job/roguetown/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	. = ..()
 	var/datum/patron/old_patron = H.patron // Store the initial patron selected before spawning on this var
 	if(length(allowed_patrons) && (!old_patron || !(old_patron.type in allowed_patrons)))
@@ -71,14 +71,14 @@
 	H.underwear_color = null
 	H.update_body()
 
-/datum/outfit/job/roguetown/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	. = ..()
 	if(H.mind)
 		if(H.familytree_pref != FAMILY_NONE && !visualsOnly && !H.family_datum)
 			SSfamilytree.AddLocal(H, H.familytree_pref)
 		if(H.ckey)
 			if(check_crownlist(H.ckey))
-				H.mind.special_items["Champion Circlet"] = /obj/item/clothing/head/roguetown/crown/sparrowcrown
+				H.mind.special_items["Champion Circlet"] = /obj/item/clothing/head/crown/sparrowcrown
 			give_special_items(H)
 	for(var/list_key in SStriumphs.post_equip_calls)
 		var/datum/triumph_buy/thing = SStriumphs.post_equip_calls[list_key]

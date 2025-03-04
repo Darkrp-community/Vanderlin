@@ -1,5 +1,5 @@
 
-/datum/job/roguetown/priest
+/datum/job/priest
 	title = "Priest"
 	flag = PRIEST
 	department_flag = CHURCHMEN
@@ -18,7 +18,7 @@
 	tutorial = "You are a devoted follower of Astrata. The divine is all that matters in an immoral world. The Sun Queen and her pantheon rule over all, and you will preach their wisdom to Vanderlin. It is up to you to shephard the flock into a Ten-fearing future."
 	whitelist_req = FALSE
 	bypass_lastclass = TRUE
-	outfit = /datum/outfit/job/roguetown/priest
+	outfit = /datum/outfit/job/priest
 
 	display_order = JDO_PRIEST
 	give_bank_account = 115
@@ -30,25 +30,25 @@
 		/obj/effect/proc_holder/spell/self/convertrole/monk
 	)
 
-/datum/outfit/job/roguetown/priest/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/priest/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.virginity = TRUE
 	H.verbs |= /mob/living/carbon/human/proc/coronate_lord
 	H.verbs |= /mob/living/carbon/human/proc/churchexcommunicate
 	H.verbs |= /mob/living/carbon/human/proc/churchcurse
 	H.verbs |= /mob/living/carbon/human/proc/churchannouncement
-	neck = /obj/item/clothing/neck/roguetown/psycross/silver/astrata
-	head = /obj/item/clothing/head/roguetown/priestmask
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/priest
-	pants = /obj/item/clothing/under/roguetown/tights/black
-	shoes = /obj/item/clothing/shoes/roguetown/shortboots
+	neck = /obj/item/clothing/neck/psycross/silver/astrata
+	head = /obj/item/clothing/head/priestmask
+	shirt = /obj/item/clothing/shirt/undershirt/priest
+	pants = /obj/item/clothing/pants/tights/black
+	shoes = /obj/item/clothing/shoes/shortboots
 	beltl = /obj/item/storage/keyring/priest
-	belt = /obj/item/storage/belt/rogue/leather/rope
-	armor = /obj/item/clothing/suit/roguetown/shirt/robe/priest
-	backl = /obj/item/storage/backpack/rogue/satchel
-	backpack_contents = list(/obj/item/needle = 1, /obj/item/storage/belt/rogue/pouch/coins/rich = 1 )
+	belt = /obj/item/storage/belt/leather/rope
+	armor = /obj/item/clothing/shirt/robe/priest
+	backl = /obj/item/storage/backpack/satchel
+	backpack_contents = list(/obj/item/needle = 1, /obj/item/storage/belt/pouch/coins/rich = 1 )
 
-	var/obj/item/rogueweapon/polearm/woodstaff/aries/P = new()
+	var/obj/item/weapon/polearm/woodstaff/aries/P = new()
 	H.put_in_hands(P, forced = TRUE)
 
 
@@ -79,7 +79,7 @@
 
 	H.update_icons()
 
-/datum/job/roguetown/expriest //just used to change the priest title
+/datum/job/expriest //just used to change the priest title
 	title = "Ex-Priest"
 	f_title = "Ex-Priestess"
 	flag = PRIEST
@@ -94,7 +94,7 @@
 	set category = "Priest"
 	if(!mind)
 		return
-	if(!istype(get_area(src), /area/rogue/indoors/town/church/chapel))
+	if(!istype(get_area(src), /area/indoors/town/church/chapel))
 		to_chat(src, "<span class='warning'>I need to do this in the chapel.</span>")
 		return FALSE
 	for(var/mob/living/carbon/human/HU in get_step(src, src.dir))
@@ -104,7 +104,7 @@
 			continue
 		if(!HU.head)
 			continue
-		if(!istype(HU.head, /obj/item/clothing/head/roguetown/crown/serpcrown))
+		if(!istype(HU.head, /obj/item/clothing/head/crown/serpcrown))
 			continue
 		for(var/mob/living/carbon/human/HL in GLOB.human_list)
 			if(HL.mind)
@@ -113,11 +113,11 @@
 			//would be better to change their title directly, but that's not possible since the title comes from the job datum
 			if(HL.job == "Monarch")
 				HL.job = "Ex-Monarch"
-				var/datum/job/J = SSjob.GetJobType(/datum/job/roguetown/lord)
+				var/datum/job/J = SSjob.GetJobType(/datum/job/lord)
 				J?.remove_spells(HL)
 			if(HL.job == "Consort")
 				HL.job = "Ex-Consort"
-				var/datum/job/J = SSjob.GetJobType(/datum/job/roguetown/consort)
+				var/datum/job/J = SSjob.GetJobType(/datum/job/consort)
 				J?.remove_spells(HL)
 		switch(HU.gender)
 			if("male")
@@ -126,7 +126,7 @@
 			if("female")
 				HU.mind.assigned_role = "Monarch"
 				HU.job = "Monarch"
-		var/datum/job/J = SSjob.GetJobType(/datum/job/roguetown/lord)
+		var/datum/job/J = SSjob.GetJobType(/datum/job/lord)
 		J?.add_spells(HU)
 		SSticker.rulermob = HU
 		GLOB.badomens -= OMEN_NOLORD
@@ -141,7 +141,7 @@
 		return
 	var/inputty = input("Excommunicate someone, cutting off their connection to the Ten. (excommunicate them again to remove it)", "Sinner Name") as text|null
 	if(inputty)
-		if(!istype(get_area(src), /area/rogue/indoors/town/church/chapel))
+		if(!istype(get_area(src), /area/indoors/town/church/chapel))
 			to_chat(src, span_warning("I need to do this from the chapel."))
 			return FALSE
 		if(inputty in GLOB.excommunicated_players)
@@ -169,7 +169,7 @@
 		return
 	var/inputty = input("Curse someone as a heretic. (curse them again to remove it)", "Sinner Name") as text|null
 	if(inputty)
-		if(!istype(get_area(src), /area/rogue/indoors/town/church/chapel))
+		if(!istype(get_area(src), /area/indoors/town/church/chapel))
 			to_chat(src, "<span class='warning'>I need to do this from the chapel.</span>")
 			return FALSE
 		if(inputty in GLOB.heretical_players)
@@ -196,7 +196,7 @@
 		return
 	var/inputty = input("Make an announcement", "VANDERLIN") as text|null
 	if(inputty)
-		if(!istype(get_area(src), /area/rogue/indoors/town/church/chapel))
+		if(!istype(get_area(src), /area/indoors/town/church/chapel))
 			to_chat(src, "<span class='warning'>I need to do this from the chapel.</span>")
 			return FALSE
 		priority_announce("[inputty]", title = "The [get_role_title()] Speaks", sound = 'sound/misc/bell.ogg')

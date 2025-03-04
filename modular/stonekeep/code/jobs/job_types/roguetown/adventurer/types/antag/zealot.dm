@@ -10,11 +10,11 @@
 		"Tiefling",
 		"Dark Elf"
 	)
-	outfit = /datum/outfit/job/roguetown/bandit/zealot
+	outfit = /datum/outfit/job/bandit/zealot
 	category_tags = list(CTAG_BANDIT)
 	cmode_music = 'sound/music/cmode/antag/CombatBandit3.ogg'
 
-/datum/outfit/job/roguetown/bandit/zealot/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/bandit/zealot/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.mind.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 3, TRUE)
@@ -31,14 +31,14 @@
 	H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
 
-	head = /obj/item/clothing/head/roguetown/helmet/leather/hood_ominous
-	armor = /obj/item/clothing/suit/roguetown/armor/cuirass/copperchest
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	belt = /obj/item/storage/belt/rogue/leather/rope
-	beltl = /obj/item/rogueweapon/knife/hunting
-	pants = /obj/item/clothing/under/roguetown/trou/beltpants
-	shoes = /obj/item/clothing/shoes/roguetown/boots/leather/heavy
-	backr = /obj/item/storage/backpack/rogue/satchel
+	head = /obj/item/clothing/head/helmet/leather/hood_ominous
+	armor = /obj/item/clothing/armor/cuirass/copperchest
+	wrists = /obj/item/clothing/wrists/bracers/leather
+	belt = /obj/item/storage/belt/leather/rope
+	beltl = /obj/item/weapon/knife/hunting
+	pants = /obj/item/clothing/pants/trou/beltpants
+	shoes = /obj/item/clothing/shoes/boots/leather/heavy
+	backr = /obj/item/storage/backpack/satchel
 	backpack_contents = list(/obj/item/needle/thorn = 1, /obj/item/natural/cloth = 1)
 
 	H.change_stat("strength", 2)
@@ -52,11 +52,11 @@
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Crusher")
-			r_hand = /obj/item/rogueweapon/flail/peasant
+			r_hand = /obj/item/weapon/flail/peasant
 		if("Goedendag")
-			r_hand = /obj/item/rogueweapon/mace/goden
+			r_hand = /obj/item/weapon/mace/goden
 		if("Club & Shield")
-			backl= /obj/item/rogueweapon/shield/wood
-			beltr = /obj/item/rogueweapon/mace/woodclub
+			backl= /obj/item/weapon/shield/wood
+			beltr = /obj/item/weapon/mace/woodclub
 	H.verbs |= /mob/proc/haltyell
 	H.ambushable = FALSE

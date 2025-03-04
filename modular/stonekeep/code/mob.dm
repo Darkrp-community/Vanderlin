@@ -27,17 +27,17 @@
 
 /obj/structure/innocent_web/attack_hand()
 	playsound(src, pick('sound/misc/jumpscare (1).ogg','sound/misc/jumpscare (2).ogg','sound/misc/jumpscare (3).ogg','sound/misc/jumpscare (4).ogg'), 100)
-	new /mob/living/simple_animal/hostile/retaliate/rogue/spider/hairy (get_turf(src))
+	new /mob/living/simple_animal/hostile/retaliate/spider/hairy (get_turf(src))
 	qdel(src)
 
 /obj/structure/innocent_web/attackby(obj/item, /mob/user, params)
 	playsound(src, pick('sound/misc/jumpscare (1).ogg','sound/misc/jumpscare (2).ogg','sound/misc/jumpscare (3).ogg','sound/misc/jumpscare (4).ogg'), 100)
-	new /mob/living/simple_animal/hostile/retaliate/rogue/spider/hairy (get_turf(src))
+	new /mob/living/simple_animal/hostile/retaliate/spider/hairy (get_turf(src))
 	qdel(src)
 
 /obj/structure/innocent_web/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	playsound(src, pick('sound/misc/jumpscare (1).ogg','sound/misc/jumpscare (2).ogg','sound/misc/jumpscare (3).ogg','sound/misc/jumpscare (4).ogg'), 100)
-	new /mob/living/simple_animal/hostile/retaliate/rogue/spider/hairy (get_turf(src))
+	new /mob/living/simple_animal/hostile/retaliate/spider/hairy (get_turf(src))
 	qdel(src)
 
 /obj/structure/innocent_web/Crossed(atom/movable/AM)
@@ -53,7 +53,7 @@
 				qdel(src)
 			else
 				playsound(src, pick('sound/misc/jumpscare (1).ogg','sound/misc/jumpscare (2).ogg','sound/misc/jumpscare (3).ogg','sound/misc/jumpscare (4).ogg'), 120)
-				new /mob/living/simple_animal/hostile/retaliate/rogue/spider/hairy (get_turf(src))
+				new /mob/living/simple_animal/hostile/retaliate/spider/hairy (get_turf(src))
 				qdel(src)
 		if(L.m_intent == MOVE_INTENT_RUN)
 			to_chat(L, "<span class='warning'>I'm stuck in the web!</span>")
@@ -63,7 +63,7 @@
 				qdel(src)
 			else
 				playsound(src, pick('sound/misc/jumpscare (1).ogg','sound/misc/jumpscare (2).ogg','sound/misc/jumpscare (3).ogg','sound/misc/jumpscare (4).ogg'), 120)
-				new /mob/living/simple_animal/hostile/retaliate/rogue/spider/hairy (get_turf(src))
+				new /mob/living/simple_animal/hostile/retaliate/spider/hairy (get_turf(src))
 				qdel(src)
 		else
 			to_chat(L, "<span class='warning'>I'm stuck in the web!</span>")
@@ -73,23 +73,23 @@
 				qdel(src)
 			else
 				playsound(src, pick('sound/misc/jumpscare (1).ogg','sound/misc/jumpscare (2).ogg','sound/misc/jumpscare (3).ogg','sound/misc/jumpscare (4).ogg'), 120)
-				new /mob/living/simple_animal/hostile/retaliate/rogue/spider/hairy (get_turf(src))
+				new /mob/living/simple_animal/hostile/retaliate/spider/hairy (get_turf(src))
 				qdel(src)
 
 
-/mob/living/simple_animal/hostile/retaliate/rogue/spider/hairy
+/mob/living/simple_animal/hostile/retaliate/spider/hairy
 	name = "hairy spider"
 	desc = "The forest canopies hides more than leaves...These creachers make honey from flowers and spin silk from their abdomen, when not consuming prey."
 	icon = 'modular/stonekeep/icons/spider.dmi'
 	icon_state = "spider"
 	icon_living = "spider"
 	icon_dead = "spider-dead"
-	botched_butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/strange = 1,
+	botched_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/strange = 1,
 							/obj/item/natural/silk = 1)
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/strange= 2,
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/strange= 2,
 							/obj/item/reagent_containers/food/snacks/spiderhoney = 1,
 							/obj/item/natural/silk = 2)
-	perfect_butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/strange = 2,
+	perfect_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/strange = 2,
 							/obj/item/reagent_containers/food/snacks/spiderhoney = 2,
 							/obj/item/natural/silk = 3)
 
@@ -120,15 +120,15 @@
 	outfit = /datum/outfit/savageorc2
 
 /datum/outfit/savageorc
-//	shirt = /obj/item/clothing/suit/roguetown/shirt/tribalrag	Vanderlin clothing
-	pants =	/obj/item/clothing/under/roguetown/loincloth/brown
-	shoes = /obj/item/clothing/shoes/roguetown/boots/furlinedanklets
+//	shirt = /obj/item/clothing/shirt/tribalrag	Vanderlin clothing
+	pants =	/obj/item/clothing/pants/loincloth/brown
+	shoes = /obj/item/clothing/shoes/boots/furlinedanklets
 
 /datum/outfit/savageorc2
-//	shirt = /obj/item/clothing/suit/roguetown/shirt/tribalrag
-	pants =	/obj/item/clothing/under/roguetown/loincloth/brown
-	shoes = /obj/item/clothing/shoes/roguetown/boots/furlinedanklets
-	head = /obj/item/clothing/head/roguetown/helmet/leather
+//	shirt = /obj/item/clothing/shirt/tribalrag
+	pants =	/obj/item/clothing/pants/loincloth/brown
+	shoes = /obj/item/clothing/shoes/boots/furlinedanklets
+	head = /obj/item/clothing/head/helmet/leather
 
 /obj/effect/mob_spawn/human/orc/corpse/orcmarauder
 	mob_name = "Orc Marauder"
@@ -140,10 +140,10 @@
 	mob_type = /mob/living/carbon/human/species/orc/marauder
 /*
 /datum/outfit/orcmarauder
-	armor = /obj/item/clothing/suit/roguetown/armor/chainmail
-	pants =	/obj/item/clothing/under/roguetown/chainlegs
-	shoes = /obj/item/clothing/shoes/roguetown/boots/furlinedboots
-	head = /obj/item/clothing/head/roguetown/helmet/leather
+	armor = /obj/item/clothing/armor/chainmail
+	pants =	/obj/item/clothing/pants/chainlegs
+	shoes = /obj/item/clothing/shoes/boots/furlinedboots
+	head = /obj/item/clothing/head/helmet/leather
 */
 /obj/effect/mob_spawn/human/orc/corpse/orcravager
 	mob_name = "Orc Ravager"
@@ -154,13 +154,13 @@
 	outfit = /datum/outfit/orcravager
 
 /datum/outfit/orcravager
-	armor = /obj/item/clothing/suit/roguetown/armor/chainmail
-	pants =	/obj/item/clothing/under/roguetown/chainlegs
-	shoes = /obj/item/clothing/shoes/roguetown/boots/armor
-	head = /obj/item/clothing/head/roguetown/helmet/skullcap
-	gloves = /obj/item/clothing/gloves/roguetown/chain
-	neck = /obj/item/clothing/neck/roguetown/chaincoif
-///	mask = /obj/item/clothing/mask/rogue/skullmask	Vanderlin clothing TO DO review it
+	armor = /obj/item/clothing/armor/chainmail
+	pants =	/obj/item/clothing/pants/chainlegs
+	shoes = /obj/item/clothing/shoes/boots/armor
+	head = /obj/item/clothing/head/helmet/skullcap
+	gloves = /obj/item/clothing/gloves/chain
+	neck = /obj/item/clothing/neck/chaincoif
+///	mask = /obj/item/clothing/face/skullmask	Vanderlin clothing TO DO review it
 
 /obj/effect/mob_spawn/human/orc/corpse/dwarfinvasion
 	color = "#82aa00"
@@ -168,24 +168,24 @@
 
 /mob/living/carbon/human/species/orc/dwarfinvasion/after_creation()
 	..()
-	equipOutfit(new /datum/outfit/job/roguetown/npc/orc/dead_invader)
+	equipOutfit(new /datum/outfit/job/npc/orc/dead_invader)
 
-/datum/outfit/job/roguetown/npc/orc/dead_invader/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/npc/orc/dead_invader/pre_equip(mob/living/carbon/human/H)
 	..()
 	var/loadout = rand(1,5)
 	switch(loadout)
 		if(1)
-			armor = /obj/item/clothing/suit/roguetown/armor/leather/hide/orc
+			armor = /obj/item/clothing/armor/leather/hide/orc
 		if(2)
-			armor = /obj/item/clothing/suit/roguetown/armor/leather/hide/orc
+			armor = /obj/item/clothing/armor/leather/hide/orc
 			cloak = /obj/item/clothing/cloak/raincloak/brown
 		if(3)
 			cloak = /obj/item/clothing/cloak/raincloak/brown
 		if(4)
-			armor = /obj/item/clothing/suit/roguetown/armor/leather/hide/orc
+			armor = /obj/item/clothing/armor/leather/hide/orc
 			cloak = /obj/item/clothing/cloak/raincloak/brown
 		if(5)
-			armor = /obj/item/clothing/suit/roguetown/armor/leather/hide/orc
+			armor = /obj/item/clothing/armor/leather/hide/orc
 			cloak = /obj/item/clothing/cloak/raincloak/brown
 
 /*	..................   Dwarf Underdweller Corpse   ................... */
@@ -201,19 +201,19 @@
 	outfit = /datum/outfit/deadunderdweller
 
 /datum/outfit/deadunderdweller
-	armor = /obj/item/clothing/suit/roguetown/armor/cuirass/iron
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/sailor/red
-	pants = /obj/item/clothing/under/roguetown/trou/leather
-	shoes = /obj/item/clothing/shoes/roguetown/simpleshoes/buckle
-	backl = /obj/item/storage/backpack/rogue/backpack
-	head = /obj/item/clothing/head/roguetown/helmet/leather/minershelm
+	armor = /obj/item/clothing/armor/cuirass/iron
+	shirt = /obj/item/clothing/shirt/undershirt/sailor/red
+	pants = /obj/item/clothing/pants/trou/leather
+	shoes = /obj/item/clothing/shoes/simpleshoes/buckle
+	backl = /obj/item/storage/backpack/backpack
+	head = /obj/item/clothing/head/helmet/leather/minershelm
 
 
 // ======================================================================
 /*	..................   Cat   ................... */
 /mob/living/simple_animal/pet/cat/rogue
 	TOTALSTR = 2
-	botched_butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/mince/beef = 1)
+	botched_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/mince/beef = 1)
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/flayedcat = 1)
 	perfect_butcher_results = list(/obj/item/reagent_containers/food/snacks/flayedcat = 1)
 
@@ -225,12 +225,12 @@
 	foodtype = RAW
 	w_class = WEIGHT_CLASS_SMALL
 	eat_effect = /datum/status_effect/debuff/uncookedfood
-	fried_type = /obj/item/reagent_containers/food/snacks/rogue/friedcat
+	fried_type = /obj/item/reagent_containers/food/snacks/friedcat
 	cooked_smell = /datum/pollutant/food/fried_rat
 	sellprice = 0
 	rotprocess = SHELFLIFE_SHORT
 
-/obj/item/reagent_containers/food/snacks/rogue/friedcat
+/obj/item/reagent_containers/food/snacks/friedcat
 	name = "fried cat"
 	icon_state = "cookedcat"
 	bitesize = 2
@@ -256,19 +256,19 @@
 	canparry = FALSE
 
 
-/mob/living/simple_animal/hostile/retaliate/rogue/troll
+/mob/living/simple_animal/hostile/retaliate/troll
 	base_intents = list(/datum/intent/simple/trollrip, /datum/intent/simple/trollsmash)
 
-/mob/living/simple_animal/hostile/retaliate/rogue/trollbog
+/mob/living/simple_animal/hostile/retaliate/trollbog
 	base_intents = list(/datum/intent/simple/trollsmash, /datum/intent/simple/trollrip)
 
-/mob/living/simple_animal/hostile/retaliate/rogue/wolf
+/mob/living/simple_animal/hostile/retaliate/wolf
 	base_intents = list(/datum/intent/simple/critterbite)
 
-/mob/living/simple_animal/hostile/retaliate/rogue/bigrat
+/mob/living/simple_animal/hostile/retaliate/bigrat
 	base_intents = list(/datum/intent/simple/critterbite)
 
-/mob/living/simple_animal/hostile/retaliate/rogue/spider
+/mob/living/simple_animal/hostile/retaliate/spider
 	base_intents = list(/datum/intent/simple/bite)
 
 /datum/intent/simple/trollrip
@@ -330,30 +330,30 @@
 // ======================================================================
 /*	..................   Maybe Mob Spawners   ................... */
 /obj/effect/spawner/roguemap/maybe_saiga
-	icon = 'icons/roguetown/mob/monster/saiga.dmi'
+	icon = 'icons/mob/monster/saiga.dmi'
 	icon_state = "saiga"
 	probby = 50
 	color = "#ff00d9"
 	spawned = list(
-		/mob/living/simple_animal/hostile/retaliate/rogue/saiga = 40,
-		/mob/living/simple_animal/hostile/retaliate/rogue/saigabuck = 50,
-		/mob/living/simple_animal/hostile/retaliate/rogue/saiga/saigakid = 10)
+		/mob/living/simple_animal/hostile/retaliate/saiga = 40,
+		/mob/living/simple_animal/hostile/retaliate/saigabuck = 50,
+		/mob/living/simple_animal/hostile/retaliate/saiga/saigakid = 10)
 
 /obj/effect/spawner/roguemap/maybe_cabbit
-	icon = 'icons/roguetown/mob/cabbit.dmi'
+	icon = 'icons/mob/cabbit.dmi'
 	icon_state = "cabbit"
 	probby = 50
 	color = "#ff00d9"
 	spawned = list(
-		/mob/living/simple_animal/pet/cat/rogue/cabbit = 100)
+		/mob/living/simple_animal/pet/cat/cabbit = 100)
 
 /obj/effect/spawner/roguemap/maybe_volf
-	icon = 'icons/roguetown/mob/monster/vol.dmi'
+	icon = 'icons/mob/monster/vol.dmi'
 	icon_state = "vv"
 	probby = 50
 	color = "#ff00d9"
 	spawned = list(
-		/mob/living/simple_animal/hostile/retaliate/rogue/wolf = 100)
+		/mob/living/simple_animal/hostile/retaliate/wolf = 100)
 
 
 // ======================================================================
@@ -373,12 +373,12 @@
 /*	..................   Catacomb Random   ................... */
 /obj/effect/spawner/roguemap/catacomb_random
 	icon_state = "srat"
-	icon = 'icons/roguetown/mob/monster/rat.dmi'
+	icon = 'icons/mob/monster/rat.dmi'
 	probby = 50
 	color = "#ffce0b"
 	spawned = list(
 		/obj/item/roguecoin/silver = 5,
-		/obj/item/clothing/under/roguetown/trou = 2,
+		/obj/item/clothing/pants/trou = 2,
 		/obj/item/flashlight/flare/torch/lantern = 1,
 		/obj/item/natural/worms = 20,
 		/obj/item/reagent_containers/food/snacks/smallrat = 5,
@@ -394,7 +394,7 @@ range. How much processing this saves is unclear */
 	. = ..()
 	AddComponent(/datum/component/spawner/bigrat)
 /datum/component/spawner/bigrat
-	mob_types = list(/mob/living/simple_animal/hostile/retaliate/rogue/bigrat)
+	mob_types = list(/mob/living/simple_animal/hostile/retaliate/bigrat)
 	spawn_time = 0
 	spawn_delay = 0
 	max_mobs = 1
@@ -408,7 +408,7 @@ range. How much processing this saves is unclear */
 	AddComponent(/datum/component/spawner/weak_skelly)
 /datum/component/spawner/weak_skelly
 //	mob_types = list(/mob/living/carbon/human/species/skeleton/skilled/unarmed)
-	mob_types = list(/mob/living/simple_animal/hostile/rogue/skeleton)
+	mob_types = list(/mob/living/simple_animal/hostile/skeleton)
 	spawn_time = 0
 	spawn_delay = 0
 	max_mobs = 1

@@ -191,26 +191,26 @@
 // ========================		WEATHER EDITS		============================
 
 // braziers, magic fire, lamps etc are rain resistant, standing fires and torch holders are not
-/obj/machinery/light/rogue/torchholder/Initialize()
+/obj/machinery/light/torchholder/Initialize()
 	. = ..()
 	GLOB.weather_act_upon_list += src
 
-/obj/machinery/light/rogue/torchholder/Destroy()
+/obj/machinery/light/torchholder/Destroy()
 	GLOB.weather_act_upon_list -= src
 	. = ..()
 
 
-/obj/machinery/light/rogue/firebowl/standing/Initialize()
+/obj/machinery/light/firebowl/standing/Initialize()
 	. = ..()
 	GLOB.weather_act_upon_list += src
-/obj/machinery/light/rogue/firebowl/standing/Destroy()
+/obj/machinery/light/firebowl/standing/Destroy()
 	GLOB.weather_act_upon_list -= src
 	. = ..()
 
-/obj/machinery/light/rogue/firebowl/standing/blue/Initialize()
+/obj/machinery/light/firebowl/standing/blue/Initialize()
 	. = ..()
 	GLOB.weather_act_upon_list -= src
-/obj/machinery/light/rogue/firebowl/standing/lamp/Initialize()
+/obj/machinery/light/firebowl/standing/lamp/Initialize()
 	. = ..()
 	GLOB.weather_act_upon_list -= src
 
@@ -227,7 +227,7 @@
 		return
 	extinguish()
 
-/obj/machinery/light/rogue/firebowl/standing/weather_act_on(weather_trait, severity)
+/obj/machinery/light/firebowl/standing/weather_act_on(weather_trait, severity)
 	if(weather_trait != PARTICLEWEATHER_RAIN)
 		return
 	extinguish()
@@ -310,7 +310,7 @@
 /obj/effect/decal/miasma
 	name = ""
 	desc = ""
-	icon = 'icons/roguetown/mob/rotten.dmi'
+	icon = 'icons/mob/rotten.dmi'
 	icon_state = "deadite"
 	mouse_opacity = 0
 
@@ -401,7 +401,7 @@
 	climb_offset = 16
 
 
-/datum/supply_pack/rogue/narcotics/soap	// correct soap now
+/datum/supply_pack/narcotics/soap	// correct soap now
 	name = "Herbal Soap"
 	cost = 20
 	contains = /obj/item/soap
@@ -776,7 +776,7 @@
 	dropshrink = 0.7
 	icon = 'modular/stonekeep/icons/structure.dmi'
 
-/obj/structure/bed/rogue/sleepingbag
+/obj/structure/bed/sleepingbag
 	icon = 'modular/stonekeep/icons/structure.dmi'
 
 

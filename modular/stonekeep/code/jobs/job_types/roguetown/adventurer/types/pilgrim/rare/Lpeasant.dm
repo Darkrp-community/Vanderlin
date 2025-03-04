@@ -15,13 +15,13 @@
 		"Dark Elf",
 		"Aasimar"
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/farmermaster
+	outfit = /datum/outfit/job/adventurer/farmermaster
 	maximum_possible_slots = 1
 	pickprob = 15
 	category_tags = list(CTAG_PILGRIM, CTAG_TOWNER)
 	apprentice_name = "Handyman"
 
-/datum/outfit/job/roguetown/adventurer/farmermaster/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/farmermaster/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.mind?.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
@@ -40,21 +40,21 @@
 	H.mind?.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/labor/taming, 2, TRUE)
 
-	belt = /obj/item/storage/belt/rogue/leather
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/random
-	pants = /obj/item/clothing/under/roguetown/trou
-	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
-	backr = /obj/item/rogueweapon/hoe
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	backl = /obj/item/storage/backpack/rogue/backpack
-	neck = /obj/item/clothing/neck/roguetown/coif/cloth
-	armor = /obj/item/clothing/suit/roguetown/armor/gambeson
-	mouth = /obj/item/clothing/mask/cigarette/pipe/westman
-	beltl = /obj/item/rogueweapon/sickle
-	beltr = /obj/item/rogueweapon/knife/hunting
-	var/obj/item/rogueweapon/pitchfork/P = new()
+	belt = /obj/item/storage/belt/leather
+	shirt = /obj/item/clothing/shirt/undershirt/random
+	pants = /obj/item/clothing/pants/trou
+	shoes = /obj/item/clothing/shoes/boots/leather
+	backr = /obj/item/weapon/hoe
+	wrists = /obj/item/clothing/wrists/bracers/leather
+	backl = /obj/item/storage/backpack/backpack
+	neck = /obj/item/clothing/neck/coif/cloth
+	armor = /obj/item/clothing/armor/gambeson
+	mouth = /obj/item/clothing/face/cigarette/pipe/westman
+	beltl = /obj/item/weapon/sickle
+	beltr = /obj/item/weapon/knife/hunting
+	var/obj/item/weapon/pitchfork/P = new()
 	H.put_in_hands(P, forced = TRUE)
-	backpack_contents = list(/obj/item/neuFarm/seed/wheat=1,/obj/item/neuFarm/seed/apple=1,/obj/item/neuFarm/seed/cabbage=1,/obj/item/neuFarm/seed/potato=1,/obj/item/neuFarm/seed/onion=1,/obj/item/ash=2,/obj/item/flint=1,/obj/item/storage/belt/rogue/pouch/coins/mid=1)
+	backpack_contents = list(/obj/item/neuFarm/seed/wheat=1,/obj/item/neuFarm/seed/apple=1,/obj/item/neuFarm/seed/cabbage=1,/obj/item/neuFarm/seed/potato=1,/obj/item/neuFarm/seed/onion=1,/obj/item/ash=2,/obj/item/flint=1,/obj/item/storage/belt/pouch/coins/mid=1)
 	H.change_stat("strength", 2)
 	H.change_stat("constitution", 1)
 	H.change_stat("endurance", 2)

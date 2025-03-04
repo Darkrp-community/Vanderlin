@@ -1,5 +1,5 @@
 
-/datum/job/roguetown/villager
+/datum/job/villager
 	title = "Towner"
 	flag = ADVENTURER
 	department_flag = PEASANTS
@@ -19,7 +19,7 @@
 
 
 
-/datum/job/roguetown/villager/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
+/datum/job/villager/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
 	if(L)
 		var/mob/living/carbon/human/H = L
@@ -27,7 +27,7 @@
 		H.invisibility = INVISIBILITY_MAXIMUM
 		H.become_blind("advsetup")
 
-/datum/job/roguetown/villager/New()
+/datum/job/villager/New()
 	. = ..()
 	for(var/X in GLOB.peasant_positions)
 		peopleiknow += X

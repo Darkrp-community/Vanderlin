@@ -6,7 +6,7 @@
 		"Humen",
 		"Dwarf"
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/grenzelhoft
+	outfit = /datum/outfit/job/adventurer/grenzelhoft
 	category_tags = list(CTAG_PILGRIM)
 	maximum_possible_slots = 1
 	pickprob = 30
@@ -14,25 +14,25 @@
 
 	cmode_music = 'sound/music/cmode/combat_grenzelhoft.ogg'
 
-/datum/outfit/job/roguetown/adventurer/grenzelhoft/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/grenzelhoft/pre_equip(mob/living/carbon/human/H)
 	..()
-	shoes = /obj/item/clothing/shoes/roguetown/grenzelhoft
-	gloves = /obj/item/clothing/gloves/roguetown/angle/grenzel
-	wrists = /obj/item/clothing/neck/roguetown/psycross/g
-	head = /obj/item/clothing/head/roguetown/helmet/skullcap/grenzelhoft
-	armor = /obj/item/clothing/suit/roguetown/armor/brigandine
-	belt = /obj/item/storage/belt/rogue/leather/plaquesilver
-	beltl = /obj/item/rogueweapon/sword/sabre/dec
+	shoes = /obj/item/clothing/shoes/grenzelhoft
+	gloves = /obj/item/clothing/gloves/angle/grenzel
+	wrists = /obj/item/clothing/neck/psycross/g
+	head = /obj/item/clothing/head/helmet/skullcap/grenzelhoft
+	armor = /obj/item/clothing/armor/brigandine
+	belt = /obj/item/storage/belt/leather/plaquesilver
+	beltl = /obj/item/weapon/sword/sabre/dec
 	beltr = /obj/item/flashlight/flare/torch/lantern
-	backr = /obj/item/storage/backpack/rogue/satchel
+	backr = /obj/item/storage/backpack/satchel
 	id = /obj/item/clothing/ring/gold
-	shirt = /obj/item/clothing/suit/roguetown/shirt/grenzelhoft
-	pants = /obj/item/clothing/under/roguetown/grenzelpants
-	neck = /obj/item/clothing/neck/roguetown/gorget
-	backpack_contents = list(/obj/item/storage/belt/rogue/pouch/coins/veryrich)
+	shirt = /obj/item/clothing/shirt/grenzelhoft
+	pants = /obj/item/clothing/pants/grenzelpants
+	neck = /obj/item/clothing/neck/gorget
+	backpack_contents = list(/obj/item/storage/belt/pouch/coins/veryrich)
 	if(H.gender == FEMALE)
-		armor = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/dress/alt
-		beltl = /obj/item/rogueweapon/sword/rapier/dec
+		armor = /obj/item/clothing/armor/gambeson/heavy/dress/alt
+		beltl = /obj/item/weapon/sword/rapier/dec
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)

@@ -10,28 +10,28 @@
 		"Undine"
 
 	)
-	outfit = /datum/outfit/job/roguetown/mercenary/toweryakko
+	outfit = /datum/outfit/job/mercenary/toweryakko
 	category_tags = list(CTAG_MERCENARY)
 	maximum_possible_slots = 5
 
 
-/datum/outfit/job/roguetown/mercenary/toweryakko/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/mercenary/toweryakko/pre_equip(mob/living/carbon/human/H)
 	..()
-	shoes = /obj/item/clothing/shoes/roguetown/shortboots/cloudhead/toweryakkos
-	head = /obj/item/clothing/head/roguetown/helmet/kaizoku/jingasa
-	gloves = /obj/item/clothing/gloves/roguetown/leather/abyssal/toweryakko
-	mask = /obj/item/clothing/mask/rogue/kaizoku/menpo
-	belt = /obj/item/storage/belt/rogue/leather
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather/khudagach
+	shoes = /obj/item/clothing/shoes/shortboots/cloudhead/toweryakkos
+	head = /obj/item/clothing/head/helmet/kaizoku/jingasa
+	gloves = /obj/item/clothing/gloves/leather/abyssal/toweryakko
+	mask = /obj/item/clothing/face/kaizoku/menpo
+	belt = /obj/item/storage/belt/leather
+	wrists = /obj/item/clothing/wrists/bracers/leather/khudagach
 	cloak = /obj/item/clothing/cloak/stabard/haramaki/odoshi/toweryakko
-	armor = /obj/item/clothing/suit/roguetown/armor/cuirass/sanmaido
-	backr = /obj/item/rogueweapon/shield/abyssaltower
-	beltr = /obj/item/rogueweapon/sword/scimitar/falchion/yuntoudao
+	armor = /obj/item/clothing/armor/cuirass/sanmaido
+	backr = /obj/item/weapon/shield/abyssaltower
+	beltr = /obj/item/weapon/sword/scimitar/falchion/yuntoudao
 	beltl = /obj/item/flashlight/flare/torch/lantern
-	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail/tatami
-	pants = /obj/item/clothing/under/roguetown/chainlegs/iron/haidate_tatami
-	backl = /obj/item/storage/backpack/rogue/satchel
-	backpack_contents = list(/obj/item/storage/belt/rogue/pouch/coins/poor)
+	shirt = /obj/item/clothing/armor/chainmail/tatami
+	pants = /obj/item/clothing/pants/chainlegs/iron/haidate_tatami
+	backl = /obj/item/storage/backpack/satchel
+	backpack_contents = list(/obj/item/storage/belt/pouch/coins/poor)
 	if(!H.has_language(/datum/language/abyssal))
 		H.grant_language(/datum/language/abyssal)
 		to_chat(H, "<span class='info'>I can speak Abyssal with ,a before my speech.</span>")
@@ -57,8 +57,8 @@
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 
 	if(H.wear_mask)
-		if(istype(H.wear_mask, /obj/item/clothing/mask/rogue/eyepatch || /obj/item/clothing/mask/rogue/eyepatch/left ))
+		if(istype(H.wear_mask, /obj/item/clothing/face/eyepatch || /obj/item/clothing/face/eyepatch/left ))
 			qdel(H.wear_mask)
-			mask = /obj/item/clothing/mask/rogue/kaizoku/menpo
+			mask = /obj/item/clothing/face/kaizoku/menpo
 
 //colortone for toweryakkos;	color = "#804d97"

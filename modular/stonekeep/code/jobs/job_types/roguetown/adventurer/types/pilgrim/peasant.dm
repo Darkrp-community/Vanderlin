@@ -13,11 +13,11 @@
 		"Dark Elf",
 		"Aasimar"
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/peasant
+	outfit = /datum/outfit/job/adventurer/peasant
 	category_tags = list(CTAG_PILGRIM)
 	apprentice_name = "Handyman"
 
-/datum/outfit/job/roguetown/adventurer/peasant/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/peasant/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.mind?.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
@@ -32,46 +32,46 @@
 	H.mind?.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
 
-	belt = /obj/item/storage/belt/rogue/leather/rope
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/random
-	pants = /obj/item/clothing/under/roguetown/trou
-	head = /obj/item/clothing/head/roguetown/strawhat
-	shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	backr = /obj/item/rogueweapon/hoe
-	backl = /obj/item/storage/backpack/rogue/satchel
-	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
-	armor = /obj/item/clothing/suit/roguetown/armor/gambeson/light/striped
-	beltl = /obj/item/rogueweapon/sickle
+	belt = /obj/item/storage/belt/leather/rope
+	shirt = /obj/item/clothing/shirt/undershirt/random
+	pants = /obj/item/clothing/pants/trou
+	head = /obj/item/clothing/head/strawhat
+	shoes = /obj/item/clothing/shoes/simpleshoes
+	wrists = /obj/item/clothing/wrists/bracers/leather
+	backr = /obj/item/weapon/hoe
+	backl = /obj/item/storage/backpack/satchel
+	neck = /obj/item/storage/belt/pouch/coins/poor
+	armor = /obj/item/clothing/armor/gambeson/light/striped
+	beltl = /obj/item/weapon/sickle
 	beltr = /obj/item/flint
 	if(HAS_TRAIT(H, TRAIT_KAIZOKU)) //Heartfelt humens.
-		wrists = /obj/item/clothing/wrists/roguetown/bracers/leather/khudagach
-		gloves = /obj/item/clothing/gloves/roguetown/fingerless/yugake
+		wrists = /obj/item/clothing/wrists/bracers/leather/khudagach
+		gloves = /obj/item/clothing/gloves/fingerless/yugake
 		if(H.gender == FEMALE)
-			shirt = /obj/item/clothing/suit/roguetown/shirt/tunic/kimono
+			shirt = /obj/item/clothing/shirt/tunic/kimono
 		else
-			shirt = /obj/item/clothing/suit/roguetown/shirt/looseshirt
-			pants = /obj/item/clothing/under/roguetown/trou/tobi
+			shirt = /obj/item/clothing/shirt/looseshirt
+			pants = /obj/item/clothing/pants/trou/tobi
 		var/helmettype = pickweight(list("Gasa" = 1, "Roningasa" = 1, "Sandogasa" = 1, "Takuhatsugasa" = 1, "Torioigasa" = 1))
 		switch(helmettype)
 			if("Gasa")
-				head = /obj/item/clothing/head/roguetown/tengai/gasa
+				head = /obj/item/clothing/head/tengai/gasa
 			if("Roningasa")
-				head = /obj/item/clothing/head/roguetown/tengai/roningasa
+				head = /obj/item/clothing/head/tengai/roningasa
 			if("Sandogasa")
-				head = /obj/item/clothing/head/roguetown/tengai/sandogasa
+				head = /obj/item/clothing/head/tengai/sandogasa
 			if("Takuhatsugasa")
-				head = /obj/item/clothing/head/roguetown/takuhatsugasa
+				head = /obj/item/clothing/head/takuhatsugasa
 			if("Torioigasa")
-				head =/obj/item/clothing/head/roguetown/tengai/torioigasa
-	var/obj/item/rogueweapon/pitchfork/P = new()
+				head =/obj/item/clothing/head/tengai/torioigasa
+	var/obj/item/weapon/pitchfork/P = new()
 	H.put_in_hands(P, forced = TRUE)
 	if(H.gender == FEMALE)
-		head = /obj/item/clothing/head/roguetown/armingcap
-		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/random
-		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
+		head = /obj/item/clothing/head/armingcap
+		armor = /obj/item/clothing/shirt/dress/gen/random
+		shirt = /obj/item/clothing/shirt/undershirt
 		pants = null
-	backpack_contents = list(/obj/item/neuFarm/seed/wheat=1,/obj/item/neuFarm/seed/apple=1,/obj/item/ash=1,/obj/item/rogueweapon/knife/villager=1)
+	backpack_contents = list(/obj/item/neuFarm/seed/wheat=1,/obj/item/neuFarm/seed/apple=1,/obj/item/ash=1,/obj/item/weapon/knife/villager=1)
 	H.change_stat("strength", 1)
 	H.change_stat("constitution", 1)
 	H.change_stat("endurance", 1)

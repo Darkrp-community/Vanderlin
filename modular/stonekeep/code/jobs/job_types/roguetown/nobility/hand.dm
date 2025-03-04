@@ -1,4 +1,4 @@
-/datum/job/roguetown/hand
+/datum/job/hand
 	title = "Hand"
 	flag = HAND
 	department_flag = NOBLEMEN
@@ -12,7 +12,7 @@
 		"Dwarf"
 	)
 	allowed_sexes = list(MALE, FEMALE)
-	outfit = /datum/outfit/job/roguetown/hand
+	outfit = /datum/outfit/job/hand
 	advclass_cat_rolls = list(CTAG_HAND = 20)
 	display_order = JDO_HAND
 	tutorial = "You owe everything to your liege. You are the most trusted of the ruler- their sibling, in fact. You have played spymaster and confidant to the Noble-Family for so long that you are a vault of intrigue, something you exploit with potent conviction. Let no man ever forget whose ear you whisper into. Youve killed more men with those lips than any blademaster could ever claim to."
@@ -22,7 +22,7 @@
 	min_pq = 0
 
 /*
-/datum/job/roguetown/hand/special_job_check(mob/dead/new_player/player)
+/datum/job/hand/special_job_check(mob/dead/new_player/player)
 	if(!player)
 		return
 	if(!player.ckey)
@@ -33,11 +33,11 @@
 				return TRUE
 */
 
-/datum/outfit/job/roguetown/hand
-	shoes = /obj/item/clothing/shoes/roguetown/nobleboot/thighboots
-	belt = /obj/item/storage/belt/rogue/leather/steel
+/datum/outfit/job/hand
+	shoes = /obj/item/clothing/shoes/nobleboot/thighboots
+	belt = /obj/item/storage/belt/leather/steel
 
-/datum/job/roguetown/hand/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
+/datum/job/hand/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	. = ..()
 	SSfamilytree.AddRoyal(L, FAMILY_OMMER)
 	if(ishuman(L))
@@ -48,7 +48,7 @@
 
 		addtimer(CALLBACK(src, PROC_REF(know_agents), H), 50)
 
-/datum/job/roguetown/hand/proc/know_agents(mob/living/carbon/human/H)
+/datum/job/hand/proc/know_agents(mob/living/carbon/human/H)
 	if(!GLOB.roundstart_court_agents.len)
 		to_chat(H, span_notice("You begun the week with no agents."))
 	else
@@ -62,19 +62,19 @@
 /datum/advclass/hand/hand
 	name = "Hand"
 	tutorial = " You have played blademaster and strategist to the Noble-Family for so long that you are a master tactician, something you exploit with potent conviction. Let no man ever forget whose ear you whisper into. You've killed more men with swords than any spymaster could ever claim to."
-	outfit = /datum/outfit/job/roguetown/hand/handclassic
+	outfit = /datum/outfit/job/hand/handclassic
 
 	category_tags = list(CTAG_HAND)
 	cmode_music = 'sound/music/cmode/nobility/combat_noble.ogg'
 
 //Classical hand start - same as before, nothing changed.
-/datum/outfit/job/roguetown/hand/handclassic/pre_equip(mob/living/carbon/human/H)
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/fancy
-	backr = /obj/item/storage/backpack/rogue/satchel/black
-	backpack_contents = list(/obj/item/rogueweapon/knife/dagger/steel = 1, /obj/item/storage/keyring/hand = 1, /obj/item/paper/scroll/frumentarii/roundstart = 1)
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/jacket/handjacket
-	pants = /obj/item/clothing/under/roguetown/tights/black
-	beltr = /obj/item/rogueweapon/sword/rapier/dec
+/datum/outfit/job/hand/handclassic/pre_equip(mob/living/carbon/human/H)
+	shirt = /obj/item/clothing/shirt/undershirt/fancy
+	backr = /obj/item/storage/backpack/satchel/black
+	backpack_contents = list(/obj/item/weapon/knife/dagger/steel = 1, /obj/item/storage/keyring/hand = 1, /obj/item/paper/scroll/frumentarii/roundstart = 1)
+	armor = /obj/item/clothing/armor/leather/jacket/handjacket
+	pants = /obj/item/clothing/pants/tights/black
+	beltr = /obj/item/weapon/sword/rapier/dec
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/crossbows, 4, TRUE)
@@ -97,26 +97,26 @@
 /datum/advclass/hand/spymaster
 	name = "Spymaster"
 	tutorial = " You have played spymaster and confidant to the Noble-Family for so long that you are a vault of intrigue, something you exploit with potent conviction. Let no man ever forget whose ear you whisper into. You've killed more men with those lips than any blademaster could ever claim to."
-	outfit = /datum/outfit/job/roguetown/hand/spymaster
+	outfit = /datum/outfit/job/hand/spymaster
 
 	category_tags = list(CTAG_HAND)
 	cmode_music = 'sound/music/cmode/nobility/CombatSpymaster.ogg'
 
 //Spymaster start. More similar to the rogue adventurer - loses heavy armor and sword skills for more sneaky stuff.
-/datum/outfit/job/roguetown/hand/spymaster/pre_equip(mob/living/carbon/human/H)
-	backr = /obj/item/storage/backpack/rogue/satchel/black
-	backpack_contents = list(/obj/item/rogueweapon/knife/dagger/steel/special = 1, /obj/item/storage/keyring/hand = 1, /obj/item/lockpickring/mundane = 1, /obj/item/paper/scroll/frumentarii/roundstart = 1)
+/datum/outfit/job/hand/spymaster/pre_equip(mob/living/carbon/human/H)
+	backr = /obj/item/storage/backpack/satchel/black
+	backpack_contents = list(/obj/item/weapon/knife/dagger/steel/special = 1, /obj/item/storage/keyring/hand = 1, /obj/item/lockpickring/mundane = 1, /obj/item/paper/scroll/frumentarii/roundstart = 1)
 	if(!istype(H.dna.species, /datum/species/dwarf))
-		shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/shadowrobe
+		shirt = /obj/item/clothing/armor/gambeson/shadowrobe
 		cloak = /obj/item/clothing/cloak/half/shadowcloak
-		gloves = /obj/item/clothing/gloves/roguetown/fingerless/shadowgloves
-		mask = /obj/item/clothing/mask/rogue/shepherd/shadowmask
-		pants = /obj/item/clothing/under/roguetown/trou/shadowpants
+		gloves = /obj/item/clothing/gloves/fingerless/shadowgloves
+		mask = /obj/item/clothing/face/shepherd/shadowmask
+		pants = /obj/item/clothing/pants/trou/shadowpants
 	else
 		cloak = /obj/item/clothing/cloak/raincloak/mortus //cool spymaster cloak
-		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/guard
-		armor = /obj/item/clothing/suit/roguetown/armor/leather/jacket/hand
-		pants = /obj/item/clothing/under/roguetown/tights/black
+		shirt = /obj/item/clothing/shirt/undershirt/guard
+		armor = /obj/item/clothing/armor/leather/jacket/hand
+		pants = /obj/item/clothing/pants/tights/black
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/crossbows, 4, TRUE)
@@ -145,18 +145,18 @@
 /datum/advclass/hand/advisor
 	name = "Advisor"
 	tutorial = " You have played researcher and confidant to the Noble-Family for so long that you are a vault of knowledge, something you exploit with potent conviction. Let no man ever forget the knowledge you wield. You've read more books than any blademaster or spymaster could ever claim to."
-	outfit = /datum/outfit/job/roguetown/hand/advisor
+	outfit = /datum/outfit/job/hand/advisor
 
 	category_tags = list(CTAG_HAND)
 	cmode_music = 'sound/music/cmode/nobility/combat_noble.ogg'
 
 //Advisor start. Trades combat skills for more knowledge and skills - for older hands, hands that don't do combat - people who wanna play wizened old advisors.
-/datum/outfit/job/roguetown/hand/advisor/pre_equip(mob/living/carbon/human/H)
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/fancy
-	backr = /obj/item/storage/backpack/rogue/satchel/black
-	backpack_contents = list(/obj/item/rogueweapon/knife/dagger/steel = 1, /obj/item/storage/keyring/hand = 1, /obj/item/reagent_containers/glass/bottle/rogue/poison = 1, /obj/item/paper/scroll/frumentarii/roundstart = 1) //starts with a vial of poison, like all wizened evil advisors do!
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/jacket/hand
-	pants = /obj/item/clothing/under/roguetown/tights/black
+/datum/outfit/job/hand/advisor/pre_equip(mob/living/carbon/human/H)
+	shirt = /obj/item/clothing/shirt/undershirt/fancy
+	backr = /obj/item/storage/backpack/satchel/black
+	backpack_contents = list(/obj/item/weapon/knife/dagger/steel = 1, /obj/item/storage/keyring/hand = 1, /obj/item/reagent_containers/glass/bottle/poison = 1, /obj/item/paper/scroll/frumentarii/roundstart = 1) //starts with a vial of poison, like all wizened evil advisors do!
+	armor = /obj/item/clothing/armor/leather/jacket/hand
+	pants = /obj/item/clothing/pants/tights/black
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/crossbows, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)

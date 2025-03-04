@@ -255,7 +255,7 @@
 		return
 	var/icon/I = get_flat_human_icon(null, J, P, DUMMY_HUMAN_SLOT_MANIFEST, list(SOUTH))
 	if(I)
-		var/icon/female_s = icon("icon"='icons/mob/clothing/under/masking_helpers.dmi', "icon_state"="credits")
+		var/icon/female_s = icon("icon"='icons/mob/clothing/pants/masking_helpers.dmi', "icon_state"="credits")
 		I.Blend(female_s, ICON_MULTIPLY)
 		I.Scale(96,96)
 		GLOB.credits_icons[thename]["icon"] = I
@@ -347,3 +347,15 @@
 	if(!J)
 		J = SSjob.GetJob(H.job)
 
+	if(H.mind)
+		H.mind?.job_bitflag = job_bitflag
+		if(H.familytree_pref != FAMILY_NONE && !visualsOnly && !H.family_datum)
+			SSfamilytree.AddLocal(H, H.familytree_pref)
+		if(H.ckey)
+			if(check_crownlist(H.ckey))
+				H.mind.special_items["Champion Circlet"] = /obj/item/clothing/head/crown/sparrowcrown
+			give_special_items(H)
+	for(var/list_key in SStriumphs.post_equip_calls)
+		var/datum/triumph_buy/thing = SStriumphs.post_equip_calls[list_key]
+		thing.on_activate(H)
+	return

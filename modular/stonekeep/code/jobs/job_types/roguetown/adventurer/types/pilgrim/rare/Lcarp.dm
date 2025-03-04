@@ -16,13 +16,13 @@
 		"Dark Elf",
 		"Aasimar"
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/mastercarpenter
+	outfit = /datum/outfit/job/adventurer/mastercarpenter
 	category_tags = list(CTAG_PILGRIM, CTAG_TOWNER)
 	maximum_possible_slots = 1
 	pickprob = 15
 	apprentice_name = "Carpenter Apprentice"
 
-/datum/outfit/job/roguetown/adventurer/mastercarpenter/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/mastercarpenter/pre_equip(mob/living/carbon/human/H)
 	..()
 
 	H.mind?.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
@@ -41,19 +41,19 @@
 	H.mind?.adjust_skillrank(/datum/skill/misc/sewing, 2, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/labor/lumberjacking, 4, TRUE)
 
-	head = pick(/obj/item/clothing/head/roguetown/hatfur, /obj/item/clothing/head/roguetown/hatblu, /obj/item/clothing/head/roguetown/brimmed)
-	neck = /obj/item/clothing/neck/roguetown/coif
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/jacket
-	pants = /obj/item/clothing/under/roguetown/trou
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/random
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
-	belt = /obj/item/storage/belt/rogue/leather
-	beltr = /obj/item/storage/belt/rogue/pouch/coins/mid
-	beltl = /obj/item/rogueweapon/hammer/steel
-	backl = /obj/item/storage/backpack/rogue/backpack
-	backr = /obj/item/rogueweapon/polearm/halberd/bardiche/woodcutter // A specialist in cutting trees would carry an impressive axe
-	backpack_contents = list(/obj/item/flint = 1, /obj/item/rogueweapon/knife/hunting = 1, /obj/item/key/artificer = 1)
+	head = pick(/obj/item/clothing/head/hatfur, /obj/item/clothing/head/hatblu, /obj/item/clothing/head/brimmed)
+	neck = /obj/item/clothing/neck/coif
+	armor = /obj/item/clothing/armor/leather/jacket
+	pants = /obj/item/clothing/pants/trou
+	shirt = /obj/item/clothing/shirt/undershirt/random
+	wrists = /obj/item/clothing/wrists/bracers/leather
+	shoes = /obj/item/clothing/shoes/boots/leather
+	belt = /obj/item/storage/belt/leather
+	beltr = /obj/item/storage/belt/pouch/coins/mid
+	beltl = /obj/item/weapon/hammer/steel
+	backl = /obj/item/storage/backpack/backpack
+	backr = /obj/item/weapon/polearm/halberd/bardiche/woodcutter // A specialist in cutting trees would carry an impressive axe
+	backpack_contents = list(/obj/item/flint = 1, /obj/item/weapon/knife/hunting = 1, /obj/item/key/artificer = 1)
 	H.change_stat("strength", 2)
 	H.change_stat("endurance", 2)
 	H.change_stat("intelligence", 1)

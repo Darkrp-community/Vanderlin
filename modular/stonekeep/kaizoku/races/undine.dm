@@ -37,8 +37,8 @@
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | RACE_SWAP | SLIME_EXTRACT
 	limbs_icon_m = 'modular/stonekeep/kaizoku/icons/abyssariad_bodies/male/ms_kappa.dmi'
 	limbs_icon_f = 'modular/stonekeep/kaizoku/icons/abyssariad_bodies/female/fs_kappa.dmi'
-	dam_icon = 'icons/roguetown/mob/bodies/dam/dam_male.dmi'
-	dam_icon_f = 'icons/roguetown/mob/bodies/dam/dam_female.dmi'
+	dam_icon = 'icons/mob/bodies/dam/dam_male.dmi'
+	dam_icon_f = 'icons/mob/bodies/dam/dam_female.dmi'
 
 	hairyness = ""
 	use_f = FALSE
@@ -148,54 +148,54 @@
 	name = "Reinforced Tribal Armor"
 	time = 8 SECONDS
 	reqs = list(/obj/item/alch/bone = 5, /obj/item/alch/sinew = 2, /obj/item/natural/hide = 3, /obj/item/alch/horn = 1)
-	result = /obj/item/clothing/suit/roguetown/armor/ceramic/reinforced
+	result = /obj/item/clothing/armor/ceramic/reinforced
 	category = CAT_NONE
 
 /datum/crafting_recipe/reinforcedhelmet //3-tier, medium armor. Requires troll horns.
 	name = "Reinforced Tribal Helmet"
 	time = 8 SECONDS
 	reqs = list(/obj/item/alch/bone = 3, /obj/item/alch/sinew = 2, /obj/item/natural/hide = 2, /obj/item/alch/horn = 1) //Costs less since it is a helmet. Still requires troll horns.
-	result = /obj/item/clothing/head/roguetown/helmet/ceramic/reinforced
+	result = /obj/item/clothing/head/helmet/ceramic/reinforced
 	category = CAT_NONE
 
 /datum/crafting_recipe/mediumhelmet //2-tiers, medium armor. The materials can be adquired naturally by butchering.
 	name = "Medium Tribal helmet"
 	time = 4 SECONDS
 	reqs = list(/obj/item/alch/bone = 2, /obj/item/alch/sinew = 1, /obj/item/natural/hide = 1, /obj/item/natural/cloth = 4)
-	result = /obj/item/clothing/head/roguetown/helmet/ceramic/medium
+	result = /obj/item/clothing/head/helmet/ceramic/medium
 	category = CAT_NONE
 
 /datum/crafting_recipe/mediumarmor //2-tiers, medium armor. The materials can be adquired naturally by butchering.
 	name = "Medium Tribal Armor"
 	time = 4 SECONDS
 	reqs = list(/obj/item/alch/bone = 3, /obj/item/alch/sinew = 2, /obj/item/natural/hide = 2, /obj/item/natural/cloth = 4)
-	result = /obj/item/clothing/suit/roguetown/armor/ceramic
+	result = /obj/item/clothing/armor/ceramic
 	category = CAT_NONE
 
 /datum/crafting_recipe/lighthelmet //1-tiers, light armor. The materials can be adquired naturally by butchering.
 	name = "Light Tribal Helmet"
 	time = 4 SECONDS
 	reqs = list(/obj/item/alch/bone = 1, /obj/item/natural/cloth = 4)
-	result = /obj/item/clothing/head/roguetown/helmet/ceramic
+	result = /obj/item/clothing/head/helmet/ceramic
 	category = CAT_NONE
 
 /datum/crafting_recipe/lightarmor //1-tier, light armor. The materials can be adquired naturally by butchering.
 	name = "Light Tribal Armor"
 	time = 4 SECONDS
 	reqs = list(/obj/item/alch/bone = 2, /obj/item/natural/cloth = 4)
-	result = /obj/item/clothing/suit/roguetown/armor/ceramic/light
+	result = /obj/item/clothing/armor/ceramic/light
 	category = CAT_NONE
 
 /datum/crafting_recipe/obsidian_club
 	name = "Obsidian Club"
 	time = 4 SECONDS
 	reqs = list(/obj/item/grown/log/tree/small = 1, /obj/item/natural/stone =  4, /obj/item/ash = 1)
-	result = /obj/item/rogueweapon/mace/ararebo/obsidian
+	result = /obj/item/weapon/mace/ararebo/obsidian
 	category = CAT_NONE
 
 /datum/crafting_recipe/obsidian_spear
 	name = "Obsidian Spear"
 	time = 4 SECONDS
 	reqs = list(/obj/item/grown/log/tree/small = 1, /obj/item/natural/cloth = 1, /obj/item/natural/stone =  2, /obj/item/ash = 1)
-	result = /obj/item/rogueweapon/polearm/spear/stone/obsidian
+	result = /obj/item/weapon/polearm/spear/stone/obsidian
 	category = CAT_NONE

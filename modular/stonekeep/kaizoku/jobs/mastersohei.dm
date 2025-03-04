@@ -19,26 +19,26 @@
 		"Ogrun",
 		"Undine"
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/abyssariad/mastersohei
+	outfit = /datum/outfit/job/adventurer/abyssariad/mastersohei
 	maximum_possible_slots = 1
 	pickprob = 100
 	category_tags = list(CTAG_ADVENTURER)
 	vampcompat = FALSE
 
-/datum/outfit/job/roguetown/adventurer/abyssariad/mastersohei/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/abyssariad/mastersohei/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket/soheidemon
-	wrists = /obj/item/clothing/neck/roguetown/psycross/silver/abyssanctum
-	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/kusari
-	pants = /obj/item/clothing/under/roguetown/chainlegs/sendan
-	shoes = /obj/item/clothing/shoes/roguetown/sandals/geta
-	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/random
-	beltl = /obj/item/storage/belt/rogue/pouch/coins/mid
+	head = /obj/item/clothing/head/helmet/heavy/bucket/soheidemon
+	wrists = /obj/item/clothing/neck/psycross/silver/abyssanctum
+	shirt = /obj/item/clothing/armor/chainmail/hauberk/kusari
+	pants = /obj/item/clothing/pants/chainlegs/sendan
+	shoes = /obj/item/clothing/shoes/sandals/geta
+	belt = /obj/item/storage/belt/kaizoku/leather/daisho/random
+	beltl = /obj/item/storage/belt/pouch/coins/mid
 	id = /obj/item/clothing/ring/silver
 	cloak = /obj/item/clothing/cloak/odoshisohei
-	neck = /obj/item/clothing/neck/roguetown/chaincoif/karuta_zukin/random
-	gloves = /obj/item/clothing/gloves/roguetown/chain/kikko
-	r_hand = /obj/item/rogueweapon/polearm/halberd/bisento
+	neck = /obj/item/clothing/neck/chaincoif/karuta_zukin/random
+	gloves = /obj/item/clothing/gloves/chain/kikko
+	r_hand = /obj/item/weapon/polearm/halberd/bisento
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)

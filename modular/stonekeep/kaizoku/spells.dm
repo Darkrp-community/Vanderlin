@@ -141,7 +141,7 @@
 /obj/structure/frontierjustice/Destroy()
 	var/turf/T = loc
 	if(isturf(T)) // Ensure `T` is a valid turf
-		var/obj/item/reagent_containers/food/snacks/rogue/meat/steak/meat_piece = new(T)
+		var/obj/item/reagent_containers/food/snacks/meat/steak/meat_piece = new(T)
 		if(meat_piece)
 			meat_piece.name = "humen meat" //funny
 	. = ..()
@@ -202,7 +202,7 @@
 // =================================================================
 // ========================		TURF	============================
 
-/turf/closed/wall/mineral/rogue/stone/abyssal
+/turf/closed/wall/mineral/stone/abyssal
 	name = "abyssal ishigaki wall"
 	desc = "Made from large, interlocking uncut stones without the use of mortar, so a castle is built above it. However, many make simple walls out of it."
 	icon = 	'modular/stonekeep/kaizoku/icons/wallset/abyssalstone.dmi'
@@ -210,55 +210,55 @@
 	sheet_type = /obj/item/natural/stone
 	break_sound = 'sound/combat/hits/onstone/stonedeath.ogg'
 	attacked_sound = list('sound/combat/hits/onstone/wallhit.ogg', 'sound/combat/hits/onstone/wallhit2.ogg', 'sound/combat/hits/onstone/wallhit3.ogg')
-	canSmoothWith = list(/turf/closed/wall/mineral/rogue/stone/abyssal)
-	above_floor = /turf/open/floor/rogue/blocks
-	baseturfs = list(/turf/open/floor/rogue/blocks)
+	canSmoothWith = list(/turf/closed/wall/mineral/stone/abyssal)
+	above_floor = /turf/open/floor/blocks
+	baseturfs = list(/turf/open/floor/blocks)
 	climbdiff = 1
 	damage_deflection = 10
 
-/turf/closed/wall/mineral/rogue/stone/abyssal/window
+/turf/closed/wall/mineral/stone/abyssal/window
 	name = "abyssal ishigaki window"
 	desc = "An simple hole within a Ishigaki wall."
 	opacity = FALSE
 	max_integrity = 800
 
-/turf/closed/wall/mineral/rogue/stone/window/CanPass(atom/movable/mover, turf/target)
+/turf/closed/wall/mineral/stone/window/CanPass(atom/movable/mover, turf/target)
 	if(istype(mover) && ((mover.pass_flags & PASSTABLE) || (mover.pass_flags & PASSGRILLE)) )
 		return 1
 	return ..()
 
-/turf/closed/wall/mineral/rogue/stone/abyssal/window/Initialize()
+/turf/closed/wall/mineral/stone/abyssal/window/Initialize()
 	. = ..()
 	icon_state = "abyssal"
 	var/mutable_appearance/M = mutable_appearance(icon, "abyssalhole", layer = ABOVE_NORMAL_TURF_LAYER)
 	add_overlay(M)
 
-/turf/closed/wall/mineral/rogue/wood/abyssal
+/turf/closed/wall/mineral/wood/abyssal
 	name = "wagoya wall"
 	desc = "wooden wall of abyssal architecture that uses wooden joinery that fits together seamlessly to avoid use of nails or screws, increasing protection against earthshakes."
 	icon = 	'modular/stonekeep/kaizoku/icons/wallset/eastern_wood.dmi'
 	icon_state = "wood"
 	break_sound = 'sound/combat/hits/onwood/destroywalldoor.ogg'
 	attacked_sound = list('sound/combat/hits/onwood/woodimpact (1).ogg','sound/combat/hits/onwood/woodimpact (2).ogg')
-	canSmoothWith = list(/turf/closed/wall/mineral/rogue/wood, /obj/structure/roguewindow, /obj/structure/roguetent, /turf/closed/wall/mineral/rogue/wooddark)
+	canSmoothWith = list(/turf/closed/wall/mineral/wood, /obj/structure/roguewindow, /obj/structure/roguetent, /turf/closed/wall/mineral/wooddark)
 //	sheet_type = /obj/item/grown/log/tree/lumber
-	above_floor = /turf/open/floor/rogue/woodturned
-	baseturfs = list(/turf/open/floor/rogue/woodturned)
+	above_floor = /turf/open/floor/woodturned
+	baseturfs = list(/turf/open/floor/woodturned)
 	neighborlay = "dirtedge"
 	climbdiff = 3
 
-/turf/closed/wall/mineral/rogue/wood/abyssal/window
+/turf/closed/wall/mineral/wood/abyssal/window
 	name = "wagoya no sama"
 	desc = "A murderhole on a wooden wall that lacks nails and screws."
 	opacity = FALSE
 	max_integrity = 550
 
-/turf/closed/wall/mineral/rogue/wood/abyssal/window/CanPass(atom/movable/mover, turf/target)
+/turf/closed/wall/mineral/wood/abyssal/window/CanPass(atom/movable/mover, turf/target)
 	if(istype(mover) && ((mover.pass_flags & PASSTABLE) || (mover.pass_flags & PASSGRILLE)) )
 		return 1
 	return ..()
 
-/turf/closed/wall/mineral/rogue/wood/abyssal/window/Initialize()
+/turf/closed/wall/mineral/wood/abyssal/window/Initialize()
 	. = ..()
 	var/mutable_appearance/M = mutable_appearance(icon, "woodhole", layer = ABOVE_NORMAL_TURF_LAYER)
 	add_overlay(M)
@@ -292,7 +292,7 @@
 	associated_skill = /datum/skill/magic/holy
 	antimagic_allowed = TRUE
 	charge_max = 60 SECONDS
-	req_items = list(/obj/item/clothing/neck/roguetown/psycross/silver/abyssanctum)
+	req_items = list(/obj/item/clothing/neck/psycross/silver/abyssanctum)
 	devotion_cost = 45
 
 /turf/open/proc/apply_ice_turf()
@@ -462,7 +462,7 @@
 	movement_interrupt = FALSE
 	projectile_type = /obj/projectile/magic/purify
 	chargedloop = null
-	req_items = list(/obj/item/clothing/neck/roguetown/psycross/silver/abyssanctum)
+	req_items = list(/obj/item/clothing/neck/psycross/silver/abyssanctum)
 	sound = 'sound/magic/magic_nulled.ogg'
 	invocation_type = "none"
 	//invocation = "delivers sharp jabs and a sudden clap, unleashing a freezing shockwave that forms and launches a jagged ice spike."

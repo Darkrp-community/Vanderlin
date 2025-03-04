@@ -12,13 +12,13 @@
 		"Dark Elf",
 		"Aasimar"
 	)
-	outfit = /datum/outfit/job/roguetown/mercenary/exiled
+	outfit = /datum/outfit/job/mercenary/exiled
 	category_tags = list(CTAG_MERCENARY)
 	maximum_possible_slots = 0
 
 	cmode_music = 'sound/music/cmode/adventurer/CombatOutlander2.ogg'
 
-/datum/outfit/job/roguetown/mercenary/exiled/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/mercenary/exiled/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
@@ -36,19 +36,19 @@
 		H.mind?.adjust_skillrank(/datum/skill/misc/sewing, 1, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/craft/traps, 3, TRUE) // Valor pleases you, Crom.
 
-	beltr = /obj/item/rogueweapon/sword/iron
-	neck = /obj/item/clothing/neck/roguetown/coif
-	pants = /obj/item/clothing/under/roguetown/loincloth
-	gloves = /obj/item/clothing/gloves/roguetown/leather
-	belt = /obj/item/storage/belt/rogue/leather/mercenary
-	beltl = /obj/item/rogueweapon/mace/cudgel
-	head = /obj/item/clothing/head/roguetown/helmet/leather
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/hide
-	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+	beltr = /obj/item/weapon/sword/iron
+	neck = /obj/item/clothing/neck/coif
+	pants = /obj/item/clothing/pants/loincloth
+	gloves = /obj/item/clothing/gloves/leather
+	belt = /obj/item/storage/belt/leather/mercenary
+	beltl = /obj/item/weapon/mace/cudgel
+	head = /obj/item/clothing/head/helmet/leather
+	armor = /obj/item/clothing/armor/leather/hide
+	shoes = /obj/item/clothing/shoes/boots/leather
+	wrists = /obj/item/clothing/wrists/bracers/leather
 	cloak = /obj/item/clothing/cloak/raincloak/furcloak/brown
-	backl = /obj/item/storage/backpack/rogue/satchel
-	backpack_contents = list(/obj/item/storage/belt/rogue/pouch/coins/poor)
+	backl = /obj/item/storage/backpack/satchel
+	backpack_contents = list(/obj/item/storage/belt/pouch/coins/poor)
 
 	H.change_stat("strength", 1)
 	H.change_stat("endurance", 1)

@@ -12,13 +12,13 @@
 		"Tiefling",
 		"Aasimar"
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/sfighter
+	outfit = /datum/outfit/job/adventurer/sfighter
 	category_tags = list(CTAG_ADVENTURER)
 	min_pq = -10
 	cmode_music = 'sound/music/cmode/adventurer/CombatWarrior.ogg'
 
 
-/datum/outfit/job/roguetown/adventurer/sfighter/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/sfighter/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.mind?.adjust_skillrank(/datum/skill/combat/crossbows, pick(1,2), TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/combat/whipsflails, 2, TRUE)
@@ -38,49 +38,49 @@
 		H.underwear = "Femleotard"
 		H.underwear_color = CLOTHING_SOOT_BLACK
 		H.update_body()
-	shoes = /obj/item/clothing/shoes/roguetown/boots
-	gloves = /obj/item/clothing/gloves/roguetown/leather
-	belt = /obj/item/storage/belt/rogue/leather
-	pants = /obj/item/clothing/under/roguetown/tights/black
-	backl = /obj/item/storage/backpack/rogue/satchel
-	backr = /obj/item/rogueweapon/shield/wood
-	beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
+	shoes = /obj/item/clothing/shoes/boots
+	gloves = /obj/item/clothing/gloves/leather
+	belt = /obj/item/storage/belt/leather
+	pants = /obj/item/clothing/pants/tights/black
+	backl = /obj/item/storage/backpack/satchel
+	backr = /obj/item/weapon/shield/wood
+	beltr = /obj/item/storage/belt/pouch/coins/poor
 	var/armortype = pickweight(list("Ironmail" = 6, "Ironplate" = 3, "Ironplate&Legs" = 1)) // At best they can get an iron breastplate over mail and iron chainleggings
 	var/weapontype = pickweight(list("Axe" = 2, "Mace" = 2, "Messer" = 2, "Sword" = 3, "Flail" = 1)) // Rolls for various weapons, all of these are iron tier
 	switch(armortype)
 		if("Ironmail")
-			armor = /obj/item/clothing/suit/roguetown/armor/chainmail/iron
-			shirt = /obj/item/clothing/suit/roguetown/armor/gambeson
+			armor = /obj/item/clothing/armor/chainmail/iron
+			shirt = /obj/item/clothing/armor/gambeson
 		if("Ironplate")
-			armor = /obj/item/clothing/suit/roguetown/armor/cuirass/iron
-			shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy
+			armor = /obj/item/clothing/armor/cuirass/iron
+			shirt = /obj/item/clothing/armor/gambeson/heavy
 		if("Ironplate&Legs") // Big roller gets an iron cuirass over iron mail AND iron chain leggings. Lucky them
-			armor = /obj/item/clothing/suit/roguetown/armor/cuirass/iron
-			shirt = /obj/item/clothing/suit/roguetown/armor/chainmail/iron
-			pants = /obj/item/clothing/under/roguetown/chainlegs/iron
+			armor = /obj/item/clothing/armor/cuirass/iron
+			shirt = /obj/item/clothing/armor/chainmail/iron
+			pants = /obj/item/clothing/pants/chainlegs/iron
 	switch(weapontype) // We get +1 weapon skill in either axes/maces, swords, or flails depending on our starting weapon
 		if("Axe")
-			beltl = /obj/item/rogueweapon/axe/iron
+			beltl = /obj/item/weapon/axe/iron
 			H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 1, TRUE)
 		if("Mace")
-			beltl = /obj/item/rogueweapon/mace
+			beltl = /obj/item/weapon/mace
 			H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 1, TRUE)
 		if("Messer")
-			beltl = /obj/item/rogueweapon/sword/scimitar/messer
+			beltl = /obj/item/weapon/sword/scimitar/messer
 			H.mind?.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
 		if("Sword")
-			beltl = /obj/item/rogueweapon/sword/iron
+			beltl = /obj/item/weapon/sword/iron
 			H.mind?.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
 		if("Flail") // Big roller gets one of the best weapons to pair with a shield, even if it is only iron tier. Lucky bastard
-			beltl = /obj/item/rogueweapon/flail
+			beltl = /obj/item/weapon/flail
 			H.mind?.adjust_skillrank(/datum/skill/combat/whipsflails, 1, TRUE)
 
 	if(prob(66))
-		neck = /obj/item/clothing/neck/roguetown/gorget
-		head = /obj/item/clothing/head/roguetown/helmet/kettle
+		neck = /obj/item/clothing/neck/gorget
+		head = /obj/item/clothing/head/helmet/kettle
 	else // High roller gets an iron chain coif and nasal helmet
-		neck = /obj/item/clothing/neck/roguetown/chaincoif/iron
-		head = /obj/item/clothing/head/roguetown/helmet/nasal
+		neck = /obj/item/clothing/neck/chaincoif/iron
+		head = /obj/item/clothing/head/helmet/nasal
 
 	H.change_stat("strength", 2)
 	H.change_stat("endurance", 1)

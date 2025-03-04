@@ -10,11 +10,11 @@
 		"Tiefling",
 		"Dark Elf"
 	)
-	outfit = /datum/outfit/job/roguetown/bandit/knave
+	outfit = /datum/outfit/job/bandit/knave
 	category_tags = list(CTAG_BANDIT)
 	cmode_music = 'sound/music/cmode/antag/CombatBandit3.ogg'
 
-/datum/outfit/job/roguetown/bandit/knave/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/bandit/knave/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.mind.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 3, TRUE)
@@ -35,18 +35,18 @@
 	H.mind.adjust_skillrank(/datum/skill/misc/lockpicking, 4, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/craft/traps, 3, TRUE)
 	//H.mind.adjust_skillrank(/datum/skill/misc/tracking, 3, TRUE)
-	belt = /obj/item/storage/belt/rogue/leather
-	pants = /obj/item/clothing/under/roguetown/trou/leather
-	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/random
-	shoes = /obj/item/clothing/shoes/roguetown/boots
-	mask = /obj/item/clothing/mask/rogue/facemask/steel
+	belt = /obj/item/storage/belt/leather
+	pants = /obj/item/clothing/pants/trou/leather
+	shirt = /obj/item/clothing/shirt/shortshirt/random
+	shoes = /obj/item/clothing/shoes/boots
+	mask = /obj/item/clothing/face/facemask/steel
 	var/armor2choose = pickweight(list("Vest" = 2, "Gambeson" = 1))
 	switch(armor2choose)
 		if("Vest")
-			armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/random
+			armor = /obj/item/clothing/armor/leather/vest/random
 		if("Gambeson")
-			armor = /obj/item/clothing/suit/roguetown/armor/gambeson
-	backr = /obj/item/storage/backpack/rogue/satchel
+			armor = /obj/item/clothing/armor/gambeson
+	backr = /obj/item/storage/backpack/satchel
 	H.change_stat(STATKEY_SPD, 2)
 	H.change_stat(STATKEY_END, 1)
 	H.change_stat(STATKEY_PER, 2)
@@ -57,18 +57,18 @@
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Crossbow & Dagger") //Rogue
-			head = /obj/item/clothing/head/roguetown/roguehood/random/heavy
+			head = /obj/item/clothing/head/roguehood/random/heavy
 			backl= /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow //we really need to make this not a grenade launcher subtype
 			beltr = /obj/item/ammo_holder/quiver/bolts
-			beltl = /obj/item/rogueweapon/knife/dagger
+			beltl = /obj/item/weapon/knife/dagger
 			backpack_contents = list(/obj/item/needle/thorn = 1, /obj/item/natural/cloth = 1, /obj/item/lockpickring/mundane = 1) //rogue gets lockpicks
 			H.mind.adjust_skillrank(/datum/skill/combat/crossbows, 1, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
 		if("Bow & Sword") //Poacher
 			backl= /obj/item/gun/ballistic/revolver/grenadelauncher/bow
-			beltr = /obj/item/rogueweapon/sword/short //steel sword like literally every adventurer gets
-			head = /obj/item/clothing/head/roguetown/helmet/leather/volfhelm //cool hat
-			neck = /obj/item/clothing/neck/roguetown/coif
+			beltr = /obj/item/weapon/sword/short //steel sword like literally every adventurer gets
+			head = /obj/item/clothing/head/helmet/leather/volfhelm //cool hat
+			neck = /obj/item/clothing/neck/coif
 			backpack_contents = list(/obj/item/needle/thorn = 1, /obj/item/natural/cloth = 1, /obj/item/restraints/legcuffs/beartrap = 2) //poacher gets mantraps
 			H.mind.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)

@@ -1,45 +1,45 @@
 
-/datum/crafting_recipe/roguetown/structure
+/datum/crafting_recipe/structure
 	req_table = FALSE
 	craftdiff = 0
 	verbage = "build"
 	verbage_tp = "builds"
 
-/datum/crafting_recipe/roguetown/structure/TurfCheck(mob/user, turf/T)
+/datum/crafting_recipe/structure/TurfCheck(mob/user, turf/T)
 	if(istype(T,/turf/open/transparent/openspace))
 		return FALSE
 	return ..()
 
 
 /*========= CARPENTRY SKILL ==========*/
-/datum/crafting_recipe/roguetown/structure/carpentry
+/datum/crafting_recipe/structure/carpentry
 	skillcraft = /datum/skill/craft/carpentry
 	time = 3 SECONDS
 	verbage = "carpent"
 	verbage_tp = "carpents"
 	craftsound = 'sound/foley/Building-01.ogg'
-	tools = list(/obj/item/rogueweapon/hammer)
+	tools = list(/obj/item/weapon/hammer)
 
-/datum/crafting_recipe/roguetown/structure/carpentry/stool
+/datum/crafting_recipe/structure/carpentry/stool
 	name = "chair (stool)"
-	result = /obj/item/chair/stool/bar/rogue/crafted
+	result = /obj/item/chair/stool/bar/crafted
 	reqs = list(/obj/item/grown/log/tree/small = 1)
 
 
 /* === SKILL LEVEL 1 === */
 
-/datum/crafting_recipe/roguetown/structure/carpentry/chair
+/datum/crafting_recipe/structure/carpentry/chair
 	name = "chair (wood)"
 	result = /obj/item/chair/rogue
 	reqs = list(/obj/item/grown/log/tree/small = 2)
 	craftdiff = 1
 
-/datum/crafting_recipe/roguetown/structure/carpentry/composter
+/datum/crafting_recipe/structure/carpentry/composter
 	name = "composter"
 	result = /obj/structure/composter
 	craftdiff = 1
 
-/datum/crafting_recipe/roguetown/structure/carpentry/roguebin // Bins are easier to craft than barrels for pure convenience.
+/datum/crafting_recipe/structure/carpentry/roguebin // Bins are easier to craft than barrels for pure convenience.
 	name = "bin"
 	result = /obj/item/roguebin
 	reqs = list(/obj/item/grown/log/tree/small = 2)
@@ -47,7 +47,7 @@
 	verbage_tp = "makes"
 	craftdiff = 1
 
-/datum/crafting_recipe/roguetown/structure/carpentry/table
+/datum/crafting_recipe/structure/carpentry/table
 	name = "table (wood)"
 	result = /obj/structure/table/wood/crafted
 	reqs = list(/obj/item/grown/log/tree/small = 2)
@@ -55,7 +55,7 @@
 	verbage_tp = "carpents"
 	craftdiff = 1
 
-/datum/crafting_recipe/roguetown/structure/carpentry/wallladder
+/datum/crafting_recipe/structure/carpentry/wallladder
 	name = "wall ladder"
 	result = /obj/structure/wallladder
 	reqs = list(/obj/item/grown/log/tree/small = 1)
@@ -63,20 +63,20 @@
 	verbage_tp = "carpents"
 	wallcraft = TRUE
 	craftdiff = 1
-/datum/crafting_recipe/roguetown/structure/carpentry/wallladder/TurfCheck(mob/user, turf/T)
+/datum/crafting_recipe/structure/carpentry/wallladder/TurfCheck(mob/user, turf/T)
 	var/turf/check_turf = get_step(T, user.dir)
 	if(!isclosedturf(check_turf))
 		return FALSE
 	return TRUE
 
-/datum/crafting_recipe/roguetown/structure/carpentry/sign
+/datum/crafting_recipe/structure/carpentry/sign
 	name = "custom sign"
 	result = /obj/structure/fluff/customsign
 	verbage = "construct"
 	verbage_tp = "constructs"
 	craftdiff = 1
 
-/datum/crafting_recipe/roguetown/structure/carpentry/chest
+/datum/crafting_recipe/structure/carpentry/chest
 	name = "chest"
 	result = /obj/structure/closet/crate/chest/crafted
 	reqs = list(/obj/item/grown/log/tree/small = 1)
@@ -91,7 +91,7 @@
 	keylock = FALSE
 	sellprice = 6
 
-/datum/crafting_recipe/roguetown/structure/carpentry/closet
+/datum/crafting_recipe/structure/carpentry/closet
 	name = "closet"
 	result = /obj/structure/closet/crate/roguecloset/crafted
 	reqs = list(/obj/item/grown/log/tree/small = 2)
@@ -99,7 +99,7 @@
 	verbage_tp = "constructs"
 	craftdiff = 1
 
-/datum/crafting_recipe/roguetown/structure/carpentry/coffin
+/datum/crafting_recipe/structure/carpentry/coffin
 	name = "coffin"
 	result = /obj/structure/closet/crate/coffin
 	reqs = list(/obj/item/grown/log/tree/small=3)
@@ -107,14 +107,14 @@
 	verbage_tp = "constructs"
 	craftdiff = 1
 
-/datum/crafting_recipe/roguetown/structure/carpentry/psycrss
+/datum/crafting_recipe/structure/carpentry/psycrss
 	name = "psycross (wood)"
 	result = /obj/structure/fluff/psycross/crafted
 	reqs = list(/obj/item/grown/log/tree/small = 1,
 				/obj/item/grown/log/tree/stake = 3)
 	craftdiff = 1
 
-/datum/crafting_recipe/roguetown/structure/carpentry/loom
+/datum/crafting_recipe/structure/carpentry/loom
 	name = "loom"
 	result = /obj/machinery/loom
 	reqs = list(/obj/item/grown/log/tree/small = 2,
@@ -124,7 +124,7 @@
 	verbage = "constructs"
 	craftdiff = 1
 
-/datum/crafting_recipe/roguetown/structure/carpentry/dummy // Easier to craft than display dummies for convenience, and also because a training dummy isn't actually fitting any measurements. You're just smacking it.
+/datum/crafting_recipe/structure/carpentry/dummy // Easier to craft than display dummies for convenience, and also because a training dummy isn't actually fitting any measurements. You're just smacking it.
 	name = "training dummy"
 	result = /obj/structure/fluff/statue/tdummy
 	reqs = list(/obj/item/grown/log/tree/small = 1)
@@ -134,7 +134,7 @@
 
 /* === SKILL LEVEL 2 === */
 
-/datum/crafting_recipe/roguetown/structure/carpentry/display_stand
+/datum/crafting_recipe/structure/carpentry/display_stand
 	name = "display stand"
 	result = /obj/structure/mannequin
 	reqs = list(/obj/item/grown/log/tree/small = 1,
@@ -143,7 +143,7 @@
 	verbage_tp = "constructs"
 	craftdiff = 2
 
-/datum/crafting_recipe/roguetown/structure/carpentry/mannequin
+/datum/crafting_recipe/structure/carpentry/mannequin
 	name = "mannequin (male)"
 	result = /obj/structure/mannequin/male
 	reqs = list(/obj/item/grown/log/tree/small = 1,
@@ -153,7 +153,7 @@
 	verbage_tp = "constructs"
 	craftdiff = 2
 
-/datum/crafting_recipe/roguetown/structure/carpentry/mannequin_f
+/datum/crafting_recipe/structure/carpentry/mannequin_f
 	name = "mannequin (female)"
 	result = /obj/structure/mannequin/male/female
 	reqs = list(/obj/item/grown/log/tree/small = 1,
@@ -163,14 +163,14 @@
 	verbage_tp = "constructs"
 	craftdiff = 2
 
-/datum/crafting_recipe/roguetown/structure/carpentry/handcart
+/datum/crafting_recipe/structure/carpentry/handcart
 	name = "handcart"
 	result = /obj/structure/handcart
 	reqs = list(/obj/item/grown/log/tree/small = 3,
 				/obj/item/rope = 1)
 	craftdiff = 2
 
-/datum/crafting_recipe/roguetown/structure/carpentry/barrel
+/datum/crafting_recipe/structure/carpentry/barrel
 	name = "barrel"
 	result = /obj/structure/fermenting_barrel/crafted
 	reqs = list(/obj/item/grown/log/tree/small=2)
@@ -181,13 +181,13 @@
 /obj/structure/fermenting_barrel/crafted
 	sellprice = 6
 
-/datum/crafting_recipe/roguetown/structure/carpentry/stairsd
+/datum/crafting_recipe/structure/carpentry/stairsd
 	name = "stairs (down)"
 	result = /obj/structure/stairs/d
 	verbage = "construct"
 	verbage_tp = "constructs"
 	ontile = TRUE
-/datum/crafting_recipe/roguetown/structure/carpentry/stairsd/TurfCheck(mob/user, turf/T)
+/datum/crafting_recipe/structure/carpentry/stairsd/TurfCheck(mob/user, turf/T)
 	var/turf/checking = get_step(T, user.dir)
 	if(!checking)
 		return FALSE
@@ -209,7 +209,7 @@
 
 
 
-/datum/crafting_recipe/roguetown/structure/carpentry/nicebed
+/datum/crafting_recipe/structure/carpentry/nicebed
 	name = "bed (good)"
 	result = /obj/structure/bed/rogue
 	reqs = list(/obj/item/grown/log/tree/small=2,
@@ -217,24 +217,24 @@
 	tools = list(/obj/item/needle)
 	craftdiff = 2
 
-/datum/crafting_recipe/roguetown/structure/carpentry/door
+/datum/crafting_recipe/structure/carpentry/door
 	name = "door (wood)"
 	result = /obj/structure/mineral_door/wood/deadbolt
 	reqs = list(/obj/item/grown/log/tree/small=2)
 	craftdiff = 2
 
-/datum/crafting_recipe/roguetown/structure/carpentry/railing
+/datum/crafting_recipe/structure/carpentry/railing
 	name = "railing"
 	result = /obj/structure/fluff/railing/wood
 	reqs = list(/obj/item/grown/log/tree/small=2)
 	craftdiff = 2
-/datum/crafting_recipe/roguetown/structure/carpentry/railing/TurfCheck(mob/user, turf/T)
+/datum/crafting_recipe/structure/carpentry/railing/TurfCheck(mob/user, turf/T)
 	for(var/obj/structure/S in T)
 		if(istype(S, /obj/structure/fluff/railing))
 			if(user.dir == S.dir)
 				return FALSE
 
-/datum/crafting_recipe/roguetown/structure/carpentry/easel
+/datum/crafting_recipe/structure/carpentry/easel
 	name = "painting (easel)"
 	result = /obj/structure/easel
 	reqs = list(/obj/item/grown/log/tree/stick = 3)
@@ -243,7 +243,7 @@
 	craftdiff = 3
 
 
-/datum/crafting_recipe/roguetown/structure/carpentry/optable
+/datum/crafting_recipe/structure/carpentry/optable
 	name = "feldsher table"
 	result = /obj/structure/table/optable
 	reqs = list(/obj/item/grown/log/tree/small=2)
@@ -251,7 +251,7 @@
 	verbage_tp = "makes"
 	craftdiff = 3
 
-/datum/crafting_recipe/roguetown/structure/carpentry/meathook
+/datum/crafting_recipe/structure/carpentry/meathook
 	name = "meathook"
 	result = /obj/structure/meathook
 	reqs = list(/obj/item/grown/log/tree/small=2, /obj/item/rope/chain = 1)
@@ -261,14 +261,14 @@
 
 
 /*========= MASONRY SKILL ==========*/
-/datum/crafting_recipe/roguetown/structure/masonry
+/datum/crafting_recipe/structure/masonry
 	skillcraft = /datum/skill/craft/masonry
 	time = 3 SECONDS
 	verbage = "mason"
 	verbage_tp = "masons"
 	craftsound = 'sound/foley/Building-01.ogg'
 
-/datum/crafting_recipe/roguetown/structure/masonry/millstone
+/datum/crafting_recipe/structure/masonry/millstone
 	name = "millstone"
 	result = /obj/structure/fluff/millstone
 	reqs = list(/obj/item/natural/stone = 3)
@@ -276,9 +276,9 @@
 	verbage_tp = "crafts"
 	craftdiff = 1
 
-/datum/crafting_recipe/roguetown/structure/masonry/cauldron
+/datum/crafting_recipe/structure/masonry/cauldron
 	name = "cauldron"
-	result = /obj/machinery/light/rogue/cauldron
+	result = /obj/machinery/light/cauldron
 	reqs = list(/obj/item/ingot/iron = 2,
 				/obj/item/natural/stone = 4,
 				/obj/item/grown/log/tree/small = 1)
@@ -286,22 +286,22 @@
 	verbage_tp = "crafts"
 	craftdiff = 1
 
-/datum/crafting_recipe/roguetown/structure/masonry/oven
+/datum/crafting_recipe/structure/masonry/oven
 	name = "oven"
-	result = /obj/machinery/light/rogue/oven
+	result = /obj/machinery/light/oven
 	reqs = list(/obj/item/grown/log/tree/small = 1,
 				/obj/item/natural/stone = 3)
 	wallcraft = TRUE
 	craftdiff = 1
 
-/datum/crafting_recipe/roguetown/structure/masonry/window
+/datum/crafting_recipe/structure/masonry/window
 	name = "window (fixed)"
 	result = /obj/structure/roguewindow/solid
 	reqs = list(/obj/item/grown/log/tree/small = 1,
 				/obj/item/natural/glass = 1)
 	craftdiff = 1
 
-/datum/crafting_recipe/roguetown/structure/masonry/windowopen
+/datum/crafting_recipe/structure/masonry/windowopen
 	name = "window (openable)"
 	result = /obj/structure/roguewindow/openclose
 	reqs = list(/obj/item/grown/log/tree/small = 1,
@@ -309,7 +309,7 @@
 				/obj/item/ingot/iron = 1)
 	craftdiff = 1
 
-/datum/crafting_recipe/roguetown/structure/masonry/windowstained
+/datum/crafting_recipe/structure/masonry/windowstained
 	name = "window (stained glass)"
 	result = /obj/structure/roguewindow/stained
 	reqs = list(/obj/item/natural/stoneblock = 3,
@@ -317,18 +317,18 @@
 				/obj/item/ingot/silver = 1)
 	craftdiff = 2
 
-/datum/crafting_recipe/roguetown/structure/masonry/stonetable
+/datum/crafting_recipe/structure/masonry/stonetable
 	name = "table (stone long mid)"
 	result = /obj/structure/table/stone
 	reqs = list(/obj/item/natural/stoneblock = 2)
 	verbage = "build"
 	verbage_tp = "builds"
 	craftdiff = 3
-/datum/crafting_recipe/roguetown/structure/masonry/stonetable/end
+/datum/crafting_recipe/structure/masonry/stonetable/end
 	name = "table (stone long end)"
 	result = /obj/structure/table/stone_end
 
-/datum/crafting_recipe/roguetown/structure/masonry/stonetable/small
+/datum/crafting_recipe/structure/masonry/stonetable/small
 	name = "table (stone single)"
 	result = /obj/structure/table/stone_small
 
@@ -336,7 +336,7 @@
 
 /* === NO SKILL NEEDED === */
 
-/datum/crafting_recipe/roguetown/structure/noose
+/datum/crafting_recipe/structure/noose
 	name = "noose"
 	result = /obj/structure/noose
 	reqs = list(/obj/item/rope = 1)
@@ -344,7 +344,7 @@
 	verbage_tp = "ties"
 	craftsound = 'sound/foley/noose_idle.ogg'
 	ontile = TRUE
-/datum/crafting_recipe/roguetown/structure/noose/TurfCheck(mob/user, turf/T)
+/datum/crafting_recipe/structure/noose/TurfCheck(mob/user, turf/T)
 	var/turf/checking = get_step_multiz(T, UP)
 	if(!checking)
 		return FALSE
@@ -356,7 +356,7 @@
 		return FALSE
 	return TRUE
 
-/datum/crafting_recipe/roguetown/structure/fence
+/datum/crafting_recipe/structure/fence
 	name = "palisade (s x2)"
 	result = /obj/structure/fluff/railing/fence
 	reqs = list(/obj/item/grown/log/tree/stake = 2)
@@ -364,56 +364,56 @@
 	craftsound = 'sound/foley/Building-01.ogg'
 	buildsame = TRUE
 
-/datum/crafting_recipe/roguetown/structure/fence/alt
+/datum/crafting_recipe/structure/fence/alt
 	name = "palisade (l)"
 	reqs = list(/obj/item/grown/log/tree/small = 1)
-/datum/crafting_recipe/roguetown/structure/fence/TurfCheck(mob/user, turf/T)
+/datum/crafting_recipe/structure/fence/TurfCheck(mob/user, turf/T)
 	for(var/obj/structure/S in T)
 		if(istype(S, /obj/structure/fluff/railing))
 			if(user.dir == S.dir)
 				return FALSE
 
-/datum/crafting_recipe/roguetown/structure/bed // This one's not in carpentry because it's just a shitty pile of sticks and cloth.
+/datum/crafting_recipe/structure/bed // This one's not in carpentry because it's just a shitty pile of sticks and cloth.
 	name = "bed (terrible)"
-	result = /obj/structure/bed/rogue/shit
+	result = /obj/structure/bed/shit
 	reqs = list(/obj/item/grown/log/tree/small = 1,
 				/obj/item/natural/fibers = 1)
 
-/datum/crafting_recipe/roguetown/structure/campfire
+/datum/crafting_recipe/structure/campfire
 	name = "campfire"
-	result = /obj/machinery/light/rogue/campfire
+	result = /obj/machinery/light/campfire
 	reqs = list(/obj/item/grown/log/tree/stick = 2)
 
-/datum/crafting_recipe/roguetown/structure/densefire
+/datum/crafting_recipe/structure/densefire
 	name = "greater campfire"
-	result = /obj/machinery/light/rogue/campfire/densefire
+	result = /obj/machinery/light/campfire/densefire
 	reqs = list(/obj/item/grown/log/tree/stick = 2,
 				/obj/item/natural/stone = 2)
 
-/datum/crafting_recipe/roguetown/structure/pyre
+/datum/crafting_recipe/structure/pyre
 	name = "wooden pyre"
-	result = /obj/machinery/light/rogue/campfire/pyre
+	result = /obj/machinery/light/campfire/pyre
 	reqs = list(/obj/item/grown/log/tree/small = 2,
 				/obj/item/grown/log/tree/stake = 3)
 	craftsound = 'sound/foley/Building-01.ogg'
 
 /* === SKILL LEVEL 1 === */
 
-/datum/crafting_recipe/roguetown/structure/cookpit
+/datum/crafting_recipe/structure/cookpit
 	name = "cookpit"
-	result = /obj/machinery/light/rogue/hearth
+	result = /obj/machinery/light/hearth
 	reqs = list(/obj/item/grown/log/tree/stick = 1,
 				/obj/item/natural/stone = 3)
 	craftdiff = 1
 
-/datum/crafting_recipe/roguetown/structure/brazier
+/datum/crafting_recipe/structure/brazier
 	name = "brazier"
-	result = /obj/machinery/light/rogue/firebowl/stump
+	result = /obj/machinery/light/firebowl/stump
 	reqs = list(/obj/item/grown/log/tree/small = 1,
 				/obj/item/rogueore/coal = 1)
 	craftdiff = 1
 
-/datum/crafting_recipe/roguetown/structure/dryingrack
+/datum/crafting_recipe/structure/dryingrack
 	name = "drying rack"
 	result = /obj/machinery/tanningrack
 	reqs = list(/obj/item/grown/log/tree/stick = 4)
@@ -424,46 +424,46 @@
 
 /* === SKILL LEVEL 2 === */
 
-/datum/crafting_recipe/roguetown/structure/anvil // Call me crazy, but I think there should be some difficulty involved in making these huge structures.
+/datum/crafting_recipe/structure/anvil // Call me crazy, but I think there should be some difficulty involved in making these huge structures.
 	name = "anvil"
 	result = /obj/machinery/anvil
 	reqs = list(/obj/item/ingot/iron = 1)
 	craftsound = 'sound/foley/Building-01.ogg'
 	craftdiff = 2
 
-/datum/crafting_recipe/roguetown/structure/smelter
+/datum/crafting_recipe/structure/smelter
 	name = "ore furnace"
-	result = /obj/machinery/light/rogue/smelter
+	result = /obj/machinery/light/smelter
 	reqs = list(/obj/item/natural/stone = 6,
 			/obj/item/rogueore/coal = 1)
 	craftdiff = 2
 
-/datum/crafting_recipe/roguetown/structure/smelter_block
+/datum/crafting_recipe/structure/smelter_block
 	name = "ore furnace"
-	result = /obj/machinery/light/rogue/smelter
+	result = /obj/machinery/light/smelter
 	reqs = list(/obj/item/natural/stoneblock = 4,
 			/obj/item/rogueore/coal = 1)
 	craftdiff = 2
 
-/datum/crafting_recipe/roguetown/structure/forge
+/datum/crafting_recipe/structure/forge
 	name = "forge"
-	result = /obj/machinery/light/rogue/forge
+	result = /obj/machinery/light/forge
 	reqs = list(/obj/item/natural/stoneblock = 4,
 				/obj/item/rogueore/coal = 1)
 	craftdiff = 2
 
 /* === SKILL LEVEL 3 === */
 
-/datum/crafting_recipe/roguetown/structure/sharpwheel
+/datum/crafting_recipe/structure/sharpwheel
 	name = "sharpening wheel"
 	result = /obj/structure/fluff/grindwheel
 	reqs = list(/obj/item/ingot/iron = 1,
 				/obj/item/natural/stone = 1)
 	craftdiff = 3
 
-/datum/crafting_recipe/roguetown/structure/greatsmelter // I figure if you've already got a riddle of steel you're a mason making this anyway.
+/datum/crafting_recipe/structure/greatsmelter // I figure if you've already got a riddle of steel you're a mason making this anyway.
 	name = "great furnace"
-	result = /obj/machinery/light/rogue/smelter/great
+	result = /obj/machinery/light/smelter/great
 	reqs = list(/obj/item/ingot/iron = 2,
 				/obj/item/riddleofsteel = 1,
 				/obj/item/rogueore/coal = 1)
@@ -472,39 +472,39 @@
 
 
 /*========= ENGINEERING SKILL ==========*/
-/datum/crafting_recipe/roguetown/structure/engineer
+/datum/crafting_recipe/structure/engineer
 	verbage = "construct"
 	verbage_tp = "constructs"
 	craftsound = 'sound/foley/Building-01.ogg'
 	skillcraft = /datum/skill/craft/engineering
 
-/datum/crafting_recipe/roguetown/structure/engineer/lever
+/datum/crafting_recipe/structure/engineer/lever
 	name = "lever"
 	result = /obj/structure/lever
 	reqs = list(/obj/item/roguegear = 1)
 	craftdiff = 1
 
-/datum/crafting_recipe/roguetown/structure/engineer/trapdoor
+/datum/crafting_recipe/structure/engineer/trapdoor
 	name = "floorhatch"
 	result = /obj/structure/floordoor
 	reqs = list(/obj/item/grown/log/tree/small = 1,
 					/obj/item/roguegear = 1)
 	craftdiff = 1
-/datum/crafting_recipe/roguetown/structure/engineer/trapdoor/TurfCheck(mob/user, turf/T)
+/datum/crafting_recipe/structure/engineer/trapdoor/TurfCheck(mob/user, turf/T)
 	if(istype(T,/turf/open/transparent/openspace))
 		return TRUE
 	if(istype(T,/turf/open/lava))
 		return TRUE // its just too hilarious not to allow this
 	return ..()
 
-/datum/crafting_recipe/roguetown/structure/engineer/pressure
+/datum/crafting_recipe/structure/engineer/pressure
 	name = "pressure plate"
 	result = /obj/structure/pressure_plate
 	reqs = list(/obj/item/grown/log/tree/small = 1,
 					/obj/item/roguegear = 1)
 	craftdiff = 1
 
-/datum/crafting_recipe/roguetown/structure/engineer/repeater
+/datum/crafting_recipe/structure/engineer/repeater
 	name = "repeater"
 	result = /obj/structure/repeater
 	reqs = list(/obj/item/grown/log/tree/small = 1,
@@ -512,7 +512,7 @@
 					/obj/item/roguegear = 1)
 	craftdiff = 1
 
-/datum/crafting_recipe/roguetown/structure/engineer/activator
+/datum/crafting_recipe/structure/engineer/activator
 	name = "activator"
 	result = /obj/structure/activator
 	reqs = list(/obj/item/grown/log/tree/small = 2,
@@ -520,13 +520,13 @@
 					/obj/item/roguegear = 2)
 	craftdiff = 1
 
-/datum/crafting_recipe/roguetown/structure/engineer/passage
+/datum/crafting_recipe/structure/engineer/passage
 	name = "passage"
 	result = /obj/structure/bars/passage
 	reqs = list(/obj/item/ingot/iron = 1,
 					/obj/item/roguegear = 1)
 	craftdiff = 1
-/datum/crafting_recipe/roguetown/structure/engineer/passage/TurfCheck(mob/user, turf/T)
+/datum/crafting_recipe/structure/engineer/passage/TurfCheck(mob/user, turf/T)
 	if(istype(T,/turf/open/transparent/openspace))
 		return FALSE
 	if(istype(T,/turf/open/lava))

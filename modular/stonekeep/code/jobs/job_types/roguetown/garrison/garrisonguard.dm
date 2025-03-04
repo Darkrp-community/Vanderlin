@@ -1,5 +1,5 @@
 // ==========	Updated to new Kaizoku garrison	====================
-/datum/job/roguetown/guardsman
+/datum/job/guardsman
 	title = "Garrison Guard"
 	flag = GUARDSMAN
 	department_flag = GARRISON
@@ -21,14 +21,14 @@
 	whitelist_req = FALSE
 	bypass_lastclass = TRUE
 
-	outfit = /datum/outfit/job/roguetown/garrison	//Default outfit.
+	outfit = /datum/outfit/job/garrison	//Default outfit.
 	advclass_cat_rolls = list(CTAG_GARRISON = 20)	//Handles class selection.
 	give_bank_account = 30
 	min_pq = -10
 
 	cmode_music = 'modular/stonekeep/kaizoku/sound/combat/combat_stormwarrior.ogg'
 
-/datum/job/roguetown/guardsman/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
+/datum/job/guardsman/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
@@ -45,13 +45,13 @@
 			S.name = "ashigaru's jinbaori ([index])"
 
 //Universal stuff for all guards, regardless of their class selection.
-/datum/outfit/job/roguetown/garrison
-	pants = /obj/item/clothing/under/roguetown/trou/tobi/random
+/datum/outfit/job/garrison
+	pants = /obj/item/clothing/pants/trou/tobi/random
 	cloak = /obj/item/clothing/cloak/stabard/haramaki/jinbaori/guard //I can't put these somewhere else.
-	shoes = /obj/item/clothing/shoes/roguetown/boots/jikatabi/shinobi
-	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/random
+	shoes = /obj/item/clothing/shoes/boots/jikatabi/shinobi
+	belt = /obj/item/storage/belt/kaizoku/leather/daisho/random
 
-/datum/outfit/job/roguetown/garrison/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/garrison/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.dna.species.id == "human")
 		H.skin_tone = SKIN_COLOR_TROPICALDRY
@@ -75,20 +75,20 @@ Design philosphy:
 /datum/advclass/garrison/footman
 	name = "Garrison Footman"
 	tutorial = "You are a footman in the garrison levy. You are well versed in holding the line with a shield while wielding a trusty sword, axe, or mace in the other hand."
-	outfit = /datum/outfit/job/roguetown/garrison/footman
+	outfit = /datum/outfit/job/garrison/footman
 
 	category_tags = list(CTAG_GARRISON)
 
-/datum/outfit/job/roguetown/garrison/footman/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/garrison/footman/pre_equip(mob/living/carbon/human/H)
 	..()
 	to_chat(H, "<span class='warning'>My clan was bound to sworn to the king's cause under the Heavenly Emperor's will. As an Ashigaru retainer, their lineage is held in high regard, and I shall serve their bloodline as I would my daimyo.")
-	armor = /obj/item/clothing/suit/roguetown/armor/cuirass/nanbando
-	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail/tatami
-	mask = /obj/item/clothing/mask/rogue/kaizoku/menpo/half //Abyssariads relies less in gorgets, more in masks.
-	head = /obj/item/clothing/head/roguetown/helmet/zijinguan //Hopefully the feather colors will be fixed.
-	backr = /obj/item/rogueweapon/shield/wood/rattan
-	beltr = /obj/item/rogueweapon/sword/scimitar/messer/dao
-	beltl = /obj/item/rogueweapon/mace/ararebo
+	armor = /obj/item/clothing/armor/cuirass/nanbando
+	shirt = /obj/item/clothing/armor/chainmail/tatami
+	mask = /obj/item/clothing/face/kaizoku/menpo/half //Abyssariads relies less in gorgets, more in masks.
+	head = /obj/item/clothing/head/helmet/zijinguan //Hopefully the feather colors will be fixed.
+	backr = /obj/item/weapon/shield/wood/rattan
+	beltr = /obj/item/weapon/sword/scimitar/messer/dao
+	beltl = /obj/item/weapon/mace/ararebo
 	backpack_contents = list(/obj/item/storage/keyring/manorguard)
 
 	//Stats for class
@@ -108,18 +108,18 @@ Design philosphy:
 /datum/advclass/garrison/pikeman
 	name = "Garrison Spearman"
 	tutorial = "You are a pikeman in the garrison levy. You are less fleet of foot compared to the rest, but you are burly and well practiced with spears, pikes, billhooks - all the various polearms for striking enemies from a distance."
-	outfit = /datum/outfit/job/roguetown/garrison/pikeman
+	outfit = /datum/outfit/job/garrison/pikeman
 
 	category_tags = list(CTAG_GARRISON)
 
-/datum/outfit/job/roguetown/garrison/pikeman/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/garrison/pikeman/pre_equip(mob/living/carbon/human/H)
 	..()
 	to_chat(H, "<span class='warning'>My clan was bound to sworn to the king's cause under the Heavenly Emperor's will. As an Ashigaru retainer, their lineage is held in high regard, and I shall serve their bloodline as I would my daimyo.")
-	armor = /obj/item/clothing/suit/roguetown/armor/chainmail/tatami
-	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/ruankai
-	neck = /obj/item/clothing/neck/roguetown/gorget
-	head = /obj/item/clothing/head/roguetown/helmet/kaizoku/jingasa
-	beltr = /obj/item/rogueweapon/sword/scimitar/messer/dao
+	armor = /obj/item/clothing/armor/chainmail/tatami
+	shirt = /obj/item/clothing/armor/gambeson/ruankai
+	neck = /obj/item/clothing/neck/gorget
+	head = /obj/item/clothing/head/helmet/kaizoku/jingasa
+	beltr = /obj/item/weapon/sword/scimitar/messer/dao
 	backpack_contents = list(/obj/item/storage/keyring/manorguard)
 
 	//Stats for class
@@ -140,30 +140,30 @@ Design philosphy:
 	var/weapontype = pickweight(list("Spear" = 6, "Bardiche" = 4)) // Rolls for either a spear or a bardiche
 	switch(weapontype)
 		if("Spear")
-			var/obj/item/rogueweapon/polearm/spear/yari/P = new()
+			var/obj/item/weapon/polearm/spear/yari/P = new()
 			H.put_in_hands(P, forced = TRUE)
 		if("Bardiche")
-			var/obj/item/rogueweapon/polearm/halberd/bardiche/naginata/P = new()
+			var/obj/item/weapon/polearm/halberd/bardiche/naginata/P = new()
 			H.put_in_hands(P, forced = TRUE)
 
 /datum/advclass/garrison/archer
 	name = "Garrison Archer"
 	tutorial = "You are an archer in the garrison levy. Your training with bows and crossbows makes you a formidable threat when perched atop the walls or rooftops, raining arrows or bolts down upon foes with impunity."
-	outfit = /datum/outfit/job/roguetown/garrison/archer
+	outfit = /datum/outfit/job/garrison/archer
 
 	category_tags = list(CTAG_GARRISON)
 
-/datum/outfit/job/roguetown/garrison/archer/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/garrison/archer/pre_equip(mob/living/carbon/human/H)
 	..()
 	to_chat(H, "<span class='warning'>My clan was bound to sworn to the king's cause under the Heavenly Emperor's will. As an Ashigaru retainer, their lineage is held in high regard, and I shall serve their bloodline as I would my daimyo.")
-	armor = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/deelcoat
-	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/merc
+	armor = /obj/item/clothing/armor/gambeson/heavy/deelcoat
+	shirt = /obj/item/clothing/shirt/shortshirt/merc
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/hankyu
-	head = /obj/item/clothing/head/roguetown/tengai/gasa
-	neck = /obj/item/clothing/neck/roguetown/chaincoif/karuta_zukin/military
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather/khudagach
+	head = /obj/item/clothing/head/tengai/gasa
+	neck = /obj/item/clothing/neck/chaincoif/karuta_zukin/military
+	wrists = /obj/item/clothing/wrists/bracers/leather/khudagach
 	beltr = /obj/item/ammo_holder/quiver/arrows
-	beltl = /obj/item/rogueweapon/knife/steel/tanto
+	beltl = /obj/item/weapon/knife/steel/tanto
 	backpack_contents = list(/obj/item/storage/keyring/manorguard)
 
 	//Stats for class
@@ -189,19 +189,19 @@ Design philosphy:
 /datum/advclass/garrison/fencer
 	name = "Garrison Scout"
 	tutorial = "You are a fencer in the garrison levy. If nothing else you know a simple truth, there are few problems that cannot be resolved with quick feet and the precise application of a deft blade."
-	outfit = /datum/outfit/job/roguetown/garrison/fencer
+	outfit = /datum/outfit/job/garrison/fencer
 
 	category_tags = list(CTAG_GARRISON)
 
-/datum/outfit/job/roguetown/garrison/fencer/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/garrison/fencer/pre_equip(mob/living/carbon/human/H)
 	..()
 	to_chat(H, "<span class='warning'>My clan was bound to sworn to the king's cause under the Heavenly Emperor's will. As an Ashigaru retainer, their lineage is held in high regard, and I shall serve their bloodline as I would my daimyo.")
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/splint/kikko
-	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/merc
-	beltr = /obj/item/rogueweapon/sword/rapier
-	head = /obj/item/clothing/head/roguetown/tengai/gasa
-	neck = /obj/item/clothing/neck/roguetown/chaincoif/karuta_zukin/military
-	beltl = /obj/item/rogueweapon/knife/steel/tanto
+	armor = /obj/item/clothing/armor/leather/splint/kikko
+	shirt = /obj/item/clothing/shirt/shortshirt/merc
+	beltr = /obj/item/weapon/sword/rapier
+	head = /obj/item/clothing/head/tengai/gasa
+	neck = /obj/item/clothing/neck/chaincoif/karuta_zukin/military
+	beltl = /obj/item/weapon/knife/steel/tanto
 	backpack_contents = list(/obj/item/storage/keyring/manorguard)
 
 	H.mind?.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)

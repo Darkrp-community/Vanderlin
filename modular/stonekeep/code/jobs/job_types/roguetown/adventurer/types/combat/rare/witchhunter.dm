@@ -12,25 +12,25 @@
 		"Dark Elf",
 		"Aasimar"
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/puritan
+	outfit = /datum/outfit/job/adventurer/puritan
 	maximum_possible_slots = 1
 	pickprob = 15
 	category_tags = list(CTAG_ADVENTURER)
 	min_pq = 0
 	cmode_music = 'sound/music/cmode/church/CombatInquisitor.ogg'
 
-/datum/outfit/job/roguetown/adventurer/puritan/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/puritan/pre_equip(mob/living/carbon/human/H)
 	..()
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/puritan
-	belt = /obj/item/storage/belt/rogue/leather
-	shoes = /obj/item/clothing/shoes/roguetown/boots
-	pants = /obj/item/clothing/under/roguetown/tights/black
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/winterjacket
-	beltr = /obj/item/storage/belt/rogue/pouch/coins/mid
-	head = /obj/item/clothing/head/roguetown/helmet/leather/inquisitor
-	gloves = /obj/item/clothing/gloves/roguetown/angle
-	beltl = /obj/item/rogueweapon/sword/rapier/silver
-	neck = /obj/item/clothing/neck/roguetown/chaincoif
+	shirt = /obj/item/clothing/shirt/undershirt/puritan
+	belt = /obj/item/storage/belt/leather
+	shoes = /obj/item/clothing/shoes/boots
+	pants = /obj/item/clothing/pants/tights/black
+	armor = /obj/item/clothing/armor/leather/vest/winterjacket
+	beltr = /obj/item/storage/belt/pouch/coins/mid
+	head = /obj/item/clothing/head/helmet/leather/inquisitor
+	gloves = /obj/item/clothing/gloves/angle
+	beltl = /obj/item/weapon/sword/rapier/silver
+	neck = /obj/item/clothing/neck/chaincoif
 
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/misc/sewing, 2, TRUE)
@@ -52,13 +52,13 @@
 		H.change_stat("constitution", 2)
 		switch(H.patron?.name)
 			if("Astrata")
-				wrists = /obj/item/clothing/neck/roguetown/psycross/silver/astrata
+				wrists = /obj/item/clothing/neck/psycross/silver/astrata
 			if("Necra")
-				wrists = /obj/item/clothing/neck/roguetown/psycross/silver/necra
+				wrists = /obj/item/clothing/neck/psycross/silver/necra
 			if("Pestra")
-				wrists = /obj/item/clothing/neck/roguetown/psycross/silver/pestra
+				wrists = /obj/item/clothing/neck/psycross/silver/pestra
 			else
-				wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+				wrists = /obj/item/clothing/wrists/bracers/leather
 	H.verbs |= /mob/living/carbon/human/proc/torture_victim
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)		//If they have torture variables, they shouldn't be effected by stuff.

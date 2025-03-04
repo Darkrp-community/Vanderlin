@@ -9,11 +9,11 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = list(
 	"Undine")
-	outfit = /datum/outfit/job/roguetown/adventurer/marauder
+	outfit = /datum/outfit/job/adventurer/marauder
 	category_tags = list(CTAG_ADVENTURER)
 	tutorial = "Ever since Grenzelhoft invasions on Fog Islands, the Undine Tribes became allies of many Abyssariad clans and guardians. Even if untrue for the entire government itself, Undine Marauders take part of Abyssariad expeditions as ''allies'' and formidable annihilators of Humens and Goblins alike."
 
-/datum/outfit/job/roguetown/adventurer/marauder/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/marauder/pre_equip(mob/living/carbon/human/H)
 	..()
 	//average normal skill for all. They are not civilized Undine, so they have skills for survival.
 	H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
@@ -34,15 +34,15 @@
 	switch(specialization)
 		if("boneclad") //Starts with no survival tool. Full melee, tier 3 makeshift armor roundstart. Mace/axe focus.
 			H.set_blindness(0)
-			armor = /obj/item/clothing/suit/roguetown/armor/ceramic/reinforced
-			head = /obj/item/clothing/head/roguetown/helmet/ceramic/reinforced
-			pants = /obj/item/clothing/under/roguetown/kaizoku/ceramic
-			beltl = /obj/item/rogueweapon/mace/cudgel/rungu
-			backl = /obj/item/rogueweapon/mace/ararebo/obsidian
-			shoes = /obj/item/clothing/shoes/roguetown/sandals/geta
-			wrists = /obj/item/clothing/wrists/roguetown/bracers/bonebracer
-			shirt = /obj/item/clothing/suit/roguetown/shirt/rags/tribal
-			belt = /obj/item/storage/belt/rogue/leather/rope
+			armor = /obj/item/clothing/armor/ceramic/reinforced
+			head = /obj/item/clothing/head/helmet/ceramic/reinforced
+			pants = /obj/item/clothing/pants/kaizoku/ceramic
+			beltl = /obj/item/weapon/mace/cudgel/rungu
+			backl = /obj/item/weapon/mace/ararebo/obsidian
+			shoes = /obj/item/clothing/shoes/sandals/geta
+			wrists = /obj/item/clothing/wrists/bracers/bonebracer
+			shirt = /obj/item/clothing/shirt/rags/tribal
+			belt = /obj/item/storage/belt/leather/rope
 
 			H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 3, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/shields, 2, TRUE)
@@ -58,17 +58,17 @@
 
 		if("bodysnatcher") //Starts with blade as survival tool. Has Tier 2 makeshift armor, spear and throwable ranged weapon. Spear focus.
 			H.set_blindness(0)
-			armor = /obj/item/clothing/suit/roguetown/armor/ceramic
-			head = /obj/item/clothing/head/roguetown/helmet/ceramic/medium
-			pants = /obj/item/clothing/under/roguetown/kaizoku/ceramic/light
-			backr = /obj/item/rogueweapon/polearm/spear/stone/obsidian
-			backl = /obj/item/rogueweapon/shield/wood/rattan
-			beltr = /obj/item/rogueweapon/mace/cudgel/rungu
-			beltl = /obj/item/rogueweapon/huntingknife/kunai
-			shoes = /obj/item/clothing/shoes/roguetown/sandals/geta
-			wrists = /obj/item/clothing/wrists/roguetown/bracers/bonebracer
-			shirt = /obj/item/clothing/suit/roguetown/shirt/rags/tribal
-			belt = /obj/item/storage/belt/rogue/leather/rope
+			armor = /obj/item/clothing/armor/ceramic
+			head = /obj/item/clothing/head/helmet/ceramic/medium
+			pants = /obj/item/clothing/pants/kaizoku/ceramic/light
+			backr = /obj/item/weapon/polearm/spear/stone/obsidian
+			backl = /obj/item/weapon/shield/wood/rattan
+			beltr = /obj/item/weapon/mace/cudgel/rungu
+			beltl = /obj/item/weapon/huntingknife/kunai
+			shoes = /obj/item/clothing/shoes/sandals/geta
+			wrists = /obj/item/clothing/wrists/bracers/bonebracer
+			shirt = /obj/item/clothing/shirt/rags/tribal
+			belt = /obj/item/storage/belt/leather/rope
 
 			H.mind.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/shields, 2, TRUE)
@@ -85,20 +85,20 @@
 		if("skypiercer") //Start with survival tool. Ranged weapon focus.
 			H.set_blindness(0)
 			cloak = /obj/item/clothing/cloak/raincloak/mino
-			armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/muneate/kappa
-			shirt = /obj/item/clothing/suit/roguetown/armor/ceramic/light
-			head = /obj/item/clothing/head/roguetown/helmet/ceramic
-			pants = /obj/item/clothing/under/roguetown/kaizoku/tribal
-			shoes = /obj/item/clothing/shoes/roguetown/sandals/geta
-			wrists = /obj/item/clothing/wrists/roguetown/bracers/bonebracer
+			armor = /obj/item/clothing/armor/leather/vest/muneate/kappa
+			shirt = /obj/item/clothing/armor/ceramic/light
+			head = /obj/item/clothing/head/helmet/ceramic
+			pants = /obj/item/clothing/pants/kaizoku/tribal
+			shoes = /obj/item/clothing/shoes/sandals/geta
+			wrists = /obj/item/clothing/wrists/bracers/bonebracer
 			backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow
 			beltl = /obj/item/flashlight/flare/torch/lantern
 			backl = /obj/item/ammo_holder/quiver/arrows
-			belt = /obj/item/storage/belt/rogue/leather
+			belt = /obj/item/storage/belt/leather
 
 			H.mind.adjust_skillrank(/datum/skill/combat/bows, 3, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/craft/tanning, 2, TRUE)
-			backpack_contents = list(/obj/item/bait = 1, /obj/item/rogueweapon/huntingknife/kunai = 1)
+			backpack_contents = list(/obj/item/bait = 1, /obj/item/weapon/huntingknife/kunai = 1)
 
 			ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 			H.change_stat("strength", -1)

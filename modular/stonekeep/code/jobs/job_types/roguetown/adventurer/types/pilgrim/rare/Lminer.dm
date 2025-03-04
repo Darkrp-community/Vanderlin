@@ -6,23 +6,23 @@
 	the acquisition of ore, precious stones, and anything deep below the mines."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = list("Dwarf")
-	outfit = /datum/outfit/job/roguetown/adventurer/minermaster
+	outfit = /datum/outfit/job/adventurer/minermaster
 	maximum_possible_slots = 1
 	pickprob = 15
 	category_tags = list(CTAG_PILGRIM, CTAG_TOWNER)
 	apprentice_name = "Miner Apprentice"
 
-/datum/outfit/job/roguetown/adventurer/minermaster/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/minermaster/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = /obj/item/clothing/head/roguetown/helmet/leather/minershelm
-	pants = /obj/item/clothing/under/roguetown/trou
-	armor = /obj/item/clothing/suit/roguetown/armor/gambeson/light/striped
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/random
-	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
-	belt = /obj/item/storage/belt/rogue/leather
-	neck = /obj/item/storage/belt/rogue/pouch/coins/mid
-	beltl = /obj/item/rogueweapon/pick
-	backl = /obj/item/storage/backpack/rogue/backpack
+	head = /obj/item/clothing/head/helmet/leather/minershelm
+	pants = /obj/item/clothing/pants/trou
+	armor = /obj/item/clothing/armor/gambeson/light/striped
+	shirt = /obj/item/clothing/shirt/undershirt/random
+	shoes = /obj/item/clothing/shoes/boots/leather
+	belt = /obj/item/storage/belt/leather
+	neck = /obj/item/storage/belt/pouch/coins/mid
+	beltl = /obj/item/weapon/pick
+	backl = /obj/item/storage/backpack/backpack
 	if(H.age == AGE_OLD)
 		H.change_stat("endurance", -1)
 		H.mind?.adjust_skillrank(/datum/skill/craft/traps, 1, TRUE)

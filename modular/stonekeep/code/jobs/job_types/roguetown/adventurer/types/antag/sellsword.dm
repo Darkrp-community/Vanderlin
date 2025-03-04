@@ -11,11 +11,11 @@
 		"Aasimar",
 		"Dark Elf"
 	)
-	outfit = /datum/outfit/job/roguetown/bandit/sellsword
+	outfit = /datum/outfit/job/bandit/sellsword
 	category_tags = list(CTAG_BANDIT)
 	cmode_music = 'sound/music/cmode/antag/combat_bandit2.ogg'
 
-/datum/outfit/job/roguetown/bandit/sellsword/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/bandit/sellsword/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.mind?.adjust_skillrank(/datum/skill/combat/shields, 3, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
@@ -32,13 +32,13 @@
 	H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/misc/sewing, 1, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
-	belt = /obj/item/storage/belt/rogue/leather
-	pants = /obj/item/clothing/under/roguetown/trou
-	shoes = /obj/item/clothing/shoes/roguetown/boots
-	backr = /obj/item/storage/backpack/rogue/satchel
+	belt = /obj/item/storage/belt/leather
+	pants = /obj/item/clothing/pants/trou
+	shoes = /obj/item/clothing/shoes/boots
+	backr = /obj/item/storage/backpack/satchel
 	backpack_contents = list(/obj/item/needle/thorn = 1, /obj/item/natural/cloth = 1)
-	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson
-	armor = /obj/item/clothing/suit/roguetown/armor/chainmail/iron
+	shirt = /obj/item/clothing/armor/gambeson
+	armor = /obj/item/clothing/armor/chainmail/iron
 	H.change_stat(STATKEY_STR, 1)
 	H.change_stat(STATKEY_END, 2)
 	H.change_stat(STATKEY_CON, 2)
@@ -51,15 +51,15 @@
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Former Town Watch") //Deserter watchman.
-			r_hand = /obj/item/rogueweapon/polearm/spear/billhook
-			head = /obj/item/clothing/head/roguetown/helmet/kettle/slit
-			mask = /obj/item/clothing/mask/rogue/shepherd/rag
-			neck = /obj/item/clothing/neck/roguetown/chaincoif/iron
+			r_hand = /obj/item/weapon/polearm/spear/billhook
+			head = /obj/item/clothing/head/helmet/kettle/slit
+			mask = /obj/item/clothing/face/shepherd/rag
+			neck = /obj/item/clothing/neck/chaincoif/iron
 			H.mind.adjust_skillrank(/datum/skill/combat/polearms, 1, TRUE)
 		if("Former Mercenary") //Mercenary on the wrong side of the law
-			backl= /obj/item/rogueweapon/shield/tower/buckleriron
-			beltr = /obj/item/rogueweapon/sword //steel sword like literally every adventurer gets
-			head = /obj/item/clothing/head/roguetown/helmet/sallet
-			mask = /obj/item/clothing/mask/rogue/facemask
-			neck = /obj/item/clothing/neck/roguetown/coif/cloth
+			backl= /obj/item/weapon/shield/tower/buckleriron
+			beltr = /obj/item/weapon/sword //steel sword like literally every adventurer gets
+			head = /obj/item/clothing/head/helmet/sallet
+			mask = /obj/item/clothing/face/facemask
+			neck = /obj/item/clothing/neck/coif/cloth
 			H.mind.adjust_skillrank(/datum/skill/combat/shields, 1, TRUE)

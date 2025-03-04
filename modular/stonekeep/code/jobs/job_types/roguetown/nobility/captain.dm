@@ -1,4 +1,4 @@
-/datum/job/roguetown/captain
+/datum/job/captain
 	title = "Captain"
 	flag = CAPTAIN
 	department_flag = NOBLEMEN
@@ -18,13 +18,13 @@
 	tutorial = "Law and Order, your divine reason for existence. You have been given command over the garrison to help keep order and peace within the city and defend it against the many dangers of the island."
 	whitelist_req = FALSE
 	bypass_lastclass = TRUE
-	outfit = /datum/outfit/job/roguetown/captain
+	outfit = /datum/outfit/job/captain
 	give_bank_account = 120
 	min_pq = 0
 
 	cmode_music = 'sound/music/cmode/antag/CombatSausageMaker.ogg'
 
-/datum/job/roguetown/captain/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
+/datum/job/captain/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
@@ -36,20 +36,20 @@
 		H.real_name = "[honorary] [prev_real_name]"
 		H.name = "[honorary] [prev_name]"
 
-/datum/outfit/job/roguetown/captain/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/captain/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = /obj/item/clothing/head/roguetown/helmet/visored/captain
-	gloves = /obj/item/clothing/gloves/roguetown/plate
-	pants = /obj/item/clothing/under/roguetown/platelegs/captain
-	armor = /obj/item/clothing/suit/roguetown/armor/captain
-	neck = /obj/item/clothing/neck/roguetown/gorget
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/guard
-	shoes = /obj/item/clothing/shoes/roguetown/boots
-	backr = /obj/item/storage/backpack/rogue/satchel
-	backl = /obj/item/rogueweapon/shield/tower/metal
-	belt = /obj/item/storage/belt/rogue/leather/plaquesilver
-	beltl = /obj/item/rogueweapon/sword/sabre
-	beltr = /obj/item/rogueweapon/mace/cudgel
+	head = /obj/item/clothing/head/helmet/visored/captain
+	gloves = /obj/item/clothing/gloves/plate
+	pants = /obj/item/clothing/pants/platelegs/captain
+	armor = /obj/item/clothing/armor/captain
+	neck = /obj/item/clothing/neck/gorget
+	shirt = /obj/item/clothing/shirt/undershirt/guard
+	shoes = /obj/item/clothing/shoes/boots
+	backr = /obj/item/storage/backpack/satchel
+	backl = /obj/item/weapon/shield/tower/metal
+	belt = /obj/item/storage/belt/leather/plaquesilver
+	beltl = /obj/item/weapon/sword/sabre
+	beltr = /obj/item/weapon/mace/cudgel
 	cloak = /obj/item/clothing/cloak/captain
 	backpack_contents = list(/obj/item/storage/keyring/captain = 1, /obj/item/signal_horn = 1)
 	if(H.mind)

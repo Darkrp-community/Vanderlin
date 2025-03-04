@@ -5,24 +5,24 @@
 	allowed_races = list(
 		"Tiefling"
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/corsair
+	outfit = /datum/outfit/job/adventurer/corsair
 	category_tags = list(CTAG_MERCENARY)
 	cmode_music = 'sound/music/cmode/adventurer/CombatOutlander.ogg'
 	maximum_possible_slots = 5
 
-/datum/outfit/job/roguetown/adventurer/corsair
-	head = /obj/item/clothing/head/roguetown/helmet/leather/headscarf
-	pants = /obj/item/clothing/under/roguetown/tights/sailor
-	belt = /obj/item/storage/belt/rogue/leather/mercenary
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/jacket/sea
-	backl = /obj/item/storage/backpack/rogue/satchel
-	backpack_contents = list(/obj/item/natural/worms/leech = 2, /obj/item/storage/belt/rogue/pouch/coins/mid)
+/datum/outfit/job/adventurer/corsair
+	head = /obj/item/clothing/head/helmet/leather/headscarf
+	pants = /obj/item/clothing/pants/tights/sailor
+	belt = /obj/item/storage/belt/leather/mercenary
+	armor = /obj/item/clothing/armor/leather/jacket/sea
+	backl = /obj/item/storage/backpack/satchel
+	backpack_contents = list(/obj/item/natural/worms/leech = 2, /obj/item/storage/belt/pouch/coins/mid)
 	backr = /obj/item/fishingrod/fisher
-	beltl = /obj/item/rogueweapon/sword/sabre/cutlass
-	beltr = /obj/item/rogueweapon/knife/dagger
-	shoes = /obj/item/clothing/shoes/roguetown/boots
+	beltl = /obj/item/weapon/sword/sabre/cutlass
+	beltr = /obj/item/weapon/knife/dagger
+	shoes = /obj/item/clothing/shoes/boots
 
-/datum/outfit/job/roguetown/adventurer/corsair/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/corsair/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.mind)
 
@@ -38,7 +38,7 @@
 		H.mind?.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/craft/cooking, 3, TRUE)
 
-	shirt = pick(/obj/item/clothing/suit/roguetown/shirt/undershirt/sailor, /obj/item/clothing/suit/roguetown/shirt/undershirt/sailor/red)
+	shirt = pick(/obj/item/clothing/shirt/undershirt/sailor, /obj/item/clothing/shirt/undershirt/sailor/red)
 	ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 	H.change_stat("endurance", 3)
 	H.change_stat("perception", -2) // We don't want them using ranged weapons, period.

@@ -1,4 +1,4 @@
-/datum/job/roguetown/bard
+/datum/job/bard
 	title = "Bard"
 	tutorial = "Bards make up one of the largest populations of \
 	registered adventurers in Enigma, mostly because they are \
@@ -16,14 +16,14 @@
 		"Aasimar",
 		"Rakshari"
 	)
-	outfit = /datum/outfit/job/roguetown/bard
+	outfit = /datum/outfit/job/bard
 	flag = BARD
 	department_flag = PEASANTS
 	display_order = JDO_BARD
 	total_positions = 2
 	spawn_positions = 2
 
-/datum/outfit/job/roguetown/bard/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/bard/pre_equip(mob/living/carbon/human/H)
 	. = ..()
 	H.mind?.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
@@ -40,20 +40,20 @@
 	H.mind?.adjust_skillrank(/datum/skill/misc/music, 4, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
 	H.mind?.AddSpell(new /obj/effect/proc_holder/spell/invoked/mockery)
-	head = /obj/item/clothing/head/roguetown/bardhat
-	shoes = /obj/item/clothing/shoes/roguetown/boots
-	pants = /obj/item/clothing/under/roguetown/tights/random
-	shirt = /obj/item/clothing/suit/roguetown/shirt/tunic/noblecoat
+	head = /obj/item/clothing/head/bardhat
+	shoes = /obj/item/clothing/shoes/boots
+	pants = /obj/item/clothing/pants/tights/random
+	shirt = /obj/item/clothing/shirt/tunic/noblecoat
 	if(prob(30))
-		gloves = /obj/item/clothing/gloves/roguetown/fingerless
-	belt = /obj/item/storage/belt/rogue/leather
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest
+		gloves = /obj/item/clothing/gloves/fingerless
+	belt = /obj/item/storage/belt/leather
+	armor = /obj/item/clothing/armor/leather/vest
 	cloak = /obj/item/clothing/cloak/raincloak/blue
 	if(prob(50))
 		cloak = /obj/item/clothing/cloak/raincloak/red
-	backl = /obj/item/storage/backpack/rogue/satchel
-	beltr = /obj/item/rogueweapon/knife/dagger/steel/special
-	beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
+	backl = /obj/item/storage/backpack/satchel
+	beltr = /obj/item/weapon/knife/dagger/steel/special
+	beltl = /obj/item/storage/belt/pouch/coins/poor
 	backpack_contents = list(/obj/item/flint)
 	if(H.dna?.species?.id == "dwarf")
 		H.cmode_music = 'sound/music/cmode/combat_dwarf.ogg'
@@ -64,7 +64,7 @@
 	H.change_stat("speed", 2)
 	H.change_stat("strength", -1)
 
-/datum/job/roguetown/bard/after_spawn(mob/living/L, mob/M, latejoin)
+/datum/job/bard/after_spawn(mob/living/L, mob/M, latejoin)
 	. = ..()
 	if(ishuman(L)) //utter slop
 		var/mob/living/carbon/human/H = L
@@ -72,18 +72,18 @@
 		H.invisibility = INVISIBILITY_MAXIMUM
 		H.become_blind("bard_select")
 		var/instruments = list(
-			"Harp" = /obj/item/rogue/instrument/harp,
-			"Lute" = /obj/item/rogue/instrument/lute,
-			"Accordion" = /obj/item/rogue/instrument/accord,
-			"Guitar" = /obj/item/rogue/instrument/guitar,
-			"Flute" = /obj/item/rogue/instrument/flute,
-			"Drum" = /obj/item/rogue/instrument/drum,
-			"Hurdy-Gurdy" = /obj/item/rogue/instrument/hurdygurdy,
-			"Viola" = /obj/item/rogue/instrument/viola)
+			"Harp" = /obj/item/instrument/harp,
+			"Lute" = /obj/item/instrument/lute,
+			"Accordion" = /obj/item/instrument/accord,
+			"Guitar" = /obj/item/instrument/guitar,
+			"Flute" = /obj/item/instrument/flute,
+			"Drum" = /obj/item/instrument/drum,
+			"Hurdy-Gurdy" = /obj/item/instrument/hurdygurdy,
+			"Viola" = /obj/item/instrument/viola)
 		var/instrument_choice = input(M, "Choose your instrument.", "XYLIX") as anything in instruments
 		var/spawn_instrument = instruments[instrument_choice]
 		if(!spawn_instrument)
-			spawn_instrument = /obj/item/rogue/instrument/lute
+			spawn_instrument = /obj/item/instrument/lute
 		H.equip_to_slot_or_del(new spawn_instrument(H),SLOT_BACK_R, TRUE)
 		H.advsetup = 0
 		H.invisibility = initial(H.invisibility)

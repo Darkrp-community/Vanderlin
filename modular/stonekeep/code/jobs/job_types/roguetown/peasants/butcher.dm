@@ -1,4 +1,4 @@
-/datum/job/roguetown/butcher
+/datum/job/butcher
 	title = "Butcher"
 	flag = BEASTMASTER
 	department_flag = PEASANTS
@@ -20,29 +20,29 @@
 	tutorial = "Some say youre a strange individual, some say youre a cheat while some claim you are a savant in the art of sausage making. Without your skilled hands and knifework most of the livestock around the town would be wasted. "
 
 
-	outfit = /datum/outfit/job/roguetown/beastmaster
+	outfit = /datum/outfit/job/beastmaster
 	display_order = JDO_BUTCHER
 	give_bank_account = TRUE
 	min_pq = -20
 	bypass_lastclass = TRUE
 	cmode_music = 'sound/music/cmode/towner/CombatTowner.ogg'
 
-/datum/outfit/job/roguetown/beastmaster/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/beastmaster/pre_equip(mob/living/carbon/human/H)
 	..()
 
-	belt = /obj/item/storage/belt/rogue/leather
+	belt = /obj/item/storage/belt/leather
 	beltr= /obj/item/storage/meatbag
 	beltl= /obj/item/key/butcher
-	backl = /obj/item/storage/backpack/rogue/satchel
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/butcher
-	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
-	backpack_contents = list(/obj/item/kitchen/spoon, /obj/item/reagent_containers/food/snacks/truffles, /obj/item/rogueweapon/knife/hunting)
+	backl = /obj/item/storage/backpack/satchel
+	armor = /obj/item/clothing/armor/leather/vest/butcher
+	shoes = /obj/item/clothing/shoes/boots/leather
+	backpack_contents = list(/obj/item/kitchen/spoon, /obj/item/reagent_containers/food/snacks/truffles, /obj/item/weapon/knife/hunting)
 
 	if(H.gender == MALE)
-		pants = /obj/item/clothing/under/roguetown/trou
-		wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+		pants = /obj/item/clothing/pants/trou
+		wrists = /obj/item/clothing/wrists/bracers/leather
 	else
-		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/gen/random
+		shirt = /obj/item/clothing/shirt/dress/gen/random
 
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC) // Used to dismembering live stock, desensitized to it.
 

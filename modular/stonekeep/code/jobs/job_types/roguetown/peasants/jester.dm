@@ -1,4 +1,4 @@
-/datum/job/roguetown/jester
+/datum/job/jester
 	title = "Jester"
 	flag = JESTER
 	department_flag = PEASANTS
@@ -22,22 +22,22 @@
 		and someday you'll find yourself at the end of something sharper than you."
 
 	spells = list(/obj/effect/proc_holder/spell/self/telljoke,/obj/effect/proc_holder/spell/self/telltragedy,/obj/effect/proc_holder/spell/self/fart)
-	outfit = /datum/outfit/job/roguetown/jester
+	outfit = /datum/outfit/job/jester
 	display_order = JDO_JESTER
 	bypass_lastclass = TRUE
 	min_pq = -20
 	give_bank_account = TRUE
 
-/datum/outfit/job/roguetown/jester/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/jester/pre_equip(mob/living/carbon/human/H)
 	..()
-	shoes = /obj/item/clothing/shoes/roguetown/jester
-	pants = /obj/item/clothing/under/roguetown/tights
-	armor = /obj/item/clothing/suit/roguetown/shirt/jester
-	belt = /obj/item/storage/belt/rogue/leather
+	shoes = /obj/item/clothing/shoes/jester
+	pants = /obj/item/clothing/pants/tights
+	armor = /obj/item/clothing/shirt/jester
+	belt = /obj/item/storage/belt/leather
 	beltr = /obj/item/storage/keyring/jester
-	beltl = /obj/item/storage/belt/rogue/pouch
-	head = /obj/item/clothing/head/roguetown/jester
-	neck = /obj/item/clothing/neck/roguetown/coif
+	beltl = /obj/item/storage/belt/pouch
+	head = /obj/item/clothing/head/jester
+	neck = /obj/item/clothing/neck/coif
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/knives, pick(1,2,3,4,5), TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/unarmed, pick(1,2,3,4,5,6), TRUE)

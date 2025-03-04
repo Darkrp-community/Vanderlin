@@ -1,4 +1,4 @@
-/datum/job/roguetown/royalguard
+/datum/job/royalguard
 	title = "Royal Guard"
 	flag = GUARDSMAN
 	department_flag = GARRISON
@@ -17,7 +17,7 @@
 	whitelist_req = FALSE
 	bypass_lastclass = TRUE
 
-	outfit = /datum/outfit/job/roguetown/royalguard
+	outfit = /datum/outfit/job/royalguard
 
 	tutorial = "A lower-ranking zamurai serving the warrior caste that became adrift during a expedition, \
 	keeping their trusty steed. They are expected to uphold their oficial duties and following the strict \
@@ -29,7 +29,7 @@
 
 	cmode_music = 'sound/music/cmode/nobility/CombatKnight.ogg'
 
-/datum/job/roguetown/royalguard/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
+/datum/job/royalguard/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
@@ -72,25 +72,25 @@
 
 			H.name = H.real_name // Sync `name` with the modified `real_name`
 
-/datum/outfit/job/roguetown/royalguard/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/royalguard/pre_equip(mob/living/carbon/human/H)
 	..()
 	to_chat(H, span_warning( "<span class='userdanger'>I am a noble storm-hardened Zamurai. I hold the blood oath of my ancestors, bound to the throne - I serve the ruler's clan with utmost devotion, let death find me before dishonoring my pact.</span>"))
-	pants = /obj/item/clothing/under/roguetown/chainlegs/sendan
+	pants = /obj/item/clothing/pants/chainlegs/sendan
 	neck = null //Abyssariads rarely uses gorgets. For that they use menpos.
-	mask = /obj/item/clothing/mask/rogue/kaizoku/menpo
+	mask = /obj/item/clothing/face/kaizoku/menpo
 	cloak = /obj/item/clothing/cloak/stabard/haramaki/odoshi/zamurai
-	shirt = /obj/item/clothing/suit/roguetown/shirt/looseshirt
-	armor = /obj/item/clothing/suit/roguetown/armor/brigandine/oyoroi/royal
-	shoes = /obj/item/clothing/shoes/roguetown/boots/armor/light/kusaritabi
-	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/random
-	beltr = /obj/item/rogueweapon/sword/uchigatana
-	backr = /obj/item/storage/backpack/rogue/satchel
-	r_hand = /obj/item/rogueweapon/polearm/halberd/bardiche/naginata
-	backl = /obj/item/rogueweapon/shield/tower/metal/abyssal
+	shirt = /obj/item/clothing/shirt/looseshirt
+	armor = /obj/item/clothing/armor/brigandine/oyoroi/royal
+	shoes = /obj/item/clothing/shoes/boots/armor/light/kusaritabi
+	belt = /obj/item/storage/belt/kaizoku/leather/daisho/random
+	beltr = /obj/item/weapon/sword/uchigatana
+	backr = /obj/item/storage/backpack/satchel
+	r_hand = /obj/item/weapon/polearm/halberd/bardiche/naginata
+	backl = /obj/item/weapon/shield/tower/metal/abyssal
 	if(prob(30))
-		head = /obj/item/clothing/head/roguetown/helmet/visored/zunari
+		head = /obj/item/clothing/head/helmet/visored/zunari
 	else
-		head = /obj/item/clothing/head/roguetown/helmet/sallet/tosei_kabuto
+		head = /obj/item/clothing/head/helmet/sallet/tosei_kabuto
 	if(findtext(H.real_name, " Clanless"))
 		to_chat(H, "<span class='warning'>The King acquired my clan - so I have to belong to one before reaching this royal duty I serve.</span>")
 		clanfication(H)
@@ -98,7 +98,7 @@
 
 	if(H.dna.species.name == "Ogrun")
 		H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 4, TRUE)
-		r_hand = /obj/item/rogueweapon/mace/goden/steel/tetsubo
+		r_hand = /obj/item/weapon/mace/goden/steel/tetsubo
 	else
 		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 4, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/bows, 3, TRUE)

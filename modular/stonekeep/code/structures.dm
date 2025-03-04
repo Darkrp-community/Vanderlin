@@ -13,7 +13,7 @@
 /obj/structure/closet/crate/roguecloset
 	icon = 'modular/stonekeep/icons/structure.dmi'
 
-/obj/structure/rack/rogue/shelf
+/obj/structure/rack/shelf
 	icon = 'modular/stonekeep/icons/structure.dmi'
 
 
@@ -24,47 +24,47 @@
 \----------------*/
 // base was 8, 5 for torches
 
-/obj/machinery/light/rogue/firebowl
+/obj/machinery/light/firebowl
 	brightness = 10
-/obj/machinery/light/rogue/firebowl/Initialize()
+/obj/machinery/light/firebowl/Initialize()
 	. = ..()
 	light_outer_range =  9
 
-/obj/machinery/light/rogue/wallfire
+/obj/machinery/light/wallfire
 	brightness = 9
 
-/obj/machinery/light/rogue/torchholder
+/obj/machinery/light/torchholder
 	brightness = 7
 
-/obj/machinery/light/rogue/campfire
+/obj/machinery/light/campfire
 	brightness = 8
-/obj/machinery/light/rogue/campfire/Initialize()
+/obj/machinery/light/campfire/Initialize()
 	. = ..()
 	light_outer_range =  6
 
 
-/obj/machinery/light/rogue/torchholder/empty
+/obj/machinery/light/torchholder/empty
 	lacks_torch = TRUE
 	pixel_y = 32
 
-/obj/machinery/light/rogue/torchholder/cold
+/obj/machinery/light/torchholder/cold
 	unlit_torch = TRUE
 	pixel_y = 32
 
-/obj/machinery/light/rogue/firebowl/cold/Initialize(mapload)
+/obj/machinery/light/firebowl/cold/Initialize(mapload)
 	. = ..()
 	addtimer(CALLBACK(src, PROC_REF(extinguish)), 10)
 
-/obj/machinery/light/rogue/wallfire/candle/open	// starts cold, light it when open is the idea.
+/obj/machinery/light/wallfire/candle/open	// starts cold, light it when open is the idea.
 	name = "open candle"
 	icon = 'modular/stonekeep/icons/structure.dmi'
 	icon_state = "storecandle1"
 	base_state = "storecandle"
-/obj/machinery/light/rogue/wallfire/candle/open/Initialize(mapload)
+/obj/machinery/light/wallfire/candle/open/Initialize(mapload)
 	. = ..()
 	addtimer(CALLBACK(src, PROC_REF(extinguish)), 10)
 
-/obj/machinery/light/rogue/firebowl/standing/lamp
+/obj/machinery/light/firebowl/standing/lamp
 	name = "standing lamp"
 	icon = 'modular/stonekeep/icons/structure.dmi'
 
@@ -200,30 +200,30 @@
 	icon_state = "nordic"
 
 // Placeholder shrines. Migth get better code at some point but use for now
-/obj/machinery/light/rogue/wallfire/candle/lamp/temple
+/obj/machinery/light/wallfire/candle/lamp/temple
 	icon = 'modular/stonekeep/icons/temple.dmi'
 
-/obj/machinery/light/rogue/wallfire/candle/lamp/temple/noc
+/obj/machinery/light/wallfire/candle/lamp/temple/noc
 	icon_state = "noc1"
 	base_state = "noc"
-/obj/machinery/light/rogue/wallfire/candle/lamp/temple/pestra
+/obj/machinery/light/wallfire/candle/lamp/temple/pestra
 	icon_state = "pestra1"
 	base_state = "pestra"
-/obj/machinery/light/rogue/wallfire/candle/lamp/temple/xylix
+/obj/machinery/light/wallfire/candle/lamp/temple/xylix
 	icon_state = "xylix1"
 	base_state = "xylix"
-/obj/machinery/light/rogue/wallfire/candle/lamp/temple/eora
+/obj/machinery/light/wallfire/candle/lamp/temple/eora
 	icon_state = "eora1"
 	base_state = "eora"
-/obj/machinery/light/rogue/wallfire/candle/lamp/temple/malum
+/obj/machinery/light/wallfire/candle/lamp/temple/malum
 	icon_state = "malum1"
 	base_state = "malum"
-/obj/machinery/light/rogue/wallfire/candle/lamp/temple/ravox
+/obj/machinery/light/wallfire/candle/lamp/temple/ravox
 	icon_state = "ravox1"
 	base_state = "ravox"
 
 // Sandstone brick wall
-/turf/closed/wall/mineral/rogue/stonebrick/sandstone
+/turf/closed/wall/mineral/stonebrick/sandstone
 	name = "sandstone wall"
 	icon = 'modular/stonekeep/icons/sandstonebrick.dmi'
 
@@ -326,7 +326,7 @@
 /obj/effect/decal/stonehedge_corner
 	name = "stone hedge"
 	desc = ""
-	icon = 'icons/roguetown/misc/railing.dmi'
+	icon = 'icons/misc/railing.dmi'
 	icon_state = "stone_decorn"
 	mouse_opacity = 0
 

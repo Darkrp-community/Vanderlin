@@ -14,11 +14,11 @@
 		"Ogrun",
 		"Undine"
 	)
-	outfit = /datum/outfit/job/roguetown/mercenary/kabukimaru
+	outfit = /datum/outfit/job/mercenary/kabukimaru
 	category_tags = list(CTAG_MERCENARY)
 	maximum_possible_slots = 5
 
-/datum/outfit/job/roguetown/mercenary/kabukimaru/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/mercenary/kabukimaru/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
@@ -34,19 +34,19 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
 		H.burakumin = TRUE //They will not receive the explosive mask, as these have already been exiled. They do not require masks to exist on a society.
 
-	beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
-	neck = /obj/item/clothing/neck/roguetown/chaincoif/karuta_zukin/kabukimono
-	pants = /obj/item/clothing/under/roguetown/trou/tobi/kabukimono
-	shoes = /obj/item/clothing/shoes/roguetown/shortboots/cloudhead/kabukimono
-	gloves = /obj/item/clothing/gloves/roguetown/leather/abyssal/kabukimono
-	belt = /obj/item/storage/belt/rogue/leather
-	beltl = /obj/item/rogueweapon/mace/cudgel/jitte
+	beltr = /obj/item/storage/belt/pouch/coins/poor
+	neck = /obj/item/clothing/neck/chaincoif/karuta_zukin/kabukimono
+	pants = /obj/item/clothing/pants/trou/tobi/kabukimono
+	shoes = /obj/item/clothing/shoes/shortboots/cloudhead/kabukimono
+	gloves = /obj/item/clothing/gloves/leather/abyssal/kabukimono
+	belt = /obj/item/storage/belt/leather
+	beltl = /obj/item/weapon/mace/cudgel/jitte
 	cloak = /obj/item/clothing/cloak/raincloak/horocloak/kabukimono
-	shirt = /obj/item/clothing/suit/roguetown/shirt/tunic/kimono/kabukimono
-	head = /obj/item/clothing/head/roguetown/helmet/kaizoku/hachigane
-	armor = /obj/item/clothing/suit/roguetown/armor/cuirass/nanbando
-	backl = /obj/item/storage/backpack/rogue/satchel
-	backr = /obj/item/rogueweapon/sword/long/greatsword/odachi
+	shirt = /obj/item/clothing/shirt/tunic/kimono/kabukimono
+	head = /obj/item/clothing/head/helmet/kaizoku/hachigane
+	armor = /obj/item/clothing/armor/cuirass/nanbando
+	backl = /obj/item/storage/backpack/satchel
+	backr = /obj/item/weapon/sword/long/greatsword/odachi
 	if(!H.has_language(/datum/language/abyssal))
 		H.grant_language(/datum/language/abyssal)
 		to_chat(H, "<span class='info'>I can speak Abyssal with ,a before my speech.</span>")

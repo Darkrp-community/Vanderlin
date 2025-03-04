@@ -14,11 +14,11 @@
 	"Skylancer",
 	"Ogrun",
 	"Undine")
-	outfit = /datum/outfit/job/roguetown/adventurer/abyssariad/wokou
+	outfit = /datum/outfit/job/adventurer/abyssariad/wokou
 	category_tags = list(CTAG_ADVENTURER)
 	pickprob = 100
 
-/datum/outfit/job/roguetown/adventurer/abyssariad/wokou/pre_equip(mob/living/carbon/human/H) // Same as Warrior.
+/datum/outfit/job/adventurer/abyssariad/wokou/pre_equip(mob/living/carbon/human/H) // Same as Warrior.
 	..()
 	H.mind.adjust_skillrank(/datum/skill/combat/crossbows, pick(1,2), TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 2, TRUE)
@@ -34,11 +34,11 @@
 	H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/misc/riding, pick(1,1,2), TRUE)
 
-	shoes = /obj/item/clothing/shoes/roguetown/boots/jikatabi
-	gloves = /obj/item/clothing/gloves/roguetown/leather
-	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho
-	shirt = /obj/item/clothing/suit/roguetown/shirt/looseshirt
-	pants = /obj/item/clothing/under/roguetown/trou/tobi/random
+	shoes = /obj/item/clothing/shoes/boots/jikatabi
+	gloves = /obj/item/clothing/gloves/leather
+	belt = /obj/item/storage/belt/kaizoku/leather/daisho
+	shirt = /obj/item/clothing/shirt/looseshirt
+	pants = /obj/item/clothing/pants/trou/tobi/random
 
 	H.become_blind("TRAIT_GENERIC")
 	var/wokoutype = list("LinYou (Ambusher)","Dustrider (Scout)","Muqian (Towerdweller)","Shuhen (Militia)","Kaizoku (Navy)", "Jizamurai (Enforcer)")
@@ -47,17 +47,17 @@
 		if("LinYou (Ambusher)") //Weaker iron armor, specialized exactly in being able to repair their own weaker armor.
 			var/roll = rand(1, 100)
 			H.set_blindness(0)
-			armor = /obj/item/clothing/suit/roguetown/armor/chainmail/rattan
-			head = /obj/item/clothing/head/roguetown/helmet/kaizoku/rattan
-			backl = /obj/item/storage/backpack/rogue/satchel
-			backr = /obj/item/rogueweapon/shield/wood/rattan
-			beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
+			armor = /obj/item/clothing/armor/chainmail/rattan
+			head = /obj/item/clothing/head/helmet/kaizoku/rattan
+			backl = /obj/item/storage/backpack/satchel
+			backr = /obj/item/weapon/shield/wood/rattan
+			beltr = /obj/item/storage/belt/pouch/coins/poor
 			if(roll <= 33)
-				beltl = /obj/item/rogueweapon/sword/short/jian
+				beltl = /obj/item/weapon/sword/short/jian
 			else if(roll <= 66)
-				beltl = /obj/item/rogueweapon/sword/scimitar/messer/dao
+				beltl = /obj/item/weapon/sword/scimitar/messer/dao
 			else
-				beltl = /obj/item/rogueweapon/sword/iron/jian
+				beltl = /obj/item/weapon/sword/iron/jian
 			H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
 			to_chat(H, span_warning( "<span class='info'>Hailing from the tropical edges, I am a 'LinYou', armored in humble, oil-boiled wickerwork and iron, I am trained to perform long-term expeditions and guerrila tactics on any soil.</span>"))
 
@@ -70,16 +70,16 @@
 
 		if("Dustrider (Scout)") // Full light armor, highest quality of light armor. Loses shield and money for bow. Literally mongolian, but lacking a horse. Only Dodge expert.
 			H.set_blindness(0)
-			armor = /obj/item/clothing/suit/roguetown/armor/leather/hide/dustwalker
-			shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/deelcoat
-			head = /obj/item/clothing/head/roguetown/helmet/leather/malgai/duulga
+			armor = /obj/item/clothing/armor/leather/hide/dustwalker
+			shirt = /obj/item/clothing/armor/gambeson/heavy/deelcoat
+			head = /obj/item/clothing/head/helmet/leather/malgai/duulga
 			backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/hankyu
-			backl = /obj/item/storage/backpack/rogue/satchel
+			backl = /obj/item/storage/backpack/satchel
 			beltr = /obj/item/ammo_holder/quiver/arrows
 			if(prob(60))
-				beltl = /obj/item/rogueweapon/huntingknife/kunai //so they HAVE something to use in melee combat.
+				beltl = /obj/item/weapon/huntingknife/kunai //so they HAVE something to use in melee combat.
 			else
-				beltl = /obj/item/rogueweapon/knife/steel/tanto // luckyroll. Now you have a short-short sword.
+				beltl = /obj/item/weapon/knife/steel/tanto // luckyroll. Now you have a short-short sword.
 			H.mind.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE)
 
 			//please tell me if this is balanced or not.
@@ -96,19 +96,19 @@
 
 		if("Shuhen (Militia)")  //No protective helmet, full face protection + neck from a full menpo - still does not protect the head. Their weapon also functions to work the field, but since that can be done by hand nowadays, is no balance issue now.
 			H.set_blindness(0)
-			armor = /obj/item/clothing/suit/roguetown/armor/plate/mirror/iron
-			head = /obj/item/clothing/head/roguetown/tengai/gasa
+			armor = /obj/item/clothing/armor/plate/mirror/iron
+			head = /obj/item/clothing/head/tengai/gasa
 			if(prob(33))
-				head = /obj/item/clothing/head/roguetown/tengai/torioigasa
+				head = /obj/item/clothing/head/tengai/torioigasa
 			if(prob(33))
-				head = /obj/item/clothing/head/roguetown/tengai/sandogasa
-			mask = /obj/item/clothing/mask/rogue/kaizoku/menpo
-			backr = /obj/item/rogueweapon/shield/wood/rattan
-			beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
+				head = /obj/item/clothing/head/tengai/sandogasa
+			mask = /obj/item/clothing/face/kaizoku/menpo
+			backr = /obj/item/weapon/shield/wood/rattan
+			beltr = /obj/item/storage/belt/pouch/coins/poor
 			if(prob(60))
-				beltl = /obj/item/rogueweapon/sickle/kama
+				beltl = /obj/item/weapon/sickle/kama
 			else
-				beltl = /obj/item/rogueweapon/axe/iron/changfu // luckyroll. Now you have an axe.
+				beltl = /obj/item/weapon/axe/iron/changfu // luckyroll. Now you have an axe.
 			H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 1, TRUE)
 			to_chat(H, span_warning("<span class='info'>Farmlands shall never struggle under my might, as I came from the Outskirts where the demons once brew, I slaughtered the Grezenholft like pigs - and I can do it again. May the waters fortalify the soil I step on.</span>"))
 
@@ -121,10 +121,10 @@
 
 		if("Muqian (Towerdweller)") //The 20% of Wokou Population. Practically the best armored - but has no shield and no money, and have to rely on flails for combat. 'Kusari/Chain-People'
 			H.set_blindness(0)
-			shirt = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/kusari
-			neck = /obj/item/clothing/neck/roguetown/chaincoif/iron/kusari_zukin
-			shoes = /obj/item/clothing/shoes/roguetown/boots/armor/light/kusaritabi
-			beltl = /obj/item/rogueweapon/flail/kusarigama/peasant
+			shirt = /obj/item/clothing/armor/chainmail/hauberk/kusari
+			neck = /obj/item/clothing/neck/chaincoif/iron/kusari_zukin
+			shoes = /obj/item/clothing/shoes/boots/armor/light/kusaritabi
+			beltl = /obj/item/weapon/flail/kusarigama/peasant
 			H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 1, TRUE)
 			to_chat(H, span_warning("<span class='info'>I am a Muqian, I hail from the towers of civilization, those upheld in sturdy chains alike my body. May the dices of destiny enlight my ways.</span>"))
 
@@ -137,11 +137,11 @@
 
 		if("Kaizoku (Navy)") // Special one. "AYO THIS IS THE PROJECT NAME!!!" Start with Steel Weapon - but uses weak light armor, but they have DRIP, and non-rattan shield, because from where they come from, has no Rattan.
 			H.set_blindness(0)
-			armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/kaizoku
-			head = /obj/item/clothing/head/roguetown/helmet/leather/malgai/kaizoku
-			beltl = /obj/item/rogueweapon/sword/scimitar/falchion/yuntoudao
-			backr = /obj/item/rogueweapon/shield/wood
-			beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
+			armor = /obj/item/clothing/armor/leather/vest/kaizoku
+			head = /obj/item/clothing/head/helmet/leather/malgai/kaizoku
+			beltl = /obj/item/weapon/sword/scimitar/falchion/yuntoudao
+			backr = /obj/item/weapon/shield/wood
+			beltr = /obj/item/storage/belt/pouch/coins/poor
 			H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
 			to_chat(H, span_warning("<span class='info'>I am a son of Kaizoku and I am one with the destroyed Atoll, my life is on the seas. The major empire's supply lines shall crumble against my ways of warfare. May the Abyssal Emperor live FOREVER. </span>"))
 
@@ -152,16 +152,16 @@
 			ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 		if("Jizamurai (Enforcer)")
 			H.set_blindness(0)
-			armor = /obj/item/clothing/suit/roguetown/armor/leather/splint/kikko/rich
-			head = /obj/item/clothing/head/roguetown/tengai/gasa
+			armor = /obj/item/clothing/armor/leather/splint/kikko/rich
+			head = /obj/item/clothing/head/tengai/gasa
 			cloak = /obj/item/clothing/cloak/stabard/haramaki/jinbaori/jizamurai
-			mask = /obj/item/clothing/mask/rogue/kaizoku/menpo/steel/half
-			mouth = /obj/item/clothing/mask/cigarette/pipe/westman
-			neck = /obj/item/clothing/neck/roguetown/chaincoif/karuta_zukin
-			shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/light/hitatare/rich
-			pants = /obj/item/clothing/under/roguetown/trou/tobi/random
-			beltr = /obj/item/rogueweapon/sword/short/wakizashi
-			beltl = /obj/item/rogueweapon/sword/uchigatana
+			mask = /obj/item/clothing/face/kaizoku/menpo/steel/half
+			mouth = /obj/item/clothing/face/cigarette/pipe/westman
+			neck = /obj/item/clothing/neck/chaincoif/karuta_zukin
+			shirt = /obj/item/clothing/armor/gambeson/light/hitatare/rich
+			pants = /obj/item/clothing/pants/trou/tobi/random
+			beltr = /obj/item/weapon/sword/short/wakizashi
+			beltl = /obj/item/weapon/sword/uchigatana
 			H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
 			to_chat(H, span_warning("<span class='info'>As a minor Zamurai lord, my roots are bound to the sword. I shall protect the weak and the innocent from corruption, as its reach ends where my blade begins. </span>"))
 

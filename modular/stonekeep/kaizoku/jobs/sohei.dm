@@ -20,55 +20,55 @@
 		"Ogrun",
 		"Undine"
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/abyssariad/sohei
+	outfit = /datum/outfit/job/adventurer/abyssariad/sohei
 	category_tags = list(CTAG_ADVENTURER)
 	vampcompat = FALSE
 	maximum_possible_slots = 2 //Only two, united with Yamabushi.
 	pickprob = 100
 
-/datum/outfit/job/roguetown/adventurer/abyssariad/sohei
+/datum/outfit/job/adventurer/abyssariad/sohei
 	allowed_patrons = list(/datum/patron/divine/abyssor)
 
-/datum/outfit/job/roguetown/adventurer/abyssariad/sohei/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/abyssariad/sohei/pre_equip(mob/living/carbon/human/H)
 	..()
-	neck = /obj/item/clothing/head/roguetown/soheicloth
-	armor = /obj/item/clothing/suit/roguetown/armor/cuirass/sanmaido
-	wrists = /obj/item/clothing/neck/roguetown/psycross/silver/abyssanctum
-	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail/iron/tatami
-	shoes = /obj/item/clothing/shoes/roguetown/boots/jikatabi
-	head = /obj/item/clothing/head/roguetown/helmet/kaizoku/hachigane
-	beltr = /obj/item/rogueweapon/knife/hunting/sai
+	neck = /obj/item/clothing/head/soheicloth
+	armor = /obj/item/clothing/armor/cuirass/sanmaido
+	wrists = /obj/item/clothing/neck/psycross/silver/abyssanctum
+	shirt = /obj/item/clothing/armor/chainmail/iron/tatami
+	shoes = /obj/item/clothing/shoes/boots/jikatabi
+	head = /obj/item/clothing/head/helmet/kaizoku/hachigane
+	beltr = /obj/item/weapon/knife/hunting/sai
 
 	var/background = pickweight(list("thunder" = 1, "storm" = 1, "ocean" = 1, "island" = 1)) //This is just flavour. Mostly unwritten portrayal how different Soheis were of each other. Leave it up to the players to interact.
 	var/weapontype = pickweight(list("yari" = 6, "tsukushi" = 5, "katakama" = 3)) // Rolls for various polearms.
 	switch(background)
 		if("thunder")
-			neck = /obj/item/clothing/head/roguetown/soheicloth/thunder
-			pants = /obj/item/clothing/under/roguetown/trou/tobi/thunder
-			belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/thunder
-			head = /obj/item/clothing/head/roguetown/helmet/kaizoku/hachigane/thunder
+			neck = /obj/item/clothing/head/soheicloth/thunder
+			pants = /obj/item/clothing/pants/trou/tobi/thunder
+			belt = /obj/item/storage/belt/kaizoku/leather/daisho/thunder
+			head = /obj/item/clothing/head/helmet/kaizoku/hachigane/thunder
 		if("storm")
-			neck = /obj/item/clothing/head/roguetown/soheicloth/storm
-			pants = /obj/item/clothing/under/roguetown/trou/tobi/storm
-			belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/storm
-			head = /obj/item/clothing/head/roguetown/helmet/kaizoku/hachigane/storm
+			neck = /obj/item/clothing/head/soheicloth/storm
+			pants = /obj/item/clothing/pants/trou/tobi/storm
+			belt = /obj/item/storage/belt/kaizoku/leather/daisho/storm
+			head = /obj/item/clothing/head/helmet/kaizoku/hachigane/storm
 		if("ocean")
-			neck = /obj/item/clothing/head/roguetown/soheicloth/ocean
-			pants = /obj/item/clothing/under/roguetown/trou/tobi/ocean
-			belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/ocean
-			head = /obj/item/clothing/head/roguetown/helmet/kaizoku/hachigane/ocean
+			neck = /obj/item/clothing/head/soheicloth/ocean
+			pants = /obj/item/clothing/pants/trou/tobi/ocean
+			belt = /obj/item/storage/belt/kaizoku/leather/daisho/ocean
+			head = /obj/item/clothing/head/helmet/kaizoku/hachigane/ocean
 		if("island")
-			neck = /obj/item/clothing/head/roguetown/soheicloth/island
-			pants = /obj/item/clothing/under/roguetown/trou/tobi/island
-			belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/island
-			head = /obj/item/clothing/head/roguetown/helmet/kaizoku/hachigane/island
+			neck = /obj/item/clothing/head/soheicloth/island
+			pants = /obj/item/clothing/pants/trou/tobi/island
+			belt = /obj/item/storage/belt/kaizoku/leather/daisho/island
+			head = /obj/item/clothing/head/helmet/kaizoku/hachigane/island
 	switch(weapontype)
 		if("tsukushi")
-			backr = /obj/item/rogueweapon/polearm/halberd/bardiche/naginata/tsukushi  //weaker naginata, mass-produced iron tier. Slightly more rare than Yari.
+			backr = /obj/item/weapon/polearm/halberd/bardiche/naginata/tsukushi  //weaker naginata, mass-produced iron tier. Slightly more rare than Yari.
 		if("katakama")
-			backr = /obj/item/rogueweapon/polearm/spear/yari/katakama//Steel, more combat-effective and rarer than iron Yari.
+			backr = /obj/item/weapon/polearm/spear/yari/katakama//Steel, more combat-effective and rarer than iron Yari.
 		if("yari")
-			backr = /obj/item/rogueweapon/polearm/spear/yari //just a simple iron spear.
+			backr = /obj/item/weapon/polearm/spear/yari //just a simple iron spear.
 
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE) //The true focus of this class.

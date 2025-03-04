@@ -1,4 +1,4 @@
-/datum/job/roguetown/fisher
+/datum/job/fisher
 	title = "Fisher"
 	tutorial = "Simple folk with an affinity for catching fish out of any body of water, \
 				they are decent cooks and swimmers, living off the gifts of Abyssor."
@@ -16,14 +16,14 @@
 		"Aasimar",
 		"Half-Orc"
 	)
-	outfit = /datum/outfit/job/roguetown/fisher
+	outfit = /datum/outfit/job/fisher
 	min_pq = -50
 	give_bank_account = 8
 	total_positions = 2
 	spawn_positions = 2
 	display_order = JDO_FISHER
 
-/datum/outfit/job/roguetown/fisher/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/fisher/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
@@ -40,28 +40,28 @@
 		else
 			H.change_stat("constitution", 2)
 	if(H.gender == MALE)
-		pants = /obj/item/clothing/under/roguetown/tights/random
-		shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/random
-		shoes = /obj/item/clothing/shoes/roguetown/boots/leather
-		neck = /obj/item/storage/belt/rogue/pouch/coins/poor
-		head = /obj/item/clothing/head/roguetown/fisherhat
-		armor = /obj/item/clothing/suit/roguetown/armor/gambeson/light/striped
-		backl = /obj/item/storage/backpack/rogue/satchel
-		belt = /obj/item/storage/belt/rogue/leather
+		pants = /obj/item/clothing/pants/tights/random
+		shirt = /obj/item/clothing/shirt/shortshirt/random
+		shoes = /obj/item/clothing/shoes/boots/leather
+		neck = /obj/item/storage/belt/pouch/coins/poor
+		head = /obj/item/clothing/head/fisherhat
+		armor = /obj/item/clothing/armor/gambeson/light/striped
+		backl = /obj/item/storage/backpack/satchel
+		belt = /obj/item/storage/belt/leather
 		backr = /obj/item/fishingrod/fisher
 		beltr = /obj/item/cooking/pan
 		beltl = /obj/item/flint
-		backpack_contents = list(/obj/item/rogueweapon/knife/villager = 1, /obj/item/natural/worms = 1, /obj/item/rogueweapon/shovel/small = 1)
+		backpack_contents = list(/obj/item/weapon/knife/villager = 1, /obj/item/natural/worms = 1, /obj/item/weapon/shovel/small = 1)
 
 	else
-		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/gen/random
-		armor = /obj/item/clothing/suit/roguetown/armor/gambeson/light/striped
-		shoes = /obj/item/clothing/shoes/roguetown/boots/leather
-		neck = /obj/item/storage/belt/rogue/pouch/coins/poor
-		head = /obj/item/clothing/head/roguetown/fisherhat
-		backl = /obj/item/storage/backpack/rogue/satchel
+		shirt = /obj/item/clothing/shirt/dress/gen/random
+		armor = /obj/item/clothing/armor/gambeson/light/striped
+		shoes = /obj/item/clothing/shoes/boots/leather
+		neck = /obj/item/storage/belt/pouch/coins/poor
+		head = /obj/item/clothing/head/fisherhat
+		backl = /obj/item/storage/backpack/satchel
 		backr = /obj/item/fishingrod/fisher
-		belt = /obj/item/storage/belt/rogue/leather
+		belt = /obj/item/storage/belt/leather
 		beltr = /obj/item/cooking/pan
 		beltl = /obj/item/flint
-		backpack_contents = list(/obj/item/rogueweapon/knife/hunting = 1, /obj/item/natural/worms = 1, /obj/item/rogueweapon/shovel/small = 1)
+		backpack_contents = list(/obj/item/weapon/knife/hunting = 1, /obj/item/natural/worms = 1, /obj/item/weapon/shovel/small = 1)

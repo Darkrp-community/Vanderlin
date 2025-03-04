@@ -14,7 +14,7 @@
 	next_blind = world.time + 45 SECONDS 													//Giving fresh darklings enough time to get to cover or at least put their hood up before getting blinded
 	if(ishuman(parent))
 		var/mob/living/carbon/human/character = parent
-		var/obj/item/clothing/head/roguetown/roguehood/hood = new /obj/item/clothing/head/roguetown/roguehood(get_turf(character))
+		var/obj/item/clothing/head/roguehood/hood = new /obj/item/clothing/head/roguehood(get_turf(character))
 		character.put_in_hands(hood, forced = TRUE)
 
 //Proc used for updating light stress, occurs every health update so around once every 2 seconds

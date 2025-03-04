@@ -1,4 +1,4 @@
-/datum/job/roguetown/jailor
+/datum/job/jailor
 	title = "Jailor"
 	flag = JAILOR
 	department_flag = GARRISON
@@ -16,24 +16,24 @@
 	)
 	allowed_ages = list(AGE_OLD, AGE_IMMORTAL) // He's a wierd elderly man that is fucking jacked- this will make for a memorable character I think.
 	allowed_sexes = list(MALE, FEMALE)
-	outfit = /datum/outfit/job/roguetown/jailor
+	outfit = /datum/outfit/job/jailor
 	cmode_music = 'sound/music/cmode/garrison/CombatJailor.ogg'
 	give_bank_account = 25
 	min_pq = 4
 
-/datum/outfit/job/roguetown/jailor/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/jailor/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = /obj/item/clothing/head/roguetown/roguehood/black
-	neck = /obj/item/clothing/neck/roguetown/coif
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/splint
-	shirt = /obj/item/clothing/suit/roguetown/shirt/tunic/black
-	pants = /obj/item/clothing/under/roguetown/loincloth/black
-	shoes = /obj/item/clothing/shoes/roguetown/shortboots
+	head = /obj/item/clothing/head/roguehood/black
+	neck = /obj/item/clothing/neck/coif
+	armor = /obj/item/clothing/armor/leather/splint
+	shirt = /obj/item/clothing/shirt/tunic/black
+	pants = /obj/item/clothing/pants/loincloth/black
+	shoes = /obj/item/clothing/shoes/shortboots
 	wrists = /obj/item/rope/chain
-	belt = /obj/item/storage/belt/rogue/leather
-	beltl = /obj/item/rogueweapon/mace/spiked // He gets a random mace.
+	belt = /obj/item/storage/belt/leather
+	beltl = /obj/item/weapon/mace/spiked // He gets a random mace.
 	beltr = /obj/item/storage/keyring/guard
-	backpack_contents = list(/obj/item/rogueweapon/knife/dagger)
+	backpack_contents = list(/obj/item/weapon/knife/dagger)
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 3, TRUE) // Main weapon
 		H.mind?.adjust_skillrank(/datum/skill/combat/whipsflails, 2, TRUE) // He has lost his trusty whip a long time ago

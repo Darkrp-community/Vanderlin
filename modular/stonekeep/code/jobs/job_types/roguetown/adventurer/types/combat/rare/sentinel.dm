@@ -9,9 +9,9 @@
 		"Half-Elf",
 		"Dark Elf"
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/sentinel
-	horse = /mob/living/simple_animal/hostile/retaliate/rogue/saigabuck/tame/saddled
-	outfit = /datum/outfit/job/roguetown/adventurer/sentinel
+	outfit = /datum/outfit/job/adventurer/sentinel
+	horse = /mob/living/simple_animal/hostile/retaliate/saigabuck/tame/saddled
+	outfit = /datum/outfit/job/adventurer/sentinel
 	maximum_possible_slots = 1
 	min_pq = 0
 	pickprob = 30
@@ -20,11 +20,11 @@
 
 /datum/advclass/combat/sentinel/equipme(mob/living/carbon/human/H)
 	if(H.gender == FEMALE)
-		horse = /mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame/saddled
+		horse = /mob/living/simple_animal/hostile/retaliate/saiga/tame/saddled
 	return ..()
 
 
-/datum/outfit/job/roguetown/adventurer/sentinel/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/sentinel/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
@@ -42,21 +42,21 @@
 		H.change_stat("speed", 1)
 
 	if(H.gender == MALE)
-		pants = /obj/item/clothing/under/roguetown/trou/leather
+		pants = /obj/item/clothing/pants/trou/leather
 	else
-		pants = /obj/item/clothing/under/roguetown/tights
+		pants = /obj/item/clothing/pants/tights
 		if(prob(50))
-			pants = /obj/item/clothing/under/roguetown/tights/black
+			pants = /obj/item/clothing/pants/tights/black
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/long
 	beltl = /obj/item/ammo_holder/quiver/arrows
-	shoes = /obj/item/clothing/shoes/roguetown/ridingboots
-	gloves = /obj/item/clothing/gloves/roguetown/angle
-	belt = /obj/item/storage/belt/rogue/leather
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/random
-	armor = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk
-	backl = /obj/item/rogueweapon/polearm/spear
-	head = /obj/item/clothing/head/roguetown/helmet/leather
-	neck = /obj/item/clothing/neck/roguetown/chaincoif
+	shoes = /obj/item/clothing/shoes/ridingboots
+	gloves = /obj/item/clothing/gloves/angle
+	belt = /obj/item/storage/belt/leather
+	shirt = /obj/item/clothing/shirt/undershirt/random
+	armor = /obj/item/clothing/armor/chainmail/hauberk
+	backl = /obj/item/weapon/polearm/spear
+	head = /obj/item/clothing/head/helmet/leather
+	neck = /obj/item/clothing/neck/chaincoif
 	if(prob(33))
 		if(!H.has_language(/datum/language/elvish))
 			H.grant_language(/datum/language/elvish)

@@ -6,7 +6,7 @@
 		"Humen",
 		"Dwarf"
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/preacher
+	outfit = /datum/outfit/job/adventurer/preacher
 	category_tags = list(CTAG_PILGRIM)
 	maximum_possible_slots = 1
 	pickprob = 30
@@ -14,16 +14,16 @@
 
 	cmode_music = 'sound/music/cmode/church/CombatInquisitor.ogg'
 
-/datum/outfit/job/roguetown/adventurer/preacher/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/preacher/pre_equip(mob/living/carbon/human/H)
 	..()
-	shoes = /obj/item/clothing/shoes/roguetown/shortboots
-	belt = /obj/item/storage/belt/rogue/leather/rope
+	shoes = /obj/item/clothing/shoes/shortboots
+	belt = /obj/item/storage/belt/leather/rope
 	beltr = /obj/item/flashlight/flare/torch/lantern
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/priest
-	pants = /obj/item/clothing/under/roguetown/tights/black
-	neck = /obj/item/clothing/neck/roguetown/psycross
-	head = /obj/item/clothing/head/roguetown/brimmed
-	r_hand = /obj/item/book/rogue/psybibble
+	shirt = /obj/item/clothing/shirt/undershirt/priest
+	pants = /obj/item/clothing/pants/tights/black
+	neck = /obj/item/clothing/neck/psycross
+	head = /obj/item/clothing/head/brimmed
+	r_hand = /obj/item/book/psybibble
 	beltl = /obj/item/handheld_bell
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/misc/reading, 4, TRUE)

@@ -7,14 +7,14 @@
 	allowed_ages = list( AGE_MIDDLEAGED, AGE_OLD)
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = list("Dwarf")
-	outfit = /datum/outfit/job/roguetown/adventurer/longbeard
+	outfit = /datum/outfit/job/adventurer/longbeard
 	maximum_possible_slots = 1
 	pickprob = 15
 	category_tags = list(CTAG_ADVENTURER)
 	min_pq = 0
 	cmode_music = 'sound/music/cmode/adventurer/CombatOutlander2.ogg'
 
-/datum/outfit/job/roguetown/adventurer/longbeard/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/longbeard/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 4, TRUE)
@@ -33,16 +33,16 @@
 		H.change_stat("constitution", 2)
 		H.change_stat("endurance", 1)
 
-	pants = /obj/item/clothing/under/roguetown/tights/black
-	backr = /obj/item/rogueweapon/mace/goden/steel/warhammer
-	beltl = /obj/item/storage/belt/rogue/pouch/coins/mid
-	shoes = /obj/item/clothing/shoes/roguetown/boots/rare/dwarfplate
-	gloves = /obj/item/clothing/gloves/roguetown/rare/dwarfplate
-	belt = /obj/item/storage/belt/rogue/leather
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/black
-	armor = /obj/item/clothing/suit/roguetown/armor/rare/dwarfplate
-	backl = /obj/item/storage/backpack/rogue/satchel
-	head = /obj/item/clothing/head/roguetown/rare/dwarfplate
-	neck = /obj/item/clothing/neck/roguetown/chaincoif
+	pants = /obj/item/clothing/pants/tights/black
+	backr = /obj/item/weapon/mace/goden/steel/warhammer
+	beltl = /obj/item/storage/belt/pouch/coins/mid
+	shoes = /obj/item/clothing/shoes/boots/rare/dwarfplate
+	gloves = /obj/item/clothing/gloves/rare/dwarfplate
+	belt = /obj/item/storage/belt/leather
+	shirt = /obj/item/clothing/shirt/undershirt/black
+	armor = /obj/item/clothing/armor/rare/dwarfplate
+	backl = /obj/item/storage/backpack/satchel
+	head = /obj/item/clothing/head/rare/dwarfplate
+	neck = /obj/item/clothing/neck/chaincoif
 	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC) // Nothing fazes a longbeard

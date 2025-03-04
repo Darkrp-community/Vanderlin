@@ -7,24 +7,24 @@
 		"Half-Orc",
 		"Kappa"
 	)
-	outfit = /datum/outfit/job/roguetown/haiduk_migration/khan
+	outfit = /datum/outfit/job/haiduk_migration/khan
 	grant_lit_torch = FALSE
 	show_wanderer_examine = FALSE
 
-/datum/outfit/job/roguetown/haiduk_migration/khan/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/haiduk_migration/khan/pre_equip(mob/living/carbon/human/H)
 	..()
-	shoes = /obj/item/clothing/shoes/roguetown/boots/furlinedboots
-	wrists = /obj/item/clothing/wrists/roguetown/bracers
-	head = /obj/item/clothing/head/roguetown/helmet/horned
-	r_hand = /obj/item/rogueweapon/mace/goden
-	neck = /obj/item/clothing/neck/roguetown/coif
-	armor = /obj/item/clothing/suit/roguetown/armor/cuirass/iron/rust
+	shoes = /obj/item/clothing/shoes/boots/furlinedboots
+	wrists = /obj/item/clothing/wrists/bracers
+	head = /obj/item/clothing/head/helmet/horned
+	r_hand = /obj/item/weapon/mace/goden
+	neck = /obj/item/clothing/neck/coif
+	armor = /obj/item/clothing/armor/cuirass/iron/rust
 	cloak = /obj/item/clothing/cloak/raincloak/furcloak
-	gloves =  /obj/item/clothing/gloves/roguetown/angle
-	belt = /obj/item/storage/belt/rogue/leather/rope/haiduk
+	gloves =  /obj/item/clothing/gloves/angle
+	belt = /obj/item/storage/belt/leather/rope/haiduk
 	beltl = /obj/item/flashlight/flare/torch/lantern/bronzelamptern
-	backr = /obj/item/storage/backpack/rogue/satchel
-	pants = /obj/item/clothing/under/roguetown/leather/heavy
+	backr = /obj/item/storage/backpack/satchel
+	pants = /obj/item/clothing/pants/leather/heavy
 	backpack_contents = list(/obj/item/flint = 1, /obj/item/reagent_containers/food/snacks/fat/salo = 1, /obj/item/sleepingbag = 1)
 
 
@@ -62,23 +62,23 @@
 		"Half-Orc",
 		"Kappa"
 	)
-	outfit = /datum/outfit/job/roguetown/haiduk_migration/raider
+	outfit = /datum/outfit/job/haiduk_migration/raider
 	grant_lit_torch = TRUE
 	show_wanderer_examine = FALSE
 
-/datum/outfit/job/roguetown/haiduk_migration/raider/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/haiduk_migration/raider/pre_equip(mob/living/carbon/human/H)
 	..()
-	shoes = /obj/item/clothing/shoes/roguetown/boots/furlinedboots
-	wrists = /obj/item/clothing/wrists/roguetown/bracers
-	head = /obj/item/clothing/head/roguetown/helmet/leather/malgai
-	r_hand = /obj/item/rogueweapon/sword/scimitar/haiduk
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/hide
+	shoes = /obj/item/clothing/shoes/boots/furlinedboots
+	wrists = /obj/item/clothing/wrists/bracers
+	head = /obj/item/clothing/head/helmet/leather/malgai
+	r_hand = /obj/item/weapon/sword/scimitar/haiduk
+	armor = /obj/item/clothing/armor/leather/hide
 	cloak = /obj/item/clothing/cloak/wickercloak
-	belt = /obj/item/storage/belt/rogue/leather/rope/haiduk
+	belt = /obj/item/storage/belt/leather/rope/haiduk
 	beltl = /obj/item/ammo_holder/quiver/arrows
-	backr = /obj/item/storage/backpack/rogue/satchel
+	backr = /obj/item/storage/backpack/satchel
 	backl = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve
-	pants = /obj/item/clothing/under/roguetown/trou/leather
+	pants = /obj/item/clothing/pants/trou/leather
 
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
@@ -105,16 +105,16 @@
 	name = "Haiduk Slave"
 	greet_text = "Chosen to come with the raid for being reliable and a hard worker. Build a camp, tend wound, make food, whatever the warriors want, you better do or you will end up in the cooking pot next."
 	allowed_races = ALL_PLAYER_RACES_BY_NAME
-	outfit = /datum/outfit/job/roguetown/haiduk_migration/haiduk_slave
+	outfit = /datum/outfit/job/haiduk_migration/haiduk_slave
 	show_wanderer_examine = FALSE
 	grant_lit_torch = TRUE
 
-/datum/outfit/job/roguetown/haiduk_migration/haiduk_slave/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/haiduk_migration/haiduk_slave/pre_equip(mob/living/carbon/human/H)
 	..()
-	pants = /obj/item/clothing/under/roguetown/loincloth/brown
-	backr = /obj/item/rogueweapon/axe/stone
-	belt = /obj/item/storage/belt/rogue/leather/rope/haiduk
-	shirt = /obj/item/clothing/suit/roguetown/shirt/rags
+	pants = /obj/item/clothing/pants/loincloth/brown
+	backr = /obj/item/weapon/axe/stone
+	belt = /obj/item/storage/belt/leather/rope/haiduk
+	shirt = /obj/item/clothing/shirt/rags
 	r_hand = /obj/item/storage/roguebag
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
@@ -162,7 +162,7 @@
 
 
 
-/obj/item/rogueweapon/sword/scimitar/haiduk
+/obj/item/weapon/sword/scimitar/haiduk
 	possible_item_intents = list(/datum/intent/sword/cut, /datum/intent/sword/chop)
 	name = "chopper"
 	desc = "A crude iron blade made by unskilled smiths. Used both as a weapon and a tool by the Haiduk raiders."
@@ -171,7 +171,7 @@
 	possible_item_intents = list(/datum/intent/sword/cut, /datum/intent/axe/chop)
 	smeltresult = /obj/item/ingot/iron
 
-/obj/item/storage/belt/rogue/leather/rope/haiduk
+/obj/item/storage/belt/leather/rope/haiduk
 	populate_contents = list(
 		/obj/item/needle/thorn,
 		/obj/item/natural/cloth,

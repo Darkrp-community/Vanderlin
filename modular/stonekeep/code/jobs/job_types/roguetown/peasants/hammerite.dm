@@ -1,4 +1,4 @@
-/datum/job/roguetown/hammerite
+/datum/job/hammerite
 	title = "Hammerite"
 	tutorial = "As a long-standing and dedicated member of the Maker's Guild, you have risen to the illustrious rank of Master Builder. \
 				Your work is praise to Malum, either through excavation or construction, \
@@ -6,7 +6,7 @@
 	faction = "Station"
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = ALL_PLAYER_RACES_BY_NAME
-	outfit = /datum/outfit/job/roguetown/hammerite
+	outfit = /datum/outfit/job/hammerite
 	flag = MINER
 	department_flag = PEASANTS
 	display_order = JDO_MINER
@@ -16,21 +16,21 @@
 	min_pq = -50
 	allowed_patrons = list(/datum/patron/divine/malum)
 
-/datum/outfit/job/roguetown/hammerite/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/hammerite/pre_equip(mob/living/carbon/human/H)
 	..()
 	id = /obj/item/clothing/ring/silver/makers_guild
-	pants = /obj/item/clothing/under/roguetown/tights/makers
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/black
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/red
-	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
-	belt = /obj/item/storage/belt/rogue/leather
-	neck = /obj/item/clothing/neck/roguetown/psycross/silver/malum_steel
-	beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
-	beltl = /obj/item/rogueweapon/pick
-	backr = /obj/item/rogueweapon/hammer/sledgehammer
-	backl = /obj/item/storage/backpack/rogue/backpack
-	head = /obj/item/clothing/head/roguetown/helmet/leather/minershelm
-	backpack_contents = list(/obj/item/flint = 1, /obj/item/rogueweapon/knife/villager = 1)
+	pants = /obj/item/clothing/pants/tights/makers
+	armor = /obj/item/clothing/armor/leather/vest/black
+	shirt = /obj/item/clothing/shirt/undershirt/red
+	shoes = /obj/item/clothing/shoes/boots/leather
+	belt = /obj/item/storage/belt/leather
+	neck = /obj/item/clothing/neck/psycross/silver/malum_steel
+	beltr = /obj/item/storage/belt/pouch/coins/poor
+	beltl = /obj/item/weapon/pick
+	backr = /obj/item/weapon/hammer/sledgehammer
+	backl = /obj/item/storage/backpack/backpack
+	head = /obj/item/clothing/head/helmet/leather/minershelm
+	backpack_contents = list(/obj/item/flint = 1, /obj/item/weapon/knife/villager = 1)
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/labor/mining, 4, TRUE)

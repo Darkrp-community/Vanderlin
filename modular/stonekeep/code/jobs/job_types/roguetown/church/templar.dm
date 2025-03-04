@@ -1,4 +1,4 @@
-/datum/job/roguetown/templar
+/datum/job/templar
 	title = "Templar"
 	department_flag = CHURCHMEN
 	faction = "Station"
@@ -12,82 +12,82 @@
 		"Half-Elf",
 	)
 	allowed_patrons = ALL_TEMPLAR_PATRONS
-	outfit = /datum/outfit/job/roguetown/templar
+	outfit = /datum/outfit/job/templar
 	total_positions = 2
 	spawn_positions = 2
 	display_order = JDO_TEMPLAR
 	give_bank_account = 0
 	min_pq = 4
 
-/datum/outfit/job/roguetown/templar
+/datum/outfit/job/templar
 	name = "Templar"
-	jobtype = /datum/job/roguetown/templar
+	jobtype = /datum/job/templar
 	allowed_patrons = ALL_TEMPLAR_PATRONS
 
-/datum/outfit/job/roguetown/templar/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/templar/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket
+	head = /obj/item/clothing/head/helmet/heavy/bucket
 	cloak = /obj/item/clothing/cloak/tabard/crusader/tief
 	switch(H.patron?.type)
 		if(/datum/patron/divine/astrata)
-			neck = /obj/item/clothing/neck/roguetown/psycross/silver/astrata
-			head = /obj/item/clothing/head/roguetown/helmet/heavy/necked/astrata
+			neck = /obj/item/clothing/neck/psycross/silver/astrata
+			head = /obj/item/clothing/head/helmet/heavy/necked/astrata
 			cloak = /obj/item/clothing/cloak/stabard/templar/astrata
 			H.cmode_music = 'sound/music/cmode/adventurer/CombatMonk.ogg'
 		if(/datum/patron/divine/noc)
-			neck = /obj/item/clothing/neck/roguetown/psycross/noc
-			head = /obj/item/clothing/head/roguetown/helmet/heavy/necked/noc
+			neck = /obj/item/clothing/neck/psycross/noc
+			head = /obj/item/clothing/head/helmet/heavy/necked/noc
 			cloak = /obj/item/clothing/cloak/stabard/templar/noc
 			H.cmode_music = 'sound/music/cmode/adventurer/CombatMonk.ogg'
 		if(/datum/patron/divine/dendor)
-			neck = /obj/item/clothing/neck/roguetown/psycross/silver/dendor
-			head = /obj/item/clothing/head/roguetown/helmet/heavy/necked/dendorhelm
+			neck = /obj/item/clothing/neck/psycross/silver/dendor
+			head = /obj/item/clothing/head/helmet/heavy/necked/dendorhelm
 			cloak = /obj/item/clothing/cloak/stabard/templar/dendor
 			H.cmode_music = 'sound/music/cmode/garrison/CombatForestGarrison.ogg'
 		if(/datum/patron/divine/necra)
-			neck = /obj/item/clothing/neck/roguetown/psycross/silver/necra
-			head = /obj/item/clothing/head/roguetown/helmet/heavy/necked/necra
+			neck = /obj/item/clothing/neck/psycross/silver/necra
+			head = /obj/item/clothing/head/helmet/heavy/necked/necra
 			cloak = /obj/item/clothing/cloak/stabard/templar/necra
 			H.cmode_music = 'sound/music/cmode/church/CombatGravekeeper.ogg'
 		if(/datum/patron/divine/pestra)
-			neck = /obj/item/clothing/neck/roguetown/psycross/silver/pestra
-			head = /obj/item/clothing/head/roguetown/helmet/heavy/necked/pestrahelm
+			neck = /obj/item/clothing/neck/psycross/silver/pestra
+			head = /obj/item/clothing/head/helmet/heavy/necked/pestrahelm
 			cloak = /obj/item/clothing/cloak/stabard/templar/pestra
 			H.cmode_music = 'sound/music/cmode/adventurer/CombatMonk.ogg'
 		if(/datum/patron/divine/eora)
-			head = /obj/item/clothing/head/roguetown/helmet/sallet/eoran
-			wrists = /obj/item/clothing/neck/roguetown/psycross/silver/eora
-			neck = /obj/item/clothing/neck/roguetown/chaincoif
+			head = /obj/item/clothing/head/helmet/sallet/eoran
+			wrists = /obj/item/clothing/neck/psycross/silver/eora
+			neck = /obj/item/clothing/neck/chaincoif
 			cloak = /obj/item/clothing/cloak/stabard/templar/eora
 			H.cmode_music = 'sound/music/cmode/church/CombatEora.ogg'
 			H.virginity = FALSE
 		if(/datum/patron/divine/ravox)
-			wrists = /obj/item/clothing/neck/roguetown/psycross/silver/ravox
-			head = /obj/item/clothing/head/roguetown/helmet/heavy/necked/ravox
+			wrists = /obj/item/clothing/neck/psycross/silver/ravox
+			head = /obj/item/clothing/head/helmet/heavy/necked/ravox
 			cloak = /obj/item/clothing/cloak/stabard/templar/ravox
 			H.cmode_music = 'sound/music/cmode/adventurer/CombatOutlander2.ogg'
 		if(/datum/patron/divine/malum)
-			wrists = /obj/item/clothing/neck/roguetown/psycross/silver/malum
-			head = /obj/item/clothing/head/roguetown/helmet/heavy/necked/malumhelm
+			wrists = /obj/item/clothing/neck/psycross/silver/malum
+			head = /obj/item/clothing/head/helmet/heavy/necked/malumhelm
 			cloak = /obj/item/clothing/cloak/stabard/templar/malum
 			H.cmode_music = 'sound/music/cmode/adventurer/CombatOutlander2.ogg'
 		if(/datum/patron/divine/abyssor)
-			wrists = /obj/item/clothing/neck/roguetown/psycross/silver/abyssor
+			wrists = /obj/item/clothing/neck/psycross/silver/abyssor
 			H.cmode_music = 'sound/music/cmode/adventurer/CombatMonk.ogg'
 			H.mind?.adjust_skillrank(/datum/skill/labor/fishing, 1, TRUE)
 
 
-	armor = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk
-	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson
-	pants = /obj/item/clothing/under/roguetown/chainlegs
-	shoes = /obj/item/clothing/shoes/roguetown/boots
-	backl = /obj/item/storage/backpack/rogue/satchel
+	armor = /obj/item/clothing/armor/chainmail/hauberk
+	shirt = /obj/item/clothing/armor/gambeson
+	pants = /obj/item/clothing/pants/chainlegs
+	shoes = /obj/item/clothing/shoes/boots
+	backl = /obj/item/storage/backpack/satchel
 	backpack_contents = list(/obj/item/storage/keyring/priest = 1)
-	backr = /obj/item/rogueweapon/shield/tower/metal
-	belt = /obj/item/storage/belt/rogue/leather/black
-	beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
+	backr = /obj/item/weapon/shield/tower/metal
+	belt = /obj/item/storage/belt/leather/black
+	beltl = /obj/item/storage/belt/pouch/coins/poor
 	id = /obj/item/clothing/ring/silver
-	gloves = /obj/item/clothing/gloves/roguetown/chain
+	gloves = /obj/item/clothing/gloves/chain
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
@@ -105,10 +105,10 @@
 	switch(H.patron?.type)
 		if(/datum/patron/divine/malum)
 			H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 4, TRUE)
-			beltr = /obj/item/rogueweapon/mace/warhammer/steel
+			beltr = /obj/item/weapon/mace/warhammer/steel
 		else
 			H.mind?.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
-			beltr = /obj/item/rogueweapon/sword/long
+			beltr = /obj/item/weapon/sword/long
 	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_KNOWBANDITS, TRAIT_GENERIC)

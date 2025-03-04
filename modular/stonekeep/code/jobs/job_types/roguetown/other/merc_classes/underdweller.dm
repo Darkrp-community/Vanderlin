@@ -6,21 +6,21 @@
 		"Dwarf",
 		"Dark Elf"
 	)
-	outfit = /datum/outfit/job/roguetown/mercenary/underdweller
+	outfit = /datum/outfit/job/mercenary/underdweller
 	category_tags = list(CTAG_MERCENARY)
 	maximum_possible_slots = 5
 
-/datum/outfit/job/roguetown/mercenary/underdweller/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/mercenary/underdweller/pre_equip(mob/living/carbon/human/H)
 	..()
-	pants = /obj/item/clothing/under/roguetown/trou/leather
-	armor = /obj/item/clothing/suit/roguetown/armor/cuirass/iron
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/sailor/red
-	shoes = /obj/item/clothing/shoes/roguetown/simpleshoes/buckle
-	belt = /obj/item/storage/belt/rogue/leather/mercenary
-	beltr = /obj/item/rogueweapon/knife/hunting
-	neck = /obj/item/clothing/neck/roguetown/chaincoif/iron
-	backl = /obj/item/storage/backpack/rogue/backpack
-	backpack_contents = list(/obj/item/storage/belt/rogue/pouch/coins/poor=1)
+	pants = /obj/item/clothing/pants/trou/leather
+	armor = /obj/item/clothing/armor/cuirass/iron
+	shirt = /obj/item/clothing/shirt/undershirt/sailor/red
+	shoes = /obj/item/clothing/shoes/simpleshoes/buckle
+	belt = /obj/item/storage/belt/leather/mercenary
+	beltr = /obj/item/weapon/knife/hunting
+	neck = /obj/item/clothing/neck/chaincoif/iron
+	backl = /obj/item/storage/backpack/backpack
+	backpack_contents = list(/obj/item/storage/belt/pouch/coins/poor=1)
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/labor/mining, 3, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
@@ -43,13 +43,13 @@
 		H.cmode_music = 'sound/music/cmode/adventurer/CombatOutlander2.ogg'
 		H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 3, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/shields, 2, TRUE)
-		head = /obj/item/clothing/head/roguetown/helmet/leather/minershelm
-		beltl = /obj/item/rogueweapon/pick/paxe // Dorfs get a pick as their primary weapon and axes/maces to use it
-		backr = /obj/item/rogueweapon/shield/wood
+		head = /obj/item/clothing/head/helmet/leather/minershelm
+		beltl = /obj/item/weapon/pick/paxe // Dorfs get a pick as their primary weapon and axes/maces to use it
+		backr = /obj/item/weapon/shield/wood
 	else // No miner's helm for Delves as they haven nitevision now.
 		H.mind?.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
 
-		beltl = /obj/item/rogueweapon/sword/sabre // Dark elves get a sabre as their primary weapon and swords skill, who woulda thought
+		beltl = /obj/item/weapon/sword/sabre // Dark elves get a sabre as their primary weapon and swords skill, who woulda thought
 
 	H.merctype = 3
 

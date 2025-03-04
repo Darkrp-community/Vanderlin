@@ -11,23 +11,23 @@
 		"Dark Elf",
 		"Aasimar"
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/mage
+	outfit = /datum/outfit/job/adventurer/mage
 	category_tags = list(CTAG_ADVENTURER)
 	min_pq = -10
 	maximum_possible_slots = 2
 	cmode_music = 'sound/music/cmode/adventurer/CombatSorcerer.ogg'
 
-/datum/outfit/job/roguetown/adventurer/mage
+/datum/outfit/job/adventurer/mage
 
-/datum/outfit/job/roguetown/adventurer/mage/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/mage/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = /obj/item/clothing/head/roguetown/roguehood/mage
-	shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
-	armor = /obj/item/clothing/suit/roguetown/shirt/robe/mage
-	belt = /obj/item/storage/belt/rogue/leather/rope
-	backr = /obj/item/storage/backpack/rogue/satchel
-	beltl = /obj/item/reagent_containers/glass/bottle/rogue/manapot
-	r_hand = /obj/item/rogueweapon/polearm/woodstaff
+	head = /obj/item/clothing/head/roguehood/mage
+	shoes = /obj/item/clothing/shoes/simpleshoes
+	armor = /obj/item/clothing/shirt/robe/mage
+	belt = /obj/item/storage/belt/leather/rope
+	backr = /obj/item/storage/backpack/satchel
+	beltl = /obj/item/reagent_containers/glass/bottle/manapot
+	r_hand = /obj/item/weapon/polearm/woodstaff
 	if(H.mind)
 		if(H.patron != /datum/patron/divine/noc)
 			H.set_patron(/datum/patron/divine/noc)
@@ -38,9 +38,9 @@
 		H.mind?.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/craft/alchemy, 2, TRUE)
 		if(H.age == AGE_OLD)
-			head = /obj/item/clothing/head/roguetown/wizhat/gen
-			armor = /obj/item/clothing/suit/roguetown/shirt/robe/plain
-			backl = /obj/item/storage/backpack/rogue/backpack
+			head = /obj/item/clothing/head/wizhat/gen
+			armor = /obj/item/clothing/shirt/robe/plain
+			backl = /obj/item/storage/backpack/backpack
 			H.mind?.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
 			H.change_stat("intelligence", 1)
 		H.change_stat("strength", -2)

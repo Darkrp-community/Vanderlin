@@ -1,4 +1,4 @@
-/datum/job/roguetown/inquisitor
+/datum/job/inquisitor
 	title = "Inquisitor"
 	flag = PURITAN
 	department_flag = CHURCHMEN
@@ -14,13 +14,13 @@
 	tutorial = "A recent arrival from Grenzelhoft, you are a member of the secretive lodges that have held to the service of Psydon since the Apotheosis War. You have been sent by your leader, the Holy Bishop, to assign the local Priest in combatting the increasing number of heretics and monsters infiltrating Vanderlin."
 	whitelist_req = FALSE
 
-	outfit = /datum/outfit/job/roguetown/inquisitor
+	outfit = /datum/outfit/job/inquisitor
 	display_order = JDO_PURITAN
 	min_pq = 0
 	bypass_lastclass = TRUE
 	cmode_music = 'sound/music/cmode/church/CombatInquisitor.ogg'
 
-/datum/job/roguetown/inquisitor/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
+/datum/job/inquisitor/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
 	if(!L.mind)
 		return
@@ -29,26 +29,26 @@
 	var/datum/antagonist/new_antag = new /datum/antagonist/purishep()
 	L.mind.add_antag_datum(new_antag)
 
-/datum/outfit/job/roguetown/inquisitor
+/datum/outfit/job/inquisitor
 	name = "Inquisitor"
-	jobtype = /datum/job/roguetown/inquisitor
+	jobtype = /datum/job/inquisitor
 	allowed_patrons = list(/datum/patron/psydon)
 
-/datum/outfit/job/roguetown/inquisitor/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/inquisitor/pre_equip(mob/living/carbon/human/H)
 	..()
-	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/dark
-	belt = /obj/item/storage/belt/rogue/leather/black
-	shoes = /obj/item/clothing/shoes/roguetown/nobleboot
-	pants = /obj/item/clothing/under/roguetown/trou/leather
+	shirt = /obj/item/clothing/armor/gambeson/heavy/dark
+	belt = /obj/item/storage/belt/leather/black
+	shoes = /obj/item/clothing/shoes/nobleboot
+	pants = /obj/item/clothing/pants/trou/leather
 	cloak = /obj/item/clothing/cloak/cape/puritan
-	head = /obj/item/clothing/head/roguetown/helmet/leather/inquisitor
-	gloves = /obj/item/clothing/gloves/roguetown/angle
-	wrists = /obj/item/clothing/neck/roguetown/psycross/silver
-	backr = /obj/item/storage/backpack/rogue/satchel
-	backl = /obj/item/rogueweapon/sword/long/forgotten
+	head = /obj/item/clothing/head/helmet/leather/inquisitor
+	gloves = /obj/item/clothing/gloves/angle
+	wrists = /obj/item/clothing/neck/psycross/silver
+	backr = /obj/item/storage/backpack/satchel
+	backl = /obj/item/weapon/sword/long/forgotten
 	beltl = /obj/item/flashlight/flare/torch/lantern
-	neck = /obj/item/clothing/neck/roguetown/bevor
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/splint
+	neck = /obj/item/clothing/neck/bevor
+	armor = /obj/item/clothing/armor/leather/splint
 	backpack_contents = list(/obj/item/storage/keyring/inquisitor = 1)
 	var/prev_real_name = H.real_name
 	var/prev_name = H.name
@@ -97,7 +97,7 @@
 		-Your fraternal order and the blessed Imperiate have dispatched you to this island for grave import. Imperial spies have uncovered plots by cultists, sub-humens and monsters to overthrow the powers of Rockhill. Stop them at all costs.\n\
 		-You've also been gaven 10 favors to use at the mail machines, you can get more favor by sending signed confessions to your brothers. Spend your favors wisely.")
 		)
-	H.mind?.teach_crafting_recipe(/datum/crafting_recipe/roguetown/confessional)
+	H.mind?.teach_crafting_recipe(/datum/crafting_recipe/confessional)
 
 /mob/living/carbon/human/proc/torture_victim()
 	set name = "Extract Confession"
