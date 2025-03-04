@@ -1,5 +1,5 @@
-/mob/living/simple_animal/hostile/retaliate/rogue/gator
-	icon = 'modular/stonekeep/icons/roguetown/mob/monster/gator.dmi'
+/mob/living/simple_animal/hostile/retaliate/gator
+	icon = 'modular/stonekeep/icons/mob/monster/gator.dmi'
 	name = "gator"
 	desc = "Vicious and patient creachers; tales have been told of passersby being grabbed and dragged underwater, never to be seen again."
 	icon_state = "gator"
@@ -15,10 +15,10 @@
 	aggro_vision_range = 5
 
 	// One of these daes, they'll drop Gator leather
-	botched_butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/mince = 1)
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/mince = 1,
+	botched_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/mince = 1)
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/mince = 1,
 						/obj/item/alch/bone = 2)
-	perfect_butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/steak = 1,
+	perfect_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/steak = 1,
 						/obj/item/alch/sinew = 1,
 						/obj/item/alch/bone = 4)
 
@@ -26,7 +26,7 @@
 	maxHealth = GATOR_HEALTH
 	food_type = list(/obj/item/bodypart,
 					/obj/item/organ,
-					/obj/item/reagent_containers/food/snacks/rogue/meat)
+					/obj/item/reagent_containers/food/snacks/meat)
 
 	base_intents = list(/datum/intent/simple/bite)
 	attack_sound = list('modular/stonekeep/sound/vo/mobs/gator/gatorattack1.ogg', 'modular/stonekeep/sound/vo/mobs/gator/gatorattack2.ogg')
@@ -54,7 +54,7 @@
 	AIStatus = AI_OFF
 	can_have_ai = FALSE
 
-/mob/living/simple_animal/hostile/retaliate/rogue/gator/Initialize()
+/mob/living/simple_animal/hostile/retaliate/gator/Initialize()
 	. = ..()
 	gender = MALE
 	if(prob(33))
@@ -65,17 +65,17 @@
 	ai_controller.set_blackboard_key(BB_BASIC_FOODS, food_type)
 	//ADD_TRAIT(src, TRAIT_GENERIC) // to-do
 
-/mob/living/simple_animal/hostile/retaliate/rogue/gator/find_food()
+/mob/living/simple_animal/hostile/retaliate/gator/find_food()
 	. = ..()
 	if(!.)
 		return eat_bodies()
 
-/mob/living/simple_animal/hostile/retaliate/rogue/gator/death(gibbed)
+/mob/living/simple_animal/hostile/retaliate/gator/death(gibbed)
 	..()
 	update_icon()
 
 
-/mob/living/simple_animal/hostile/retaliate/rogue/gator/update_icon()
+/mob/living/simple_animal/hostile/retaliate/gator/update_icon()
 	cut_overlays()
 	..()
 	if(stat != DEAD)
@@ -84,7 +84,7 @@
 		eye_lights.layer = 19
 		add_overlay(eye_lights)
 
-/mob/living/simple_animal/hostile/retaliate/rogue/gator/get_sound(input)
+/mob/living/simple_animal/hostile/retaliate/gator/get_sound(input)
 	switch(input)
 		if("aggro")
 			return pick('modular/stonekeep/sound/vo/mobs/gator/gatoraggro1.ogg','modular/stonekeep/sound/vo/mobs/gator/gatoraggro2.ogg','modular/stonekeep/sound/vo/mobs/gator/gatoraggro3.ogg','modular/stonekeep/sound/vo/mobs/gator/gatoraggro4.ogg')
@@ -95,19 +95,19 @@
 		if("idle")
 			return pick('modular/stonekeep/sound/vo/mobs/gator/gatoridle1.ogg')
 
-/mob/living/simple_animal/hostile/retaliate/rogue/gator/taunted(mob/user)
+/mob/living/simple_animal/hostile/retaliate/gator/taunted(mob/user)
 	emote("aggro")
 	Retaliate()
 	GiveTarget(user)
 	return
 
-/mob/living/simple_animal/hostile/retaliate/rogue/gator/Life()
+/mob/living/simple_animal/hostile/retaliate/gator/Life()
 	..()
 	if(pulledby)
 		Retaliate()
 		GiveTarget(pulledby)
 
-/mob/living/simple_animal/hostile/retaliate/rogue/gator/simple_limb_hit(zone)
+/mob/living/simple_animal/hostile/retaliate/gator/simple_limb_hit(zone)
 	if(!zone)
 		return ""
 	switch(zone)

@@ -94,7 +94,7 @@ get_accent_list()
 /obj/structure/frontierjustice/Destroy()
 	var/turf/T = loc
 	if(isturf(T)) // Ensure `T` is a valid turf
-		var/obj/item/reagent_containers/food/snacks/rogue/meat/steak/meat_piece = new(T)
+		var/obj/item/reagent_containers/food/snacks/meat/steak/meat_piece = new(T)
 		if(meat_piece)
 			meat_piece.name = "humen meat" //funny
 	. = ..()
@@ -155,7 +155,7 @@ get_accent_list()
 // =================================================================
 // ========================		TURF	============================
 
-/turf/closed/wall/mineral/rogue/stone/abyssal
+/turf/closed/wall/mineral/stone/abyssal
 	name = "abyssal ishigaki wall"
 	desc = "Made from large, interlocking uncut stones without the use of mortar, so a castle is built above it. However, many make simple walls out of it."
 	icon = 	'modular/stonekeep/kaizoku/icons/wallset/abyssalstone.dmi'
@@ -163,55 +163,55 @@ get_accent_list()
 	sheet_type = /obj/item/natural/stone
 	break_sound = 'sound/combat/hits/onstone/stonedeath.ogg'
 	attacked_sound = list('sound/combat/hits/onstone/wallhit.ogg', 'sound/combat/hits/onstone/wallhit2.ogg', 'sound/combat/hits/onstone/wallhit3.ogg')
-	canSmoothWith = list(/turf/closed/wall/mineral/rogue/stone/abyssal)
-	above_floor = /turf/open/floor/rogue/blocks
-	baseturfs = list(/turf/open/floor/rogue/blocks)
+	canSmoothWith = list(/turf/closed/wall/mineral/stone/abyssal)
+	above_floor = /turf/open/floor/blocks
+	baseturfs = list(/turf/open/floor/blocks)
 	climbdiff = 1
 	damage_deflection = 10
 
-/turf/closed/wall/mineral/rogue/stone/abyssal/window
+/turf/closed/wall/mineral/stone/abyssal/window
 	name = "abyssal ishigaki window"
 	desc = "An simple hole within a Ishigaki wall."
 	opacity = FALSE
 	max_integrity = 800
 
-/turf/closed/wall/mineral/rogue/stone/window/CanPass(atom/movable/mover, turf/target)
+/turf/closed/wall/mineral/stone/window/CanPass(atom/movable/mover, turf/target)
 	if(istype(mover) && ((mover.pass_flags & PASSTABLE) || (mover.pass_flags & PASSGRILLE)) )
 		return 1
 	return ..()
 
-/turf/closed/wall/mineral/rogue/stone/abyssal/window/Initialize()
+/turf/closed/wall/mineral/stone/abyssal/window/Initialize()
 	. = ..()
 	icon_state = "abyssal"
 	var/mutable_appearance/M = mutable_appearance(icon, "abyssalhole", layer = ABOVE_NORMAL_TURF_LAYER)
 	add_overlay(M)
 
-/turf/closed/wall/mineral/rogue/wood/abyssal
+/turf/closed/wall/mineral/wood/abyssal
 	name = "wagoya wall"
 	desc = "wooden wall of abyssal architecture that uses wooden joinery that fits together seamlessly to avoid use of nails or screws, increasing protection against earthshakes."
 	icon = 	'modular/stonekeep/kaizoku/icons/wallset/eastern_wood.dmi'
 	icon_state = "wood"
 	break_sound = 'sound/combat/hits/onwood/destroywalldoor.ogg'
 	attacked_sound = list('sound/combat/hits/onwood/woodimpact (1).ogg','sound/combat/hits/onwood/woodimpact (2).ogg')
-	canSmoothWith = list(/turf/closed/wall/mineral/rogue/wood, /obj/structure/roguewindow, /obj/structure/roguetent, /turf/closed/wall/mineral/rogue/wooddark)
+	canSmoothWith = list(/turf/closed/wall/mineral/wood, /obj/structure/roguewindow, /obj/structure/roguetent, /turf/closed/wall/mineral/wooddark)
 //	sheet_type = /obj/item/grown/log/tree/lumber
-	above_floor = /turf/open/floor/rogue/woodturned
-	baseturfs = list(/turf/open/floor/rogue/woodturned)
+	above_floor = /turf/open/floor/woodturned
+	baseturfs = list(/turf/open/floor/woodturned)
 	neighborlay = "dirtedge"
 	climbdiff = 3
 
-/turf/closed/wall/mineral/rogue/wood/abyssal/window
+/turf/closed/wall/mineral/wood/abyssal/window
 	name = "wagoya no sama"
 	desc = "A murderhole on a wooden wall that lacks nails and screws."
 	opacity = FALSE
 	max_integrity = 550
 
-/turf/closed/wall/mineral/rogue/wood/abyssal/window/CanPass(atom/movable/mover, turf/target)
+/turf/closed/wall/mineral/wood/abyssal/window/CanPass(atom/movable/mover, turf/target)
 	if(istype(mover) && ((mover.pass_flags & PASSTABLE) || (mover.pass_flags & PASSGRILLE)) )
 		return 1
 	return ..()
 
-/turf/closed/wall/mineral/rogue/wood/abyssal/window/Initialize()
+/turf/closed/wall/mineral/wood/abyssal/window/Initialize()
 	. = ..()
 	var/mutable_appearance/M = mutable_appearance(icon, "woodhole", layer = ABOVE_NORMAL_TURF_LAYER)
 	add_overlay(M)
@@ -221,7 +221,7 @@ get_accent_list()
 // =================================================================
 // ========================	STORAGE	================================
 
-/obj/item/storage/belt/rogue/kaizoku/leather/daisho
+/obj/item/storage/belt/kaizoku/leather/daisho
 	name = "daisho belt"
 	desc = "A oil-boiled reinforced silk or leather belt used by Abyssariads for practicing Daisho."
 	icon_state = "daisho"
@@ -229,32 +229,32 @@ get_accent_list()
 	icon = 'modular/stonekeep/kaizoku/icons/clothingicon/belts.dmi'
 	mob_overlay_icon ='modular/stonekeep/kaizoku/icons/clothing/belts.dmi'
 
-/obj/item/storage/belt/rogue/kaizoku/leather/daisho/random/Initialize()
+/obj/item/storage/belt/kaizoku/leather/daisho/random/Initialize()
 	color = pick(GLOB.peasant_dyes)
 	..()
 
-/obj/item/storage/belt/rogue/kaizoku/leather/daisho/ninja/PopulateContents()
+/obj/item/storage/belt/kaizoku/leather/daisho/ninja/PopulateContents()
 	new /obj/item/reagent_containers/food/snacks/fogdart(src)
 	new /obj/item/reagent_containers/food/snacks/fogdart(src)
-	new /obj/item/rogueweapon/tetsubishi(src)
+	new /obj/item/weapon/tetsubishi(src)
 
-/obj/item/storage/belt/rogue/kaizoku/leather/daisho/thunder
+/obj/item/storage/belt/kaizoku/leather/daisho/thunder
 	name = "thunder daisho belt"
 	color = CLOTHING_THUNDER
 
-/obj/item/storage/belt/rogue/kaizoku/leather/daisho/storm
+/obj/item/storage/belt/kaizoku/leather/daisho/storm
 	name = "storm daisho belt"
 	color = CLOTHING_STORM
 
-/obj/item/storage/belt/rogue/kaizoku/leather/daisho/ocean
+/obj/item/storage/belt/kaizoku/leather/daisho/ocean
 	name = "ocean daisho belt"
 	color = CLOTHING_SEA
 
-/obj/item/storage/belt/rogue/kaizoku/leather/daisho/island
+/obj/item/storage/belt/kaizoku/leather/daisho/island
 	name = "island daisho belt"
 	color = CLOTHING_ISLAND
 
-/obj/item/storage/backpack/rogue/satchel/ninja/PopulateContents()
+/obj/item/storage/backpack/satchel/ninja/PopulateContents()
 	new /obj/item/grenade/smoke_bomb(src)
 	new /obj/item/grenade/smoke_bomb/poison(src)
 	new /obj/item/throwing_star/ninja(src)
@@ -388,7 +388,7 @@ get_accent_list()
 	name = ""
 	icon_state = null
 	gender = NEUTER
-	icon = 'icons/roguetown/mob/detail.dmi'
+	icon = 'icons/mob/detail.dmi'
 	use_static = TRUE
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "abyssariad")
 
@@ -512,7 +512,7 @@ get_accent_list()
 	offsetti = TRUE
 
 
-/datum/outfit/job/roguetown/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	. = ..()
 	if(H.mind)
 		if(H.dna)
@@ -568,7 +568,7 @@ get_accent_list()
 	slot = ORGAN_SLOT_TONGUE
 
 
-/obj/item/organ/eyes/rogue/tengu
+/obj/item/organ/eyes/tengu
 	name = "tengu eyes"
 	desc = ""
 	eye_icon_state = "eyes_closed"

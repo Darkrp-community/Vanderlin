@@ -10,54 +10,54 @@
 | Better Floors |
 \--------------*/
 
-/turf/open/floor/rogue/wood
+/turf/open/floor/wood
 	smooth_icon = 'modular/stonekeep/icons/wood.dmi'
-/turf/open/floor/rogue/wood/nosmooth
+/turf/open/floor/wood/nosmooth
 	smooth_icon = 'modular/stonekeep/icons/wood.dmi'
 
-/turf/open/floor/rogue/woodturned
+/turf/open/floor/woodturned
 	smooth_icon = 'modular/stonekeep/icons/wood_turned.dmi'
-/turf/open/floor/rogue/woodturned/nosmooth/saiga
+/turf/open/floor/woodturned/nosmooth/saiga
 	smooth_icon = 'modular/stonekeep/icons/wood_turned.dmi'
 
-/turf/open/floor/rogue/hexstone
+/turf/open/floor/hexstone
 	icon = 'modular/stonekeep/icons/turfs.dmi'
 
-/turf/open/floor/rogue/cobble
+/turf/open/floor/cobble
 	icon = 'modular/stonekeep/icons/turfs.dmi'
 
-/turf/open/floor/rogue/herringbone
+/turf/open/floor/herringbone
 	icon = 'modular/stonekeep/icons/turfs.dmi'
 
-/turf/open/floor/rogue/carpet/green
+/turf/open/floor/carpet/green
 	icon = 'modular/stonekeep/icons/turfs.dmi'
 
-/turf/open/floor/rogue/cobblerock/alt
+/turf/open/floor/cobblerock/alt
 	icon_state = "cobblerock_alt"
 	icon = 'modular/stonekeep/icons/turfs.dmi'
 	neighborlay = "cobblerock_alt"
 	smooth = SMOOTH_TRUE	// needed ?
 
-/turf/open/floor/rogue/cobblerock/alt/Initialize()
+/turf/open/floor/cobblerock/alt/Initialize()
 	. = ..()
 	dir = pick(GLOB.cardinals)
 
-/turf/open/floor/rogue/cobblerock/red
+/turf/open/floor/cobblerock/red
 	icon = 'modular/stonekeep/icons/turfs.dmi'
 	icon_state = "cobblerock_red"
 	neighborlay = "cobblerock_red"
 
-/turf/open/floor/rogue/blocks/carved
+/turf/open/floor/blocks/carved
 	icon_state = "carvedstone"
 
-/turf/open/floor/rogue/cobblerock/cardinal_smooth(adjacencies)
+/turf/open/floor/cobblerock/cardinal_smooth(adjacencies)
 	roguesmooth(adjacencies)
 
-/turf/open/floor/rogue/cobble/mossy/Initialize()
+/turf/open/floor/cobble/mossy/Initialize()
 	. = ..()
 	dir = pick(GLOB.cardinals)
 
-/turf/open/floor/rogue/sandstone
+/turf/open/floor/sandstone
 	icon = 'modular/stonekeep/icons/turfs.dmi'
 	icon_state = "sandstone"
 	footstep = FOOTSTEP_STONE
@@ -67,56 +67,56 @@
 	landsound = 'sound/foley/jumpland/stoneland.wav'
 	smooth = SMOOTH_MORE
 	canSmoothWith = list(/turf/closed/mineral/rogue,
-						/turf/open/floor/rogue/herringbone,
+						/turf/open/floor/herringbone,
 						/turf/closed/mineral,
-						/turf/closed/wall/mineral/rogue/stonebrick,
-						/turf/closed/wall/mineral/rogue/wood,
-						/turf/closed/wall/mineral/rogue/wooddark,
-						/turf/closed/wall/mineral/rogue/stone,
-						/turf/closed/wall/mineral/rogue/stone/moss,
-						/turf/open/floor/rogue/cobble,
-						/turf/open/floor/rogue/dirt,
-						/turf/open/floor/rogue/grass,
-						/turf/open/floor/rogue/grass/red,
-						/turf/open/floor/rogue/grass/yel,
-						/turf/open/floor/rogue/grass/cold,
-						/turf/open/floor/rogue/snow,
-						/turf/open/floor/rogue/snow/patchy,
-						/turf/open/floor/rogue/snow/rough,
-						/turf/open/floor/rogue/sandstone,
-						/turf/open/floor/rogue/sandstone/temple)
+						/turf/closed/wall/mineral/stonebrick,
+						/turf/closed/wall/mineral/wood,
+						/turf/closed/wall/mineral/wooddark,
+						/turf/closed/wall/mineral/stone,
+						/turf/closed/wall/mineral/stone/moss,
+						/turf/open/floor/cobble,
+						/turf/open/floor/dirt,
+						/turf/open/floor/grass,
+						/turf/open/floor/grass/red,
+						/turf/open/floor/grass/yel,
+						/turf/open/floor/grass/cold,
+						/turf/open/floor/snow,
+						/turf/open/floor/snow/patchy,
+						/turf/open/floor/snow/rough,
+						/turf/open/floor/sandstone,
+						/turf/open/floor/sandstone/temple)
 
-/turf/open/floor/rogue/sandstone/shaded
+/turf/open/floor/sandstone/shaded
 	color = "#e5dfdf"
 
-/turf/open/floor/rogue/sandstone/temple
+/turf/open/floor/sandstone/temple
 	icon_state = "temple"
-/turf/open/floor/rogue/sandstone/temple/Initialize()
+/turf/open/floor/sandstone/temple/Initialize()
 	dir = pick(GLOB.cardinals)
 	. = ..()
 
-/turf/open/floor/rogue/sandstone/old
+/turf/open/floor/sandstone/old
 	icon_state = "sandstone_old"
 
-/turf/open/floor/rogue/grass/mixyel/under_tree
+/turf/open/floor/grass/mixyel/under_tree
 	color = "#ff3535"
-/turf/open/floor/rogue/grass/Initialize()
+/turf/open/floor/grass/Initialize()
 	color = "#ffffff"
 	. = ..()
 
 
-/turf/open/floor/rogue/grass/mixyel
-	canSmoothWith = list(/turf/open/floor/rogue/grass,
-	/turf/open/floor/rogue/snow,
-	/turf/open/floor/rogue/dirt,)
+/turf/open/floor/grass/mixyel
+	canSmoothWith = list(/turf/open/floor/grass,
+	/turf/open/floor/snow,
+	/turf/open/floor/dirt,)
 
 
 
-/turf/open/floor/rogue/grass/yel
+/turf/open/floor/grass/yel
 	icon = 'modular/stonekeep/icons/turfs.dmi'
-	canSmoothWith = list(/turf/open/floor/rogue/grass,
-	/turf/open/floor/rogue/snow,
-	/turf/open/floor/rogue/grass/mixyel)
+	canSmoothWith = list(/turf/open/floor/grass,
+	/turf/open/floor/snow,
+	/turf/open/floor/grass/mixyel)
 
 // =================================================================================
 /*--------\
@@ -127,17 +127,17 @@
 	wash_in = FALSE
 
 
-/turf/open/floor/rogue/dirt
-	canSmoothWith = list(/turf/open/floor/rogue/grass,
-						/turf/open/floor/rogue/grass/red,
-						/turf/open/floor/rogue/grass/yel,
-						/turf/open/floor/rogue/grass/cold,
-						/turf/open/floor/rogue/snow,
-						/turf/open/floor/rogue/snow/patchy,
-						/turf/open/floor/rogue/snow/rough,
-						/turf/open/floor/rogue/hay)
+/turf/open/floor/dirt
+	canSmoothWith = list(/turf/open/floor/grass,
+						/turf/open/floor/grass/red,
+						/turf/open/floor/grass/yel,
+						/turf/open/floor/grass/cold,
+						/turf/open/floor/snow,
+						/turf/open/floor/snow/patchy,
+						/turf/open/floor/snow/rough,
+						/turf/open/floor/hay)
 
-/turf/open/floor/rogue/hay
+/turf/open/floor/hay
 	icon = 'modular/stonekeep/icons/turfs.dmi'
 	icon_state = "hay"
 	footstep = FOOTSTEP_GRASS
@@ -148,11 +148,11 @@
 	slowdown = 0
 	neighborlay = "hayedge"
 
-/turf/open/floor/rogue/hay/cardinal_smooth(adjacencies)
+/turf/open/floor/hay/cardinal_smooth(adjacencies)
 	roguesmooth(adjacencies)
 
 /*	..................   Kaizoku Sand   ................... */
-/turf/open/floor/rogue/sand
+/turf/open/floor/sand
 	icon = 'modular/stonekeep/icons/turfs.dmi'
 	icon_state = "sand"
 	footstep = FOOTSTEP_SAND
@@ -165,26 +165,26 @@
 	canSmoothWith = list(
 		/turf/closed/mineral/rogue,
 		/turf/closed/mineral,
-		/turf/closed/wall/mineral/rogue/stonebrick,
-		/turf/closed/wall/mineral/rogue/wood,
-		/turf/closed/wall/mineral/rogue/wooddark,
-		/turf/closed/wall/mineral/rogue/stone,
-		/turf/closed/wall/mineral/rogue/stone/moss,
-		/turf/open/floor/rogue/cobble,
-		/turf/open/floor/rogue/dirt,
-		/turf/open/floor/rogue/grass,
-		/turf/open/floor/rogue/grass/red,
-		/turf/open/floor/rogue/grass/yel,
-		/turf/open/floor/rogue/grass/cold,
-		/turf/open/floor/rogue/snow,
-		/turf/open/floor/rogue/snow/patchy,
-		/turf/open/floor/rogue/snow/rough
+		/turf/closed/wall/mineral/stonebrick,
+		/turf/closed/wall/mineral/wood,
+		/turf/closed/wall/mineral/wooddark,
+		/turf/closed/wall/mineral/stone,
+		/turf/closed/wall/mineral/stone/moss,
+		/turf/open/floor/cobble,
+		/turf/open/floor/dirt,
+		/turf/open/floor/grass,
+		/turf/open/floor/grass/red,
+		/turf/open/floor/grass/yel,
+		/turf/open/floor/grass/cold,
+		/turf/open/floor/snow,
+		/turf/open/floor/snow/patchy,
+		/turf/open/floor/snow/rough
 	)
 
-/turf/open/floor/rogue/sand/cardinal_smooth(adjacencies)
+/turf/open/floor/sand/cardinal_smooth(adjacencies)
 	roguesmooth(adjacencies)
 
-/turf/open/floor/rogue/sand/Initialize()
+/turf/open/floor/sand/Initialize()
 	dir = pick(GLOB.cardinals)
 	. = ..()
 
@@ -207,15 +207,15 @@
 							/obj/structure/table/wood/treestump = 4,
 							/obj/structure/closet/dirthole/closed/loot=6,
 							/obj/item/restraints/legcuffs/beartrap/armed=0.1)
-	spawnableTurfs = list(/turf/open/floor/rogue/dirt/road=80,
+	spawnableTurfs = list(/turf/open/floor/dirt/road=80,
 						/turf/open/water/swamp=25)
-	allowed_areas = list(/area/rogue/outdoors/woods)
+	allowed_areas = list(/area/outdoors/woods)
 
 /datum/mapGeneratorModule/forestgrass
 	clusterCheckFlags = CLUSTER_CHECK_SAME_ATOMS
-	allowed_turfs = list(/turf/open/floor/rogue/grass)
-	excluded_turfs = list(/turf/open/floor/rogue/grass/mixyel/under_tree)
-	allowed_areas = list(/area/rogue/outdoors/woods)
+	allowed_turfs = list(/turf/open/floor/grass)
+	excluded_turfs = list(/turf/open/floor/grass/mixyel/under_tree)
+	allowed_areas = list(/area/outdoors/woods)
 	spawnableAtoms = list(/obj/structure/flora/roguetree = 0,
 							/obj/structure/flora/roguegrass/bush_meagre = 6,
 							/obj/structure/flora/roguegrass = 80,
@@ -235,9 +235,9 @@
 
 /datum/mapGeneratorModule/forest_undertree
 	clusterCheckFlags = CLUSTER_CHECK_SAME_ATOMS
-	allowed_turfs = list(/turf/open/floor/rogue/grass/mixyel/under_tree)
+	allowed_turfs = list(/turf/open/floor/grass/mixyel/under_tree)
 	excluded_turfs = list()
-	allowed_areas = list(/area/rogue/outdoors/woods)
+	allowed_areas = list(/area/outdoors/woods)
 	spawnableAtoms = list(/obj/structure/innocent_web = 10,
 							/obj/structure/flora/rogueflower/random = 6,
 							/obj/item/grown/log/tree/stick = 3,
@@ -246,15 +246,15 @@
 
 // ======================================================================
 /*	..................   Areas   ................... */
-/area/rogue/indoors/cave/volf
+/area/indoors/cave/volf
 	name = "volf cave"
 	icon_state = "cave"
 
-/area/rogue/indoors/cave/spider
+/area/indoors/cave/spider
 	name = "spider cave"
 	icon_state = "cave"
 
-/area/rogue/outdoors/town/amphitheatre
+/area/outdoors/town/amphitheatre
 	name = "town (amphitheatre)"
 
 
@@ -285,24 +285,24 @@
 	mappath = "_maps/map_files/candlelight/templates/bantravel_d.dmm"
 
 
-/area/rogue/outdoors/mountains/deception
+/area/outdoors/mountains/deception
 	name = "deception"
 	icon_state = "deception"
 	first_time_text = "THE CANYON OF DECEPTION"
 	ambush_types = list(
-				/turf/open/floor/rogue/dirt)
+				/turf/open/floor/dirt)
 	ambush_mobs = list(
-				/mob/living/simple_animal/hostile/retaliate/rogue/troll = 20,
+				/mob/living/simple_animal/hostile/retaliate/troll = 20,
 				/mob/living/carbon/human/species/skeleton/skilled/fighter = 15,
 				/mob/living/carbon/human/species/goblin/skilled/ambush/hell = 50)
 
-/area/rogue/outdoors/mountains/decap
+/area/outdoors/mountains/decap
 	name = "mt decapitation"
 	icon_state = "decap"
 	ambush_types = list(
-				/turf/open/floor/rogue/dirt)
+				/turf/open/floor/dirt)
 	ambush_mobs = list(
-				/mob/living/simple_animal/hostile/retaliate/rogue/troll = 15,
+				/mob/living/simple_animal/hostile/retaliate/troll = 15,
 				/mob/living/carbon/human/species/skeleton/skilled/unarmed = 25,
 				/mob/living/carbon/human/species/skeleton/skilled/fighter = 25)
 	droning_sound = 'sound/music/area/decap.ogg'
@@ -310,37 +310,37 @@
 	droning_sound_night = null
 	first_time_text = "MOUNT DECAPITATION"
 	ambush_times = list("night","dawn","dusk","day")
-	converted_type = /area/rogue/indoors/shelter/mountains/decap
+	converted_type = /area/indoors/shelter/mountains/decap
 
 
-/area/rogue/outdoors/woods/stone
+/area/outdoors/woods/stone
 	ambush_types = list(
-				/turf/open/floor/rogue/grass)
+				/turf/open/floor/grass)
 	ambush_mobs = list(
-				/mob/living/simple_animal/hostile/retaliate/rogue/wolf = 20,
-				/mob/living/simple_animal/hostile/retaliate/rogue/spider/hairy = 10)
+				/mob/living/simple_animal/hostile/retaliate/wolf = 20,
+				/mob/living/simple_animal/hostile/retaliate/spider/hairy = 10)
 	first_time_text = "HOWLING FOREST"
-	converted_type = /area/rogue/indoors/shelter/woods
+	converted_type = /area/indoors/shelter/woods
 
 
-/area/rogue/outdoors/beach
+/area/outdoors/beach
 	name = "beach"
 	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Oceansanct.ogg'
 	droning_sound_dusk = 'modular/stonekeep/kaizoku/sound/ambience/Town_in_Rogue.ogg'
 	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Defenestration.ogg'
 
-/area/rogue/under/cave/abandoned_mine
+/area/under/cave/abandoned_mine
 	name = "abandoned mine"
 	first_time_text = "Abandoned Mine"
 	ambush_types = list(
-				/turf/open/floor/rogue/dirt)
+				/turf/open/floor/dirt)
 	ambush_mobs = list(
-				/mob/living/simple_animal/hostile/retaliate/rogue/bigrat = 30,
+				/mob/living/simple_animal/hostile/retaliate/bigrat = 30,
 				/mob/living/carbon/human/species/goblin/skilled/ambush/cave = 20)
 
 
 
-/area/rogue/under/catacombs
+/area/under/catacombs
 	name = "catacombs"
 	icon_state = "cavewet"
 	first_time_text = "The Catacombs"
@@ -356,24 +356,24 @@
 				/turf/open/water/swamp)
 	ambush_mobs = list(
 				/mob/living/carbon/human/species/skeleton/skilled/unarmed = 30,
-				/mob/living/simple_animal/hostile/retaliate/rogue/bigrat = 10)
-	converted_type = /area/rogue/outdoors/caves
+				/mob/living/simple_animal/hostile/retaliate/bigrat = 10)
+	converted_type = /area/outdoors/caves
 
-/area/rogue/under/catacombs/dwarfoutpost
+/area/under/catacombs/dwarfoutpost
 	name = "underrock outpost"
 	first_time_text = "Underrock Outpost"
 	ambush_types = list(
 				/turf/open/water/swamp)
 	ambush_mobs = list(
-				/mob/living/simple_animal/hostile/retaliate/rogue/lamia = 30,
-				/mob/living/simple_animal/hostile/retaliate/rogue/headless = 20)
+				/mob/living/simple_animal/hostile/retaliate/lamia = 30,
+				/mob/living/simple_animal/hostile/retaliate/headless = 20)
 
-/area/rogue/under/catacombs/dwarfoutpost/orcy
+/area/under/catacombs/dwarfoutpost/orcy
 	ambush_types = list(
-				/turf/open/floor/rogue/blocks/newstone/alt)
+				/turf/open/floor/blocks/newstone/alt)
 	ambush_mobs = list(
 				/mob/living/carbon/human/species/orc/skilled/savage = 50)
 
-/area/rogue/under/town/caverogue/saltmine
+/area/under/town/caverogue/saltmine
 	name = "salt mine"
 	first_time_text = "Salt Mine"

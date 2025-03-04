@@ -309,7 +309,7 @@
 // =================================================================
 // ========================		SHIELD	============================
 
-/obj/item/rogueweapon/shield/wood/rattan //The description about the firearm projectiles protection is actually real for this shield, pretty neat thing to include here. It won't change gamewise tho
+/obj/item/weapon/shield/wood/rattan //The description about the firearm projectiles protection is actually real for this shield, pretty neat thing to include here. It won't change gamewise tho
 	name = "rattan shield"
 	desc = "A lightweight rattan shield woven with leather padding and hardened in oil, known for keeping shrapnel and firearm projectiles stuck after being shot at. \nIt can exceptionally block attacks but is more brittle than metal."
 	icon = 'modular/stonekeep/kaizoku/icons/weapons/32.dmi'
@@ -318,10 +318,10 @@
 	coverage = 50
 	max_integrity = 150
 
-/obj/item/rogueweapon/shield/wood/rattan/attack_hand(mob/user)
+/obj/item/weapon/shield/wood/rattan/attack_hand(mob/user)
 		..()
 
-/obj/item/rogueweapon/shield/wood/rattan/getonmobprop(tag)
+/obj/item/weapon/shield/wood/rattan/getonmobprop(tag)
 	. = ..()
 	if(tag)
 		switch(tag)
@@ -330,7 +330,7 @@
 			if("onback")
 				return list("shrink" = 0.6,"sx" = 1,"sy" = 4,"nx" = 1,"ny" = 2,"wx" = 3,"wy" = 3,"ex" = 0,"ey" = 2,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 8,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0)
 
-/obj/item/rogueweapon/shield/tower/abyssaltower
+/obj/item/weapon/shield/tower/abyssaltower
 	name = "abyssal towershield"
 	desc = "The legendary shield frame named 'Naraku-kai no Tate', long used by Abyssariad champions in the old age against demonic incursions on Fog Islands. It has resemblance with Aasimar's tower shields, which was proper for the time."
 	icon_state = "abyssaltower"
@@ -348,7 +348,7 @@
 	max_integrity = 300
 	smeltresult = /obj/item/ingot/iron // Made with an iron ingot, let us recover it
 
-/obj/item/rogueweapon/shield/abyssaltower/dustcurse/dropped()
+/obj/item/weapon/shield/abyssaltower/dustcurse/dropped()
 	. = ..()
 	name = "Dustcurse abyssal towershield"
 	minstr = 0 //asset solely to be used by NPCs. This will not be found on the hands of players.
@@ -357,7 +357,7 @@
 		return
 	qdel(src)
 
-/obj/item/rogueweapon/shield/tower/metal/abyssal
+/obj/item/weapon/shield/tower/metal/abyssal
 	name = "spiked steel aegis"
 	desc = "Light steel spikes are visible on this shield to protect the user against the chaotic close-quarter skirmishes where grappling and flanking is common, but can be caught on enemy armor and weapons."
 	icon_state = "aegis"
@@ -379,7 +379,7 @@
 	sellprice = 30
 	smeltresult = /obj/item/ingot/steel // Made with steel, let us repurpose it
 
-/obj/item/rogueweapon/shield/tower/metal/abyssal/getonmobprop(tag)
+/obj/item/weapon/shield/tower/metal/abyssal/getonmobprop(tag)
 	if(tag)
 		switch(tag)
 			if("gen")
@@ -388,10 +388,10 @@
 				return list("shrink" = 0.6,"sx" = 1,"sy" = 4,"nx" = 1,"ny" = 2,"wx" = 3,"wy" = 3,"ex" = 0,"ey" = 2,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 8,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 1,"southabove" = 0,"eastabove" = 0,"westabove" = 0)
 	return ..()
 
-/obj/item/rogueweapon/shield/tower/metal/attack_hand(mob/user)
+/obj/item/weapon/shield/tower/metal/attack_hand(mob/user)
 		..()
 
-/obj/item/rogueweapon/shield/tower/metal/abyssal/dustcurse/dropped()
+/obj/item/weapon/shield/tower/metal/abyssal/dustcurse/dropped()
 	. = ..()
 	name = "Dustcurse spiked steel aegis"
 	minstr = 0 //asset solely to be used by NPCs. This will not be found on the hands of players.
@@ -404,7 +404,7 @@
 // =================================================================
 // ========================		AXE		============================
 
-/obj/item/rogueweapon/axe/battle/ono
+/obj/item/weapon/axe/battle/ono
 	slot_flags = ITEM_SLOT_HIP
 	name = "nagai ono"
 	desc = "A battleaxe of Abyssariad design with a longer handle and shorter blade than its Humen counterpart. The increased leverage, reduced weight, and smaller striking area give it greater use against armor, while the longer handle makes it easier to parry with."
@@ -416,7 +416,7 @@
 	max_integrity = INTEGRITY_STANDARD
 	wdefense = GOOD_PARRY
 
-/obj/item/rogueweapon/axe/battle/ono/getonmobprop(tag)
+/obj/item/weapon/axe/battle/ono/getonmobprop(tag)
 	if(tag)
 		switch(tag)
 			if("gen")
@@ -427,7 +427,7 @@
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0)
 	return ..()
 
-/obj/item/rogueweapon/thrown/ono
+/obj/item/weapon/thrown/ono
 	slot_flags = ITEM_SLOT_HIP
 	force = 15
 	possible_item_intents = list(/datum/intent/axe/cut, /datum/intent/axe/chop) //Added chop because the throwing Ono is still suitable for woodcutting. It's a hatchet.
@@ -449,7 +449,7 @@
 	axe_cut = 5 //You'd be surprised to know that the axe head design for throwing is the same one for cutting wood, but lighter.
 	embedding = list("embedded_pain_multiplier" = 3, "embed_chance" = 20, "embedded_fall_chance" = 60)
 
-/obj/item/rogueweapon/axe/iron/changfu
+/obj/item/weapon/axe/iron/changfu
 	name = "iron changfu"
 	desc = "The tool of justice, hardwork and destruction, all in one."
 	icon_state = "changfu"
@@ -461,7 +461,7 @@
 // =================================================================
 // ========================		MACE	============================
 
-/obj/item/rogueweapon/mace/goden/otsuchi
+/obj/item/weapon/mace/goden/otsuchi
 	force = 10
 	force_wielded = 25
 	possible_item_intents = list(/datum/intent/mace/strike)
@@ -487,7 +487,7 @@
 	bigboy = TRUE
 	gripsprite = TRUE
 
-/obj/item/rogueweapon/mace/goden/kanabo
+/obj/item/weapon/mace/goden/kanabo
 	name = "kanabo"
 	desc = "A heavy two handed club, reinforced with an iron sleeve. Most commonly seen in the hands of Onis and Yamabushis."
 	icon_state = "kanabo"
@@ -505,7 +505,7 @@
 	gripsprite = TRUE
 	slowdown = 1
 
-/obj/item/rogueweapon/mace/goden/kanabo/dustcurse/dropped()
+/obj/item/weapon/mace/goden/kanabo/dustcurse/dropped()
 	. = ..()
 	name = "Dustcurse kanabo"
 	to_chat(src, "<span class='warning'>A haunting wind scatters [usr] into dust, sweeping it back to the ocean!</span>")
@@ -514,7 +514,7 @@
 		return
 	qdel(src)
 
-/obj/item/rogueweapon/mace/goden/steel/tetsubo
+/obj/item/weapon/mace/goden/steel/tetsubo
 	name = "tetsubo"
 	desc = "A heavier variant of the kanabo, fitted with a steel sleeve bearing menacing spikes and favored by Ogrun Warlords. Requires immense strength to use, but hits like a raging bull."
 	icon_state = "tetsubo"
@@ -527,7 +527,7 @@
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
 
-/obj/item/rogueweapon/mace/goden/steel/tetsubo/dustcurse/dropped()
+/obj/item/weapon/mace/goden/steel/tetsubo/dustcurse/dropped()
 	. = ..()
 	name = "Dustcurse tetsubo"
 	minstr = 0 //asset solely to be used by NPCs. This will not be found on the hands of players.
@@ -536,13 +536,13 @@
 		return
 	qdel(src)
 
-/obj/item/rogueweapon/mace/ararebo
+/obj/item/weapon/mace/ararebo
 	name = "ararebo"
 	icon = 'modular/stonekeep/kaizoku/icons/weapons/32.dmi'
 	icon_state = "ararebo"
 	desc = "A large, iron-capped club used by Abyssariads as a armor-breaking tool. Most suitable to breach Grezenholftean cuirass while still holding a shield in the off-hand."
 
-/obj/item/rogueweapon/mace/ararebo/dustcurse/dropped()
+/obj/item/weapon/mace/ararebo/dustcurse/dropped()
 	. = ..()
 	name = "Dustcurse ararebo"
 	to_chat(src, "<span class='warning'>A haunting wind scatters [usr] into dust, sweeping it back to the ocean!</span>")
@@ -550,7 +550,7 @@
 		return
 	qdel(src)
 
-/obj/item/rogueweapon/mace/ararebo/obsidian
+/obj/item/weapon/mace/ararebo/obsidian
 	name = "obsidian club"
 	icon_state = "obsidian_club"
 	desc = "A large, wooden club with sharp flakes of obsidian embedded into it. Its appearance is similar to a flanged mace, but it inflicts deep cuts."
@@ -562,13 +562,13 @@
 	minstr = 0
 	wdefense = 3
 
-/obj/item/rogueweapon/mace/steel/ararebo
+/obj/item/weapon/mace/steel/ararebo
 	name = "steel ararebo"
 	icon = 'modular/stonekeep/kaizoku/icons/weapons/32.dmi'
 	icon_state = "sararebo"
 	desc = "A large, steel-capped club used by Abyssariads as a armor-breaking tool. Most suitable to breach Grezenholftean cuirass while still holding a shield in the off-hand."
 
-/obj/item/rogueweapon/mace/steel/ararebo/dustcurse/dropped()
+/obj/item/weapon/mace/steel/ararebo/dustcurse/dropped()
 	. = ..()
 	name = "Dustcurse steel ararebo"
 	to_chat(src, "<span class='warning'>A haunting wind scatters [usr] into dust, sweeping it back to the ocean!</span>")
@@ -576,7 +576,7 @@
 		return
 	qdel(src)
 
-/obj/item/rogueweapon/mace/cudgel/rungu
+/obj/item/weapon/mace/cudgel/rungu
 	force = 15
 	force_wielded = 20
 	name = "rungu club"
@@ -594,7 +594,7 @@
 	minstr = 0
 	throwforce = 25
 
-/obj/item/rogueweapon/mace/cudgel/jitte
+/obj/item/weapon/mace/cudgel/jitte
 	name = "jitte"
 	desc = "An abyssariad Ashigaru guard weapon. The hook along the shaft allows the club to arrest a blade that has been parried, increasing the defensive utility of a otherwise simple baton."
 	icon = 'modular/stonekeep/kaizoku/icons/weapons/32.dmi'
@@ -638,13 +638,13 @@
 	chargetime = 10
 
 
-/obj/item/rogueweapon/flail/sflail/kusarifundo
+/obj/item/weapon/flail/sflail/kusarifundo
 	name = "kusari fundo"
 	icon = 'modular/stonekeep/kaizoku/icons/weapons/32.dmi'
 	desc = "A pair of heavy steel weights connected by a long chain. Originally a self-defense weapon during the Blood Apotheosis when iron was running low - so lead balls were used as weight."
 	icon_state = "kusarifundo"
 
-/obj/item/rogueweapon/flail/nunchaku
+/obj/item/weapon/flail/nunchaku
 	force = 20
 	w_class = WEIGHT_CLASS_SMALL
 	name = "nunchaku"
@@ -652,7 +652,7 @@
 	desc = "A pair of wooden rods linked by a short chain, designed for concealment and often used by Abyssariad Plowmen- for where swords was only on the hands of the Zamurai caste."
 	icon_state = "nunchaku"
 
-/obj/item/rogueweapon/flail/kusarigama
+/obj/item/weapon/flail/kusarigama
 	possible_item_intents = list(/datum/intent/flail/strike, /datum/intent/flail/strike/smash, /datum/intent/flail/cut, /datum/intent/flail/cut/chop)
 	name = "kusarigama"
 	desc = "A handle with a sickle-like blade, featuring a chain that ends in a spiked ball. Versatile weapon adapted to defeat sword-wielding foes."
@@ -664,7 +664,7 @@
 	parrysound = list('sound/combat/parry/parrygen.ogg')
 	swingsound = BLUNTWOOSH_MED
 
-/obj/item/rogueweapon/flail/kusarigama/peasant
+/obj/item/weapon/flail/kusarigama/peasant
 	force = DAMAGE_WEAK_FLAIL
 	name = "handmade kusarigama"
 	desc = "A handle with a sickle-like blade and a chain with spiked ball, quickly assembled from an actual plowmen's sickle - it is clearly homemade."
@@ -676,14 +676,14 @@
 // =================================================================
 // ========================		KNIFE	============================
 
-/obj/item/rogueweapon/huntingknife/kunai //Practically a villager knife with more utility. It helps others to climb walls.
+/obj/item/weapon/huntingknife/kunai //Practically a villager knife with more utility. It helps others to climb walls.
 	name = "kunai"
 	desc = "A simple stabbing weapon made of iron which originated as a masonry or gardening tool, useful for climbing walls in similar ways to pitons."
 	icon = 'modular/stonekeep/kaizoku/icons/weapons/32.dmi'
 	icon_state = "kunai"
 	force = 8
 
-/obj/item/rogueweapon/knife/kaiken
+/obj/item/weapon/knife/kaiken
 	name = "iron kaiken"
 	desc = "The weapon laws in colonized Abyssariad islands, with high humen or elven population, forbade non-warriors from carrying blades in public, so abyssariad colonists made weapons such as this."
 	icon = 'modular/stonekeep/kaizoku/icons/weapons/32.dmi'
@@ -693,7 +693,7 @@
 	smeltresult = null
 	sellprice = 15
 
-/obj/item/rogueweapon/knife/steel/tanto
+/obj/item/weapon/knife/steel/tanto
 	name = "steel tanto"
 	desc = "Initially a companion blade to the tachi in a zamurai's daisho, the tanto was later replaced by the wakizashi with the shift to infantry tactics after the Bloody Apotheosis."
 	icon = 'modular/stonekeep/kaizoku/icons/weapons/32.dmi'
@@ -705,7 +705,7 @@
 	wbalance = VERY_HARD_TO_DODGE
 	sellprice = 20
 
-/obj/item/rogueweapon/knife/hunting/sai //I love gundam for helping me on my request on this sai. I love HIM!!!!!!!!!!!!! -Monochrome
+/obj/item/weapon/knife/hunting/sai //I love gundam for helping me on my request on this sai. I love HIM!!!!!!!!!!!!! -Monochrome
 	name = "sai"
 	desc = "Recognizable by its uniqueness and typically carried in pairs, the sai features a sharply-tapered central rod with two prongs at the cross-guards. It lacks blade for cutting, but it excels in jabbing and defending against other weapons."
 	icon = 'modular/stonekeep/kaizoku/icons/weapons/32.dmi'
@@ -740,7 +740,7 @@
 	misscost = 10
 
 
-/obj/item/rogueweapon/polearm/mancatcher
+/obj/item/weapon/polearm/mancatcher
 	force = 10
 	force_wielded = 20
 	possible_item_intents = list(POLEARM_BASH)
@@ -771,7 +771,7 @@
 		"embedded_fall_chance" = 0,
 	)
 
-/obj/item/rogueweapon/polearm/spear/yari
+/obj/item/weapon/polearm/spear/yari
 	name = "su yari"
 	desc = "A long, straight-headed spear of Abyssariad design, often used by sea raiders to fend off light cavalry on in-land offensives. Well know for the 'Yari wall' strategy and for being 'Yarimazing' among Abyssariads."
 	icon_state = "suyari"
@@ -786,7 +786,7 @@
 	dropshrink = 0.8
 	blade_dulling = DULLING_BASHCHOP
 
-/obj/item/rogueweapon/polearm/spear/yari/katakama
+/obj/item/weapon/polearm/spear/yari/katakama
 	name = "katakama yari"
 	desc = "An evolution of the su yari, recognizable for a single scythe-like tang perpendicular to the main point that allows for better defense against the likes of naginata."
 	icon_state = "katakamayari"
@@ -795,19 +795,19 @@
 	max_blade_int = 150
 	max_integrity = 400
 
-/obj/item/rogueweapon/polearm/spear/billhook/jumonji
+/obj/item/weapon/polearm/spear/billhook/jumonji
 	name = "jumonji yari"
 	desc = "The design of the katakama yari taken to its logical conclusion, the jumonji yari features an elongated tang on each side that is the same length as the forward point. There is no polearms that offers better defense without harming efficiency."
 	icon_state = "jumonjiyari"
 
-/obj/item/rogueweapon/polearm/halberd/bardiche/naginata
+/obj/item/weapon/polearm/halberd/bardiche/naginata
 	name = "naginata"
 	desc = "Its earliest form being a tachi blade mounted upon a long wooden pole, the naginata was the first polearm to come into widespread use by the Abyssariad, who developed the weapon in order to better combat Humen and Elven cavalry."
 	icon = 'modular/stonekeep/kaizoku/icons/weapons/64.dmi'
 	icon_state = "naginata"
 	dropshrink = 0.8
 
-/obj/item/rogueweapon/polearm/halberd/bardiche/naginata/dustcurse/dropped()
+/obj/item/weapon/polearm/halberd/bardiche/naginata/dustcurse/dropped()
 	. = ..()
 	name = "Dustcurse naginata"
 	minstr = 0 //asset solely to be used by NPCs. This will not be found on the hands of players.
@@ -816,7 +816,7 @@
 		return
 	qdel(src)
 
-/obj/item/rogueweapon/polearm/halberd/bardiche/naginata/tsukushi //make two instead of only one
+/obj/item/weapon/polearm/halberd/bardiche/naginata/tsukushi //make two instead of only one
 	name = "tsukushi naginata"
 	desc = "A cheaper, easier to construct iron Naginata with a blade held by its guard instead of its tang. Likely developed from a scythe, the blade is easily found on poor, wandering monks."
 	force_wielded = DAMAGE_SPEAR_WIELD+3
@@ -826,14 +826,14 @@
 	wdefense = 4
 	slot_flags = ITEM_SLOT_BACK
 
-/obj/item/rogueweapon/polearm/halberd/bisento //Giving the Bisento storeable 'back' because, otherwise, people will SUFFER spawning with it. Too bugged for my taste.
+/obj/item/weapon/polearm/halberd/bisento //Giving the Bisento storeable 'back' because, otherwise, people will SUFFER spawning with it. Too bugged for my taste.
 	name = "bisento"
 	desc = "The Bisento is the direct evolution of the old, outdated Champion Guandao. Akin to a large cleaver or a broad axe."
 	icon_state = "bisento"
 	dropshrink = 0.8
 	icon = 'modular/stonekeep/kaizoku/icons/weapons/64.dmi'
 
-/obj/item/rogueweapon/polearm/halberd/bisento/dustcurse/dropped()
+/obj/item/weapon/polearm/halberd/bisento/dustcurse/dropped()
 	. = ..()
 	name = "Dustcurse bisento"
 	minstr = 0 //asset solely to be used by NPCs. This will not be found on the hands of players.
@@ -842,7 +842,7 @@
 		return
 	qdel(src)
 
-/obj/item/rogueweapon/polearm/spear/stone/obsidian //direct upgrade to the stone one.
+/obj/item/weapon/polearm/spear/stone/obsidian //direct upgrade to the stone one.
 	force = DAMAGE_SPEAR+2
 	force_wielded = DAMAGE_SPEAR+4
 	throwforce = DAMAGE_SPEAR
@@ -857,14 +857,14 @@
 	smeltresult = /obj/item/ash
 	max_blade_int = 100
 
-/obj/item/rogueweapon/polearm/woodstaff/quarterstaff/bostaff
+/obj/item/weapon/polearm/woodstaff/quarterstaff/bostaff
 	name = "bo staff"
 	desc = "the bo, or 'abyssariad quarterstaff', is a simple weapon used in martial arts to entrap, strike and sweep the enemy."
 	icon_state = "bostaff"
 	icon = 'modular/stonekeep/kaizoku/icons/weapons/64.dmi'
 	bigboy = TRUE
 
-/obj/item/rogueweapon/polearm/firelance
+/obj/item/weapon/polearm/firelance
 	name = "sanctiflux firelance"
 	desc = "The new iteration of the ancient abyssariad 'Widowmaker', the harbinger of purification against zizodemons, tieflings and grezenhoft. \
 	Used safely by the hundred thousand march, by hands whom holds purifying intentions from the abyss." //Hundred thousand march is the definition of champions. But after bloody apotheosis, its just anyone islander-cultured.
@@ -897,7 +897,7 @@
 	var/fuel_source = FALSE
 	var/fuze = 30
 
-/obj/item/rogueweapon/polearm/firelance/proc/ignite(mob/living/user)
+/obj/item/weapon/polearm/firelance/proc/ignite(mob/living/user)
 	if(lit)
 		to_chat(user.loc, "<span class='warning'>The Firelance's fuse is already ignited and fierce as a bull.</span>")
 		return
@@ -922,7 +922,7 @@
 			lit = FALSE
 			update_icon()
 
-/obj/item/rogueweapon/polearm/firelance/proc/flamefire(mob/living/user)
+/obj/item/weapon/polearm/firelance/proc/flamefire(mob/living/user)
 	if(!user)
 		return
 
@@ -961,7 +961,7 @@
 	fuel_source = FALSE // Consume  fuel after use
 	update_icon()
 
-/obj/item/rogueweapon/polearm/firelance/dropped(mob/living/user)
+/obj/item/weapon/polearm/firelance/dropped(mob/living/user)
 	. = ..()
 	if(fuel_source)
 		if(HAS_TRAIT(user, TRAIT_KAIZOKU))
@@ -973,7 +973,7 @@
 			user.IgniteMob()
 			flamefire(user)
 
-/obj/item/rogueweapon/polearm/firelance/attack_self(mob/living/user)
+/obj/item/weapon/polearm/firelance/attack_self(mob/living/user)
 	if(lit) // safeguard
 		return
 	else
@@ -1017,7 +1017,7 @@
 			fuel_source = FALSE
 			update_icon()
 
-/obj/item/rogueweapon/polearm/firelance/attackby(obj/item/I, mob/living/user)
+/obj/item/weapon/polearm/firelance/attackby(obj/item/I, mob/living/user)
 	if(!istype(I, /obj/item/sanctiflux))
 		to_chat(user, "<span class='warning'>[I] is not a valid fuel source!</span>")
 		return
@@ -1035,13 +1035,13 @@
 			to_chat(user, "<span class='info'>I press the gourd against the insertion hole. I just need to adjust the mechanisms so the automata within do the rest of the job.</span>")
 			..()
 
-/obj/item/rogueweapon/polearm/firelance/spark_act()
+/obj/item/weapon/polearm/firelance/spark_act()
 	ignite(usr)
 
-/obj/item/rogueweapon/polearm/firelance/fire_act()
+/obj/item/weapon/polearm/firelance/fire_act()
 	ignite(usr)
 
-/obj/item/rogueweapon/polearm/firelance/update_icon()
+/obj/item/weapon/polearm/firelance/update_icon()
 	if(lit)
 		icon_state = "firelance_lit"
 	else
@@ -1130,7 +1130,7 @@
 */
 
 
-/obj/item/rogueweapon/tetsubishi //I humbly request someone to cook the 'jump' not causing damage.
+/obj/item/weapon/tetsubishi //I humbly request someone to cook the 'jump' not causing damage.
 	name = "tetsubishi"
 	desc = "a sharp spike object used to slow down pursuer, often used by abyssariad shinobis, it has been massproduced and shipped to Heartfell."
 	icon_state = "tetsubishi"
@@ -1162,11 +1162,11 @@
 	hitsound = 'sound/blank.ogg'
 	var/icon_prefix
 
-/obj/item/rogueweapon/tetsubishi/Initialize()
+/obj/item/weapon/tetsubishi/Initialize()
 	. = ..()
 	AddComponent(/datum/component/kaizoku/caltrop, 20, 30, 100, CALTROP_BYPASS_SHOES)
 
-/obj/item/rogueweapon/tetsubishi/Crossed(mob/living/L)
+/obj/item/weapon/tetsubishi/Crossed(mob/living/L)
 	playsound(loc, 'sound/foley/flesh_rem2.ogg', TRUE)
 	return ..()
 
@@ -1234,7 +1234,7 @@
 // =================================================================
 // ========================		SWORD	============================
 
-/obj/item/rogueweapon/sword/uchigatana
+/obj/item/weapon/sword/uchigatana
 	name = "uchigatana"
 	desc = "Shorter and simpler than the Tachi, the Uchigatana is the primary sidearm for the Abyssariad and Heartfelt footsoldiers. As a Zatana, the curved blade favor powerfull chopping strikes - but lacks a protective crossguard and the curve makes it less efficient in thrusting."
 	icon = 'modular/stonekeep/kaizoku/icons/weapons/64.dmi'
@@ -1246,16 +1246,16 @@
 	bigboy = TRUE
 	smeltresult = /obj/item/ingot/steel
 
-/obj/item/rogueweapon/sword/uchigatana/fire //Experimental weapon. Not to be found ingame.
+/obj/item/weapon/sword/uchigatana/fire //Experimental weapon. Not to be found ingame.
 	name = "fire uchigatana"
 	desc = "Shorter and simpler than the Tachi, the Uchigatana is the primary sidearm for the Abyssariad and Heartfelt footsoldiers. Unlike other uchigatanas, this sword in specifically seems curiously improved with 'frigus' runes."
 
-/obj/item/rogueweapon/sword/uchigatana/fire/attack(mob/M, mob/living/carbon/human/user)
+/obj/item/weapon/sword/uchigatana/fire/attack(mob/M, mob/living/carbon/human/user)
 	if(ismob(M))
 		fire_effect(M, user)
 		..()
 
-/obj/item/rogueweapon/sword/uchigatana/fire/proc/fire_effect(mob/living/L, mob/user)
+/obj/item/weapon/sword/uchigatana/fire/proc/fire_effect(mob/living/L, mob/user)
 	L.adjust_fire_stacks(1)
 	L.IgniteMob()
 	addtimer(CALLBACK(L, TYPE_PROC_REF(/mob/living, ExtinguishMob)), 5 SECONDS)
@@ -1267,7 +1267,7 @@
 	playsound(loc, 'sound/blank.ogg', 50, TRUE, -1)
 	return
 
-/obj/item/rogueweapon/sword/long/tachi //this sword is all fucked. Oh God. Help me.
+/obj/item/weapon/sword/long/tachi //this sword is all fucked. Oh God. Help me.
 	name = "tachi"
 	desc = "A long, curved Zatana of Abyssariad make, introduced when Wokou raiders returned to the Fog Isles with captured horses and began developing their own cavalry tactics."
 	icon = 'modular/stonekeep/kaizoku/icons/weapons/64.dmi'
@@ -1276,7 +1276,7 @@
 	pixel_y = -16
 	pixel_x = -18
 
-/obj/item/rogueweapon/sword/long/tachi/dustcurse/dropped()
+/obj/item/weapon/sword/long/tachi/dustcurse/dropped()
 	. = ..()
 	name = "Dustcurse tachi"
 	minstr = 0 //asset solely to be used by NPCs. This will not be found on the hands of players.
@@ -1285,19 +1285,19 @@
 		return
 	qdel(src)
 
-/obj/item/rogueweapon/sword/long/greatsword/odachi
+/obj/item/weapon/sword/long/greatsword/odachi
 	name = "odachi"
 	desc = "Greatsword traditionally wielded in open battlefields just as it is a ceremonial blade. Though impractical for duels, it breaks spearlines and shields on a whim, requiring momentum with each slash."
 	icon_state = "odachi"
 	icon = 'modular/stonekeep/kaizoku/icons/weapons/64.dmi'
 	parrysound = "bladedlarge"
 
-/obj/item/rogueweapon/sword/iron/jian
+/obj/item/weapon/sword/iron/jian
 	name = "iron jian"
 	icon_state = "jian1"
 	icon = 'modular/stonekeep/kaizoku/icons/weapons/32.dmi'
 
-/obj/item/rogueweapon/sword/iron/jian/Initialize()
+/obj/item/weapon/sword/iron/jian/Initialize()
 	. = ..()
 	var/design = rand(1, 6) //This system will be standardized to other weapons.
 	switch(design)
@@ -1321,31 +1321,31 @@
 			desc = "A simple, double-edged iron sword of abyssariad design with hand protection that resembles one side of the firelance apparatus. Usually used for training."
 	icon_state = "jian[design]"
 
-/obj/item/rogueweapon/sword/scimitar/messer/dao
+/obj/item/weapon/sword/scimitar/messer/dao
 	name = "iron dao"
 	desc = "A single edged iron saber of Abyssariad making for horseback use. Suitable for chopping."
 	icon_state = "dao"
 	icon = 'modular/stonekeep/kaizoku/icons/weapons/32.dmi'
 
-/obj/item/rogueweapon/sword/scimitar/falchion/yuntoudao //this sprite disappeared by reasons unknown
+/obj/item/weapon/sword/scimitar/falchion/yuntoudao //this sprite disappeared by reasons unknown
 	name = "Yuntoudao"
 	desc = "A expensive Abyssariad saber with wide middle and tapered ends in a 'willow-leaf' shape, it concentrates the force of a strike in an axe-like blow, while retaining the swiftness of a saber."
 	icon_state = "yuntoudao"
 	icon = 'modular/stonekeep/kaizoku/icons/weapons/32.dmi'
 
-/obj/item/rogueweapon/sword/short/jian
+/obj/item/weapon/sword/short/jian
 	name = "short steel jian"
 	desc = "A simple, shortened version of the double-edged Jian. This is usually given to Abyssariad citizens as a right for self-defense by the emperor's will."
 	icon = 'modular/stonekeep/kaizoku/icons/weapons/32.dmi'
 	icon_state = "shortjian"
 
-/obj/item/rogueweapon/sword/short/wakizashi
+/obj/item/weapon/sword/short/wakizashi
 	name = "wakizashi"
 	icon_state = "wakizashi1"
 	icon = 'modular/stonekeep/kaizoku/icons/weapons/32.dmi'
 	possible_item_intents = list(/datum/intent/sword/cut/sorii, /datum/intent/sword/thrust/sorii)
 
-/obj/item/rogueweapon/sword/short/wakizashi/Initialize()
+/obj/item/weapon/sword/short/wakizashi/Initialize()
 	. = ..()
 	var/design = rand(1, 3) //This system will be standardized to other weapons.
 	switch(design)
@@ -1368,20 +1368,20 @@
 	clickcd = 10
 	damfactor = 0.85
 
-/obj/item/rogueweapon/sword/sabre/piandao
+/obj/item/weapon/sword/sabre/piandao
 	name = "piandao"
 	desc = "An curved abyssariad sword with a broad, single-edged blade that ends in a heavier curve for powerful and fast sweeping strikes."
 	icon_state = "piandao"
 	icon = 'modular/stonekeep/kaizoku/icons/weapons/32.dmi'
 
-/obj/item/rogueweapon/sword/sabre/piandao/dec
+/obj/item/weapon/sword/sabre/piandao/dec
 	name = "decorated piandao"
 	desc = "The Abyssariad saber with the hilt covered in gold and letters reflecting the user's family lineage."
 	icon_state = "piandaodec"
 	max_integrity = 550
 	sellprice = 140
 
-/obj/item/rogueweapon/sword/dragonslayer //It's a sword, yes. It will be used as a sword? My dudes we moving that one like warhammers at this point. So it's blunt at this point.
+/obj/item/weapon/sword/dragonslayer //It's a sword, yes. It will be used as a sword? My dudes we moving that one like warhammers at this point. So it's blunt at this point.
 	name = "dragonslayer eclipse sword"
 	desc = "Dragonslayers uses swords too big to be called a sword. Massive, thick, heavy and far too rough. Indeed, they use a heap of raw iron. These are not crafted for fnesse, but for raw carnage in steel to obliterate Dragon's almost impenetrable skin."
 	gripped_intents = list(/datum/intent/dragonslayer/smash, /datum/intent/polearm/chop) //This is practically a mace... that can chop off heads since it's sharp.
@@ -1429,9 +1429,9 @@
 	desc = "An arrow with it's tip drenched in a powerful sedative."
 	icon = 'modular/stonekeep/kaizoku/icons/weapons/ammo.dmi'
 	icon_state = "arrowfog_proj"
-	ammo_type = /obj/item/ammo_casing/caseless/rogue/arrow
+	ammo_type = /obj/item/ammo_casing/caseless/arrow
 
-/obj/item/ammo_casing/caseless/rogue/arrow/poison/fog
+/obj/item/ammo_casing/caseless/arrow/poison/fog
 	name = "fog arrow"
 	desc = "An arrow with it's tip drenched in a powerful sedative."
 	projectile_type = /obj/projectile/bullet/reusable/arrow/poison/fog
@@ -1465,7 +1465,7 @@
 	. = ..()
 	reagents.add_reagent(/datum/reagent/fogblight, 5)
 
-/obj/item/ammo_casing/caseless/rogue/bolt/poison/fog
+/obj/item/ammo_casing/caseless/bolt/poison/fog
 	name = "fog bolt"
 	desc = "A bolt dipped with a potent sedative."
 	projectile_type = /obj/projectile/bullet/reusable/bolt/poison/fog
@@ -1480,7 +1480,7 @@
 	damage_type = BRUTE
 	icon = 'modular/stonekeep/kaizoku/icons/weapons/ammo.dmi'
 	icon_state = "boltfogn_proj"
-	ammo_type = /obj/item/ammo_casing/caseless/rogue/bolt
+	ammo_type = /obj/item/ammo_casing/caseless/bolt
 
 /obj/projectile/bullet/reusable/bolt/poison/fog/Initialize()
 	. = ..()
@@ -1529,7 +1529,7 @@
 	base_icon = "yumibow"
 
 
-/obj/item/rogueweapon/sickle/kama	// iron sword worse integrity
+/obj/item/weapon/sickle/kama	// iron sword worse integrity
 	possible_item_intents = list(/datum/intent/axe/cut,/datum/intent/axe/chop,MACE_STRIKE,/datum/intent/flailthresh)
 	name = "kama"
 	desc = "Originally created for the harvesting of rice, the kama has also found popularity as a commoner's weapon thanks to its axe-like design. On occasion, one is combined with a length of chain to make a kusari gama."

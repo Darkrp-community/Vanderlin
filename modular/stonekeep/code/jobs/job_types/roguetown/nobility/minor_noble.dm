@@ -1,4 +1,4 @@
-/datum/job/roguetown/minor_noble
+/datum/job/minor_noble
 	title = "Noble"
 	tutorial = "The blood of a noble family runs through your veins. You are the living proof that the minor houses \
 	of Vanderlin still exist in spite of the Monarch. You have many mammons to your name, but with wealth comes \
@@ -14,7 +14,7 @@
 		"Aasimar",
 		"Rakshari"
 	)
-	outfit = /datum/outfit/job/roguetown/noble
+	outfit = /datum/outfit/job/noble
 	faction = "Station"
 	display_order = JDO_MINOR_NOBLE
 	flag = MINOR_NOBLE
@@ -25,7 +25,7 @@
 	min_pq = 0
 	give_bank_account = 60
 
-/datum/outfit/job/roguetown/noble/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/noble/pre_equip(mob/living/carbon/human/H)
 	..()
 	var/prev_real_name = H.real_name
 	var/prev_name = H.name
@@ -43,32 +43,32 @@
 	H.mind?.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/misc/music, rand(1,2), TRUE)
 	H.change_stat("intelligence", 1)
-	shoes = /obj/item/clothing/shoes/roguetown/boots
-	backl = /obj/item/storage/backpack/rogue/satchel
-	neck = /obj/item/storage/belt/rogue/pouch/coins/veryrich
-	belt = /obj/item/storage/belt/rogue/leather
+	shoes = /obj/item/clothing/shoes/boots
+	backl = /obj/item/storage/backpack/satchel
+	neck = /obj/item/storage/belt/pouch/coins/veryrich
+	belt = /obj/item/storage/belt/leather
 	id = /obj/item/clothing/ring/silver
 	if(H.gender == FEMALE)
 		H.change_stat("speed", 1)
 		H.mind?.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/bows, 2, TRUE)
-		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/silkdress/random
-		head = /obj/item/clothing/head/roguetown/hatfur
+		shirt = /obj/item/clothing/shirt/dress/silkdress/random
+		head = /obj/item/clothing/head/hatfur
 		cloak = /obj/item/clothing/cloak/raincloak/furcloak
 		backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow
-		beltr = /obj/item/rogueweapon/knife/dagger/steel/special
+		beltr = /obj/item/weapon/knife/dagger/steel/special
 		beltl = /obj/item/ammo_holder/quiver/arrows
-		backpack_contents = list(/obj/item/reagent_containers/glass/bottle/rogue/wine = 1, /obj/item/reagent_containers/glass/cup/silver = 1)
+		backpack_contents = list(/obj/item/reagent_containers/glass/bottle/wine = 1, /obj/item/reagent_containers/glass/cup/silver = 1)
 	if(H.gender == MALE)
 		H.change_stat("constitution", 1)
 		H.mind?.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/bows, 2, TRUE)
-		pants = /obj/item/clothing/under/roguetown/tights/black
-		shirt = /obj/item/clothing/suit/roguetown/shirt/tunic/random
+		pants = /obj/item/clothing/pants/tights/black
+		shirt = /obj/item/clothing/shirt/tunic/random
 		cloak = /obj/item/clothing/cloak/raincloak/furcloak
-		head = /obj/item/clothing/head/roguetown/fancyhat
+		head = /obj/item/clothing/head/fancyhat
 		backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow
-		beltr = /obj/item/rogueweapon/sword/rapier/dec
+		beltr = /obj/item/weapon/sword/rapier/dec
 		beltl = /obj/item/ammo_holder/quiver/arrows
-		backpack_contents = list(/obj/item/reagent_containers/glass/bottle/rogue/wine = 1, /obj/item/reagent_containers/glass/cup/silver = 1)
+		backpack_contents = list(/obj/item/reagent_containers/glass/bottle/wine = 1, /obj/item/reagent_containers/glass/cup/silver = 1)
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)

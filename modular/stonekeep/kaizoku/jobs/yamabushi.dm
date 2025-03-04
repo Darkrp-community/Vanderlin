@@ -18,59 +18,59 @@
 	"Skylancer",
 	"Ogrun",
 	"Undine")
-	outfit = /datum/outfit/job/roguetown/adventurer/abyssariad/yamabushi
+	outfit = /datum/outfit/job/adventurer/abyssariad/yamabushi
 	maximum_possible_slots = 2 //Less slots. It is split with Sohei.
 	category_tags = list(CTAG_ADVENTURER)
 	pickprob = 100
 	vampcompat = FALSE
 
-/datum/outfit/job/roguetown/adventurer/abyssariad/yamabushi
+/datum/outfit/job/adventurer/abyssariad/yamabushi
 	allowed_patrons = ALL_CLERIC_PATRONS
 
-/datum/outfit/job/roguetown/adventurer/abyssariad/yamabushi/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/abyssariad/yamabushi/pre_equip(mob/living/carbon/human/H)
 	..()
 	switch(H.patron?.name)
 		if("Astrata")
-			wrists = /obj/item/clothing/neck/roguetown/psycross/silver/astrata
+			wrists = /obj/item/clothing/neck/psycross/silver/astrata
 			H.virginity = TRUE
 		if("Dendor")
-			wrists = /obj/item/clothing/neck/roguetown/psycross/silver/dendor
+			wrists = /obj/item/clothing/neck/psycross/silver/dendor
 		if("Necra")
-			wrists = /obj/item/clothing/neck/roguetown/psycross/silver/necra
+			wrists = /obj/item/clothing/neck/psycross/silver/necra
 		if("Eora")
-			wrists = /obj/item/clothing/neck/roguetown/psycross/silver/eora
+			wrists = /obj/item/clothing/neck/psycross/silver/eora
 		if("Ravox")
-			wrists = /obj/item/clothing/neck/roguetown/psycross/silver/ravox
+			wrists = /obj/item/clothing/neck/psycross/silver/ravox
 		if("Noc")
-			wrists = /obj/item/clothing/neck/roguetown/psycross/noc
+			wrists = /obj/item/clothing/neck/psycross/noc
 			H.virginity = TRUE
 		if("Pestra")
-			wrists = /obj/item/clothing/neck/roguetown/psycross/silver/pestra
+			wrists = /obj/item/clothing/neck/psycross/silver/pestra
 		if("Malum")
-			wrists = /obj/item/clothing/neck/roguetown/psycross/silver/malum_steel
+			wrists = /obj/item/clothing/neck/psycross/silver/malum_steel
 		if("Abyssor")
-			wrists = /obj/item/clothing/neck/roguetown/psycross/silver/abyssanctum
+			wrists = /obj/item/clothing/neck/psycross/silver/abyssanctum
 		else // Failsafe
-			wrists = /obj/item/clothing/neck/roguetown/psycross/silver
+			wrists = /obj/item/clothing/neck/psycross/silver
 
-	armor = /obj/item/clothing/suit/roguetown/armor/plate/nanbando
-	shirt = /obj/item/clothing/suit/roguetown/shirt/rags/monkgarb/random
-	shoes = /obj/item/clothing/shoes/roguetown/boots/jikatabi
-	pants = /obj/item/clothing/under/roguetown/tights/hakama/random
-	backl = /obj/item/storage/backpack/rogue/satchel
-	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/random
-	beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
+	armor = /obj/item/clothing/armor/plate/nanbando
+	shirt = /obj/item/clothing/shirt/rags/monkgarb/random
+	shoes = /obj/item/clothing/shoes/boots/jikatabi
+	pants = /obj/item/clothing/pants/tights/hakama/random
+	backl = /obj/item/storage/backpack/satchel
+	belt = /obj/item/storage/belt/kaizoku/leather/daisho/random
+	beltr = /obj/item/storage/belt/pouch/coins/poor
 	if(prob(40))
-		beltr = /obj/item/rogueweapon/mace/ararebo
-		beltl = /obj/item/rogueweapon/thrown/ono
+		beltr = /obj/item/weapon/mace/ararebo
+		beltl = /obj/item/weapon/thrown/ono
 	else if(prob(20))
-		backr = /obj/item/rogueweapon/mace/goden/kanabo // luckyroll, payoff for the Otsuchi.
+		backr = /obj/item/weapon/mace/goden/kanabo // luckyroll, payoff for the Otsuchi.
 	else
-		backr = /obj/item/rogueweapon/mace/goden/otsuchi //Somewhat worse than normal mace
+		backr = /obj/item/weapon/mace/goden/otsuchi //Somewhat worse than normal mace
 	if(prob(50))
-		head = /obj/item/clothing/head/roguetown/tengai/yamabushi
+		head = /obj/item/clothing/head/tengai/yamabushi
 	else
-		head = /obj/item/clothing/head/roguetown/tengai/sandogasa/yamabushi
+		head = /obj/item/clothing/head/tengai/sandogasa/yamabushi
 
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 3, TRUE)

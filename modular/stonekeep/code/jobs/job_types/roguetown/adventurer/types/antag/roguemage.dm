@@ -10,25 +10,25 @@
 		"Tiefling",
 		"Dark Elf"
 	)
-	outfit = /datum/outfit/job/roguetown/bandit/roguemage
+	outfit = /datum/outfit/job/bandit/roguemage
 	category_tags = list(CTAG_BANDIT)
 	cmode_music = 'sound/music/cmode/antag/combat_bandit_mage.ogg'
 
-/datum/outfit/job/roguetown/bandit/roguemage/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/bandit/roguemage/pre_equip(mob/living/carbon/human/H)
 	..()
-	shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
-	pants = /obj/item/clothing/under/roguetown/trou/leather
-	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt
-	armor = /obj/item/clothing/suit/roguetown/shirt/robe/black
-	belt = /obj/item/storage/belt/rogue/leather/rope
-	beltr = /obj/item/reagent_containers/glass/bottle/rogue/manapot
-	backr = /obj/item/storage/backpack/rogue/satchel
+	shoes = /obj/item/clothing/shoes/simpleshoes
+	pants = /obj/item/clothing/pants/trou/leather
+	shirt = /obj/item/clothing/shirt/shortshirt
+	armor = /obj/item/clothing/shirt/robe/black
+	belt = /obj/item/storage/belt/leather/rope
+	beltr = /obj/item/reagent_containers/glass/bottle/manapot
+	backr = /obj/item/storage/backpack/satchel
 	backpack_contents = list(/obj/item/needle/thorn = 1, /obj/item/natural/cloth = 1)
-	mask = /obj/item/clothing/mask/rogue/facemask/steel //idk if this makes it so they cant cast but i want all of the bandits to have the same mask
-	neck = /obj/item/clothing/neck/roguetown/coif
-	head = /obj/item/clothing/head/roguetown/helmet/leather/volfhelm
+	mask = /obj/item/clothing/face/facemask/steel //idk if this makes it so they cant cast but i want all of the bandits to have the same mask
+	neck = /obj/item/clothing/neck/coif
+	head = /obj/item/clothing/head/helmet/leather/volfhelm
 
-	r_hand = /obj/item/rogueweapon/polearm/woodstaff
+	r_hand = /obj/item/weapon/polearm/woodstaff
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE)
@@ -46,8 +46,8 @@
 		H.mind.adjust_skillrank(/datum/skill/craft/alchemy, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/magic/arcane, 3, TRUE)
 		if(H.age == AGE_OLD)
-			head = /obj/item/clothing/head/roguetown/wizhat/gen
-			armor = /obj/item/clothing/suit/roguetown/shirt/robe
+			head = /obj/item/clothing/head/wizhat/gen
+			armor = /obj/item/clothing/shirt/robe
 			H.mind.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
 			H.change_stat("speed", -1)
 			H.change_stat("intelligence", 1)

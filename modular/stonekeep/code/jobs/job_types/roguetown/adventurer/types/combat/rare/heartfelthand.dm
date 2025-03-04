@@ -4,27 +4,27 @@
 	but why have you come to Vanderlin?"
 	allowed_sexes = list(MALE)
 	allowed_races = list("Humen")
-	outfit = /datum/outfit/job/roguetown/adventurer/heartfelthand
+	outfit = /datum/outfit/job/adventurer/heartfelthand
 	maximum_possible_slots = 1
 	min_pq = 0
 	pickprob = 50
 	category_tags = list(CTAG_DISABLED)
 
-/datum/outfit/job/roguetown/adventurer/heartfelthand/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/heartfelthand/pre_equip(mob/living/carbon/human/H)
 	..()
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
-	belt = /obj/item/storage/belt/rogue/leather/black
-	shoes = /obj/item/clothing/shoes/roguetown/nobleboot
-	pants = /obj/item/clothing/under/roguetown/tights/black
-	neck = /obj/item/clothing/neck/roguetown/gorget
-	armor = /obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt
-	beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
-	gloves = /obj/item/clothing/gloves/roguetown/leather/black
-	beltl = /obj/item/rogueweapon/sword/decorated
+	shirt = /obj/item/clothing/shirt/undershirt
+	belt = /obj/item/storage/belt/leather/black
+	shoes = /obj/item/clothing/shoes/nobleboot
+	pants = /obj/item/clothing/pants/tights/black
+	neck = /obj/item/clothing/neck/gorget
+	armor = /obj/item/clothing/armor/medium/surcoat/heartfelt
+	beltr = /obj/item/storage/belt/pouch/coins/rich
+	gloves = /obj/item/clothing/gloves/leather/black
+	beltl = /obj/item/weapon/sword/decorated
 	beltr = /obj/item/scomstone
-	backr = /obj/item/storage/backpack/rogue/satchel/heartfelt
-	mask = /obj/item/clothing/mask/rogue/spectacles/golden
-	neck = /obj/item/clothing/neck/roguetown/chaincoif
+	backr = /obj/item/storage/backpack/satchel/heartfelt
+	mask = /obj/item/clothing/face/spectacles/golden
+	neck = /obj/item/clothing/neck/chaincoif
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 1, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)

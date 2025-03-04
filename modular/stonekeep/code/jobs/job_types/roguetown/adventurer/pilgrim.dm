@@ -1,4 +1,4 @@
-/datum/job/roguetown/pilgrim
+/datum/job/pilgrim
 	title = "Pilgrim"
 	flag = ADVENTURER
 	department_flag = PEASANTS
@@ -21,7 +21,7 @@
 	can_have_apprentices = FALSE
 
 
-/datum/job/roguetown/pilgrim/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
+/datum/job/pilgrim/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
 	if(L)
 		var/mob/living/carbon/human/H = L

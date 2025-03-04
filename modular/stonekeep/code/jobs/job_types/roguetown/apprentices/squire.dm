@@ -1,4 +1,4 @@
-/datum/job/roguetown/squire
+/datum/job/squire
 	title = "Squire"
 	flag = SQUIRE
 	department_flag = APPRENTICES
@@ -17,7 +17,7 @@
 
 	tutorial = "You've always had greater aspirations than the simple life of a peasant. You and your friends practiced the basics, swordfighting with sticks and loosing arrows into hay bale targets. The Captain took notice of your potential, and recruited you as a personal ward. Learn from the garrison and train hard... maybe one dae you will be honored with knighthood."
 
-	outfit = /datum/outfit/job/roguetown/squire
+	outfit = /datum/outfit/job/squire
 	display_order = JDO_SQUIRE
 	give_bank_account = TRUE
 	min_pq = -10
@@ -27,14 +27,14 @@
 	can_have_apprentices = FALSE
 
 
-/datum/outfit/job/roguetown/squire
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/guard
-	pants = /obj/item/clothing/under/roguetown/chainlegs/iron
-	shoes = /obj/item/clothing/shoes/roguetown/boots
-	belt = /obj/item/storage/belt/rogue/leather
+/datum/outfit/job/squire
+	shirt = /obj/item/clothing/shirt/undershirt/guard
+	pants = /obj/item/clothing/pants/chainlegs/iron
+	shoes = /obj/item/clothing/shoes/boots
+	belt = /obj/item/storage/belt/leather
 	beltl = /obj/item/storage/keyring/mguard
 
-/datum/job/roguetown/squire/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
+/datum/job/squire/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	. = ..()
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
@@ -45,18 +45,18 @@
 /datum/advclass/squire/lancer
 	name = "Pikeman Squire"
 	tutorial = "History with riding, and a bit of practice with a spear have landed you in a promising mounted position."
-	outfit = /datum/outfit/job/roguetown/squire/lancer
+	outfit = /datum/outfit/job/squire/lancer
 
 	category_tags = list(CTAG_SQUIRE)
 
-/datum/outfit/job/roguetown/squire/lancer/pre_equip(mob/living/carbon/human/H)
-	r_hand = /obj/item/rogueweapon/polearm/spear
-	armor = /obj/item/clothing/suit/roguetown/armor/chainmail
-	gloves = /obj/item/clothing/gloves/roguetown/leather
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	backr = /obj/item/storage/backpack/rogue/satchel
+/datum/outfit/job/squire/lancer/pre_equip(mob/living/carbon/human/H)
+	r_hand = /obj/item/weapon/polearm/spear
+	armor = /obj/item/clothing/armor/chainmail
+	gloves = /obj/item/clothing/gloves/leather
+	wrists = /obj/item/clothing/wrists/bracers/leather
+	backr = /obj/item/storage/backpack/satchel
 	cloak = /obj/item/clothing/cloak/stabard/guard
-	backpack_contents = list(/obj/item/storage/belt/rogue/pouch/coins/poor = 1, /obj/item/clothing/neck/roguetown/chaincoif = 1, /obj/item/rogueweapon/hammer/iron = 1,)
+	backpack_contents = list(/obj/item/storage/belt/pouch/coins/poor = 1, /obj/item/clothing/neck/chaincoif = 1, /obj/item/weapon/hammer/iron = 1,)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/crossbows, 1, TRUE)
@@ -83,18 +83,18 @@
 /datum/advclass/squire/footman
 	name = "Footman Squire"
 	tutorial = "Years of hitting dummies with a sword and chasing your friends around have finally paid off."
-	outfit = /datum/outfit/job/roguetown/squire/footman
+	outfit = /datum/outfit/job/squire/footman
 
 	category_tags = list(CTAG_SQUIRE)
 
-/datum/outfit/job/roguetown/squire/footman/pre_equip(mob/living/carbon/human/H)
-	armor = /obj/item/clothing/suit/roguetown/armor/chainmail
-	gloves = /obj/item/clothing/gloves/roguetown/leather
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	backr = /obj/item/storage/backpack/rogue/satchel
-	beltr = /obj/item/rogueweapon/sword
+/datum/outfit/job/squire/footman/pre_equip(mob/living/carbon/human/H)
+	armor = /obj/item/clothing/armor/chainmail
+	gloves = /obj/item/clothing/gloves/leather
+	wrists = /obj/item/clothing/wrists/bracers/leather
+	backr = /obj/item/storage/backpack/satchel
+	beltr = /obj/item/weapon/sword
 	cloak = /obj/item/clothing/cloak/tabard/knight/guard
-	backpack_contents = list(/obj/item/storage/belt/rogue/pouch/coins/poor = 1, /obj/item/clothing/neck/roguetown/chaincoif = 1, /obj/item/rogueweapon/hammer/iron = 1,)
+	backpack_contents = list(/obj/item/storage/belt/pouch/coins/poor = 1, /obj/item/clothing/neck/chaincoif = 1, /obj/item/weapon/hammer/iron = 1,)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/crossbows, 2, TRUE)
@@ -120,19 +120,19 @@
 /datum/advclass/squire/skirmisher
 	name = "Bowman Squire"
 	tutorial = "Coming from a background of hunters, your practice with a bow has proven useful for the keep."
-	outfit = /datum/outfit/job/roguetown/squire/skirmisher
+	outfit = /datum/outfit/job/squire/skirmisher
 
 	category_tags = list(CTAG_SQUIRE)
 
-/datum/outfit/job/roguetown/squire/skirmisher/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/squire/skirmisher/pre_equip(mob/living/carbon/human/H)
 	beltr = /obj/item/ammo_holder/quiver/arrows
-	armor = /obj/item/clothing/suit/roguetown/armor/chainmail
+	armor = /obj/item/clothing/armor/chainmail
 	backl = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve
-	gloves = /obj/item/clothing/gloves/roguetown/leather
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	backr = /obj/item/storage/backpack/rogue/satchel
+	gloves = /obj/item/clothing/gloves/leather
+	wrists = /obj/item/clothing/wrists/bracers/leather
+	backr = /obj/item/storage/backpack/satchel
 	cloak = /obj/item/clothing/cloak/stabard/surcoat/guard
-	backpack_contents = list(/obj/item/rogueweapon/knife/dagger/steel = 1, /obj/item/storage/belt/rogue/pouch/coins/poor = 1, /obj/item/clothing/neck/roguetown/chaincoif = 1, /obj/item/rogueweapon/hammer/iron = 1,)
+	backpack_contents = list(/obj/item/weapon/knife/dagger/steel = 1, /obj/item/storage/belt/pouch/coins/poor = 1, /obj/item/clothing/neck/chaincoif = 1, /obj/item/weapon/hammer/iron = 1,)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/bows, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/crossbows, 1, TRUE)

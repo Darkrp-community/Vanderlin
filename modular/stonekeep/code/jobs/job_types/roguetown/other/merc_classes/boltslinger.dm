@@ -11,26 +11,26 @@
 		"Dark Elf",
 		"Aasimar"
 	)
-	outfit = /datum/outfit/job/roguetown/mercenary/boltslinger_neu
+	outfit = /datum/outfit/job/mercenary/boltslinger_neu
 	category_tags = list(CTAG_MERCENARY)
 	maximum_possible_slots = 5
 
 
-/datum/outfit/job/roguetown/mercenary/boltslinger_neu/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/mercenary/boltslinger_neu/pre_equip(mob/living/carbon/human/H)
 	..()
-	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
-	head = /obj/item/clothing/head/roguetown/helmet/kettle/slit
-	gloves = /obj/item/clothing/gloves/roguetown/angle
-	belt = /obj/item/storage/belt/rogue/leather/mercenary
-	armor = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy
-	beltr = /obj/item/rogueweapon/sword/short
+	shoes = /obj/item/clothing/shoes/boots/leather
+	head = /obj/item/clothing/head/helmet/kettle/slit
+	gloves = /obj/item/clothing/gloves/angle
+	belt = /obj/item/storage/belt/leather/mercenary
+	armor = /obj/item/clothing/armor/gambeson/heavy
+	beltr = /obj/item/weapon/sword/short
 	beltl = /obj/item/ammo_holder/quiver/bolts
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
-	backl = /obj/item/rogueweapon/shield/tower
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/random
-	pants = /obj/item/clothing/under/roguetown/tights/random
-	neck = /obj/item/clothing/neck/roguetown/chaincoif
-	backpack_contents = list(/obj/item/storage/belt/rogue/pouch/coins/poor, /obj/item/rogueweapon/knife/hunting)
+	backl = /obj/item/weapon/shield/tower
+	shirt = /obj/item/clothing/shirt/undershirt/random
+	pants = /obj/item/clothing/pants/tights/random
+	neck = /obj/item/clothing/neck/chaincoif
+	backpack_contents = list(/obj/item/storage/belt/pouch/coins/poor, /obj/item/weapon/knife/hunting)
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)

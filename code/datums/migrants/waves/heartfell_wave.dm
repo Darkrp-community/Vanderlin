@@ -9,19 +9,19 @@
 
 /datum/outfit/job/roguetown/heartfelt/lord/pre_equip(mob/living/carbon/human/H)
 	..()
-	shirt = /obj/item/clothing/suit/roguetown/shirt/looseshirt
-	belt = /obj/item/storage/belt/rogue/leather/black
-	neck = /obj/item/clothing/neck/roguetown/gorget
-	head = /obj/item/clothing/head/roguetown/helmet/kaizoku/heartfelt
-	shoes = /obj/item/clothing/shoes/roguetown/ridingboots/gutal
-	pants = /obj/item/clothing/under/roguetown/trou/tobi/dark
+	shirt = /obj/item/clothing/shirt/looseshirt
+	belt = /obj/item/storage/belt/leather/black
+	neck = /obj/item/clothing/neck/gorget
+	head = /obj/item/clothing/head/helmet/kaizoku/heartfelt
+	shoes = /obj/item/clothing/shoes/ridingboots/gutal
+	pants = /obj/item/clothing/pants/trou/tobi/dark
 	cloak = /obj/item/clothing/cloak/newheartfelt
-	armor = /obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt
-	beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
+	armor = /obj/item/clothing/armor/medium/surcoat/heartfelt
+	beltr = /obj/item/storage/belt/pouch/coins/rich
 	beltl = /obj/item/scomstone
-	gloves = /obj/item/clothing/gloves/roguetown/leather/abyssal/black
-	neck = /obj/item/clothing/neck/roguetown/chaincoif/karuta_zukin
-	beltl = /obj/item/rogueweapon/sword/long/tachi
+	gloves = /obj/item/clothing/gloves/leather/abyssal/black
+	neck = /obj/item/clothing/neck/chaincoif/karuta_zukin
+	beltl = /obj/item/weapon/sword/long/tachi
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/crossbows, 3, TRUE)
@@ -115,15 +115,15 @@
 /datum/outfit/job/roguetown/heartfelt/bodyguard/pre_equip(mob/living/carbon/human/H)
 	..()
 
-	pants = /obj/item/clothing/under/roguetown/trou/tobi/random //Fully intended to give them Haidate Tatami, but the armor is strong enough already.
-	shoes = /obj/item/clothing/shoes/roguetown/boots/armor/suneate
-	gloves = /obj/item/clothing/gloves/roguetown/leather/abyssal //kote already protects the hands.
-	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/random
-	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/light/hitatare/zamurai //weaker gambeson. Has way more DRIP. (Doesn't matter for balance, shutup)
-	armor = /obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt/abyssariad //Paying off for 4 swordskill instead of 5.
-	head = /obj/item/clothing/head/roguetown/helmet/visored/zunari //fucking-shit-up knight helmet tier. Sacrificed some to keep that one.
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/kote //Cooler Bracer that protects the hands.
-	neck = /obj/item/clothing/neck/roguetown/chaincoif/karuta_zukin/military
+	pants = /obj/item/clothing/pants/trou/tobi/random //Fully intended to give them Haidate Tatami, but the armor is strong enough already.
+	shoes = /obj/item/clothing/shoes/boots/armor/suneate
+	gloves = /obj/item/clothing/gloves/leather/abyssal //kote already protects the hands.
+	belt = /obj/item/storage/belt/kaizoku/leather/daisho/random
+	shirt = /obj/item/clothing/armor/gambeson/light/hitatare/zamurai //weaker gambeson. Has way more DRIP. (Doesn't matter for balance, shutup)
+	armor = /obj/item/clothing/armor/medium/surcoat/heartfelt/abyssariad //Paying off for 4 swordskill instead of 5.
+	head = /obj/item/clothing/head/helmet/visored/zunari //fucking-shit-up knight helmet tier. Sacrificed some to keep that one.
+	wrists = /obj/item/clothing/wrists/bracers/kote //Cooler Bracer that protects the hands.
+	neck = /obj/item/clothing/neck/chaincoif/karuta_zukin/military
 
 	to_chat(H, span_warning( "<span class='userdanger'>I am a noble storm-hardened warrior in lacquered armor whom lands I own and control. Yet, here I stand in unfamiliar lands no different of my own.</span>"))
 
@@ -157,7 +157,7 @@
 	switch(specialization)
 		if("Odashibushi(Melee)") //Not as sword-specialized as Swordmaster, but have better armor.
 			H.set_blindness(0)
-			backr = /obj/item/rogueweapon/sword/long/greatsword/odachi
+			backr = /obj/item/weapon/sword/long/greatsword/odachi
 			if(H.mind)
 				H.mind.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE) //4 instead of 5. Abyssariads with 5 are champions only.
 				H.mind.adjust_skillrank(/datum/skill/combat/bows, 2, TRUE)
@@ -170,7 +170,7 @@
 			H.set_blindness(0)
 			backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/long/yumi
 			beltl = /obj/item/ammo_holder/quiver/arrows
-			beltr = /obj/item/rogueweapon/sword/uchigatana
+			beltr = /obj/item/weapon/sword/uchigatana
 			if(H.mind)
 				H.mind.adjust_skillrank(/datum/skill/combat/bows, 4, TRUE)
 				H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)

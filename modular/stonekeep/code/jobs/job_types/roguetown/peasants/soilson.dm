@@ -1,4 +1,4 @@
-/datum/job/roguetown/farmer
+/datum/job/farmer
 	title = "Soilson"
 	flag = FARMER
 	department_flag = PEASANTS
@@ -23,13 +23,13 @@
 
 
 	f_title = "Soilbride"
-	outfit = /datum/outfit/job/roguetown/farmer
+	outfit = /datum/outfit/job/farmer
 	display_order = 24
 	give_bank_account = 20
 	min_pq = -50
 	selection_color = "#553e01"
 
-/datum/outfit/job/roguetown/farmer/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/farmer/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
@@ -53,24 +53,24 @@
 		ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_SEEDKNOW, TRAIT_GENERIC)
 
-	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
+	neck = /obj/item/storage/belt/pouch/coins/poor
 	if(H.gender == MALE)
-		head = /obj/item/clothing/head/roguetown/roguehood/random
+		head = /obj/item/clothing/head/roguehood/random
 		if(prob(50))
-			head = /obj/item/clothing/head/roguetown/strawhat
-		pants = /obj/item/clothing/under/roguetown/tights/random
-		armor = /obj/item/clothing/suit/roguetown/armor/gambeson/light/striped
-		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/random
-		shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
-		belt = /obj/item/storage/belt/rogue/leather/rope
+			head = /obj/item/clothing/head/strawhat
+		pants = /obj/item/clothing/pants/tights/random
+		armor = /obj/item/clothing/armor/gambeson/light/striped
+		shirt = /obj/item/clothing/shirt/undershirt/random
+		shoes = /obj/item/clothing/shoes/simpleshoes
+		belt = /obj/item/storage/belt/leather/rope
 		beltr = /obj/item/key/soilson
-		beltl = /obj/item/rogueweapon/knife/villager
+		beltl = /obj/item/weapon/knife/villager
 	else
-		head = /obj/item/clothing/head/roguetown/armingcap
-		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/random
-		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
-		shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
-		belt = /obj/item/storage/belt/rogue/leather/rope
+		head = /obj/item/clothing/head/armingcap
+		armor = /obj/item/clothing/shirt/dress/gen/random
+		shirt = /obj/item/clothing/shirt/undershirt
+		shoes = /obj/item/clothing/shoes/simpleshoes
+		belt = /obj/item/storage/belt/leather/rope
 		beltr = /obj/item/key/soilson
-		beltl = /obj/item/rogueweapon/knife/villager
+		beltl = /obj/item/weapon/knife/villager
 

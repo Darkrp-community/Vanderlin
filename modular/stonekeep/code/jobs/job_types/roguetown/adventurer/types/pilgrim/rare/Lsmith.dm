@@ -9,25 +9,25 @@
 		"Humen",
 		"Dwarf"
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/masterblacksmith
+	outfit = /datum/outfit/job/adventurer/masterblacksmith
 	maximum_possible_slots = 1
 	pickprob = 15
 	category_tags = list(CTAG_PILGRIM)
 
-/datum/outfit/job/roguetown/adventurer/masterblacksmith/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/masterblacksmith/pre_equip(mob/living/carbon/human/H)
 	..()
-	beltr = /obj/item/rogueweapon/hammer/iron
-	backl = /obj/item/storage/backpack/rogue/backpack
-	backr =	/obj/item/rogueweapon/hammer/sledgehammer
-	pants = /obj/item/clothing/under/roguetown/trou
-	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
-	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt
-	neck = /obj/item/storage/belt/rogue/pouch/coins/mid
-	belt = /obj/item/storage/belt/rogue/leather
-	beltl = /obj/item/rogueweapon/knife/hunting
+	beltr = /obj/item/weapon/hammer/iron
+	backl = /obj/item/storage/backpack/backpack
+	backr =	/obj/item/weapon/hammer/sledgehammer
+	pants = /obj/item/clothing/pants/trou
+	shoes = /obj/item/clothing/shoes/boots/leather
+	shirt = /obj/item/clothing/shirt/shortshirt
+	neck = /obj/item/storage/belt/pouch/coins/mid
+	belt = /obj/item/storage/belt/leather
+	beltl = /obj/item/weapon/knife/hunting
 	cloak = /obj/item/clothing/cloak/apron/brown
-	gloves = /obj/item/clothing/gloves/roguetown/leather
-	backpack_contents = list(/obj/item/flint = 1, /obj/item/rogueweapon/tongs=1, /obj/item/rogueore/coal=1, /obj/item/rogueore/iron=1)
+	gloves = /obj/item/clothing/gloves/leather
+	backpack_contents = list(/obj/item/flint = 1, /obj/item/weapon/tongs=1, /obj/item/rogueore/coal=1, /obj/item/rogueore/iron=1)
 
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 2, TRUE)
@@ -65,9 +65,9 @@
 			H.change_stat("speed", -1)
 
 	if(H.gender == MALE)
-		shoes = /obj/item/clothing/shoes/roguetown/boots/leather
-		shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt
+		shoes = /obj/item/clothing/shoes/boots/leather
+		shirt = /obj/item/clothing/shirt/shortshirt
 	else
-		shoes = /obj/item/clothing/shoes/roguetown/shortboots
-		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/random
-		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
+		shoes = /obj/item/clothing/shoes/shortboots
+		armor = /obj/item/clothing/shirt/dress/gen/random
+		shirt = /obj/item/clothing/shirt/undershirt

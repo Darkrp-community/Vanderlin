@@ -1,4 +1,4 @@
-/datum/job/roguetown/forestguard
+/datum/job/forestguard
 	title = "Forest Guard"
 	flag = FORGUARD
 	department_flag = GARRISON
@@ -25,21 +25,21 @@
 	min_pq = 5
 	cmode_music = 'sound/music/cmode/garrison/CombatForestGarrison.ogg'
 
-	outfit = /datum/outfit/job/roguetown/forestguard
+	outfit = /datum/outfit/job/forestguard
 	advclass_cat_rolls = list(CTAG_FORGARRISON = 20)
 
-/datum/outfit/job/roguetown/forestguard/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/forestguard/pre_equip(mob/living/carbon/human/H)
 	..()
 	cloak = /obj/item/clothing/cloak/raincloak/green
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/black
-	pants = /obj/item/clothing/under/roguetown/trou/leather
-	shoes = /obj/item/clothing/shoes/roguetown/boots/furlinedboots
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	gloves = /obj/item/clothing/gloves/roguetown/leather
-	belt = /obj/item/storage/belt/rogue/leather
-	backl = /obj/item/storage/backpack/rogue/satchel
+	shirt = /obj/item/clothing/shirt/undershirt/black
+	pants = /obj/item/clothing/pants/trou/leather
+	shoes = /obj/item/clothing/shoes/boots/furlinedboots
+	wrists = /obj/item/clothing/wrists/bracers/leather
+	gloves = /obj/item/clothing/gloves/leather
+	belt = /obj/item/storage/belt/leather
+	backl = /obj/item/storage/backpack/satchel
 
-/datum/job/roguetown/forestguard/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
+/datum/job/forestguard/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
 	if(L)
 		var/mob/living/carbon/human/H = L
@@ -51,17 +51,17 @@
 /datum/advclass/forestguard/infantry
 	name = "Forest Infantry"
 	tutorial = "In the goblin wars you were deployed to the front lines, you caved in thier skulls and chopped thier legs off."
-	outfit = /datum/outfit/job/roguetown/forestguard/infantry
+	outfit = /datum/outfit/job/forestguard/infantry
 	category_tags = list(CTAG_FORGARRISON)
 
-/datum/outfit/job/roguetown/forestguard/infantry/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/forestguard/infantry/pre_equip(mob/living/carbon/human/H)
 	..()
-	armor = /obj/item/clothing/suit/roguetown/armor/chainmail/iron
-	head = /obj/item/clothing/head/roguetown/helmet/leather/advanced
-	neck = /obj/item/clothing/neck/roguetown/gorget
-	beltl = /obj/item/rogueweapon/mace/steel/morningstar
-	beltr = /obj/item/rogueweapon/axe/iron
-	backpack_contents = list(/obj/item/rogueweapon/knife/hunting = 1, /obj/item/rope/chain = 1, /obj/item/key/forrestgarrison = 1, /obj/item/storage/belt/rogue/pouch/coins/poor)
+	armor = /obj/item/clothing/armor/chainmail/iron
+	head = /obj/item/clothing/head/helmet/leather/advanced
+	neck = /obj/item/clothing/neck/gorget
+	beltl = /obj/item/weapon/mace/steel/morningstar
+	beltr = /obj/item/weapon/axe/iron
+	backpack_contents = list(/obj/item/weapon/knife/hunting = 1, /obj/item/rope/chain = 1, /obj/item/key/forrestgarrison = 1, /obj/item/storage/belt/pouch/coins/poor)
 	H.verbs |= /mob/proc/haltyell
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
@@ -91,18 +91,18 @@
 /datum/advclass/forestguard/ranger
 	name = "Forest Ranger"
 	tutorial = "In the goblin wars you were always one of the fastest aswell as one of the weakest in the platoon. Your trusty bow has served you well."
-	outfit = /datum/outfit/job/roguetown/forestguard/ranger
+	outfit = /datum/outfit/job/forestguard/ranger
 	category_tags = list(CTAG_FORGARRISON)
 
-/datum/outfit/job/roguetown/forestguard/ranger/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/forestguard/ranger/pre_equip(mob/living/carbon/human/H)
 	..()
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/advanced
-	head = /obj/item/clothing/head/roguetown/roguehood/green
-	neck = /obj/item/clothing/neck/roguetown/chaincoif
-	beltl = /obj/item/rogueweapon/knife/cleaver/combat
+	armor = /obj/item/clothing/armor/leather/advanced
+	head = /obj/item/clothing/head/roguehood/green
+	neck = /obj/item/clothing/neck/chaincoif
+	beltl = /obj/item/weapon/knife/cleaver/combat
 	beltr = /obj/item/ammo_holder/quiver/arrows
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/long
-	backpack_contents = list(/obj/item/rogueweapon/knife/hunting = 1, /obj/item/rope/chain = 1, /obj/item/key/forrestgarrison = 1, /obj/item/storage/belt/rogue/pouch/coins/poor)
+	backpack_contents = list(/obj/item/weapon/knife/hunting = 1, /obj/item/rope/chain = 1, /obj/item/key/forrestgarrison = 1, /obj/item/storage/belt/pouch/coins/poor)
 	H.verbs |= /mob/proc/haltyell
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
@@ -130,17 +130,17 @@
 /datum/advclass/forestguard/brawler
 	name = "Forest Brawler"
 	tutorial = "In the goblin wars you took an oath to never wield a weapon, you just enjoy getting your hands dirty too much..."
-	outfit = /datum/outfit/job/roguetown/forestguard/brawler
+	outfit = /datum/outfit/job/forestguard/brawler
 	category_tags = list(CTAG_FORGARRISON)
 
-/datum/outfit/job/roguetown/forestguard/brawler/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/forestguard/brawler/pre_equip(mob/living/carbon/human/H)
 	..()
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/advanced
-	head = /obj/item/clothing/head/roguetown/roguehood/green
-	neck = /obj/item/clothing/neck/roguetown/chaincoif
-	beltl = /obj/item/rogueweapon/mace/steel/morningstar
-	beltr = /obj/item/rogueweapon/axe/iron
-	backpack_contents = list(/obj/item/rogueweapon/knife/hunting = 1, /obj/item/rope/chain = 1, /obj/item/key/forrestgarrison = 1, /obj/item/storage/belt/rogue/pouch/coins/poor)
+	armor = /obj/item/clothing/armor/leather/advanced
+	head = /obj/item/clothing/head/roguehood/green
+	neck = /obj/item/clothing/neck/chaincoif
+	beltl = /obj/item/weapon/mace/steel/morningstar
+	beltr = /obj/item/weapon/axe/iron
+	backpack_contents = list(/obj/item/weapon/knife/hunting = 1, /obj/item/rope/chain = 1, /obj/item/key/forrestgarrison = 1, /obj/item/storage/belt/pouch/coins/poor)
 	H.verbs |= /mob/proc/haltyell
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)

@@ -46,8 +46,8 @@ Future plan:
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | RACE_SWAP | SLIME_EXTRACT
 	limbs_icon_m = 'modular/stonekeep/kaizoku/icons/abyssariad_bodies/male/mt_kit.dmi'
 	limbs_icon_f = 'modular/stonekeep/kaizoku/icons/abyssariad_bodies/female/ft_kit.dmi'
-	dam_icon = 'icons/roguetown/mob/bodies/dam/dam_male.dmi'
-	dam_icon_f = 'icons/roguetown/mob/bodies/dam/dam_female.dmi'
+	dam_icon = 'icons/mob/bodies/dam/dam_male.dmi'
+	dam_icon_f = 'icons/mob/bodies/dam/dam_female.dmi'
 	hairyness = ""
 	mutant_bodyparts = list("ears","tail_human")
 	use_f = FALSE

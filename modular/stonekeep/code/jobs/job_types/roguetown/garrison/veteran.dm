@@ -1,4 +1,4 @@
-/datum/job/roguetown/veteran
+/datum/job/veteran
 	title = "Guildmaster"
 	flag = GUARDSMAN
 	department_flag = GARRISON
@@ -23,7 +23,7 @@
 	can_have_apprentices = FALSE
 
 
-/datum/job/roguetown/veteran/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
+/datum/job/veteran/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	. = ..()
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
@@ -43,25 +43,25 @@
 /datum/advclass/veteran/battlemaster
 	name = "Veteran Battlemaster"
 	tutorial = "You have served under a hundred masters, some good, some bad. You were a general once. A marshal, a captain. To some a hero, others a monster. Something of the sorts. You made strategies, tactics, new innovations of war. A thousand new ways for one man to kill another. It still keeps you up at night."
-	outfit = /datum/outfit/job/roguetown/vet/battlemaster
+	outfit = /datum/outfit/job/vet/battlemaster
 
 	category_tags = list(CTAG_VETERAN)
 
 // Normal veteran start, from the olden days.
 
-/datum/outfit/job/roguetown/vet/battlemaster/pre_equip(mob/living/carbon/human/H)
-	neck = /obj/item/clothing/neck/roguetown/bevor
-	armor = /obj/item/clothing/suit/roguetown/armor/plate
-	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail
-	pants = /obj/item/clothing/under/roguetown/chainlegs
-	shoes = /obj/item/clothing/shoes/roguetown/boots/armor
-	beltl = /obj/item/rogueweapon/sword/sabre
+/datum/outfit/job/vet/battlemaster/pre_equip(mob/living/carbon/human/H)
+	neck = /obj/item/clothing/neck/bevor
+	armor = /obj/item/clothing/armor/plate
+	shirt = /obj/item/clothing/armor/chainmail
+	pants = /obj/item/clothing/pants/chainlegs
+	shoes = /obj/item/clothing/shoes/boots/armor
+	beltl = /obj/item/weapon/sword/sabre
 	beltr = /obj/item/storage/keyring/veteran
-	backr = /obj/item/storage/backpack/rogue/satchel/black
+	backr = /obj/item/storage/backpack/satchel/black
 	cloak = /obj/item/clothing/cloak/half/vet
-	belt = /obj/item/storage/belt/rogue/leather/black
+	belt = /obj/item/storage/belt/leather/black
 	H.cmode_music = 'sound/music/cmode/adventurer/CombatWarrior.ogg'
-	backpack_contents = list(/obj/item/rogueweapon/knife/dagger/steel/special = 1)
+	backpack_contents = list(/obj/item/weapon/knife/dagger/steel/special = 1)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 5, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 5, TRUE)
@@ -98,30 +98,30 @@
 /datum/advclass/veteran/footman
 	name = "Retired Footman"
 	tutorial = "You served on the fields of battle as no heroic knight steadfast in shining armor, but a mere mortal clad in whatever cheap armor coin could buy. You fought in formation as a member of a unit, and through discipline, have won numerous battles. Maybe one day you even served as the captain of your unit. You specialize in polearms and bows."
-	outfit = /datum/outfit/job/roguetown/vet/footman
+	outfit = /datum/outfit/job/vet/footman
 
 	category_tags = list(CTAG_VETERAN)
 
 // No hero, just a normal guy who happened to survive war.
 
-/datum/outfit/job/roguetown/vet/footman/pre_equip(mob/living/carbon/human/H)
-	neck = /obj/item/clothing/neck/roguetown/gorget
-	armor = /obj/item/clothing/suit/roguetown/armor/plate // Meant to be better than man-at-arms, but worse than knight. No heavy armor!! This is a cuirass, not half-plate.
-	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy
-	head = /obj/item/clothing/head/roguetown/helmet/sallet
-	pants = /obj/item/clothing/under/roguetown/chainlegs
-	gloves = /obj/item/clothing/gloves/roguetown/plate
-	wrists = /obj/item/clothing/wrists/roguetown/bracers
-	shoes = /obj/item/clothing/shoes/roguetown/boots/armor
-	beltl = /obj/item/rogueweapon/sword
+/datum/outfit/job/vet/footman/pre_equip(mob/living/carbon/human/H)
+	neck = /obj/item/clothing/neck/gorget
+	armor = /obj/item/clothing/armor/plate // Meant to be better than man-at-arms, but worse than knight. No heavy armor!! This is a cuirass, not half-plate.
+	shirt = /obj/item/clothing/armor/gambeson/heavy
+	head = /obj/item/clothing/head/helmet/sallet
+	pants = /obj/item/clothing/pants/chainlegs
+	gloves = /obj/item/clothing/gloves/plate
+	wrists = /obj/item/clothing/wrists/bracers
+	shoes = /obj/item/clothing/shoes/boots/armor
+	beltl = /obj/item/weapon/sword
 	beltr = /obj/item/storage/keyring/veteran
-	backr = /obj/item/storage/backpack/rogue/satchel/black
-	backl = /obj/item/rogueweapon/shield/tower/metal
-	r_hand = /obj/item/rogueweapon/polearm/spear/billhook
-	belt = /obj/item/storage/belt/rogue/leather/black
+	backr = /obj/item/storage/backpack/satchel/black
+	backl = /obj/item/weapon/shield/tower/metal
+	r_hand = /obj/item/weapon/polearm/spear/billhook
+	belt = /obj/item/storage/belt/leather/black
 	cloak = /obj/item/clothing/cloak/half/vet
 	H.cmode_music = 'sound/music/cmode/garrison/CombatGarrison.ogg'
-	backpack_contents = list(/obj/item/rogueweapon/knife/dagger/steel/special = 1, /obj/item/rope/chain = 1)
+	backpack_contents = list(/obj/item/weapon/knife/dagger/steel/special = 1, /obj/item/rope/chain = 1)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 4, TRUE)
@@ -156,27 +156,27 @@
 /datum/advclass/veteran/calvaryman
 	name = "Tarnished Knight"
 	tutorial = "You were once a member of a knightly calvary regiment, a prestigious title. You were ontop of the world, the townspeople rejoiced when you rode through their streets. Now, all you can hear is the screams of your brothers-in-arms as they fell. You specialize in mounted warfare."
-	outfit = /datum/outfit/job/roguetown/vet/calvaryman
+	outfit = /datum/outfit/job/vet/calvaryman
 
 	category_tags = list(CTAG_VETERAN)
 
 // You get a SAIGA. Saigas are pretty good, you lose out on your legendary weapon skills and you suck more on foot though.
 
-/datum/outfit/job/roguetown/vet/calvaryman/pre_equip(mob/living/carbon/human/H)
-	neck = /obj/item/clothing/neck/roguetown/chaincoif
-	armor = /obj/item/clothing/suit/roguetown/armor/plate/	////Former knights should have knightly armour.
-	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail
-	head = /obj/item/clothing/head/roguetown/helmet/heavy/decorated/knight
-	pants = /obj/item/clothing/under/roguetown/chainlegs
-	gloves = /obj/item/clothing/gloves/roguetown/plate
-	wrists = /obj/item/clothing/wrists/roguetown/bracers
-	shoes = /obj/item/clothing/shoes/roguetown/boots/armor
+/datum/outfit/job/vet/calvaryman/pre_equip(mob/living/carbon/human/H)
+	neck = /obj/item/clothing/neck/chaincoif
+	armor = /obj/item/clothing/armor/plate/	////Former knights should have knightly armour.
+	shirt = /obj/item/clothing/armor/chainmail
+	head = /obj/item/clothing/head/helmet/heavy/decorated/knight
+	pants = /obj/item/clothing/pants/chainlegs
+	gloves = /obj/item/clothing/gloves/plate
+	wrists = /obj/item/clothing/wrists/bracers
+	shoes = /obj/item/clothing/shoes/boots/armor
 	beltr = /obj/item/storage/keyring/veteran
-	backr = /obj/item/storage/backpack/rogue/satchel/black
-	belt = /obj/item/storage/belt/rogue/leather/black
+	backr = /obj/item/storage/backpack/satchel/black
+	belt = /obj/item/storage/belt/leather/black
 	cloak = /obj/item/clothing/cloak/half/vet
 	H.cmode_music = 'sound/music/cmode/nobility/CombatDungeoneer.ogg'
-	backpack_contents = list(/obj/item/rogueweapon/knife/dagger/steel/special = 1)
+	backpack_contents = list(/obj/item/weapon/knife/dagger/steel/special = 1)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 3, TRUE)
@@ -219,44 +219,44 @@
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Sword + Recurve Bow")
-			r_hand = /obj/item/rogueweapon/sword/long
+			r_hand = /obj/item/weapon/sword/long
 			beltl = /obj/item/ammo_holder/quiver/arrows
 			backl = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve
 
 		if("Axe + Crossbow")
-			r_hand = /obj/item/rogueweapon/axe/steel
+			r_hand = /obj/item/weapon/axe/steel
 			backl = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
 			beltl = /obj/item/ammo_holder/quiver/bolts
 
 		if ("Spear + Shield")
-			r_hand = /obj/item/rogueweapon/polearm/spear
-			backl = /obj/item/rogueweapon/shield/tower/metal
+			r_hand = /obj/item/weapon/polearm/spear
+			backl = /obj/item/weapon/shield/tower/metal
 
 /datum/advclass/veteran/merc
 	name = "Retired Mercenary"
 	tutorial = "You were a sell-sword, a warrior of coin. Your pockets were never light, you always had a warm place to stay and food in your belly, but you knew that every battle could be your last. You're the last of your unit, and you can't help but regret it. You specialize in swords and polearms, or axes and polearms."
-	outfit = /datum/outfit/job/roguetown/vet/merc
+	outfit = /datum/outfit/job/vet/merc
 
 	category_tags = list(CTAG_VETERAN)
 
 // Normal veteran start, from the olden days
 
-/datum/outfit/job/roguetown/vet/merc/pre_equip(mob/living/carbon/human/H)
-	neck = /obj/item/clothing/neck/roguetown/gorget
-	wrists = /obj/item/clothing/wrists/roguetown/bracers
-	shirt = /obj/item/clothing/suit/roguetown/shirt/grenzelhoft // You do NOT get the BLACKSTEEL CUIRASS because yours BROKE & I hate you. Go on a personal quest to replace it or something.
-	head = /obj/item/clothing/head/roguetown/helmet/skullcap/grenzelhoft
-	armor = /obj/item/clothing/suit/roguetown/armor/cuirass/iron
-	pants = /obj/item/clothing/under/roguetown/grenzelpants
-	shoes = /obj/item/clothing/shoes/roguetown/grenzelhoft
-	gloves = /obj/item/clothing/gloves/roguetown/angle/grenzel
-	beltl = /obj/item/rogueweapon/sword/short
+/datum/outfit/job/vet/merc/pre_equip(mob/living/carbon/human/H)
+	neck = /obj/item/clothing/neck/gorget
+	wrists = /obj/item/clothing/wrists/bracers
+	shirt = /obj/item/clothing/shirt/grenzelhoft // You do NOT get the BLACKSTEEL CUIRASS because yours BROKE & I hate you. Go on a personal quest to replace it or something.
+	head = /obj/item/clothing/head/helmet/skullcap/grenzelhoft
+	armor = /obj/item/clothing/armor/cuirass/iron
+	pants = /obj/item/clothing/pants/grenzelpants
+	shoes = /obj/item/clothing/shoes/grenzelhoft
+	gloves = /obj/item/clothing/gloves/angle/grenzel
+	beltl = /obj/item/weapon/sword/short
 	beltr = /obj/item/storage/keyring/veteran
-	backr = /obj/item/storage/backpack/rogue/satchel/black
-	belt = /obj/item/storage/belt/rogue/leather/black
+	backr = /obj/item/storage/backpack/satchel/black
+	belt = /obj/item/storage/belt/leather/black
 	cloak = /obj/item/clothing/cloak/half/vet
 	H.cmode_music = 'sound/music/cmode/adventurer/CombatOutlander.ogg'
-	backpack_contents = list(/obj/item/rogueweapon/knife/dagger/steel/special = 1)
+	backpack_contents = list(/obj/item/weapon/knife/dagger/steel/special = 1)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 4, TRUE)
@@ -294,41 +294,41 @@
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Zweihander")
-			r_hand = /obj/item/rogueweapon/sword/long/greatsword/zwei
+			r_hand = /obj/item/weapon/sword/long/greatsword/zwei
 			H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/polearms, 1, TRUE)
 			H.change_stat("strength", 1) // needs minimum strength to actually use the fucking sword
 		if("Halberd")
-			r_hand = /obj/item/rogueweapon/polearm/halberd
+			r_hand = /obj/item/weapon/polearm/halberd
 			H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 1, TRUE) // SO, fun fact. The description of the grenzel halbardier says they specialize in axes, but they get no axe skill. Maybe this guy is where that rumor came from.
 			H.mind.adjust_skillrank(/datum/skill/combat/polearms, 1, TRUE)
 
 /datum/advclass/veteran/scout
 	name = "Former Scout"
 	tutorial = "You and your unit maneuvered ahead of the main force, ever-watchful for traps and ambushes. You never thought of what would happen should you actually walk into one. You specialize in archery and axes."
-	outfit = /datum/outfit/job/roguetown/vet/scout
+	outfit = /datum/outfit/job/vet/scout
 
 	category_tags = list(CTAG_VETERAN)
 
 // Originally was meant to be a horse archer. I decided that was a bad idea.
 // Former Bogmaster maybe? I feel like that'd be cooler than just an archer guy.
 
-/datum/outfit/job/roguetown/vet/scout/pre_equip(mob/living/carbon/human/H)
-	neck = /obj/item/clothing/neck/roguetown/gorget
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/hide
-	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy
-	pants = /obj/item/clothing/under/roguetown/trou/leather
-	gloves = /obj/item/clothing/gloves/roguetown/leather
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
+/datum/outfit/job/vet/scout/pre_equip(mob/living/carbon/human/H)
+	neck = /obj/item/clothing/neck/gorget
+	armor = /obj/item/clothing/armor/leather/hide
+	shirt = /obj/item/clothing/armor/gambeson/heavy
+	pants = /obj/item/clothing/pants/trou/leather
+	gloves = /obj/item/clothing/gloves/leather
+	wrists = /obj/item/clothing/wrists/bracers/leather
+	shoes = /obj/item/clothing/shoes/boots/leather
 	beltl = /obj/item/ammo_holder/quiver/arrows
 	beltr = /obj/item/flashlight/flare/torch/lantern
-	backr = /obj/item/storage/backpack/rogue/satchel/black
+	backr = /obj/item/storage/backpack/satchel/black
 	backl = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/long
-	belt = /obj/item/storage/belt/rogue/leather/black
+	belt = /obj/item/storage/belt/leather/black
 	cloak = /obj/item/clothing/cloak/half/vet
 	H.cmode_music = 'sound/music/cmode/adventurer/CombatWarrior.ogg'
-	backpack_contents = list(/obj/item/rogueweapon/knife/dagger/steel/special = 1, /obj/item/storage/keyring/veteran = 1)
+	backpack_contents = list(/obj/item/weapon/knife/dagger/steel/special = 1, /obj/item/storage/keyring/veteran = 1)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 3, TRUE)
@@ -366,27 +366,27 @@
 /datum/advclass/veteran/spy
 	name = "Ex-Spy"
 	tutorial = "You didn't serve on the frontlines, you were an informant, a spy, an assassin. You wove your way through enemy courts, finding information, neutralizing loose ends. You lived old in a career that many die young. It's a miracle you stand here today. You specialize in knives, whips, and stealth."
-	outfit = /datum/outfit/job/roguetown/vet/spy
+	outfit = /datum/outfit/job/vet/spy
 
 	category_tags = list(CTAG_VETERAN)
 
 // The sneaker. Not really typical, but hey, wildcard. Wanna-be Spymaster. I guess that just makes them a normal spy, or, once one.
 
-/datum/outfit/job/roguetown/vet/spy/pre_equip(mob/living/carbon/human/H)
-	neck = /obj/item/clothing/neck/roguetown/gorget
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/puritan
-	pants = /obj/item/clothing/under/roguetown/tights/black
-	gloves = /obj/item/clothing/gloves/roguetown/fingerless
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	shoes = /obj/item/clothing/shoes/roguetown/boots
-	beltl = /obj/item/rogueweapon/whip
+/datum/outfit/job/vet/spy/pre_equip(mob/living/carbon/human/H)
+	neck = /obj/item/clothing/neck/gorget
+	armor = /obj/item/clothing/armor/leather/vest
+	shirt = /obj/item/clothing/shirt/undershirt/puritan
+	pants = /obj/item/clothing/pants/tights/black
+	gloves = /obj/item/clothing/gloves/fingerless
+	wrists = /obj/item/clothing/wrists/bracers/leather
+	shoes = /obj/item/clothing/shoes/boots
+	beltl = /obj/item/weapon/whip
 	beltr = /obj/item/flashlight/flare/torch/lantern
-	backr = /obj/item/storage/backpack/rogue/satchel/black
-	belt = /obj/item/storage/belt/rogue/leather/knifebelt/iron
+	backr = /obj/item/storage/backpack/satchel/black
+	belt = /obj/item/storage/belt/leather/knifebelt/iron
 	cloak = /obj/item/clothing/cloak/raincloak/mortus
 	H.cmode_music = 'sound/music/cmode/adventurer/CombatOutlander3.ogg'
-	backpack_contents = list(/obj/item/rogueweapon/knife/dagger/silver = 1, /obj/item/storage/keyring/veteran = 1, /obj/item/reagent_containers/glass/bottle/rogue/poison = 1)
+	backpack_contents = list(/obj/item/weapon/knife/dagger/silver = 1, /obj/item/storage/keyring/veteran = 1, /obj/item/reagent_containers/glass/bottle/poison = 1)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 3, TRUE)

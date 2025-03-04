@@ -1,4 +1,4 @@
-/datum/job/roguetown/carpenter
+/datum/job/carpenter
 	title = "Carpenter"
 	tutorial = "Woodsmen and women that dedicate their lives to chopping wood \
 	for profit, and expertly building things out of it."
@@ -18,10 +18,10 @@
 	flag = LUMBERJACK
 	department_flag = PEASANTS
 	display_order = JDO_CARPENTER
-	outfit = /datum/outfit/job/roguetown/carpenter
+	outfit = /datum/outfit/job/carpenter
 	min_pq = -50
 
-/datum/outfit/job/roguetown/carpenter/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/carpenter/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
@@ -43,19 +43,19 @@
 			H.mind?.adjust_skillrank(/datum/skill/labor/lumberjacking, 1, TRUE)
 			H.mind?.adjust_skillrank(/datum/skill/craft/carpentry, 1, TRUE)
 
-	head = pick(/obj/item/clothing/head/roguetown/hatfur, /obj/item/clothing/head/roguetown/hatblu, /obj/item/clothing/head/roguetown/brimmed)
-	neck = /obj/item/clothing/neck/roguetown/coif
-	armor = /obj/item/clothing/suit/roguetown/armor/gambeson/light/striped
-	pants = /obj/item/clothing/under/roguetown/trou
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/random
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
-	belt = /obj/item/storage/belt/rogue/leather
-	beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
-	beltl = /obj/item/rogueweapon/hammer/steel
-	backr = /obj/item/rogueweapon/axe/iron
-	backl = /obj/item/storage/backpack/rogue/backpack
-	backpack_contents = list(/obj/item/flint = 1, /obj/item/rogueweapon/knife/villager = 1, /obj/item/key/artificer = 1)
+	head = pick(/obj/item/clothing/head/hatfur, /obj/item/clothing/head/hatblu, /obj/item/clothing/head/brimmed)
+	neck = /obj/item/clothing/neck/coif
+	armor = /obj/item/clothing/armor/gambeson/light/striped
+	pants = /obj/item/clothing/pants/trou
+	shirt = /obj/item/clothing/shirt/undershirt/random
+	wrists = /obj/item/clothing/wrists/bracers/leather
+	shoes = /obj/item/clothing/shoes/boots/leather
+	belt = /obj/item/storage/belt/leather
+	beltr = /obj/item/storage/belt/pouch/coins/poor
+	beltl = /obj/item/weapon/hammer/steel
+	backr = /obj/item/weapon/axe/iron
+	backl = /obj/item/storage/backpack/backpack
+	backpack_contents = list(/obj/item/flint = 1, /obj/item/weapon/knife/villager = 1, /obj/item/key/artificer = 1)
 	H.change_stat("strength", 1)
 	H.change_stat("endurance", 1) // Tree chopping builds endurance
 	H.change_stat("intelligence", 1)

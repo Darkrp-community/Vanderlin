@@ -9,26 +9,26 @@
 		"Dwarf",
 		"Aasimar"
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/monk
+	outfit = /datum/outfit/job/adventurer/monk
 	min_pq = -10
 	category_tags = list(CTAG_ADVENTURER)
 	cmode_music = 'sound/music/cmode/adventurer/CombatMonk.ogg'
 	vampcompat = FALSE
 
-/datum/outfit/job/roguetown/adventurer/monk
+/datum/outfit/job/adventurer/monk
 
-/datum/outfit/job/roguetown/adventurer/monk/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/monk/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = /obj/item/clothing/head/roguetown/roguehood/brown
-	neck = /obj/item/clothing/neck/roguetown/psycross/silver/ravox
-	shoes = /obj/item/clothing/shoes/roguetown/shortboots
+	head = /obj/item/clothing/head/roguehood/brown
+	neck = /obj/item/clothing/neck/psycross/silver/ravox
+	shoes = /obj/item/clothing/shoes/shortboots
 	cloak = /obj/item/clothing/cloak/raincloak/furcloak/brown
-	armor = /obj/item/clothing/suit/roguetown/shirt/robe/plain
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	belt = /obj/item/storage/belt/rogue/leather/rope
-	beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
-	backl = /obj/item/storage/backpack/rogue/backpack
-	backr = /obj/item/rogueweapon/polearm/woodstaff
+	armor = /obj/item/clothing/shirt/robe/plain
+	wrists = /obj/item/clothing/wrists/bracers/leather
+	belt = /obj/item/storage/belt/leather/rope
+	beltr = /obj/item/storage/belt/pouch/coins/poor
+	backl = /obj/item/storage/backpack/backpack
+	backr = /obj/item/weapon/polearm/woodstaff
 
 	if(H.mind)
 		if(H.patron != /datum/patron/divine/ravox)

@@ -10,7 +10,7 @@
 // =============================================================================
 
 //................ Rabbet Visage ............... //
-/obj/item/clothing/head/roguetown/padded/rabbetvisage
+/obj/item/clothing/head/padded/rabbetvisage
 	name = "rabbet visage"
 	desc = "A painted wooden rabbet worn by the faithful of Eora, usually during their rituals."
 	icon_state = "eoramask"
@@ -23,7 +23,7 @@
 	dynamic_hair_suffix = ""
 	body_parts_covered = HEAD | NOSE | EYES
 
-/obj/item/clothing/head/roguetown/roguehood/random/heavy
+/obj/item/clothing/head/roguehood/random/heavy
 	desc = "Thick leather, with a reinforced cap under it."
 	armor = ARMOR_LEATHER_BAD
 	prevent_crits = CUT_AND_MINOR_CRITS
@@ -31,7 +31,7 @@
 	salvage_result = /obj/item/natural/hide/cured
 
 //................ Crimson Marauder ............... //
-/obj/item/clothing/head/roguetown/helmet/ironpot/marauder
+/obj/item/clothing/head/helmet/ironpot/marauder
 	name = "Jinete's Caspon"
 	desc = "A solid bronze helmet from the age of the Apotheosis war. It has been reinforced and decorated for hundreds of yils, the symbol of pride for any Jinete, if not entirely outdated and ceremonial"
 	icon = 'modular/stonekeep/icons/clothing.dmi'
@@ -46,20 +46,20 @@
 	armor =  ARMOR_PLATE
 	body_parts_covered = NECK|HAIR|EARS|HEAD
 
-/obj/item/clothing/head/roguetown/roguehood/hierophant
+/obj/item/clothing/head/roguehood/hierophant
 	name = "hierophant's pashmina"
 	desc = "A thick hood that covers one's entire head, should they desire, or merely acts as a scarf otherwise."
 	icon = 'modular/stonekeep/icons/clothing.dmi'
 	mob_overlay_icon = 'modular/stonekeep/icons/onmob/clothes.dmi'
 	icon_state = "deserthood"
 	item_state = "deserthood"
-/obj/item/clothing/head/roguetown/roguehood/hierophant/Initialize()
+/obj/item/clothing/head/roguehood/hierophant/Initialize()
 	. = ..()
 	color = pick_assoc(GLOB.noble_dyes)
 
 
 //................ Malum Acolyte Helmet ............... //
-/obj/item/clothing/head/roguetown/helmet/leather/minershelm/malumite
+/obj/item/clothing/head/helmet/leather/minershelm/malumite
 	name = "bowl of fire"
 	desc = "The fires of industry burn ever on, to praise saint Malum."
 	icon = 'modular/stonekeep/icons/clothing.dmi'
@@ -70,25 +70,25 @@
 	worn_y_dimension = 64
 	armor = ARMOR_PLATE_BAD
 
-/obj/item/clothing/head/roguetown/roguehood/pontifex
+/obj/item/clothing/head/roguehood/pontifex
 	name = "pontifex's pashmina"
 	desc = "A slim hood with thin, yet dense fabric. Stretchy and malleable, allowing for full flexibility and mobility."
 	icon = 'modular/stonekeep/icons/clothing.dmi'
 	mob_overlay_icon = 'modular/stonekeep/icons/onmob/clothes.dmi'
 	icon_state = "monkhood"
 	item_state = "monkhood"
-/obj/item/clothing/head/roguetown/roguehood/pontifex/Initialize()
+/obj/item/clothing/head/roguehood/pontifex/Initialize()
 	. = ..()
 	color = pick(GLOB.peasant_dyes)
 
-/obj/item/clothing/head/roguetown/archercap
+/obj/item/clothing/head/archercap
 	name = "archer's cap"
 	desc = "For the merry men."
 	icon = 'modular/stonekeep/icons/clothing.dmi'
 	mob_overlay_icon = 'modular/stonekeep/icons/onmob/clothes.dmi'
 	icon_state = "archercap"
 
-/obj/item/clothing/head/roguetown/helmet/heavy/psydonbarbute
+/obj/item/clothing/head/helmet/heavy/psydonbarbute
 	name = "psydonian barbute"
 	desc = "A ceremonial barbute, masterfully forged to represent Psydon's divine authority. The Order of Saint Malum's artisans have chiseled this pronged visage into more statues than you could possibly imagine."
 	icon = 'modular/stonekeep/icons/clothing.dmi'
@@ -97,7 +97,7 @@
 	item_state = "psydonbarbute"
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 
-/obj/item/clothing/head/roguetown/helmet/heavy/chevalier
+/obj/item/clothing/head/helmet/heavy/chevalier
 	name = "chevalier armet"
 	desc = "An ornate helmet, whose visor has been bound shut with blacksteel chains."
 	icon = 'modular/stonekeep/icons/clothing.dmi'
@@ -106,7 +106,7 @@
 	item_state = "psydonarmet"
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 
-/obj/item/clothing/head/roguetown/helmet/heavy/chevalier/attackby(obj/item/W, mob/living/user, params)
+/obj/item/clothing/head/helmet/heavy/chevalier/attackby(obj/item/W, mob/living/user, params)
 	..()
 	if(istype(W, /obj/item/natural/cloth) && !detail_tag)
 		var/list/colors = list(
@@ -136,7 +136,7 @@
 			var/mob/living/carbon/H = user
 			H.update_inv_head()
 
-/obj/item/clothing/head/roguetown/helmet/heavy/chevalier/update_icon()
+/obj/item/clothing/head/helmet/heavy/chevalier/update_icon()
 	cut_overlays()
 	if(get_detail_tag())
 		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
@@ -146,7 +146,7 @@
 		add_overlay(pic)
 
 
-/obj/item/clothing/head/roguetown/helmet/heavy/knight
+/obj/item/clothing/head/helmet/heavy/knight
 	name = "knight's helmet"
 	desc = "A noble knight's helm in the current style popular with nobility. Add a feather to show the colors of your family or allegiance."
 	icon = 'modular/stonekeep/icons/clothing.dmi'
@@ -160,7 +160,7 @@
 	max_integrity = 300
 	smeltresult = /obj/item/ingot/steel
 
-/obj/item/clothing/head/roguetown/helmet/heavy/knight/AdjustClothes(mob/user)
+/obj/item/clothing/head/helmet/heavy/knight/AdjustClothes(mob/user)
 	if(loc == user)
 		playsound(user, "sound/items/visor.ogg", 100, TRUE, -1)
 		if(adjustable == CAN_CADJUST)
@@ -185,7 +185,7 @@
 					H.update_inv_head()
 		user.update_fov_angles()
 
-/obj/item/clothing/head/roguetown/helmet/heavy/knight/attackby(obj/item/W, mob/living/user, params)
+/obj/item/clothing/head/helmet/heavy/knight/attackby(obj/item/W, mob/living/user, params)
 	..()
 	if(istype(W, /obj/item/natural/feather) && !detail_tag)
 		var/list/colors = list(
@@ -215,7 +215,7 @@
 			var/mob/living/carbon/H = user
 			H.update_inv_head()
 
-/obj/item/clothing/head/roguetown/helmet/heavy/knight/update_icon()
+/obj/item/clothing/head/helmet/heavy/knight/update_icon()
 	cut_overlays()
 	if(get_detail_tag())
 		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
@@ -225,7 +225,7 @@
 		add_overlay(pic)
 
 
-/obj/item/clothing/head/roguetown/helmet/bascinet/pigface
+/obj/item/clothing/head/helmet/bascinet/pigface
 	name = "pigface bascinet"
 	desc = "A steel bascinet helmet with a pigface visor protecting the head, ears, nose, mouth, and eyes. Add a feather to show the colors of your family or allegiance."
 	icon = 'modular/stonekeep/icons/clothing.dmi'
@@ -241,7 +241,7 @@
 	smeltresult = /obj/item/ingot/steel
 
 
-/obj/item/clothing/head/roguetown/helmet/bascinet/pigface/AdjustClothes(mob/user)
+/obj/item/clothing/head/helmet/bascinet/pigface/AdjustClothes(mob/user)
 	if(loc == user)
 		playsound(user, "sound/items/visor.ogg", 100, TRUE, -1)
 		if(adjustable == CAN_CADJUST)
@@ -266,7 +266,7 @@
 					H.update_inv_head()
 		user.update_fov_angles()
 
-/obj/item/clothing/head/roguetown/helmet/bascinet/pigface/attackby(obj/item/W, mob/living/user, params)
+/obj/item/clothing/head/helmet/bascinet/pigface/attackby(obj/item/W, mob/living/user, params)
 	..()
 	if(istype(W, /obj/item/natural/feather) && !detail_tag)
 		var/list/colors = list(
@@ -296,7 +296,7 @@
 			var/mob/living/carbon/H = user
 			H.update_inv_head()
 
-/obj/item/clothing/head/roguetown/helmet/bascinet/pigface/update_icon()
+/obj/item/clothing/head/helmet/bascinet/pigface/update_icon()
 	cut_overlays()
 	if(get_detail_tag())
 		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
@@ -306,7 +306,7 @@
 		add_overlay(pic)
 
 
-/obj/item/clothing/head/roguetown/helmet/kettle_helmet
+/obj/item/clothing/head/helmet/kettle_helmet
 	name = "kettle helmet"
 	desc = "A steel helmet which protects the top and sides of the head."
 	icon = 'modular/stonekeep/icons/clothing.dmi'
@@ -315,7 +315,7 @@
 	body_parts_covered = HEAD|HAIR|EARS
 	armor = list("blunt" = 80, "slash" = 90, "piercing" = 100, "stab" = 70, "fire" = 0, "acid" = 0)
 
-/obj/item/clothing/head/roguetown/helmet/kettle_helmet/attackby(obj/item/W, mob/living/user, params)
+/obj/item/clothing/head/helmet/kettle_helmet/attackby(obj/item/W, mob/living/user, params)
 	..()
 	if(istype(W, /obj/item/natural/cloth) && !detail_tag)
 		var/list/colors = list(
@@ -345,7 +345,7 @@
 			var/mob/living/carbon/H = user
 			H.update_inv_head()
 
-/obj/item/clothing/head/roguetown/helmet/kettle_helmet/update_icon()
+/obj/item/clothing/head/helmet/kettle_helmet/update_icon()
 	cut_overlays()
 	if(get_detail_tag())
 		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
@@ -356,7 +356,7 @@
 
 
 //................ Kettle Helmet (Slitted)............... //
-/obj/item/clothing/head/roguetown/helmet/kettle/slit
+/obj/item/clothing/head/helmet/kettle/slit
 	icon_state = "kettle_slit"
 	icon = 'modular/stonekeep/icons/clothing.dmi'
 	mob_overlay_icon = 'modular/stonekeep/icons/onmob/clothes.dmi'
@@ -390,7 +390,7 @@
 // =============================================================================
 
 //................ Silk Jacket ............... //
-/obj/item/clothing/suit/roguetown/armor/leather/jacket/niteman
+/obj/item/clothing/armor/leather/jacket/niteman
 	name = "silk jacket"
 	desc = "Displaying wealth while keeping your guts safe from blades with thick leather pads underneath."
 	icon = 'modular/stonekeep/icons/clothing.dmi'
@@ -403,7 +403,7 @@
 
 
 //................ Crimson Marauder ............... //
-/obj/item/clothing/suit/roguetown/armor/leather/jacket/sea/marauder
+/obj/item/clothing/armor/leather/jacket/sea/marauder
 	slot_flags = ITEM_SLOT_ARMOR
 	name = "jinete's linothorax"
 	desc = "A stained leather cuirass bearing the snarling face of a demon. The tiefling nomads of the Crimsonlands shape this armor to hearken to that which their ancestors wore."
@@ -416,11 +416,11 @@
 	armor = ARMOR_LEATHER_GOOD
 	body_parts_covered = CHEST|GROIN|LEGS|VITALS
 
-/obj/item/clothing/suit/roguetown/armor/leather/basic
+/obj/item/clothing/armor/leather/basic
 	mob_overlay_icon = 'modular/stonekeep/icons/onmob/clothes.dmi'
 	sleeved = 'modular/stonekeep/icons/onmob/sleeves.dmi'
 
-/obj/item/clothing/suit/roguetown/armor/leather/heavy
+/obj/item/clothing/armor/leather/heavy
 	name = "heavy leather armor"
 	desc = "A heavy steerhide jerkin with enough body to stand on its own. It forms a stiff, protective mantle \
 	for its wearer, shielding from blows and weather alike."
@@ -433,14 +433,14 @@
 	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_BLUNT, BCLASS_CHOP)
 	max_integrity = INTEGRITY_STANDARD
 	sellprice = 25
-/obj/item/clothing/suit/roguetown/armor/leather/heavy/New()
+/obj/item/clothing/armor/leather/heavy/New()
 	. = ..()
 	if(icon_state == "roguearmor")
 		if(prob(30))
 			icon_state = "roguearmor_belt"
 			item_state = "roguearmor_belt"
 
-/obj/item/clothing/suit/roguetown/armor/leather/heavy/coat
+/obj/item/clothing/armor/leather/heavy/coat
 	name = "heavy leather coat"
 	desc = "Steerhide jerkin that reaches past the hips to cover the thighs and legs somewhat."
 	icon_state = "roguearmor_coat"
@@ -448,7 +448,7 @@
 	body_parts_covered = COVERAGE_ALL_BUT_ARMS
 	sellprice = 40
 
-/obj/item/clothing/suit/roguetown/shirt/robe/desertgown
+/obj/item/clothing/shirt/robe/desertgown
 	name = "desert gown"
 	desc = "A thin piece of fabric worn under a robe to stop chafing and keep ones dignity if a harsh blow of wind comes through."
 	icon = 'modular/stonekeep/icons/clothing.dmi'
@@ -457,7 +457,7 @@
 	icon_state = "desertgown"
 	item_state = "desertgown"
 
-/obj/item/clothing/suit/roguetown/shirt/robe/monkcloth
+/obj/item/clothing/shirt/robe/monkcloth
 	name = "monks robes"
 	desc = ""
 	icon = 'modular/stonekeep/icons/clothing.dmi'
@@ -468,7 +468,7 @@
 	r_sleeve_status = SLEEVE_NOMOD
 	l_sleeve_status = SLEEVE_NOMOD
 
-/obj/item/clothing/suit/roguetown/shirt/robe/bath
+/obj/item/clothing/shirt/robe/bath
 	name = "bathrobe"
 	desc = "A bathrobe with a luxurious fur interior."
 	icon = 'modular/stonekeep/icons/clothing.dmi'
@@ -479,7 +479,7 @@
 	adjustable = CAN_CADJUST
 	body_parts_covered = ARM_LEFT|ARM_RIGHT
 
-/obj/item/clothing/suit/roguetown/shirt/robe/bath/AdjustClothes(mob/user)
+/obj/item/clothing/shirt/robe/bath/AdjustClothes(mob/user)
 	if(loc == user)
 		if(adjustable == CAN_CADJUST)
 			adjustable = CADJUSTED
@@ -500,7 +500,7 @@
 					H.update_inv_armor()
 					H.update_icon()
 
-/obj/item/clothing/suit/roguetown/shirt/robe/eora
+/obj/item/clothing/shirt/robe/eora
 	name = "eoran robe"
 	desc = "Holy robes, intended for use by followers of Eora. Two layers, some choose to discard the outer one to display their physique."
 	icon = 'modular/stonekeep/icons/clothing.dmi'
@@ -508,7 +508,7 @@
 	sleeved = 'modular/stonekeep/icons/onmob/sleeves.dmi'
 	icon_state = "eorarobes"
 	var/fanatic_wear = FALSE
-/obj/item/clothing/suit/roguetown/shirt/robe/eora/attack_right(mob/user)
+/obj/item/clothing/shirt/robe/eora/attack_right(mob/user)
 	switch(fanatic_wear)
 		if(FALSE)
 			name = "open eoran robe"
@@ -529,9 +529,9 @@
 		var/mob/L = loc
 		L.update_inv_armor()
 
-/obj/item/clothing/suit/roguetown/shirt/robe/eora/alt // obsolete, dont use
+/obj/item/clothing/shirt/robe/eora/alt // obsolete, dont use
 
-/obj/item/clothing/suit/roguetown/shirt/robe/malum
+/obj/item/clothing/shirt/robe/malum
 	name = "craftsman's robes"
 	desc = "The sturdy robes of a maker-monk of Malum."
 	icon = 'modular/stonekeep/icons/clothing.dmi'
@@ -541,7 +541,7 @@
 	sleeved = null
 	armor = list("melee" = 5, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 5, "acid" = 0) // I just wanted to give Malumite robes a tiny bit of fire protection because they're craftspeople.
 
-/obj/item/clothing/suit/roguetown/shirt/dress/valorian
+/obj/item/clothing/shirt/dress/valorian
 	name = "valorian dress"
 	desc = "A simple deep-blue frock worn in many cities of Valoria."
 	icon = 'modular/stonekeep/icons/clothing.dmi'
@@ -552,7 +552,7 @@
 	sellprice = 13
 
 /* needs some edits in update icon for sleeved detail, ROGTODO
-/obj/item/clothing/suit/roguetown/armor/brigandine/coat
+/obj/item/clothing/armor/brigandine/coat
 	name = "coat of the commander"
 	desc = "A thick boiled leather surcoat with plates concealed in it's many great folds. It weighs a ton and takes a great man to wear."
 	icon = 'modular/stonekeep/icons/clothing.dmi'
@@ -565,7 +565,7 @@
 	boobed_detail = TRUE
 	armor = ARMOR_MAILLE_GOOD
 
-/obj/item/clothing/suit/roguetown/armor/brigandine/sheriff/coat/attack_right(mob/user)
+/obj/item/clothing/armor/brigandine/sheriff/coat/attack_right(mob/user)
 	if(picked)
 		return
 	var/the_time = world.time
@@ -586,14 +586,14 @@
 			L.update_inv_armor()
 */
 
-/obj/item/clothing/suit/roguetown/shirt/dress/gen/sexy/Initialize()
+/obj/item/clothing/shirt/dress/gen/sexy/Initialize()
 	color = pick( CLOTHING_ROYAL_MAJENTA, CLOTHING_MAGE_BLUE, CLOTHING_ROYAL_PURPLE	, CLOTHING_SALMON)
 	..()
 
 
 // ==============================	GLOVES	====================================
 // =============================================================================
-/obj/item/clothing/gloves/roguetown/reinforced
+/obj/item/clothing/gloves/reinforced
 	name = "reinforced gloves"
 	desc = "Metal bits protects your hands."
 	icon = 'modular/stonekeep/icons/clothing.dmi'
@@ -609,7 +609,7 @@
 	max_integrity = INTEGRITY_STANDARD
 	salvage_result = /obj/item/natural/hide/cured
 
-/obj/item/clothing/gloves/roguetown/fencer
+/obj/item/clothing/gloves/fencer
 	name = "fencing gloves"
 	desc = "Excellent quality."
 	icon = 'modular/stonekeep/icons/clothing.dmi'
@@ -628,16 +628,16 @@
 // ==============================	ARMS	====================================
 // =============================================================================
 
-/obj/item/clothing/wrists/roguetown/bracers/leather
+/obj/item/clothing/wrists/bracers/leather
 	armor = ARMOR_LEATHER_BAD
-/obj/item/clothing/wrists/roguetown/bracers/leather/hardened
+/obj/item/clothing/wrists/bracers/leather/hardened
 	name = "heavy leather bracers"
 	desc = ""
 	color = "#d5c2aa"
 	armor = ARMOR_LEATHER
 	prevent_crits = ALL_EXCEPT_BLUNT_AND_STAB
 
-/obj/item/clothing/wrists/roguetown/bracers/splint
+/obj/item/clothing/wrists/bracers/splint
 	name = "splint vambraces"
 	desc = ""
 	icon = 'modular/stonekeep/icons/clothing.dmi'
@@ -658,9 +658,9 @@
 // ==============================	LEGS	====================================
 // =============================================================================
 
-/obj/item/clothing/under/roguetown/trou
+/obj/item/clothing/pants/trou
 	salvage_result = /obj/item/natural/cloth
-/obj/item/clothing/under/roguetown/trou/baggy
+/obj/item/clothing/pants/trou/baggy
 	name = "baggy pants"
 	desc = "A pair of baggy, comfortable pants. They end in a tight stocking around the calf, ballooning out around the thigh."
 	icon = 'modular/stonekeep/icons/clothing.dmi'
@@ -669,15 +669,15 @@
 	icon_state = "monkpants"
 	item_state = "monkpants"
 	armor = ARMOR_WEAK
-/obj/item/clothing/under/roguetown/trou/baggy/Initialize()
+/obj/item/clothing/pants/trou/baggy/Initialize()
 	. = ..()
 	color = pick_assoc(GLOB.noble_dyes)
-/obj/item/clothing/under/roguetown/trou/leather
+/obj/item/clothing/pants/trou/leather
 	salvage_result = /obj/item/natural/hide/cured
 	armor =  ARMOR_LEATHER_BAD
 
 
-/obj/item/clothing/under/roguetown/leather/heavy
+/obj/item/clothing/pants/leather/heavy
 	name = "heavy leather trousers"
 	desc = "Thick hide cut and sewn into a pair of very protective trousers. The dense leather can \
 	turn away errant chops."
@@ -695,7 +695,7 @@
 	resistance_flags = FIRE_PROOF
 	armor_class = AC_LIGHT
 
-/obj/item/clothing/under/roguetown/leather/padded
+/obj/item/clothing/pants/leather/padded
 	name = "fine leather trousers"
 	desc = "Protects your legs from minor cuts and slashes well enough."
 	icon = 'modular/stonekeep/icons/clothing.dmi'
@@ -707,7 +707,7 @@
 	max_integrity = INTEGRITY_STRONG
 	armor = 	ARMOR_LEATHER
 
-/obj/item/clothing/under/roguetown/splintlegs
+/obj/item/clothing/pants/splintlegs
 	name = "splint chausses"
 	desc = "Worn by many a wandering warrior."
 	icon = 'modular/stonekeep/icons/clothing.dmi'
@@ -730,36 +730,36 @@
 	prevent_crits = ALL_EXCEPT_STAB
 	max_integrity = INTEGRITY_STRONG
 
-/obj/item/clothing/under/roguetown/chainlegs/reinforced
+/obj/item/clothing/pants/chainlegs/reinforced
 	name = "platemail chausses"
 	desc = "Chain and plate for the best leg protection possible without going plate."
 	icon_state = "heavyleggies"
 	item_state = "heavyleggies"
 
-/obj/item/clothing/under/roguetown/platelegs
+/obj/item/clothing/pants/platelegs
 	icon = 'modular/stonekeep/icons/clothing.dmi'
 	mob_overlay_icon = 'modular/stonekeep/icons/onmob/clothes.dmi'
 	sleeved = 'modular/stonekeep/icons/onmob/sleeves.dmi'
 	icon_state = "plate_legs"
 	item_state = "plate_legs"
 
-/obj/item/clothing/under/roguetown/platelegs/captain
-	icon = 'icons/roguetown/clothing/special/captain.dmi'
-	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/captain.dmi'
-	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
+/obj/item/clothing/pants/platelegs/captain
+	icon = 'icons/clothing/special/captain.dmi'
+	mob_overlay_icon = 'icons/clothing/special/onmob/captain.dmi'
+	sleeved = 'icons/clothing/onmob/helpers/sleeves_pants.dmi'
 
-/obj/item/clothing/under/roguetown/platelegs/rust
-	icon = 'icons/roguetown/clothing/special/rust_armor.dmi'
-	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/rust_armor.dmi'
-	sleeved = 'icons/roguetown/clothing/special/onmob/rust_armor.dmi'
+/obj/item/clothing/pants/platelegs/rust
+	icon = 'icons/clothing/special/rust_armor.dmi'
+	mob_overlay_icon = 'icons/clothing/special/onmob/rust_armor.dmi'
+	sleeved = 'icons/clothing/special/onmob/rust_armor.dmi'
 
-/obj/item/clothing/under/roguetown/platelegs/vampire
-	icon = 'icons/roguetown/clothing/pants.dmi'
-	mob_overlay_icon = 'icons/roguetown/clothing/onmob/pants.dmi'
-	sleeved = 'icons/roguetown/clothing/onmob/helpers/sleeves_pants.dmi'
+/obj/item/clothing/pants/platelegs/vampire
+	icon = 'icons/clothing/pants.dmi'
+	mob_overlay_icon = 'icons/clothing/onmob/pants.dmi'
+	sleeved = 'icons/clothing/onmob/helpers/sleeves_pants.dmi'
 
 //................ Stockings ............... //
-/obj/item/clothing/under/roguetown/tights/stockings
+/obj/item/clothing/pants/tights/stockings
 	name = "stockings"
 	desc = "A legwear made just for the pure aesthetics. Popular in courts and brothels alike."
 	icon = 'modular/stonekeep/icons/clothing.dmi'
@@ -771,42 +771,42 @@
 	body_parts_covered = null
 	flags_inv = null
 
-/obj/item/clothing/under/roguetown/tights/stockings/random/Initialize()
+/obj/item/clothing/pants/tights/stockings/random/Initialize()
 	color = pick(GLOB.peasant_dyes)
 	..()
-/obj/item/clothing/under/roguetown/tights/stockings/white
+/obj/item/clothing/pants/tights/stockings/white
 	color = CLOTHING_WHITE
-/obj/item/clothing/under/roguetown/tights/stockings/black
+/obj/item/clothing/pants/tights/stockings/black
 	color = CLOTHING_SOOT_BLACK
-/obj/item/clothing/under/roguetown/tights/stockings/blue
+/obj/item/clothing/pants/tights/stockings/blue
 	color = CLOTHING_BERRY_BLUE
-/obj/item/clothing/under/roguetown/tights/stockings/red
+/obj/item/clothing/pants/tights/stockings/red
 	color = CLOTHING_WINESTAIN_RED
-/obj/item/clothing/under/roguetown/tights/stockings/green
+/obj/item/clothing/pants/tights/stockings/green
 	color = CLOTHING_SPRING_GREEN
 
 //................ Silk stockings ............... //
-/obj/item/clothing/under/roguetown/tights/stockings/silk
+/obj/item/clothing/pants/tights/stockings/silk
 	name = "silk stockings"
 	desc = "A legwear made just for the pure aesthetics. Made out of thin silk. Popular among nobles."
 	icon_state = "silk"
 
-/obj/item/clothing/under/roguetown/tights/stockings/silk/random/Initialize()
+/obj/item/clothing/pants/tights/stockings/silk/random/Initialize()
 	color = pick_assoc(GLOB.noble_dyes)
 	..()
-/obj/item/clothing/under/roguetown/tights/stockings/silk/white
+/obj/item/clothing/pants/tights/stockings/silk/white
 	color = CLOTHING_CHALK_WHITE
-/obj/item/clothing/under/roguetown/tights/stockings/silk/black
+/obj/item/clothing/pants/tights/stockings/silk/black
 	color = CLOTHING_DARK_INK
-/obj/item/clothing/under/roguetown/tights/stockings/silk/blue
+/obj/item/clothing/pants/tights/stockings/silk/blue
 	color = CLOTHING_SKY_BLUE
-/obj/item/clothing/under/roguetown/tights/stockings/silk/red
+/obj/item/clothing/pants/tights/stockings/silk/red
 	color = CLOTHING_BLOOD_RED
-/obj/item/clothing/under/roguetown/tights/stockings/silk/purple
+/obj/item/clothing/pants/tights/stockings/silk/purple
 	color = CLOTHING_PLUM_PURPLE
 
 //................ Silk Pantaloons ............... //
-/obj/item/clothing/under/roguetown/pantaloons
+/obj/item/clothing/pants/pantaloons
 	name = "silk pantaloons"
 	icon_state = "pantaloons"
 	icon = 'modular/stonekeep/icons/clothing.dmi'
@@ -817,41 +817,41 @@
 	l_sleeve_status = SLEEVE_NOMOD
 	adjustable = FALSE
 
-/obj/item/clothing/under/roguetown/pantaloons/random/Initialize()
+/obj/item/clothing/pants/pantaloons/random/Initialize()
 	color = pick_assoc(GLOB.noble_dyes)
 	..()
 
-/obj/item/clothing/under/roguetown/pantaloons/dark
+/obj/item/clothing/pants/pantaloons/dark
 	color = CLOTHING_DARK_INK
 
 // ==============================	FEET	====================================
 // =============================================================================
 
-/obj/item/clothing/shoes/roguetown/boots/leather
+/obj/item/clothing/shoes/boots/leather
 	armor = ARMOR_PADDED
 	blocksound = SOFTHIT
-/obj/item/clothing/shoes/roguetown/boots/armor
+/obj/item/clothing/shoes/boots/armor
 	armor = ARMOR_PLATE
-/obj/item/clothing/shoes/roguetown/simpleshoes/buckle
+/obj/item/clothing/shoes/simpleshoes/buckle
 	armor = ARMOR_WEAK
-/obj/item/clothing/shoes/roguetown/boots
+/obj/item/clothing/shoes/boots
 	armor = ARMOR_PADDED_BAD
 
-/obj/item/clothing/shoes/roguetown/nobleboot
+/obj/item/clothing/shoes/nobleboot
 	armor = ARMOR_PADDED_BAD
-/obj/item/clothing/shoes/roguetown/shortboots
+/obj/item/clothing/shoes/shortboots
 	armor = ARMOR_WEAK
-/obj/item/clothing/shoes/roguetown/ridingboots
+/obj/item/clothing/shoes/ridingboots
 	armor = ARMOR_PADDED
-/obj/item/clothing/shoes/roguetown/apothboots
+/obj/item/clothing/shoes/apothboots
 	armor = ARMOR_PADDED_BAD
 
-/obj/item/clothing/shoes/roguetown/boots/armor/light
+/obj/item/clothing/shoes/boots/armor/light
 	armor = ARMOR_PLATE_BAD
 
-/obj/item/clothing/shoes/roguetown/grenzelhoft
+/obj/item/clothing/shoes/grenzelhoft
 	armor = ARMOR_PADDED
-/obj/item/clothing/shoes/roguetown/boots/leather/heavy
+/obj/item/clothing/shoes/boots/leather/heavy
 	name = "heavy leather boots"
 	desc = "Well-heeled boots. The leather thick enough to resist wear and tear."
 	icon = 'modular/stonekeep/icons/clothing.dmi'
@@ -863,7 +863,7 @@
 	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_TWIST)
 	armor = ARMOR_LEATHER
 
-/obj/item/clothing/shoes/roguetown/boots/leather/fencing
+/obj/item/clothing/shoes/boots/leather/fencing
 	name = "fencing boots"
 	desc = "Boots of outstanding craft, your fragile feet has never felt so protected and comfortable before."
 	icon = 'modular/stonekeep/icons/clothing.dmi'
@@ -875,7 +875,7 @@
 	max_integrity = 200
 	armor = ARMOR_LEATHER_GOOD
 
-/obj/item/clothing/shoes/roguetown/boots/armor/iron
+/obj/item/clothing/shoes/boots/armor/iron
 	name = "iron plated boots"
 	desc = "Boots with iron for added protection."
 	body_parts_covered = FEET
@@ -892,7 +892,7 @@
 	anvilrepair = /datum/skill/craft/armorsmithing
 	smeltresult = /obj/item/ingot/iron
 
-/obj/item/clothing/shoes/roguetown/boots/leather/inqboots
+/obj/item/clothing/shoes/boots/leather/inqboots
 	name = "inquisitorial boots"
 	desc = "Finely crafted boots, made to stomp out darkness."
 	icon = 'modular/stonekeep/icons/clothing.dmi'
@@ -920,22 +920,22 @@
 
 //Maker's Guild - CLOTHING_WINESTAIN_RED, CLOTHING_SOOT_BLACK
 
-/obj/item/clothing/head/roguetown/headband/makers
+/obj/item/clothing/head/headband/makers
 	color = CLOTHING_SOOT_BLACK
 
 /obj/item/clothing/cloak/apron/makers
 	color = CLOTHING_SOOT_BLACK
 
-/obj/item/clothing/suit/roguetown/shirt/shortshirt/makers
+/obj/item/clothing/shirt/shortshirt/makers
 	color = CLOTHING_WINESTAIN_RED
 
-/obj/item/clothing/under/roguetown/tights/makers
+/obj/item/clothing/pants/tights/makers
 	color = CLOTHING_SOOT_BLACK
 
 //Provisoner's Guild - CLOTHING_SPRING_GREEN, CLOTHING_OLD_LEATHER
 
-/obj/item/clothing/suit/roguetown/shirt/shortshirt/provisoner
+/obj/item/clothing/shirt/shortshirt/provisoner
 	color = CLOTHING_SPRING_GREEN
 
-/obj/item/clothing/under/roguetown/tights/provisoner
+/obj/item/clothing/pants/tights/provisoner
 	color = CLOTHING_SPRING_GREEN

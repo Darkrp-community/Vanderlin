@@ -13,28 +13,28 @@
 		"Dark Elf",
 		"Aasimar"
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/gravedigger
+	outfit = /datum/outfit/job/adventurer/gravedigger
 	min_pq = 0
 	category_tags = list(CTAG_ADVENTURER)
 	cmode_music = 'sound/music/cmode/church/CombatGravekeeper.ogg'
 
-/datum/outfit/job/roguetown/adventurer/gravedigger/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/gravedigger/pre_equip(mob/living/carbon/human/H)
 	..()
-	pants = /obj/item/clothing/under/roguetown/tights/black
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/black
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/black
-	backl = /obj/item/storage/backpack/rogue/satchel
-	belt = /obj/item/storage/belt/rogue/leather/rope
-	backpack_contents = list(/obj/item/rogueweapon/pick = 1, /obj/item/rogueweapon/knife/hunting = 1, /obj/item/lockpickring/mundane)
-	gloves = /obj/item/clothing/gloves/roguetown/fingerless
+	pants = /obj/item/clothing/pants/tights/black
+	armor = /obj/item/clothing/armor/leather/vest/black
+	shirt = /obj/item/clothing/shirt/undershirt/black
+	backl = /obj/item/storage/backpack/satchel
+	belt = /obj/item/storage/belt/leather/rope
+	backpack_contents = list(/obj/item/weapon/pick = 1, /obj/item/weapon/knife/hunting = 1, /obj/item/lockpickring/mundane)
+	gloves = /obj/item/clothing/gloves/fingerless
 	cloak = /obj/item/clothing/cloak/raincloak/mortus
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/basic
-	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
+	armor = /obj/item/clothing/armor/leather/basic
+	shoes = /obj/item/clothing/shoes/boots/leather
 	beltr = /obj/item/flashlight/flare/torch/lantern
-	beltl = /obj/item/rogueweapon/whip // You know why.
-	backr = /obj/item/rogueweapon/shovel
-	head = /obj/item/clothing/head/roguetown/helmet/leather/inquisitor
-	neck = /obj/item/storage/belt/rogue/pouch
+	beltl = /obj/item/weapon/whip // You know why.
+	backr = /obj/item/weapon/shovel
+	head = /obj/item/clothing/head/helmet/leather/inquisitor
+	neck = /obj/item/storage/belt/pouch
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/whipsflails, 3, TRUE)

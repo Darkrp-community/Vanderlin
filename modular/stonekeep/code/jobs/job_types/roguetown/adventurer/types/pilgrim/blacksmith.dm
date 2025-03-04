@@ -13,23 +13,23 @@
 		"Aasimar",
 		"Ogrun"
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/blacksmith
+	outfit = /datum/outfit/job/adventurer/blacksmith
 	category_tags = list(CTAG_PILGRIM)
 	apprentice_name = "Blacksmith Apprentice"
 
-/datum/outfit/job/roguetown/adventurer/blacksmith/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/blacksmith/pre_equip(mob/living/carbon/human/H)
 	..()
-	belt = /obj/item/storage/belt/rogue/leather
+	belt = /obj/item/storage/belt/leather
 
-	beltr = /obj/item/rogueweapon/hammer/iron
-	beltl = /obj/item/rogueweapon/tongs
+	beltr = /obj/item/weapon/hammer/iron
+	beltl = /obj/item/weapon/tongs
 
-	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
-	gloves = /obj/item/clothing/gloves/roguetown/leather
+	neck = /obj/item/storage/belt/pouch/coins/poor
+	gloves = /obj/item/clothing/gloves/leather
 	cloak = /obj/item/clothing/cloak/apron/brown
-	pants = /obj/item/clothing/under/roguetown/trou
+	pants = /obj/item/clothing/pants/trou
 
-	backl = /obj/item/storage/backpack/rogue/satchel
+	backl = /obj/item/storage/backpack/satchel
 	backpack_contents = list(/obj/item/flint = 1, /obj/item/rogueore/coal=1, /obj/item/rogueore/iron=1)
 
 	if(H.mind)
@@ -65,12 +65,12 @@
 		ADD_TRAIT(H, TRAIT_MALUMFIRE, TRAIT_GENERIC)
 
 	if(H.gender == MALE)
-		shoes = /obj/item/clothing/shoes/roguetown/boots/leather
-		shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt
+		shoes = /obj/item/clothing/shoes/boots/leather
+		shirt = /obj/item/clothing/shirt/shortshirt
 	else
-		armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/random
-		shoes = /obj/item/clothing/shoes/roguetown/shortboots
+		armor = /obj/item/clothing/shirt/dress/gen/random
+		shoes = /obj/item/clothing/shoes/shortboots
 
 	if(H.dna.species.id == "dwarf")
-		head = /obj/item/clothing/head/roguetown/helmet/leather/minershelm
+		head = /obj/item/clothing/head/helmet/leather/minershelm
 		H.cmode_music = 'sound/music/cmode/combat_dwarf.ogg'

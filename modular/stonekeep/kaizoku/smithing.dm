@@ -17,14 +17,14 @@
 	recipe_name = "a Nanban-Dou-Sode"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel,/obj/item/ingot/steel)
-	created_item = /obj/item/clothing/suit/roguetown/armor/plate/nanbando
+	created_item = /obj/item/clothing/armor/plate/nanbando
 	craftdiff = 3
 
 /datum/anvil_recipe/armor/nanbandocuirass
 	name = "Barbarian Cuirass"
 	recipe_name = "a Nanban-Dou"
 	req_bar = /obj/item/ingot/steel
-	created_item = /obj/item/clothing/suit/roguetown/armor/cuirass/nanbando
+	created_item = /obj/item/clothing/armor/cuirass/nanbando
 	craftdiff = 2
 
 /datum/anvil_recipe/armor/nanbandofull
@@ -32,14 +32,14 @@
 	recipe_name = "a Nanban-Do-Gusoku"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel,/obj/item/ingot/steel,/obj/item/ingot/steel)
-	created_item = /obj/item/clothing/suit/roguetown/armor/plate/full/nanbando
+	created_item = /obj/item/clothing/armor/plate/full/nanbando
 	craftdiff = 4
 
 /datum/anvil_recipe/armor/steeltatami
 	name = "Steel foldeable armor"
 	recipe_name = "a Lamellae Tatami-Do"
 	req_bar = /obj/item/ingot/steel
-	created_item = /obj/item/clothing/suit/roguetown/armor/chainmail/tatami
+	created_item = /obj/item/clothing/armor/chainmail/tatami
 	craftdiff = 2
 
 // huh. We can make these uniquely then. Since we can't make the iron chainmail for the european counterparts?... why?
@@ -47,7 +47,7 @@
 	name = "Iron foldeable armor"
 	recipe_name = "a Tatami Karuta-Gane"
 	req_bar = /obj/item/ingot/iron
-	created_item = /obj/item/clothing/suit/roguetown/armor/chainmail/iron/tatami
+	created_item = /obj/item/clothing/armor/chainmail/iron/tatami
 	craftdiff = 2
 	createmultiple = TRUE
 	createditem_num = 1
@@ -57,7 +57,7 @@
 	recipe_name = "a Kusari-Katabira"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel)
-	created_item = /obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/kusari
+	created_item = /obj/item/clothing/armor/chainmail/hauberk/kusari
 	craftdiff = 3
 
 /datum/anvil_recipe/armor/imirror
@@ -65,7 +65,7 @@
 	recipe_name = "a Iron Mirror Armor"
 	req_bar = /obj/item/ingot/iron
 	additional_items = list(/obj/item/ingot/iron,/obj/item/ingot/iron)
-	created_item = /obj/item/clothing/suit/roguetown/armor/plate/mirror/iron
+	created_item = /obj/item/clothing/armor/plate/mirror/iron
 	craftdiff = 1
 
 /datum/anvil_recipe/armor/mirror
@@ -73,7 +73,7 @@
 	recipe_name = "a Steel Mirror Armor"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel,/obj/item/ingot/steel)
-	created_item = /obj/item/clothing/suit/roguetown/armor/plate/mirror
+	created_item = /obj/item/clothing/armor/plate/mirror
 	craftdiff = 3
 
 /datum/anvil_recipe/armor/oyoroi
@@ -81,7 +81,7 @@
 	recipe_name = "a Incomplete O-Yoroi"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel, /obj/item/natural/cloth)
-	created_item = /obj/item/clothing/suit/roguetown/armor/brigandine/oyoroi
+	created_item = /obj/item/clothing/armor/brigandine/oyoroi
 	craftdiff = 3
 
 /datum/anvil_recipe/armor/oyoroigusoku //costier version. Only really viable if you got what to waste.
@@ -89,14 +89,14 @@
 	recipe_name = "a O-Yoroi Gusoku"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel, /obj/item/ingot/steel, /obj/item/natural/cloth, /obj/item/natural/cloth)
-	created_item = /obj/item/clothing/suit/roguetown/armor/brigandine/oyoroi/oyoroigusoku
+	created_item = /obj/item/clothing/armor/brigandine/oyoroi/oyoroigusoku
 	craftdiff = 3
 
 /datum/anvil_recipe/armor/sanmaido
 	name = "Three-plate cuirass"
 	recipe_name = "a Sanmai-Do"
 	req_bar = /obj/item/ingot/steel
-	created_item = /obj/item/clothing/suit/roguetown/armor/cuirass/sanmaido
+	created_item = /obj/item/clothing/armor/cuirass/sanmaido
 	craftdiff = 2
 
 /datum/anvil_recipe/armor/kikko
@@ -104,7 +104,7 @@
 	recipe_name = "a Kikko Leather Do"
 	req_bar = /obj/item/ingot/iron
 	additional_items = list(/obj/item/natural/hide, /obj/item/natural/hide)
-	created_item = /obj/item/clothing/suit/roguetown/armor/leather/studded/kikko
+	created_item = /obj/item/clothing/armor/leather/studded/kikko
 	craftdiff = 1
 //cheaper on iron, but has many sticks. Proper for this armor's context.
 /datum/anvil_recipe/armor/rattanarmor
@@ -112,7 +112,7 @@
 	recipe_name = "a Rattan Armor"
 	req_bar = /obj/item/ingot/iron
 	additional_items = list(/obj/item/ingot/iron,/obj/item/grown/log/tree/stick,/obj/item/grown/log/tree/stick,/obj/item/grown/log/tree/stick,/obj/item/grown/log/tree/stick)
-	created_item = /obj/item/clothing/suit/roguetown/armor/chainmail/rattan
+	created_item = /obj/item/clothing/armor/chainmail/rattan
 	craftdiff = 1
 
 /datum/anvil_recipe/armor/kikkoarmor //cheaper brigadine with hide.
@@ -120,7 +120,7 @@
 	recipe_name = "a Kikko Gusoku"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel, /obj/item/natural/hide, /obj/item/natural/hide)
-	created_item = /obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt/abyssariad
+	created_item = /obj/item/clothing/armor/medium/surcoat/heartfelt/abyssariad
 	craftdiff = 3
 
 //'feet'
@@ -128,7 +128,7 @@
 	name = "Chainmail footwear x2"
 	recipe_name = "a pair of Kusari-Tabi"
 	req_bar = /obj/item/ingot/iron
-	created_item = /obj/item/clothing/shoes/roguetown/boots/armor/light/kusaritabi
+	created_item = /obj/item/clothing/shoes/boots/armor/light/kusaritabi
 	createmultiple = TRUE
 	createditem_num = 1
 
@@ -136,7 +136,7 @@
 	name = "Plated shin-guards"
 	recipe_name = "some Suneate Footwear"
 	req_bar = /obj/item/ingot/steel
-	created_item = /obj/item/clothing/shoes/roguetown/boots/armor/suneate
+	created_item = /obj/item/clothing/shoes/boots/armor/suneate
 	craftdiff = 3
 
 //'gloves'
@@ -144,7 +144,7 @@
 	name = "Turtleshell gauntlets x2"
 	recipe_name = "a pair of Steel Kikko Tekko"
 	req_bar = /obj/item/ingot/steel
-	created_item = /obj/item/clothing/gloves/roguetown/chain/kikko
+	created_item = /obj/item/clothing/gloves/chain/kikko
 	createmultiple = TRUE
 	createditem_num = 1
 	craftdiff = 2
@@ -153,7 +153,7 @@
 	name = "Turtleshell gauntlets x2"
 	recipe_name = "a pair of Iron Kikko Tekko"
 	req_bar = /obj/item/ingot/iron
-	created_item = /obj/item/clothing/gloves/roguetown/chain/iron/kikko
+	created_item = /obj/item/clothing/gloves/chain/iron/kikko
 	createmultiple = TRUE
 	createditem_num = 1
 	craftdiff = 0
@@ -162,7 +162,7 @@
 	name = "Lamellae gauntlets"
 	recipe_name = "some Lamellae Tekko"
 	req_bar = /obj/item/ingot/steel
-	created_item = /obj/item/clothing/gloves/roguetown/plate/lamellaetekko
+	created_item = /obj/item/clothing/gloves/plate/lamellaetekko
 	craftdiff = 3
 
 //'hats'
@@ -170,7 +170,7 @@
 	name = "Hachigane x2"
 	recipe_name = "a pair of Hachinage"
 	req_bar = /obj/item/ingot/iron
-	created_item = /obj/item/clothing/head/roguetown/helmet/kaizoku/hachigane
+	created_item = /obj/item/clothing/head/helmet/kaizoku/hachigane
 	createmultiple = TRUE
 	createditem_num = 1
 
@@ -178,25 +178,25 @@
 	name = "Iron Woven Rattan Helmet x2 (3s)"
 	recipe_name = "a pair of Rattan Helmets"
 	req_bar = /obj/item/ingot/iron
-	created_item = /obj/item/clothing/head/roguetown/helmet/kaizoku/rattan
+	created_item = /obj/item/clothing/head/helmet/kaizoku/rattan
 	additional_items = list(/obj/item/grown/log/tree/stick,/obj/item/grown/log/tree/stick,/obj/item/grown/log/tree/stick)
 	createmultiple = TRUE
 	createditem_num = 1
 
-/obj/item/clothing/head/roguetown/helmet/visored/abyssalchampion
+/obj/item/clothing/head/helmet/visored/abyssalchampion
 /datum/anvil_recipe/armor/abyssalchampion
 	name = "Newfangled Myrmidon Helmet (3)"
 	recipe_name = "a Abyssal Champion Helmet"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel)
-	created_item = (/obj/item/clothing/head/roguetown/helmet/visored/abyssalchampion)
+	created_item = (/obj/item/clothing/head/helmet/visored/abyssalchampion)
 	craftdiff = 4
 
 /datum/anvil_recipe/armor/helmetbuc
 	name = "Sohei Heavy Headwear"
 	recipe_name = "a Armored sohei cowl"
 	req_bar = /obj/item/ingot/steel
-	created_item = (/obj/item/clothing/head/roguetown/helmet/heavy/bucket/soheidemon)
+	created_item = (/obj/item/clothing/head/helmet/heavy/bucket/soheidemon)
 	craftdiff = 2
 
 /datum/anvil_recipe/armor/zunari
@@ -204,14 +204,14 @@
 	recipe_name = "a Zunari's Helmet"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel)
-	created_item = (/obj/item/clothing/head/roguetown/helmet/visored/zunari)
+	created_item = (/obj/item/clothing/head/helmet/visored/zunari)
 	craftdiff = 3
 
 /datum/anvil_recipe/armor/zijinguan
 	name = "Plumed Footsoldier helmet x2"
 	recipe_name = "a pair of Zijinguan helmet"
 	req_bar = /obj/item/ingot/steel
-	created_item = /obj/item/clothing/head/roguetown/helmet/zijinguan
+	created_item = /obj/item/clothing/head/helmet/zijinguan
 	createmultiple = TRUE
 	createditem_num = 1
 	craftdiff = 2
@@ -220,7 +220,7 @@
 	name = "Conical Ashigaru helmet x2"
 	recipe_name = "a pair of Jingasas"
 	req_bar = /obj/item/ingot/steel
-	created_item = /obj/item/clothing/head/roguetown/helmet/kaizoku/jingasa
+	created_item = /obj/item/clothing/head/helmet/kaizoku/jingasa
 	createmultiple = TRUE
 	createditem_num = 1
 	craftdiff = 2
@@ -229,7 +229,7 @@
 	name = "Tosei-kabuto"
 	recipe_name = "a Tosei Kabuto"
 	req_bar = /obj/item/ingot/steel
-	created_item = /obj/item/clothing/head/roguetown/helmet/sallet/tosei_kabuto
+	created_item = /obj/item/clothing/head/helmet/sallet/tosei_kabuto
 	craftdiff = 2
 
 /datum/anvil_recipe/armor/toseikabutov
@@ -237,7 +237,7 @@
 	recipe_name = "a Visored Tosei Kabuto"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel)
-	created_item = (/obj/item/clothing/head/roguetown/helmet/visored/sallet/tosei_kabuto)
+	created_item = (/obj/item/clothing/head/helmet/visored/sallet/tosei_kabuto)
 	craftdiff = 3
 
 //'mask'
@@ -245,14 +245,14 @@
 	name = "Iron faceguard"
 	recipe_name = "a Iron Menpo"
 	req_bar = /obj/item/ingot/iron
-	created_item = /obj/item/clothing/mask/rogue/kaizoku/menpo
+	created_item = /obj/item/clothing/face/kaizoku/menpo
 	craftdiff = 0
 
 /datum/anvil_recipe/armor/himenpo
 	name = "Iron half-faceguard x2"
 	recipe_name = "a pair of Compact Menpo"
 	req_bar = /obj/item/ingot/iron
-	created_item = /obj/item/clothing/mask/rogue/kaizoku/menpo/half
+	created_item = /obj/item/clothing/face/kaizoku/menpo/half
 	createmultiple = TRUE
 	createditem_num = 1
 	craftdiff = 0
@@ -261,14 +261,14 @@
 	name = "Steel faceguard"
 	recipe_name = "a Steel Menpo"
 	req_bar = /obj/item/ingot/steel
-	created_item = (/obj/item/clothing/mask/rogue/kaizoku/menpo/steel/half)
+	created_item = (/obj/item/clothing/face/kaizoku/menpo/steel/half)
 	craftdiff = 2
 
 /datum/anvil_recipe/armor/hsmenpo
 	name = "Steel half-faceguard x2"
 	recipe_name = "a Face Mask"
 	req_bar = /obj/item/ingot/steel
-	created_item = (/obj/item/clothing/mask/rogue/kaizoku/menpo/steel)
+	created_item = (/obj/item/clothing/face/kaizoku/menpo/steel)
 	createmultiple = TRUE
 	createditem_num = 1
 	craftdiff = 2
@@ -277,7 +277,7 @@
 	name = "Iron fishpeople mask x2"
 	recipe_name = "a pair of iron Merkkin masks"
 	req_bar = /obj/item/ingot/iron
-	created_item = /obj/item/clothing/mask/rogue/kaizoku/menpo/facemask
+	created_item = /obj/item/clothing/face/kaizoku/menpo/facemask
 	createmultiple = TRUE
 	createditem_num = 1
 	craftdiff = 0
@@ -286,28 +286,28 @@
 	name = "Steel fishpeople mask"
 	recipe_name = "a Steel Merkkin Mask"
 	req_bar = /obj/item/ingot/steel
-	created_item = (/obj/item/clothing/mask/rogue/kaizoku/menpo/facemask/steel)
+	created_item = (/obj/item/clothing/face/kaizoku/menpo/facemask/steel)
 	craftdiff = 2
 
 /datum/anvil_recipe/armor/ctengu
 	name = "Birdpeople champion mask"
 	recipe_name = "a Skylancer Mask"
 	req_bar = /obj/item/ingot/steel
-	created_item = (/obj/item/clothing/mask/rogue/kaizoku/menpo/facemask/colourable/tengu)
+	created_item = (/obj/item/clothing/face/kaizoku/menpo/facemask/colourable/tengu)
 	craftdiff = 2
 
 /datum/anvil_recipe/armor/ckitsune
 	name = "Foxpeople champion mask"
 	recipe_name = "a Changeling Mask"
 	req_bar = /obj/item/ingot/steel
-	created_item = (/obj/item/clothing/mask/rogue/kaizoku/menpo/facemask/colourable/kitsune)
+	created_item = (/obj/item/clothing/face/kaizoku/menpo/facemask/colourable/kitsune)
 	craftdiff = 2
 
 /datum/anvil_recipe/armor/coni
 	name = "Ogrepeople champion mask"
 	recipe_name = "a ogrun Mask"
 	req_bar = /obj/item/ingot/steel
-	created_item = (/obj/item/clothing/mask/rogue/facemask/steel)
+	created_item = (/obj/item/clothing/face/facemask/steel)
 	craftdiff = 2
 
 //'neck'
@@ -315,7 +315,7 @@
 	name = "Karuta hood x2"
 	recipe_name = "a pair of Karuta Zukin"
 	req_bar = /obj/item/ingot/steel
-	created_item = /obj/item/clothing/neck/roguetown/chaincoif/karuta_zukin
+	created_item = /obj/item/clothing/neck/chaincoif/karuta_zukin
 	createmultiple = TRUE
 	createditem_num = 1
 	craftdiff = 2
@@ -324,7 +324,7 @@
 	name = "Chainmail hood x2"
 	recipe_name = "a pair of Kusari Zukin"
 	req_bar = /obj/item/ingot/iron
-	created_item = /obj/item/clothing/neck/roguetown/chaincoif/iron/kusari_zukin
+	created_item = /obj/item/clothing/neck/chaincoif/iron/kusari_zukin
 	createmultiple = TRUE
 	createditem_num = 1
 	craftdiff = 0
@@ -334,7 +334,7 @@
 	name = "Foldable Thighguards x2"
 	recipe_name = "a pair of Haidate Tatami"
 	req_bar = /obj/item/ingot/iron
-	created_item = /obj/item/clothing/under/roguetown/chainlegs/iron/haidate_tatami
+	created_item = /obj/item/clothing/pants/chainlegs/iron/haidate_tatami
 	createmultiple = TRUE
 	createditem_num = 1
 	craftdiff = 0
@@ -343,7 +343,7 @@
 	name = "Plate Thighguards x2"
 	recipe_name = "a pair of Chain Chausses"
 	req_bar = /obj/item/ingot/steel
-	created_item = /obj/item/clothing/under/roguetown/chainlegs/sendan
+	created_item = /obj/item/clothing/pants/chainlegs/sendan
 	createmultiple = TRUE
 	createditem_num = 1
 	craftdiff = 2
@@ -352,7 +352,7 @@
 	name = "Plated Trousers x2"
 	recipe_name = "a couple of Yoroi-Hakama"
 	req_bar = /obj/item/ingot/steel
-	created_item = /obj/item/clothing/under/roguetown/platelegs/yoroihakama
+	created_item = /obj/item/clothing/pants/platelegs/yoroihakama
 	createmultiple = TRUE
 	createditem_num = 1
 	craftdiff = 3
@@ -362,14 +362,14 @@
 	name = "Armored Sleeve"
 	recipe_name = "a couple of Kote"
 	req_bar = /obj/item/ingot/steel
-	created_item = /obj/item/clothing/wrists/roguetown/bracers/kote
+	created_item = /obj/item/clothing/wrists/bracers/kote
 	craftdiff = 4
 
 /datum/anvil_recipe/armor/weeper
 	name = "Weeper Bracers x2"
 	recipe_name = "a couple of Weeping Bracers"
 	req_bar = /obj/item/ingot/steel
-	created_item = /obj/item/clothing/wrists/roguetown/bracers/mountainstar
+	created_item = /obj/item/clothing/wrists/bracers/mountainstar
 	createmultiple = TRUE
 	createditem_num = 1
 	craftdiff = 3
@@ -384,7 +384,7 @@
 	recipe_name = "a Uchigatana"
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/steel
-	created_item = /obj/item/rogueweapon/sword/uchigatana
+	created_item = /obj/item/weapon/sword/uchigatana
 	craftdiff = 2
 
 /datum/anvil_recipe/weapons/odachi
@@ -393,7 +393,7 @@
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel)
-	created_item = /obj/item/rogueweapon/sword/long/greatsword/odachi
+	created_item = /obj/item/weapon/sword/long/greatsword/odachi
 	craftdiff = 4
 
 /datum/anvil_recipe/weapons/tachi
@@ -402,7 +402,7 @@
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel)
-	created_item = /obj/item/rogueweapon/sword/long/tachi
+	created_item = /obj/item/weapon/sword/long/tachi
 	craftdiff = 3
 
 /datum/anvil_recipe/weapons/jiansword
@@ -410,20 +410,20 @@
 	recipe_name = "a Jian sword"
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/iron
-	created_item = /obj/item/rogueweapon/sword/iron/jian
+	created_item = /obj/item/weapon/sword/iron/jian
 
 /datum/anvil_recipe/weapons/daosword
 	name = "Dao sword"
 	recipe_name = "a Dao Sword"
 	req_bar = /obj/item/ingot/iron
-	created_item = /obj/item/rogueweapon/sword/scimitar/messer/dao
+	created_item = /obj/item/weapon/sword/scimitar/messer/dao
 
 /datum/anvil_recipe/weapons/yuntoudao
 	name = "Yuntoudao"
 	recipe_name = "a willow-shaped sword"
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/steel
-	created_item = /obj/item/rogueweapon/sword/scimitar/falchion/yuntoudao
+	created_item = /obj/item/weapon/sword/scimitar/falchion/yuntoudao
 	craftdiff = 2
 
 /datum/anvil_recipe/weapons/shortjian
@@ -431,7 +431,7 @@
 	recipe_name = "a Short Jian"
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/steel
-	created_item = /obj/item/rogueweapon/sword/short/jian
+	created_item = /obj/item/weapon/sword/short/jian
 	craftdiff = 1
 
 /datum/anvil_recipe/weapons/wakizashi
@@ -439,7 +439,7 @@
 	recipe_name = "a Wakizashi"
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/steel
-	created_item = /obj/item/rogueweapon/sword/short/wakizashi
+	created_item = /obj/item/weapon/sword/short/wakizashi
 	craftdiff = 1
 
 /datum/anvil_recipe/weapons/piandao
@@ -447,7 +447,7 @@
 	recipe_name = "a Piandao"
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/steel
-	created_item = /obj/item/rogueweapon/sword/sabre/piandao
+	created_item = /obj/item/weapon/sword/sabre/piandao
 	craftdiff = 2
 
 /datum/anvil_recipe/weapons/decpiandao
@@ -456,7 +456,7 @@
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/gold)
-	created_item = /obj/item/rogueweapon/sword/sabre/piandao/dec
+	created_item = /obj/item/weapon/sword/sabre/piandao/dec
 	craftdiff = 3
 
 /datum/anvil_recipe/weapons/kanabo
@@ -465,7 +465,7 @@
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/iron
 	additional_items = list(/obj/item/grown/log/tree/small)
-	created_item = /obj/item/rogueweapon/mace/goden/kanabo
+	created_item = /obj/item/weapon/mace/goden/kanabo
 	craftdiff = 2
 
 /datum/anvil_recipe/weapons/tetsubo
@@ -474,7 +474,7 @@
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/grown/log/tree/small)
-	created_item = /obj/item/rogueweapon/mace/goden/steel/tetsubo
+	created_item = /obj/item/weapon/mace/goden/steel/tetsubo
 	craftdiff = 3
 
 /datum/anvil_recipe/weapons/iararebo
@@ -483,7 +483,7 @@
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/iron
 	additional_items = list(/obj/item/grown/log/tree/stick)
-	created_item = /obj/item/rogueweapon/mace/ararebo
+	created_item = /obj/item/weapon/mace/ararebo
 
 /datum/anvil_recipe/weapons/sararebo
 	name = "Steel Ararebo club (2)"
@@ -491,7 +491,7 @@
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel)
-	created_item = /obj/item/rogueweapon/mace/steel/ararebo
+	created_item = /obj/item/weapon/mace/steel/ararebo
 	craftdiff = 2
 
 /datum/anvil_recipe/weapons/kusarifundo
@@ -499,7 +499,7 @@
 	recipe_name = "a Kusarifundo"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/rope/chain, /obj/item/grown/log/tree/stick)
-	created_item = /obj/item/rogueweapon/flail/sflail/kusarifundo
+	created_item = /obj/item/weapon/flail/sflail/kusarifundo
 	craftdiff = 2
 
 /datum/anvil_recipe/weapons/kunai
@@ -507,7 +507,7 @@
 	recipe_name = "a Kunai"
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/iron
-	created_item = /obj/item/rogueweapon/huntingknife/kunai
+	created_item = /obj/item/weapon/huntingknife/kunai
 	craftdiff = 1
 
 /datum/anvil_recipe/weapons/tanto
@@ -515,7 +515,7 @@
 	recipe_name = "a couple Tantos"
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/steel
-	created_item = /obj/item/rogueweapon/knife/steel/tanto
+	created_item = /obj/item/weapon/knife/steel/tanto
 	createmultiple = TRUE
 	createditem_num = 1
 	craftdiff = 2
@@ -525,7 +525,7 @@
 	recipe_name = "a couple Daggers"
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/iron
-	created_item = /obj/item/rogueweapon/knife/kaiken
+	created_item = /obj/item/weapon/knife/kaiken
 	createmultiple = TRUE
 	createditem_num = 1
 	craftdiff = 3
@@ -535,7 +535,7 @@
 	recipe_name = "a couple of Sai"
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/steel
-	created_item = /obj/item/rogueweapon/knife/hunting/sai
+	created_item = /obj/item/weapon/knife/hunting/sai
 	createmultiple = TRUE
 	createditem_num = 1
 	craftdiff = 3
@@ -546,7 +546,7 @@
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/iron
 	additional_items = list(/obj/item/grown/log/tree/small)
-	created_item = /obj/item/rogueweapon/polearm/spear/yari
+	created_item = /obj/item/weapon/polearm/spear/yari
 	createmultiple = TRUE
 	createditem_num = 1
 
@@ -556,7 +556,7 @@
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/iron
 	additional_items = list(/obj/item/grown/log/tree/small, /obj/item/ingot/iron)
-	created_item = /obj/item/rogueweapon/polearm/spear/yari/katakama
+	created_item = /obj/item/weapon/polearm/spear/yari/katakama
 
 /datum/anvil_recipe/weapons/jumonji
 	name = "Jumonji Yari (+w)"
@@ -564,7 +564,7 @@
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/grown/log/tree/small)
-	created_item = /obj/item/rogueweapon/polearm/spear/billhook/jumonji
+	created_item = /obj/item/weapon/polearm/spear/billhook/jumonji
 	craftdiff = 3
 
 /datum/anvil_recipe/weapons/naginata
@@ -573,7 +573,7 @@
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/iron
 	additional_items = list(/obj/item/ingot/iron,/obj/item/grown/log/tree/small)
-	created_item = /obj/item/rogueweapon/polearm/halberd/bardiche/naginata
+	created_item = /obj/item/weapon/polearm/halberd/bardiche/naginata
 	craftdiff = 2
 
 /datum/anvil_recipe/weapons/tsukushi
@@ -582,7 +582,7 @@
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/iron
 	additional_items = list(/obj/item/ingot/iron,/obj/item/grown/log/tree/small)
-	created_item = /obj/item/rogueweapon/polearm/halberd/bardiche/naginata/tsukushi
+	created_item = /obj/item/weapon/polearm/halberd/bardiche/naginata/tsukushi
 	craftdiff = 1
 	createmultiple = TRUE
 	createditem_num = 1
@@ -594,7 +594,7 @@
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel,/obj/item/grown/log/tree/small,/obj/item/ingot/steel)
-	created_item = /obj/item/rogueweapon/polearm/halberd/bisento
+	created_item = /obj/item/weapon/polearm/halberd/bisento
 	craftdiff = 5
 
 /datum/anvil_recipe/weapons/onobattle
@@ -603,7 +603,7 @@
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel)
-	created_item = /obj/item/rogueweapon/axe/battle/ono
+	created_item = /obj/item/weapon/axe/battle/ono
 	craftdiff = 3
 
 /datum/anvil_recipe/weapons/changfu
@@ -612,7 +612,7 @@
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/iron
 	additional_items = list(/obj/item/grown/log/tree/stick)
-	created_item = /obj/item/rogueweapon/axe/iron/changfu
+	created_item = /obj/item/weapon/axe/iron/changfu
 
 //Unique few
 /datum/anvil_recipe/weapons/jitte
@@ -620,7 +620,7 @@
 	recipe_name = "an Jitte"
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/iron
-	created_item = /obj/item/rogueweapon/mace/cudgel/jitte
+	created_item = /obj/item/weapon/mace/cudgel/jitte
 
 /datum/anvil_recipe/weapons/otsuchi
 	name = "Otsuchi warhammer (+l)"
@@ -628,14 +628,14 @@
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/iron
 	additional_items = list(/obj/item/grown/log/tree/small)
-	created_item = /obj/item/rogueweapon/mace/goden/otsuchi
+	created_item = /obj/item/weapon/mace/goden/otsuchi
 
 /datum/anvil_recipe/weapons/kusarigama
 	name = "Kusarigama (+c) (+s)"
 	recipe_name = "a Kusarigama"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/rope/chain, /obj/item/grown/log/tree/stick)
-	created_item = /obj/item/rogueweapon/flail/kusarigama
+	created_item = /obj/item/weapon/flail/kusarigama
 
 /datum/anvil_recipe/weapons/mancatcher
 	name = "Mancatchers x2 (+w)"
@@ -643,7 +643,7 @@
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/iron
 	additional_items = list(/obj/item/grown/log/tree/small)
-	created_item = /obj/item/rogueweapon/polearm/mancatcher
+	created_item = /obj/item/weapon/polearm/mancatcher
 	createmultiple = TRUE
 	createditem_num = 1
 
@@ -652,7 +652,7 @@
 	recipe_name = "a Ono Throwing Axe"
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/steel
-	created_item = /obj/item/rogueweapon/thrown/ono
+	created_item = /obj/item/weapon/thrown/ono
 	craftdiff = 3
 
 /datum/anvil_recipe/weapons/tetsubishi
@@ -660,7 +660,7 @@
 	recipe_name = "a Tetsubishi"
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/iron
-	created_item = /obj/item/rogueweapon/tetsubishi
+	created_item = /obj/item/weapon/tetsubishi
 	craftdiff = 2
 
 /datum/anvil_recipe/weapons/kama
@@ -668,5 +668,5 @@
 	recipe_name = "a Warsickle"
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/iron
-	created_item = /obj/item/rogueweapon/sickle/kama
+	created_item = /obj/item/weapon/sickle/kama
 	craftdiff = 2

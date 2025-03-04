@@ -3,20 +3,20 @@
 	tutorial = "Tinkering Dwarves that like to blow things up."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = list("Dwarf")
-	outfit = /datum/outfit/job/roguetown/adventurer/dbomb
+	outfit = /datum/outfit/job/adventurer/dbomb
 	min_pq = -10
 	category_tags = list(CTAG_ADVENTURER)
 
-/datum/outfit/job/roguetown/adventurer/dbomb/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/dbomb/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = /obj/item/clothing/head/roguetown/helmet/horned
-	pants = /obj/item/clothing/under/roguetown/trou
-	belt = /obj/item/storage/belt/rogue/leather
-	armor = /obj/item/clothing/suit/roguetown/armor/chainmail/iron
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	backl = /obj/item/storage/backpack/rogue/backpack
-	beltl = /obj/item/rogueweapon/pick
-	beltr = /obj/item/rogueweapon/hammer/iron
+	head = /obj/item/clothing/head/helmet/horned
+	pants = /obj/item/clothing/pants/trou
+	belt = /obj/item/storage/belt/leather
+	armor = /obj/item/clothing/armor/chainmail/iron
+	wrists = /obj/item/clothing/wrists/bracers/leather
+	backl = /obj/item/storage/backpack/backpack
+	beltl = /obj/item/weapon/pick
+	beltr = /obj/item/weapon/hammer/iron
 	backpack_contents = list(/obj/item/bomb = 1, /obj/item/flint = 1)
 	H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 2, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/labor/mining, 1, TRUE)
@@ -35,6 +35,6 @@
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 	switch(pick(1,2))
 		if (1)
-			shoes = /obj/item/clothing/shoes/roguetown/boots/leather
+			shoes = /obj/item/clothing/shoes/boots/leather
 		if (2)
-			shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
+			shoes = /obj/item/clothing/shoes/simpleshoes

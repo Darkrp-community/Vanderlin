@@ -1,5 +1,5 @@
 
-/obj/item/rogue/instrument/shamisen //I know shamisen should be used while sitting/on knees. butt you think bards really need to be SITTING during battle?
+/obj/item/instrument/shamisen //I know shamisen should be used while sitting/on knees. butt you think bards really need to be SITTING during battle?
 	name = "shamisen"
 	desc = "shamisen, or just 'three-stings' is a abyssariad puckled stringed musical instrument, usually played using a Bachi."
 	icon = 'modular/stonekeep/kaizoku/icons/misc/music.dmi'
@@ -20,39 +20,39 @@
 // =================================================================
 // ========================		AMBIENCE	============================
 
-/area/rogue/outdoors/mountains
+/area/outdoors/mountains
 	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Zephyr.ogg'
 	droning_sound_dusk = 'sound/music/area/septimus.ogg'
 	droning_sound_night =  'modular/stonekeep/kaizoku/sound/ambience/Sanctumocean.ogg'
 
-/area/rogue/indoors/shelter/mountains
+/area/indoors/shelter/mountains
 	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Zephyr.ogg'
 	droning_sound_dusk = 'sound/music/area/septimus.ogg'
 	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Sanctumocean.ogg'
 
-/area/rogue/outdoors
+/area/outdoors
 	droning_sound = 'sound/music/area/townstreets.ogg'
 	droning_sound_dusk = 'modular/stonekeep/kaizoku/sound/ambience/Diaspora.ogg'
 	droning_sound_night = 'sound/music/area/sleeping.ogg'
-	converted_type = /area/rogue/indoors/shelter
+	converted_type = /area/indoors/shelter
 
-/area/rogue/indoors/shelter
+/area/indoors/shelter
 	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Zephyr.ogg'
 	droning_sound_dusk = 'sound/music/area/septimus.ogg'
 	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Sanctumocean.ogg'
 
-/area/rogue/outdoors
+/area/outdoors
 	droning_sound = 'sound/music/area/townstreets.ogg'
 	droning_sound_dusk = 'modular/stonekeep/kaizoku/sound/ambience/Diaspora.ogg'
 	droning_sound_night = 'sound/music/area/sleeping.ogg'
 
-/area/rogue/indoors/shelter
+/area/indoors/shelter
 	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Zephyr.ogg'
 	droning_sound_dusk = 'sound/music/area/septimus.ogg'
 	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Sanctumocean.ogg'
 
 
-/area/rogue/outdoors/woods
+/area/outdoors/woods
 	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Sibilant.ogg'
 	droning_sound_dusk = 'modular/stonekeep/kaizoku/sound/ambience/Penumbra.ogg'
 	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Sibilant_night.ogg'
@@ -60,65 +60,65 @@
 	soundenv = 15
 	ambush_times = list("night","dawn","dusk","day")
 	ambush_types = list(
-				/turf/open/floor/rogue/grass)
+				/turf/open/floor/grass)
 	ambush_mobs = list(
-				/mob/living/simple_animal/hostile/retaliate/rogue/wolf = 60,
-				/mob/living/simple_animal/hostile/retaliate/rogue/troll = 5,
+				/mob/living/simple_animal/hostile/retaliate/wolf = 60,
+				/mob/living/simple_animal/hostile/retaliate/troll = 5,
 				/mob/living/carbon/human/species/goblin/skilled/ambush = 20,
-				/mob/living/simple_animal/hostile/retaliate/rogue/mole = 10)
+				/mob/living/simple_animal/hostile/retaliate/mole = 10)
 	first_time_text = "THE MURDERWOOD"
-	converted_type = /area/rogue/indoors/shelter/woods
+	converted_type = /area/indoors/shelter/woods
 */
-/area/rogue/indoors/shelter/woods
+/area/indoors/shelter/woods
 	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Sussurus.ogg'
 	droning_sound_dusk = 'modular/stonekeep/kaizoku/sound/ambience/Diaspora.ogg'
 	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Sibilant_night.ogg'
 
 
-/area/rogue/outdoors/river
+/area/outdoors/river
 	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Abyssanctum.ogg'
 	droning_sound_dusk = 'modular/stonekeep/kaizoku/sound/ambience/kaizoku.ogg'
 	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Abyssariad.ogg'
 
-/area/rogue/under
+/area/under
 	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Oceansanct.ogg'
 	droning_sound_dusk = 'modular/stonekeep/kaizoku/sound/ambience/Town_in_Rogue.ogg'
 	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Defenestration.ogg'
 
 
-/area/rogue/outdoors/exposed
+/area/outdoors/exposed
 	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Oceansanct.ogg'
 	droning_sound_dusk = 'modular/stonekeep/kaizoku/sound/ambience/Town_in_Rogue.ogg'
 	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Defenestration.ogg'
 
-/area/rogue/under/cave
+/area/under/cave
 	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Torment.ogg'
 	droning_sound_dusk = 'modular/stonekeep/kaizoku/sound/ambience/Bucolic.ogg'
 	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Nebula.ogg'
 /*
 	ambush_times = list("night","dawn","dusk","day")
 	ambush_types = list(
-				/turf/open/floor/rogue/dirt)
+				/turf/open/floor/dirt)
 	ambush_mobs = list(
-				/mob/living/simple_animal/hostile/retaliate/rogue/bigrat = 30,
+				/mob/living/simple_animal/hostile/retaliate/bigrat = 30,
 				/mob/living/carbon/human/species/goblin/skilled/ambush/cave = 20,
 				/mob/living/carbon/human/species/skeleton/skilled/unarmed = 5,
 				/mob/living/carbon/human/species/skeleton/skilled/fighter = 5)
-	converted_type = /area/rogue/outdoors/caves
+	converted_type = /area/outdoors/caves
 */
-/area/rogue/outdoors/caves
+/area/outdoors/caves
 	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Torment.ogg'
 	droning_sound_dusk = 'modular/stonekeep/kaizoku/sound/ambience/Bucolic.ogg'
 	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Nebula.ogg'
 
-/area/rogue/under/cavewet
+/area/under/cavewet
 	droning_sound = 'sound/music/area/caves.ogg'
 	droning_sound_dusk = 'modular/stonekeep/kaizoku/sound/ambience/Bucolic.ogg'
 	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Nebula.ogg'
 
 
 
-/area/rogue/under/town/kaizoku
+/area/under/town/kaizoku
 	name = "kaizoku isle"
 	icon_state = "town"
 	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Abyssanctum.ogg'

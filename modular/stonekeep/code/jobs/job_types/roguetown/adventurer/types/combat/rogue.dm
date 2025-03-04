@@ -3,12 +3,12 @@
 	tutorial = "A wandering thief, capable of breaking in and out of just about any secure location, and born to meet the sharp end of the guillotine. Just remember, murder is the mark of an amateur."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = ALL_PLAYER_RACES_BY_NAME
-	outfit = /datum/outfit/job/roguetown/adventurer/rogue
+	outfit = /datum/outfit/job/adventurer/rogue
 	min_pq = -10
 	category_tags = list(CTAG_ADVENTURER)
 	cmode_music = 'sound/music/cmode/adventurer/CombatRogue.ogg'
 
-/datum/outfit/job/roguetown/adventurer/rogue/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/swords, pick(0,0,1), TRUE)
@@ -26,15 +26,15 @@
 		H.mind?.adjust_skillrank(/datum/skill/misc/stealing, 5, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/misc/lockpicking, 4, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/craft/traps, 3, TRUE)
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/black
-	gloves = /obj/item/clothing/gloves/roguetown/fingerless
-	pants = /obj/item/clothing/under/roguetown/trou/leather
-	shoes = /obj/item/clothing/shoes/roguetown/boots
-	backl = /obj/item/storage/backpack/rogue/satchel
-	belt = /obj/item/storage/belt/rogue/leather
-	beltr = /obj/item/rogueweapon/mace/cudgel // TEMP until I make a blackjack- for now though this will do.
-	beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
-	backpack_contents = list(/obj/item/lockpick, /obj/item/rogueweapon/knife/dagger/steel, /obj/item/clothing/mask/rogue/shepherd/rag)
+	shirt = /obj/item/clothing/shirt/undershirt/black
+	gloves = /obj/item/clothing/gloves/fingerless
+	pants = /obj/item/clothing/pants/trou/leather
+	shoes = /obj/item/clothing/shoes/boots
+	backl = /obj/item/storage/backpack/satchel
+	belt = /obj/item/storage/belt/leather
+	beltr = /obj/item/weapon/mace/cudgel // TEMP until I make a blackjack- for now though this will do.
+	beltl = /obj/item/storage/belt/pouch/coins/poor
+	backpack_contents = list(/obj/item/lockpick, /obj/item/weapon/knife/dagger/steel, /obj/item/clothing/face/shepherd/rag)
 	ADD_TRAIT(H, TRAIT_THIEVESGUILD, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_LIGHT_STEP, TRAIT_GENERIC)
@@ -45,7 +45,7 @@
 	H.grant_language(/datum/language/thievescant)
 	to_chat(H, "<span class='info'>I can gesture in thieves' cant with ,t before my speech.</span>")
 
-/datum/outfit/job/roguetown/adventurer/rogue/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/adventurer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	// Give them their cloak- as well as the ability to choose what color they want.
 	var/list/thiefcloak_colors = list(\

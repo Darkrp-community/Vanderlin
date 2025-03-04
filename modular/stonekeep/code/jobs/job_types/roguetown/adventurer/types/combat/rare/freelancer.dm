@@ -5,14 +5,14 @@
 	tutorial = "Working for many years as a famous mercenary in the southern Humen kingdoms, you've started heading north to avoid the skeletons of your past. With your polearm by your side, you can face down any foe."
 	allowed_sexes = list(MALE)
 	allowed_races = list("Humen")
-	outfit = /datum/outfit/job/roguetown/adventurer/lancer
+	outfit = /datum/outfit/job/adventurer/lancer
 	maximum_possible_slots = 1
 	pickprob = 15
 	min_pq = 0
 	category_tags = list(CTAG_ADVENTURER)
 	cmode_music = 'sound/music/cmode/adventurer/CombatOutlander3.ogg'
 
-/datum/outfit/job/roguetown/adventurer/lancer/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/lancer/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
@@ -29,24 +29,24 @@
 	var/randy = rand(1,5)
 	switch(randy)
 		if(1 to 2)
-			backr = /obj/item/rogueweapon/polearm/halberd/bardiche
+			backr = /obj/item/weapon/polearm/halberd/bardiche
 		if(3 to 4)
-			backr = /obj/item/rogueweapon/polearm/eaglebeak
+			backr = /obj/item/weapon/polearm/eaglebeak
 		if(5)
-			backr = /obj/item/rogueweapon/polearm/spear/billhook
+			backr = /obj/item/weapon/polearm/spear/billhook
 
 
-	pants = /obj/item/clothing/under/roguetown/tights/black
-	beltl = /obj/item/storage/belt/rogue/pouch/coins/mid
-	shoes = /obj/item/clothing/shoes/roguetown/boots/rare/zybanplate
-	gloves = /obj/item/clothing/gloves/roguetown/rare/zybanplate
-	belt = /obj/item/storage/belt/rogue/leather
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/random
-	armor = /obj/item/clothing/suit/roguetown/armor/rare/zybanplate
-	backl = /obj/item/storage/backpack/rogue/satchel
-	head = /obj/item/clothing/head/roguetown/rare/zybanplate
-	wrists = /obj/item/clothing/wrists/roguetown/bracers
-	neck = /obj/item/clothing/neck/roguetown/chaincoif
+	pants = /obj/item/clothing/pants/tights/black
+	beltl = /obj/item/storage/belt/pouch/coins/mid
+	shoes = /obj/item/clothing/shoes/boots/rare/zybanplate
+	gloves = /obj/item/clothing/gloves/rare/zybanplate
+	belt = /obj/item/storage/belt/leather
+	shirt = /obj/item/clothing/shirt/undershirt/random
+	armor = /obj/item/clothing/armor/rare/zybanplate
+	backl = /obj/item/storage/backpack/satchel
+	head = /obj/item/clothing/head/rare/zybanplate
+	wrists = /obj/item/clothing/wrists/bracers
+	neck = /obj/item/clothing/neck/chaincoif
 	if(!H.has_language(/datum/language/zybantine))
 		H.grant_language(/datum/language/zybantine)
 		to_chat(H, "<span class='info'>I can speak Zybean with ,z before my speech.</span>")

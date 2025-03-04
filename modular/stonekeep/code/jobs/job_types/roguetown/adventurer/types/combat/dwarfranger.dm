@@ -5,29 +5,29 @@
 	protect dwarfish settlements from wild beasts and sell their notes to the cartographers."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = list("Dwarf")
-	outfit = /datum/outfit/job/roguetown/adventurer/dranger
+	outfit = /datum/outfit/job/adventurer/dranger
 	min_pq = -10
 	category_tags = list(CTAG_ADVENTURER)
 
-/datum/outfit/job/roguetown/adventurer/dranger/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/dranger/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = /obj/item/clothing/head/roguetown/roguehood/uncolored
-	pants = /obj/item/clothing/under/roguetown/trou/leather
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/random
-	shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
-	belt = /obj/item/storage/belt/rogue/leather
+	head = /obj/item/clothing/head/roguehood/uncolored
+	pants = /obj/item/clothing/pants/trou/leather
+	shirt = /obj/item/clothing/shirt/undershirt/random
+	shoes = /obj/item/clothing/shoes/simpleshoes
+	belt = /obj/item/storage/belt/leather
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
-	backl = /obj/item/storage/backpack/rogue/satchel
+	backl = /obj/item/storage/backpack/satchel
 	beltl = /obj/item/ammo_holder/quiver/bolts
 	beltr = /obj/item/flashlight/flare/torch/lantern
-	armor = /obj/item/clothing/suit/roguetown/armor/chainmail/iron // Starts with better armor than a typical ranger (iron chainmail) but has no dodge expert or sneaking skill
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	r_hand = /obj/item/rogueweapon/sword/scimitar/falchion
+	armor = /obj/item/clothing/armor/chainmail/iron // Starts with better armor than a typical ranger (iron chainmail) but has no dodge expert or sneaking skill
+	wrists = /obj/item/clothing/wrists/bracers/leather
+	r_hand = /obj/item/weapon/sword/scimitar/falchion
 	backpack_contents = list(/obj/item/bait = 1)
 	if(prob(23))
-		shoes = /obj/item/clothing/shoes/roguetown/boots
+		shoes = /obj/item/clothing/shoes/boots
 	if(prob(23))
-		shoes = /obj/item/clothing/shoes/roguetown/boots/leather
+		shoes = /obj/item/clothing/shoes/boots/leather
 	cloak = /obj/item/clothing/cloak/raincloak/brown
 	H.mind?.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE) // In line with basic combat classes
 	H.mind?.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)

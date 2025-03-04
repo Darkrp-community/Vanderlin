@@ -1,4 +1,4 @@
-/datum/job/roguetown/niteman
+/datum/job/niteman
 	title = "Niteman"
 	flag = NIGHTMAN
 	department_flag = NOBLEMEN
@@ -18,21 +18,21 @@
 	Some accuse you of have connections with the Rogues and Bandits of the land but surely its just slander..."
 
 	allowed_sexes = list(MALE)
-	outfit = /datum/outfit/job/roguetown/niteman
+	outfit = /datum/outfit/job/niteman
 	display_order = JDO_APOTHECARY // ROGTODO this whole file I guess
 	give_bank_account = 120
 	min_pq = 0
 	bypass_lastclass = TRUE
 
-/datum/outfit/job/roguetown/niteman/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/niteman/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = /obj/item/clothing/head/roguetown/roguehood/brown
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/jacket/niteman
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/webs
-	pants = /obj/item/clothing/under/roguetown/trou/leather
-	shoes = /obj/item/clothing/shoes/roguetown/nobleboot
-// 	belt = /obj/item/storage/belt/rogue/leather/nitemaster ROGTODO
-	beltr = /obj/item/rogueweapon/knife/dagger/steel/special
+	head = /obj/item/clothing/head/roguehood/brown
+	armor = /obj/item/clothing/armor/leather/jacket/niteman
+	shirt = /obj/item/clothing/shirt/undershirt/webs
+	pants = /obj/item/clothing/pants/trou/leather
+	shoes = /obj/item/clothing/shoes/nobleboot
+// 	belt = /obj/item/storage/belt/leather/nitemaster ROGTODO
+	beltr = /obj/item/weapon/knife/dagger/steel/special
 //	beltl = /obj/item/keyring/niteman	ROGTODO
 	ADD_TRAIT(H, TRAIT_GOODLOVER, TRAIT_GENERIC)
 	if(H.mind)

@@ -17,26 +17,26 @@
 		"Ogrun",
 		"Undine"
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/hunter
+	outfit = /datum/outfit/job/adventurer/hunter
 
 	category_tags = list(CTAG_PILGRIM)
 	apprentice_name = "Hunter Apprentice"
 
-/datum/outfit/job/roguetown/adventurer/hunter/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/hunter/pre_equip(mob/living/carbon/human/H)
 	..()
-	pants = /obj/item/clothing/under/roguetown/tights/random
-	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/random
-	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
-	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
-	head = /obj/item/clothing/head/roguetown/brimmed
+	pants = /obj/item/clothing/pants/tights/random
+	shirt = /obj/item/clothing/shirt/shortshirt/random
+	shoes = /obj/item/clothing/shoes/boots/leather
+	neck = /obj/item/storage/belt/pouch/coins/poor
+	head = /obj/item/clothing/head/brimmed
 	cloak = /obj/item/clothing/cloak/raincloak/furcloak/brown
-	backr = /obj/item/storage/backpack/rogue/satchel
+	backr = /obj/item/storage/backpack/satchel
 	backl = /obj/item/gun/ballistic/revolver/grenadelauncher/bow
-	belt = /obj/item/storage/belt/rogue/leather
+	belt = /obj/item/storage/belt/leather
 	beltr = /obj/item/ammo_holder/quiver/arrows
 	beltl = /obj/item/storage/meatbag
-	backpack_contents = list(/obj/item/flint = 1, /obj/item/bait = 1, /obj/item/rogueweapon/knife/hunting = 1, /obj/item/flashlight/flare/torch/lantern = 1)
-	gloves = /obj/item/clothing/gloves/roguetown/leather
+	backpack_contents = list(/obj/item/flint = 1, /obj/item/bait = 1, /obj/item/weapon/knife/hunting = 1, /obj/item/flashlight/flare/torch/lantern = 1)
+	gloves = /obj/item/clothing/gloves/leather
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/craft/tanning, 3, TRUE)
@@ -79,6 +79,6 @@
 		"Aasimar",
 		"Half-Orc"
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/hunter // Everything is the same
+	outfit = /datum/outfit/job/adventurer/hunter // Everything is the same
 	category_tags = list(CTAG_PILGRIM, CTAG_TOWNER)
 	apprentice_name = "Hunteress Apprentice"

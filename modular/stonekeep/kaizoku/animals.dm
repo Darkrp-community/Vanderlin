@@ -54,7 +54,7 @@
 	obj_flags = CAN_BE_HIT
 	var/dead = FALSE
 	eat_effect = /datum/status_effect/debuff/uncookedfood
-	fried_type = /obj/item/reagent_containers/food/snacks/rogue/friedfrog
+	fried_type = /obj/item/reagent_containers/food/snacks/friedfrog
 	max_integrity = 10
 	sellprice = 0
 	rotprocess = null
@@ -80,7 +80,7 @@
 			return
 	return ..()
 
-/obj/item/reagent_containers/food/snacks/rogue/friedfrog
+/obj/item/reagent_containers/food/snacks/friedfrog
 	name = "fried frog"
 	desc = "are you sure you are going to eat this?"
 	icon = 'modular/stonekeep/icons/food.dmi'
@@ -206,7 +206,7 @@
 
 
 
-/mob/living/simple_animal/hostile/retaliate/rogue/saiga/horse/update_icon()
+/mob/living/simple_animal/hostile/retaliate/saiga/horse/update_icon()
 	cut_overlays()
 	..()
 	if(stat != DEAD)
@@ -217,7 +217,7 @@
 			var/mutable_appearance/mounted = mutable_appearance(icon, "horse_mounted", 4.3)
 			add_overlay(mounted)
 
-/mob/living/simple_animal/hostile/retaliate/rogue/saiga/horse/tamed(mob/user)
+/mob/living/simple_animal/hostile/retaliate/saiga/horse/tamed(mob/user)
 	..()
 	deaggroprob = 30
 	if(can_buckle)
@@ -228,7 +228,7 @@
 		D.set_vehicle_dir_layer(EAST, OBJ_LAYER)
 		D.set_vehicle_dir_layer(WEST, OBJ_LAYER)
 /sound/vo/female_abyssariad
-/mob/living/simple_animal/hostile/retaliate/rogue/saiga/horse
+/mob/living/simple_animal/hostile/retaliate/saiga/horse
 	icon = 'modular/stonekeep/kaizoku/icons/mobs/horse.dmi'
 	name = "fogbeast"
 	desc = "A huge and elegant beast that gallops across open fields with hooves deadlier than any sword. Long extinct from the mainlands, it is the favourite beasts of Fog Islanders and Heartfelteans."
@@ -241,15 +241,15 @@
 	footstep_type = FOOTSTEP_MOB_SHOE
 	emote_see = list("grazes on grass.", "whinnies softly.", "stamps a hoof.", "gazes upon the horizon.", "'s tail whips mosquitos away.")
 	move_to_delay = 7
-	botched_butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/steak = 12,
+	botched_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/steak = 12,
 						/obj/item/natural/hide = 1,
 						/obj/item/alch/bone = 1)
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/steak = 4,
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/steak = 4,
 						/obj/item/reagent_containers/food/snacks/fat = 2,
 						/obj/item/natural/hide = 3,
 						/obj/item/natural/head/saiga = 1,
 						/obj/item/alch/bone = 2)
-	perfect_butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/steak = 5,
+	perfect_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/steak = 5,
 						/obj/item/reagent_containers/food/snacks/fat = 2,
 						/obj/item/natural/hide = 4,
 						/obj/item/alch/bone = 3,
@@ -276,19 +276,19 @@
 	STASPD = 15
 	STACON = 12
 	STASTR = 11
-	childtype = /mob/living/simple_animal/hostile/retaliate/rogue/saiga/horse/horsekid
+	childtype = /mob/living/simple_animal/hostile/retaliate/saiga/horse/horsekid
 	can_buckle = TRUE
 	buckle_lying = FALSE
 	can_saddle = TRUE
 	aggressive = TRUE
 
 
-/mob/living/simple_animal/hostile/retaliate/rogue/saiga/horse/Initialize()
+/mob/living/simple_animal/hostile/retaliate/saiga/horse/Initialize()
 	. = ..()
 	if(prob(50))
 		gender = MALE
 
-/mob/living/simple_animal/hostile/retaliate/rogue/saiga/horse/tamed(mob/user)
+/mob/living/simple_animal/hostile/retaliate/saiga/horse/tamed(mob/user)
 	..()
 	if(can_buckle)
 		var/datum/component/riding/D = LoadComponent(/datum/component/riding)
@@ -302,7 +302,7 @@
 		D.set_vehicle_dir_layer(EAST, OBJ_LAYER)
 		D.set_vehicle_dir_layer(WEST, OBJ_LAYER)
 
-/mob/living/simple_animal/hostile/retaliate/rogue/saiga/horse/horsekid
+/mob/living/simple_animal/hostile/retaliate/saiga/horse/horsekid
 	icon = 'modular/stonekeep/kaizoku/icons/mobs/horse.dmi'
 	name = "fogbeast calf"
 	icon_state = "horsekid"
@@ -315,9 +315,9 @@
 	pass_flags = PASSTABLE | PASSMOB
 	mob_size = MOB_SIZE_SMALL
 
-	botched_butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/mince = 1)
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/steak = 1)
-	perfect_butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/steak = 1,
+	botched_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/mince = 1)
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/steak = 1)
+	perfect_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/steak = 1,
 								/obj/item/natural/hide = 1)
 
 	health = CALF_HEALTH
@@ -332,15 +332,15 @@
 	STASPD = 5
 	defprob = 50
 	pixel_x = -16
-	adult_growth = /mob/living/simple_animal/hostile/retaliate/rogue/saiga/horse
+	adult_growth = /mob/living/simple_animal/hostile/retaliate/saiga/horse
 	tame = TRUE
 	can_buckle = FALSE
 	aggressive = FALSE
 
-/mob/living/simple_animal/hostile/retaliate/rogue/saiga/horse/tame
+/mob/living/simple_animal/hostile/retaliate/saiga/horse/tame
 	tame = TRUE
 
-/mob/living/simple_animal/hostile/retaliate/rogue/saiga/horse/tame/saddled/Initialize()
+/mob/living/simple_animal/hostile/retaliate/saiga/horse/tame/saddled/Initialize()
 	. = ..()
 	var/obj/item/natural/saddle/S = new(src)
 	ssaddle = S

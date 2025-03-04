@@ -3,7 +3,7 @@ GLOBAL_LIST_EMPTY(billagerspawns)
 GLOBAL_VAR_INIT(adventurer_hugbox_duration, 30 SECONDS)
 GLOBAL_VAR_INIT(adventurer_hugbox_duration_still, 3 MINUTES)
 
-/datum/job/roguetown/adventurer
+/datum/job/adventurer
 	title = "Adventurer"
 	flag = ADVENTURER
 	department_flag = PEASANTS
@@ -32,7 +32,7 @@ GLOBAL_VAR_INIT(adventurer_hugbox_duration_still, 3 MINUTES)
 	can_have_apprentices = FALSE
 
 
-/datum/job/roguetown/adventurer/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
+/datum/job/adventurer/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
 	if(L)
 		var/mob/living/carbon/human/H = L

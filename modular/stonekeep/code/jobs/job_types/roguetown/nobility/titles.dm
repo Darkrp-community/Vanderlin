@@ -1,5 +1,5 @@
 
-/datum/job/roguetown/bogwarden
+/datum/job/bogwarden
 	title = "Warden of the Terrorbog"
 	tutorial = ""
 	flag = LORD
@@ -8,21 +8,21 @@
 	total_positions = 0
 	spawn_positions = 0
 
-	outfit = /datum/outfit/job/roguetown/bogwarden
+	outfit = /datum/outfit/job/bogwarden
 	display_order = 6
 	can_have_apprentices = FALSE
 
 
-/datum/outfit/job/roguetown/bogwarden
+/datum/outfit/job/bogwarden
 	name = "Warden of the Terrorbog"
-	jobtype = /datum/job/roguetown/bogwarden
+	jobtype = /datum/job/bogwarden
 
-	pants = /obj/item/clothing/under/roguetown/tights
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
-	armor = /obj/item/clothing/suit/roguetown/shirt/rags
-	shoes = /obj/item/clothing/shoes/roguetown/boots
+	pants = /obj/item/clothing/pants/tights
+	shirt = /obj/item/clothing/shirt/undershirt
+	armor = /obj/item/clothing/shirt/rags
+	shoes = /obj/item/clothing/shoes/boots
 
-/datum/job/roguetown/huntmaster
+/datum/job/huntmaster
 	title = "Huntmaster of the Murderwoods"
 	f_title = "Huntmistress of the Murderwoods"
 	tutorial = ""
@@ -32,21 +32,21 @@
 	total_positions = 0
 	spawn_positions = 0
 
-	outfit = /datum/outfit/job/roguetown/huntmaster
+	outfit = /datum/outfit/job/huntmaster
 	display_order = 6
 	can_have_apprentices = FALSE
 
 
-/datum/outfit/job/roguetown/huntmaster
+/datum/outfit/job/huntmaster
 	name = "Huntmaster of the Murderwoods"
-	jobtype = /datum/job/roguetown/huntmaster
+	jobtype = /datum/job/huntmaster
 
-	pants = /obj/item/clothing/under/roguetown/tights
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
-	armor = /obj/item/clothing/suit/roguetown/shirt/rags
-	shoes = /obj/item/clothing/shoes/roguetown/boots
+	pants = /obj/item/clothing/pants/tights
+	shirt = /obj/item/clothing/shirt/undershirt
+	armor = /obj/item/clothing/shirt/rags
+	shoes = /obj/item/clothing/shoes/boots
 
-/datum/job/roguetown/hetman
+/datum/job/hetman
 	title = "Hetman of Mount Decapitation"
 	tutorial = ""
 	flag = LORD
@@ -55,17 +55,17 @@
 	total_positions = 0
 	spawn_positions = 0
 
-	outfit = /datum/outfit/job/roguetown/hetman
+	outfit = /datum/outfit/job/hetman
 	display_order = 6
 	can_have_apprentices = FALSE
 
 
-/datum/outfit/job/roguetown/hetman
+/datum/outfit/job/hetman
 	name = "Hetman of Mount Decapitation"
-	jobtype = /datum/job/roguetown/hetman
+	jobtype = /datum/job/hetman
 
-	pants = /obj/item/clothing/under/roguetown/tights
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
-	armor = /obj/item/clothing/suit/roguetown/shirt/rags
-	shoes = /obj/item/clothing/shoes/roguetown/boots
+	pants = /obj/item/clothing/pants/tights
+	shirt = /obj/item/clothing/shirt/undershirt
+	armor = /obj/item/clothing/shirt/rags
+	shoes = /obj/item/clothing/shoes/boots
 

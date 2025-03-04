@@ -1,4 +1,4 @@
-/datum/job/roguetown/matron
+/datum/job/matron
 	title = "Matron"
 	flag = JESTER
 	department_flag = PEASANTS
@@ -19,13 +19,13 @@
 	tutorial = "You are the Matron of the orphanage, an old strict lady whom oversee the 'wellbeing' of the orphans, you show them your tricks and you'll make them just as good as you one day."
 	allowed_ages = list(AGE_MIDDLEAGED,AGE_OLD, AGE_IMMORTAL)
 	display_order = JDO_MATRON
-	outfit = /datum/outfit/job/roguetown/matron
+	outfit = /datum/outfit/job/matron
 	give_bank_account = 35
 	min_pq = 10
 	can_have_apprentices = TRUE
 	cmode_music = 'sound/music/cmode/nobility/CombatSpymaster.ogg'
 
-/datum/outfit/job/roguetown/matron/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/matron/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/misc/sewing, 3, TRUE)
@@ -55,12 +55,12 @@
 		H.grant_language(/datum/language/thievescant)
 		to_chat(H, "<span class='info'>I can gesture in thieves' cant with ,t before my speech.</span>")
 		ADD_TRAIT(H, TRAIT_THIEVESGUILD, TRAIT_GENERIC)
-		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/gen/black
-		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/black
-		pants = /obj/item/clothing/under/roguetown/trou/beltpants
-		belt = /obj/item/storage/belt/rogue/leather/cloth/lady
-		shoes = /obj/item/clothing/shoes/roguetown/boots/leather
-		beltl = /obj/item/storage/belt/rogue/pouch/coins/mid
-		backr = /obj/item/storage/backpack/rogue/satchel
+		shirt = /obj/item/clothing/shirt/dress/gen/black
+		armor = /obj/item/clothing/armor/leather/vest/black
+		pants = /obj/item/clothing/pants/trou/beltpants
+		belt = /obj/item/storage/belt/leather/cloth/lady
+		shoes = /obj/item/clothing/shoes/boots/leather
+		beltl = /obj/item/storage/belt/pouch/coins/mid
+		backr = /obj/item/storage/backpack/satchel
 		cloak = /obj/item/clothing/cloak/matron
-		backpack_contents = list(/obj/item/rogueweapon/knife/dagger/steel = 1, /obj/item/key/matron = 1)
+		backpack_contents = list(/obj/item/weapon/knife/dagger/steel = 1, /obj/item/key/matron = 1)

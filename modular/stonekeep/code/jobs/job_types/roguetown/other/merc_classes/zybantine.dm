@@ -12,26 +12,26 @@
 		"Dark Elf",
 		"Aasimar"
 	)
-	outfit = /datum/outfit/job/roguetown/mercenary/zybantine
+	outfit = /datum/outfit/job/mercenary/zybantine
 	category_tags = list(CTAG_MERCENARY)
 	maximum_possible_slots = 5
 
 	cmode_music = 'sound/music/cmode/adventurer/CombatOutlander.ogg' //Forgive me, Combat_DesertRider, I'm sorry, I'll miss you.
 
-/datum/outfit/job/roguetown/mercenary/zybantine/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/mercenary/zybantine/pre_equip(mob/living/carbon/human/H)
 	..()
-	shoes = /obj/item/clothing/shoes/roguetown/shalal
-	head = /obj/item/clothing/head/roguetown/helmet/sallet/zybantine
-	gloves = /obj/item/clothing/gloves/roguetown/angle
-	belt = /obj/item/storage/belt/rogue/leather/mercenary/shalal
-	armor = /obj/item/clothing/suit/roguetown/armor/brigandine/coatplates
-	beltr = /obj/item/rogueweapon/sword/long/rider
+	shoes = /obj/item/clothing/shoes/shalal
+	head = /obj/item/clothing/head/helmet/sallet/zybantine
+	gloves = /obj/item/clothing/gloves/angle
+	belt = /obj/item/storage/belt/leather/mercenary/shalal
+	armor = /obj/item/clothing/armor/brigandine/coatplates
+	beltr = /obj/item/weapon/sword/long/rider
 	beltl= /obj/item/flashlight/flare/torch/lantern
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/black
-	pants = /obj/item/clothing/under/roguetown/tights/red
-	neck = /obj/item/clothing/neck/roguetown/keffiyeh/red
-	backl = /obj/item/storage/backpack/rogue/satchel
-	backpack_contents = list(/obj/item/storage/belt/rogue/pouch/coins/poor)
+	shirt = /obj/item/clothing/shirt/undershirt/black
+	pants = /obj/item/clothing/pants/tights/red
+	neck = /obj/item/clothing/neck/keffiyeh/red
+	backl = /obj/item/storage/backpack/satchel
+	backpack_contents = list(/obj/item/storage/belt/pouch/coins/poor)
 	if(!H.has_language(/datum/language/zybantine))
 		H.grant_language(/datum/language/zybantine)
 		to_chat(H, "<span class='info'>I can speak Zybean with ,z before my speech.</span>")

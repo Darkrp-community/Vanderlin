@@ -9,7 +9,7 @@
 		"Tiefling",
 		"Dark Elf",
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/qatil
+	outfit = /datum/outfit/job/adventurer/qatil
 	maximum_possible_slots = 1
 	min_pq = 0
 	pickprob = 25
@@ -17,7 +17,7 @@
 
 	cmode_music = 'sound/music/cmode/adventurer/CombatOutlander3.ogg'
 
-/datum/outfit/job/roguetown/adventurer/qatil/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/qatil/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/knives, 4, TRUE)
@@ -38,16 +38,16 @@
 		H.change_stat("speed", 2)
 		H.change_stat("endurance", 1)
 
-	pants = /obj/item/clothing/under/roguetown/trou/leather
-	beltr = /obj/item/rogueweapon/knife/dagger/steel/special
-	shoes = /obj/item/clothing/shoes/roguetown/shalal
-	gloves = /obj/item/clothing/gloves/roguetown/angle
-	belt = /obj/item/storage/belt/rogue/leather/shalal
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/red
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/splint
-	backl = /obj/item/storage/backpack/rogue/satchel
-	head = /obj/item/clothing/neck/roguetown/keffiyeh/red
-	backpack_contents = list(/obj/item/storage/belt/rogue/pouch/coins/poor, /obj/item/lockpick)
+	pants = /obj/item/clothing/pants/trou/leather
+	beltr = /obj/item/weapon/knife/dagger/steel/special
+	shoes = /obj/item/clothing/shoes/shalal
+	gloves = /obj/item/clothing/gloves/angle
+	belt = /obj/item/storage/belt/leather/shalal
+	shirt = /obj/item/clothing/shirt/undershirt/red
+	armor = /obj/item/clothing/armor/leather/splint
+	backl = /obj/item/storage/backpack/satchel
+	head = /obj/item/clothing/neck/keffiyeh/red
+	backpack_contents = list(/obj/item/storage/belt/pouch/coins/poor, /obj/item/lockpick)
 	if(!H.has_language(/datum/language/zybantine))
 		H.grant_language(/datum/language/zybantine)
 		to_chat(H, "<span class='info'>I can speak Zybean with ,z before my speech.</span>")

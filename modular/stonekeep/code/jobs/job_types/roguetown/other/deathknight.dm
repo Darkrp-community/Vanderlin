@@ -1,4 +1,4 @@
-/datum/job/roguetown/deathknight
+/datum/job/deathknight
 	title = "Death Knight"
 	flag = DEATHKNIGHT
 	department_flag = UNDEAD
@@ -17,11 +17,11 @@
 	)
 	tutorial = ""
 
-	outfit = /datum/outfit/job/roguetown/deathknight
+	outfit = /datum/outfit/job/deathknight
 	show_in_credits = FALSE
 	give_bank_account = FALSE
 
-/datum/job/roguetown/deathknight/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
+/datum/job/deathknight/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	var/datum/game_mode/chaosmode/C = SSticker.mode
 	C.deathknightspawn = FALSE
 	C.deathknights |= L.mind
@@ -80,7 +80,7 @@
 		ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_CRITICAL_WEAKNESS, TRAIT_GENERIC)
 
-/datum/outfit/job/roguetown/deathknight/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/deathknight/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.mind?.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 2, TRUE)
@@ -92,14 +92,14 @@
 	H.mind?.adjust_skillrank(/datum/skill/magic/arcane, 3, TRUE)
 
 
-	belt = /obj/item/storage/belt/rogue/leather
-	pants = /obj/item/clothing/under/roguetown/platelegs/blk/death
-	shoes = /obj/item/clothing/shoes/roguetown/boots/armor/blkknight
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/black
-	armor = /obj/item/clothing/suit/roguetown/armor/plate/blkknight/death
-	gloves = /obj/item/clothing/gloves/roguetown/plate/blk/death
-	backl = /obj/item/rogueweapon/sword/long/death
-	head = /obj/item/clothing/head/roguetown/helmet/visored/knight/black
+	belt = /obj/item/storage/belt/leather
+	pants = /obj/item/clothing/pants/platelegs/blk/death
+	shoes = /obj/item/clothing/shoes/boots/armor/blkknight
+	shirt = /obj/item/clothing/shirt/undershirt/black
+	armor = /obj/item/clothing/armor/plate/blkknight/death
+	gloves = /obj/item/clothing/gloves/plate/blk/death
+	backl = /obj/item/weapon/sword/long/death
+	head = /obj/item/clothing/head/helmet/visored/knight/black
 
 	H.change_stat("intelligence", 3)
 	H.change_stat("strength", 2)
@@ -114,14 +114,14 @@
 	var/datum/antagonist/new_antag = new /datum/antagonist/skeleton/knight()
 	H.mind.add_antag_datum(new_antag)
 
-/obj/item/clothing/suit/roguetown/armor/plate/blkknight/death
+/obj/item/clothing/armor/plate/blkknight/death
 	color = CLOTHING_SOOT_BLACK
 
-/obj/item/clothing/shoes/roguetown/boots/armor/blkknight/death
+/obj/item/clothing/shoes/boots/armor/blkknight/death
 	color = CLOTHING_SOOT_BLACK
 
-/obj/item/clothing/gloves/roguetown/plate/blk/death
+/obj/item/clothing/gloves/plate/blk/death
 	color = CLOTHING_SOOT_BLACK
 
-/obj/item/clothing/under/roguetown/platelegs/blk/death
+/obj/item/clothing/pants/platelegs/blk/death
 	color = CLOTHING_SOOT_BLACK

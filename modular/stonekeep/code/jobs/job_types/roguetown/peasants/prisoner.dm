@@ -1,4 +1,4 @@
-/datum/job/roguetown/prisoner
+/datum/job/prisoner
 	title = "Prisoner"
 	flag = GRAVETENDER
 	department_flag = PEASANTS
@@ -19,7 +19,7 @@
 	)
 	tutorial = "For a crime, or false allegation; as a hostage against another, or held for ransom: your fate until this day has been ill-starred save its first. You are of noble birth. Perhaps your story, which none but you recall, will move some pity from callous hearts or promises of riches parole your release. Maybe your old associates conspire now to release you in a daring rescue. Yet it is far surer that your tears will rust this cursed mask than the sun shine upon your face a freed soul once more." // changed to reduce dictation of character. Nikov.
 
-	outfit = /datum/outfit/job/roguetown/prisoner
+	outfit = /datum/outfit/job/prisoner
 	banned_leprosy = FALSE
 	display_order = JDO_PRISONER
 	give_bank_account = 173
@@ -29,10 +29,10 @@
 	cmode_music = 'sound/music/cmode/towner/CombatPrisoner.ogg'
 	can_have_apprentices = FALSE
 
-/datum/outfit/job/roguetown/prisoner/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/prisoner/pre_equip(mob/living/carbon/human/H)
 	..()
-	pants = /obj/item/clothing/under/roguetown/loincloth/brown
-	mask = /obj/item/clothing/mask/rogue/facemask/prisoner
+	pants = /obj/item/clothing/pants/loincloth/brown
+	mask = /obj/item/clothing/face/facemask/prisoner
 	if(H.wear_mask)
 		var/obj/I = H.wear_mask
 		H.dropItemToGround(H.wear_mask, TRUE)

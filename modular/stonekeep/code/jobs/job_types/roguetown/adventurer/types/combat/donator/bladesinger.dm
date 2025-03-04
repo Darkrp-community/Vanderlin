@@ -8,13 +8,13 @@
 	)
 	maximum_possible_slots = 1
 	pickprob = 15
-	outfit = /datum/outfit/job/roguetown/adventurer/bladesinger
+	outfit = /datum/outfit/job/adventurer/bladesinger
 	category_tags = list(CTAG_ADVENTURER)
 	min_pq = 0
 	cmode_music = 'sound/music/cmode/adventurer/CombatWarrior.ogg'
 
 
-/datum/outfit/job/roguetown/adventurer/bladesinger/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/bladesinger/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
@@ -34,27 +34,27 @@
 		H.underwear_color = CLOTHING_SOOT_BLACK
 		H.update_body()
 	if(H.dna.species.name == "Dark Elf")
-		pants = /obj/item/clothing/under/roguetown/tights/black
-		backr = /obj/item/rogueweapon/sword/long/greatsword/elfgsword
-		beltl = /obj/item/storage/belt/rogue/pouch/coins/mid
-		shoes = /obj/item/clothing/shoes/roguetown/boots/rare/elfplate
-		gloves = /obj/item/clothing/gloves/roguetown/rare/elfplate
-		belt = /obj/item/storage/belt/rogue/leather
-		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/black
-		armor = /obj/item/clothing/suit/roguetown/armor/rare/elfplate
-		backl = /obj/item/storage/backpack/rogue/satchel
-		head = /obj/item/clothing/head/roguetown/rare/elfplate
-		neck = /obj/item/clothing/neck/roguetown/chaincoif
+		pants = /obj/item/clothing/pants/tights/black
+		backr = /obj/item/weapon/sword/long/greatsword/elfgsword
+		beltl = /obj/item/storage/belt/pouch/coins/mid
+		shoes = /obj/item/clothing/shoes/boots/rare/elfplate
+		gloves = /obj/item/clothing/gloves/rare/elfplate
+		belt = /obj/item/storage/belt/leather
+		shirt = /obj/item/clothing/shirt/undershirt/black
+		armor = /obj/item/clothing/armor/rare/elfplate
+		backl = /obj/item/storage/backpack/satchel
+		head = /obj/item/clothing/head/rare/elfplate
+		neck = /obj/item/clothing/neck/chaincoif
 	if(H.dna.species.name == "Elf")
-		pants = /obj/item/clothing/under/roguetown/tights/black
-		backr = /obj/item/rogueweapon/sword/long/greatsword/elfgsword
-		beltl = /obj/item/storage/belt/rogue/pouch/coins/mid
-		shoes = /obj/item/clothing/shoes/roguetown/boots/rare/elfplate/welfplate
-		gloves = /obj/item/clothing/gloves/roguetown/rare/elfplate/welfplate
-		belt = /obj/item/storage/belt/rogue/leather
-		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/black
-		armor = /obj/item/clothing/suit/roguetown/armor/rare/elfplate/welfplate
-		backl = /obj/item/storage/backpack/rogue/satchel
-		head = /obj/item/clothing/head/roguetown/rare/elfplate/welfplate
-		neck = /obj/item/clothing/neck/roguetown/chaincoif
+		pants = /obj/item/clothing/pants/tights/black
+		backr = /obj/item/weapon/sword/long/greatsword/elfgsword
+		beltl = /obj/item/storage/belt/pouch/coins/mid
+		shoes = /obj/item/clothing/shoes/boots/rare/elfplate/welfplate
+		gloves = /obj/item/clothing/gloves/rare/elfplate/welfplate
+		belt = /obj/item/storage/belt/leather
+		shirt = /obj/item/clothing/shirt/undershirt/black
+		armor = /obj/item/clothing/armor/rare/elfplate/welfplate
+		backl = /obj/item/storage/backpack/satchel
+		head = /obj/item/clothing/head/rare/elfplate/welfplate
+		neck = /obj/item/clothing/neck/chaincoif
 	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)

@@ -14,23 +14,23 @@
 		"Aasimar",
 		"Ogrun"
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/miner
+	outfit = /datum/outfit/job/adventurer/miner
 	category_tags = list(CTAG_PILGRIM)
 	apprentice_name = "Miner Apprentice"
 
-/datum/outfit/job/roguetown/adventurer/miner/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/miner/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = /obj/item/clothing/head/roguetown/armingcap
-	pants = /obj/item/clothing/under/roguetown/trou
-	armor = /obj/item/clothing/suit/roguetown/armor/gambeson/light/striped
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/random
-	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
-	belt = /obj/item/storage/belt/rogue/leather
-	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
-	beltl = /obj/item/rogueweapon/pick
-	backr = /obj/item/rogueweapon/shovel
-	backl = /obj/item/storage/backpack/rogue/backpack
-	backpack_contents = list(/obj/item/flint = 1, /obj/item/rogueweapon/knife/villager = 1)
+	head = /obj/item/clothing/head/armingcap
+	pants = /obj/item/clothing/pants/trou
+	armor = /obj/item/clothing/armor/gambeson/light/striped
+	shirt = /obj/item/clothing/shirt/undershirt/random
+	shoes = /obj/item/clothing/shoes/boots/leather
+	belt = /obj/item/storage/belt/leather
+	neck = /obj/item/storage/belt/pouch/coins/poor
+	beltl = /obj/item/weapon/pick
+	backr = /obj/item/weapon/shovel
+	backl = /obj/item/storage/backpack/backpack
+	backpack_contents = list(/obj/item/flint = 1, /obj/item/weapon/knife/villager = 1)
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/labor/mining, 4, TRUE)
@@ -50,7 +50,7 @@
 		H.change_stat("constitution", 1)
 
 	if(H.dna.species.id == "dwarf")
-		head = /obj/item/clothing/head/roguetown/helmet/leather/minershelm
+		head = /obj/item/clothing/head/helmet/leather/minershelm
 		id = /obj/item/clothing/ring/silver/makers_guild
 		beltr = /obj/item/key/blacksmith
 		H.cmode_music = 'sound/music/cmode/combat_dwarf.ogg'

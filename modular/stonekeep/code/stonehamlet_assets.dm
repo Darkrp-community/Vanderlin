@@ -77,7 +77,7 @@
 /*	..................   Random crap for moats  ................... */
 /obj/effect/spawner/roguemap/moat_debris
 	icon_state = "clodpile"
-	icon = 'icons/roguetown/items/natural.dmi'
+	icon = 'icons/items/natural.dmi'
 	probby = 50
 	color = "#ff82ec"
 	spawned = list(
@@ -93,7 +93,7 @@
 // ===================================================================================
 /*	..................   Metal bars (weakened or normal?)  ................... */
 /obj/effect/spawner/roguemap/metal_bars
-	icon = 'icons/roguetown/misc/structure.dmi'
+	icon = 'icons/misc/structure.dmi'
 	icon_state = "bars"
 	probby = 100
 	color = "#ff00d9"
@@ -111,45 +111,45 @@
 // ===================================================================================
 /*	..................   Dwarf Outpost Spawner  ................... */
 /obj/effect/spawner/roguemap/outpost_dwarf_weapon
-	icon = 'icons/roguetown/weapons/32.dmi'
+	icon = 'icons/weapons/32.dmi'
 	icon_state = "paxe"
 	probby = 50
 	color = "#ffde3a"
 	spawned = list(
-		/obj/item/rogueweapon/pick/paxe = 30,
-		/obj/item/rogueweapon/axe/steel = 60,
-		/obj/item/rogueweapon/pick/steel = 10
+		/obj/item/weapon/pick/paxe = 30,
+		/obj/item/weapon/axe/steel = 60,
+		/obj/item/weapon/pick/steel = 10
 		)
 
 /obj/effect/spawner/roguemap/outpost_dwarf_armor
-	icon = 'icons/roguetown/clothing/head.dmi'
+	icon = 'icons/clothing/head.dmi'
 	icon_state = "ironpot"
 	probby = 50
 	color = "#ffde3a"
 	spawned = list(
-		/obj/item/clothing/head/roguetown/helmet/ironpot = 25,
-		/obj/item/clothing/head/roguetown/helmet/leather/minershelm = 40,
-		/obj/item/clothing/neck/roguetown/chaincoif = 10,
-		/obj/item/clothing/suit/roguetown/armor/chainmail = 10,
-		/obj/item/clothing/suit/roguetown/armor/gambeson = 5,
-		/obj/item/clothing/suit/roguetown/armor/leather/vest/butler = 10
+		/obj/item/clothing/head/helmet/ironpot = 25,
+		/obj/item/clothing/head/helmet/leather/minershelm = 40,
+		/obj/item/clothing/neck/chaincoif = 10,
+		/obj/item/clothing/armor/chainmail = 10,
+		/obj/item/clothing/armor/gambeson = 5,
+		/obj/item/clothing/armor/leather/vest/butler = 10
 		)
 
 /obj/effect/spawner/roguemap/outpost_personal_item
-	icon = 'icons/roguetown/weapons/tools.dmi'
+	icon = 'icons/weapons/tools.dmi'
 	icon_state = "hammer_s"
 	probby = 50
 	color = "#ffde3a"
 	spawned = list(
-		/obj/item/rogueweapon/hammer/steel = 30,
-		/obj/item/reagent_containers/glass/bottle/rogue/beer/voddena = 60,
-		/obj/item/clothing/head/roguetown/hatfur = 10,
-		/obj/item/storage/belt/rogue/leather = 10,
+		/obj/item/weapon/hammer/steel = 30,
+		/obj/item/reagent_containers/glass/bottle/beer/voddena = 60,
+		/obj/item/clothing/head/hatfur = 10,
+		/obj/item/storage/belt/leather = 10,
 		)
 
 /obj/effect/spawner/roguemap/outpost_dwarf_key
 //	icon_state = "brown"
-	icon = 'icons/roguetown/items/keys.dmi'
+	icon = 'icons/items/keys.dmi'
 	probby = 50
 	color = "#3aff4e"
 	spawned = list(
@@ -175,23 +175,23 @@
 	outfit = /datum/outfit/deadunderdweller
 
 /datum/outfit/deadunderdweller
-	armor = /obj/item/clothing/suit/roguetown/armor/cuirass/iron
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/sailor/red
-	pants = /obj/item/clothing/under/roguetown/trou/leather
-	shoes = /obj/item/clothing/shoes/roguetown/simpleshoes/buckle
-	backl = /obj/item/storage/backpack/rogue/backpack
-	head = /obj/item/clothing/head/roguetown/helmet/leather/minershelm
+	armor = /obj/item/clothing/armor/cuirass/iron
+	shirt = /obj/item/clothing/shirt/undershirt/sailor/red
+	pants = /obj/item/clothing/pants/trou/leather
+	shoes = /obj/item/clothing/shoes/simpleshoes/buckle
+	backl = /obj/item/storage/backpack/backpack
+	head = /obj/item/clothing/head/helmet/leather/minershelm
 
 
 // ==============================================================
 /*	..................   Various mapping aides   ................... */
-/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/broken
+/obj/item/clothing/armor/chainmail/hauberk/broken
 	desc = "A long shirt of maille, this one is made for a short man it seems."
-/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/broken/Initialize()
+/obj/item/clothing/armor/chainmail/hauberk/broken/Initialize()
 	. = ..()
 	obj_break()
 
-/obj/item/clothing/suit/roguetown/armor/chainmail/battered
+/obj/item/clothing/armor/chainmail/battered
 	desc = "A good quality haubergon, but weakened by many blows."
 	max_integrity = INTEGRITY_STANDARD
 /*
@@ -199,47 +199,47 @@
 	icon = 'modular/Mapping/icons/96x96.dmi
 */
 
-/area/rogue/outdoors/rtfield/plague_district
-	ambush_mobs = list(/mob/living/carbon/human/species/human/northern/bum/skilled/madman = 50, /mob/living/simple_animal/hostile/rogue/skeleton = 50)
+/area/outdoors/rtfield/plague_district
+	ambush_mobs = list(/mob/living/carbon/human/species/human/northern/bum/skilled/madman = 50, /mob/living/simple_animal/hostile/skeleton = 50)
 	first_time_text = "PLAGUE DISTRICT"
 	color = "#d4da75"
 	name = "plague district"
 	ambush_types = list(
-				/turf/open/floor/rogue/cobblerock)
+				/turf/open/floor/cobblerock)
 
-/area/rogue/outdoors/rtfield/outlaw
+/area/outdoors/rtfield/outlaw
 	ambush_mobs = list(/mob/living/carbon/human/species/human/northern/bum/skilled/outlaw = 50)
 	name = "outlaw hideout"
 	color = "#e9baa3"
 	first_time_text = null
 
-/area/rogue/outdoors/rtfield/boggish
+/area/outdoors/rtfield/boggish
 	ambush_mobs = list(/mob/living/carbon/human/species/goblin/skilled/ambush/sea = 50)
 	name = "bog approaches"
 	color = "#7db36e"
 	first_time_text = null
 
-/area/rogue/outdoors/rtfield/woodish
-	ambush_mobs = list(/mob/living/simple_animal/hostile/retaliate/rogue/wolf = 50)
+/area/outdoors/rtfield/woodish
+	ambush_mobs = list(/mob/living/simple_animal/hostile/retaliate/wolf = 50)
 	name = "woods approaches"
 	color = "#7db36e"
 	first_time_text = null
 
-/area/rogue/outdoors/rtfield/spooky		// haunts ambush and dug down hidden treasure
-	ambush_mobs = list(/mob/living/simple_animal/hostile/rogue/haunt = 50)
+/area/outdoors/rtfield/spooky		// haunts ambush and dug down hidden treasure
+	ambush_mobs = list(/mob/living/simple_animal/hostile/haunt = 50)
 	name = "spooky place"
 	color = "#9294d3"
 	first_time_text = null
 
-/area/rogue/outdoors/rtfield/hamlet
+/area/outdoors/rtfield/hamlet
 	name = "hamlet surroundings"
 	ambush_times = list("night","dusk")
 	ambush_types = list(
-				/turf/open/floor/rogue/dirt)
+				/turf/open/floor/dirt)
 	ambush_mobs = list(
-				/mob/living/simple_animal/hostile/retaliate/rogue/wolf = 60,
+				/mob/living/simple_animal/hostile/retaliate/wolf = 60,
 				/mob/living/carbon/human/species/goblin/skilled/ambush = 5,
-				/mob/living/simple_animal/pet/cat/rogue/cabbit = 10)
+				/mob/living/simple_animal/pet/cat/cabbit = 10)
 	first_time_text = "STONEHILL VALLEY"
 
 

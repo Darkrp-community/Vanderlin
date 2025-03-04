@@ -1,4 +1,4 @@
-/datum/job/roguetown/merchant
+/datum/job/merchant
 	title = "Merchant"
 	flag = MERCHANT
 	department_flag = NOBLEMEN
@@ -21,32 +21,32 @@
 	display_order = JDO_MERCHANT
 	bypass_lastclass = TRUE
 
-	outfit = /datum/outfit/job/roguetown/merchant
+	outfit = /datum/outfit/job/merchant
 	bypass_lastclass = TRUE
 	give_bank_account = 100
 	min_pq = 0
 	selection_color = "#192bc2"
 
-/datum/outfit/job/roguetown/merchant/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/merchant/pre_equip(mob/living/carbon/human/H)
 	..()
 
-	neck = /obj/item/clothing/neck/roguetown/horus
-	backr = /obj/item/storage/backpack/rogue/satchel
-	backpack_contents = list(/obj/item/storage/belt/rogue/pouch/coins/veryrich = 1, /obj/item/merctoken = 1)
-	beltr = /obj/item/rogueweapon/sword/rapier
-	belt = /obj/item/storage/belt/rogue/leather/plaquesilver
+	neck = /obj/item/clothing/neck/horus
+	backr = /obj/item/storage/backpack/satchel
+	backpack_contents = list(/obj/item/storage/belt/pouch/coins/veryrich = 1, /obj/item/merctoken = 1)
+	beltr = /obj/item/weapon/sword/rapier
+	belt = /obj/item/storage/belt/leather/plaquesilver
 	beltl = /obj/item/storage/keyring/merchant
-	armor = /obj/item/clothing/suit/roguetown/shirt/robe/merchant
-	head = /obj/item/clothing/head/roguetown/chaperon
+	armor = /obj/item/clothing/shirt/robe/merchant
+	head = /obj/item/clothing/head/chaperon
 	id = /obj/item/clothing/ring/gold/guild_mercator
 
 	if(H.gender == MALE)
-		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/sailor
-		pants = /obj/item/clothing/under/roguetown/tights/sailor
-		shoes = /obj/item/clothing/shoes/roguetown/boots/leather
+		shirt = /obj/item/clothing/shirt/undershirt/sailor
+		pants = /obj/item/clothing/pants/tights/sailor
+		shoes = /obj/item/clothing/shoes/boots/leather
 	else
-		shirt = /obj/item/clothing/suit/roguetown/shirt/tunic/blue
-		shoes = /obj/item/clothing/shoes/roguetown/gladiator
+		shirt = /obj/item/clothing/shirt/tunic/blue
+		shoes = /obj/item/clothing/shoes/gladiator
 
 	ADD_TRAIT(H, TRAIT_SEEPRICES, type)
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)

@@ -1,11 +1,11 @@
-/datum/job/roguetown/feldsher
+/datum/job/feldsher
 	title = "Feldsher"
 	flag = FELDSHER
 	department_flag = NOBLEMEN
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	outfit = /datum/outfit/job/roguetown/feldsher
+	outfit = /datum/outfit/job/feldsher
 	display_order = JDO_FELDSHER
 	tutorial = "You have seen countless wounds over your time. Stitched the sores of blades, sealed honey over the bubous of plague. \
 	A thousand deaths stolen from the Carriagemen, yet these people will still call you a charlatan. At least the Apothecary understands you."
@@ -27,20 +27,20 @@
 
 	cmode_music = 'sound/music/cmode/nobility/combat_physician.ogg'
 
-/datum/outfit/job/roguetown/feldsher/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/feldsher/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.virginity = TRUE
-	shoes = /obj/item/clothing/shoes/roguetown/shortboots
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/red
-	backr = /obj/item/storage/backpack/rogue/satchel
-	backl = /obj/item/storage/backpack/rogue/satchel/surgbag
-	pants = /obj/item/clothing/under/roguetown/tights/random
-	gloves = /obj/item/clothing/gloves/roguetown/leather/feld
-	armor = /obj/item/clothing/suit/roguetown/shirt/robe/feld
-	head = /obj/item/clothing/head/roguetown/roguehood/feld
-	mask = /obj/item/clothing/mask/rogue/feld
-	neck = /obj/item/clothing/neck/roguetown/feld
-	belt = /obj/item/storage/belt/rogue/leather
+	shoes = /obj/item/clothing/shoes/shortboots
+	shirt = /obj/item/clothing/shirt/undershirt/red
+	backr = /obj/item/storage/backpack/satchel
+	backl = /obj/item/storage/backpack/satchel/surgbag
+	pants = /obj/item/clothing/pants/tights/random
+	gloves = /obj/item/clothing/gloves/leather/feld
+	armor = /obj/item/clothing/shirt/robe/feld
+	head = /obj/item/clothing/head/roguehood/feld
+	mask = /obj/item/clothing/face/feld
+	neck = /obj/item/clothing/neck/feld
+	belt = /obj/item/storage/belt/leather
 	beltl = /obj/item/storage/keyring/doctor
 
 	if(H.mind)

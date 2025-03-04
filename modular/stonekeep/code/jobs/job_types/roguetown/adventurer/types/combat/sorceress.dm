@@ -11,20 +11,20 @@
 		"Dark Elf",
 		"Aasimar"
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/sorceress
+	outfit = /datum/outfit/job/adventurer/sorceress
 	maximum_possible_slots = 2
 	min_pq = -10
 	category_tags = list(CTAG_ADVENTURER)
 	cmode_music = 'sound/music/cmode/adventurer/CombatSorcerer.ogg'
 
-/datum/outfit/job/roguetown/adventurer/sorceress/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/sorceress/pre_equip(mob/living/carbon/human/H)
 	..()
-	shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
-	armor = /obj/item/clothing/suit/roguetown/shirt/robe/mage
-	belt = /obj/item/storage/belt/rogue/leather/rope
-	backr = /obj/item/storage/backpack/rogue/satchel
-	beltl = /obj/item/reagent_containers/glass/bottle/rogue/manapot
-	r_hand = /obj/item/rogueweapon/polearm/woodstaff
+	shoes = /obj/item/clothing/shoes/simpleshoes
+	armor = /obj/item/clothing/shirt/robe/mage
+	belt = /obj/item/storage/belt/leather/rope
+	backr = /obj/item/storage/backpack/satchel
+	beltl = /obj/item/reagent_containers/glass/bottle/manapot
+	r_hand = /obj/item/weapon/polearm/woodstaff
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/misc/reading, 4, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/magic/arcane, 3, TRUE)

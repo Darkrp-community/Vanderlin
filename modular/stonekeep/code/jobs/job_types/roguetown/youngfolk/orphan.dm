@@ -1,4 +1,4 @@
-/datum/job/roguetown/orphan
+/datum/job/orphan
 	title = "Orphan"
 	flag = ORPHAN
 	department_flag = YOUNGFOLK
@@ -11,7 +11,7 @@
 
 	tutorial = "Your parents are dead and you have no home. Will you make something of yourself or will you die in the streets as a nobody."
 
-	outfit = /datum/outfit/job/roguetown/orphan
+	outfit = /datum/outfit/job/orphan
 	display_order = JDO_ORPHAN
 	show_in_credits = FALSE
 	min_pq = -30
@@ -19,31 +19,31 @@
 	can_have_apprentices = FALSE
 	bypass_lastclass = TRUE
 
-/datum/job/roguetown/orphan/New()
+/datum/job/orphan/New()
 	. = ..()
 	peopleknowme = list()
 
-/datum/outfit/job/roguetown/orphan/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/orphan/pre_equip(mob/living/carbon/human/H)
 	..()
 	// The guaranteed clothing they wear.
 	if(prob(50))
 		if(prob(50))
-			shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/vagrant/l
+			shirt = /obj/item/clothing/shirt/undershirt/vagrant/l
 		else
-			shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/vagrant
+			shirt = /obj/item/clothing/shirt/undershirt/vagrant
 		if(prob(50))
-			pants = /obj/item/clothing/under/roguetown/tights/vagrant/l
+			pants = /obj/item/clothing/pants/tights/vagrant/l
 		else
-			pants = /obj/item/clothing/under/roguetown/tights/vagrant
+			pants = /obj/item/clothing/pants/tights/vagrant
 	else
-		armor = /obj/item/clothing/suit/roguetown/shirt/rags
+		armor = /obj/item/clothing/shirt/rags
 	// Flair
 	if(prob(35))
 		cloak = pick(/obj/item/clothing/cloak/half, /obj/item/clothing/cloak/half/brown)
 	if(prob(30))
-		head = pick(/obj/item/clothing/head/roguetown/knitcap, /obj/item/clothing/head/roguetown/bardhat, /obj/item/clothing/head/roguetown/courtierhat, /obj/item/clothing/head/roguetown/fancyhat)
+		head = pick(/obj/item/clothing/head/knitcap, /obj/item/clothing/head/bardhat, /obj/item/clothing/head/courtierhat, /obj/item/clothing/head/fancyhat)
 	if(prob(15))
-		r_hand = pick(/obj/item/rogue/instrument/lute, /obj/item/rogue/instrument/accord, /obj/item/rogue/instrument/guitar, /obj/item/rogue/instrument/flute, /obj/item/rogue/instrument/hurdygurdy, /obj/item/rogue/instrument/viola)
+		r_hand = pick(/obj/item/instrument/lute, /obj/item/instrument/accord, /obj/item/instrument/guitar, /obj/item/instrument/flute, /obj/item/instrument/hurdygurdy, /obj/item/instrument/viola)
 		if(H.mind)
 			H.mind.adjust_skillrank(/datum/skill/misc/music, pick(2,3,4), TRUE)
 	if(H.mind)

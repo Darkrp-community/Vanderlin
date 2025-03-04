@@ -1,5 +1,5 @@
 /*
-/datum/job/roguetown/men_at_arms
+/datum/job/men_at_arms
 	title = "Men-at-arms"
 	flag = WATCHMAN
 	department_flag = GARRISON
@@ -17,22 +17,22 @@
 	)
 	allowed_sexes = list(MALE, FEMALE)
 
-	outfit = /datum/outfit/job/roguetown/watchman
+	outfit = /datum/outfit/job/watchman
 	advclass_cat_rolls = list(CTAG_MENATARMS = 20)
 	bypass_lastclass = TRUE
 	cmode_music = 'sound/music/cmode/garrison/CombatGarrison.ogg'
 	give_bank_account = 15
 	min_pq = 6
 
-/datum/outfit/job/roguetown/watchman/pre_equip(mob/living/carbon/human/H)
-	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/light
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
-	pants = /obj/item/clothing/under/roguetown/trou/leather
-	shoes = /obj/item/clothing/shoes/roguetown/boots
-	belt = /obj/item/storage/belt/rogue/leather
+/datum/outfit/job/watchman/pre_equip(mob/living/carbon/human/H)
+	shirt = /obj/item/clothing/armor/gambeson/light
+	wrists = /obj/item/clothing/wrists/bracers/leather
+	pants = /obj/item/clothing/pants/trou/leather
+	shoes = /obj/item/clothing/shoes/boots
+	belt = /obj/item/storage/belt/leather
 	beltl = /obj/item/storage/keyring/manorguard
 
-/datum/job/roguetown/men_at_arms/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
+/datum/job/men_at_arms/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
 	if(L)
 		var/mob/living/carbon/human/H = L
@@ -43,18 +43,18 @@
 /datum/advclass/menatarms/watchman_ranger
 	name = "Archer Men-At-Arms"
 	tutorial = "The Monarch has hired you to guard their keep, you'll do it at a safe distance."
-	outfit = /datum/outfit/job/roguetown/watchman/ranger
+	outfit = /datum/outfit/job/watchman/ranger
 
 	category_tags = list(CTAG_MENATARMS)
 
-/datum/outfit/job/roguetown/watchman/ranger/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/watchman/ranger/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = /obj/item/clothing/head/roguetown/helmet/kettle
+	head = /obj/item/clothing/head/helmet/kettle
 	cloak = /obj/item/clothing/cloak/stabard/guard
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/hide
-	beltr = /obj/item/rogueweapon/mace/cudgel
-	neck = /obj/item/clothing/neck/roguetown/chaincoif/iron
-	backpack_contents = list(/obj/item/rogueweapon/knife/dagger/steel/special)
+	armor = /obj/item/clothing/armor/leather/hide
+	beltr = /obj/item/weapon/mace/cudgel
+	neck = /obj/item/clothing/neck/chaincoif/iron
+	backpack_contents = list(/obj/item/weapon/knife/dagger/steel/special)
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 3, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
@@ -85,20 +85,20 @@
 /datum/advclass/menatarms/watchman_pikeman
 	name = "Pikeman Men-At-Arms"
 	tutorial = "The Monarch has hired you to guard their keep, unlike your peers you'll be on the frontline."
-	outfit = /datum/outfit/job/roguetown/watchman/pikeman
+	outfit = /datum/outfit/job/watchman/pikeman
 
 	category_tags = list(CTAG_MENATARMS)
 
-/datum/outfit/job/roguetown/watchman/pikeman/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/watchman/pikeman/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = /obj/item/clothing/head/roguetown/helmet/kettle
+	head = /obj/item/clothing/head/helmet/kettle
 	cloak = /obj/item/clothing/cloak/stabard/guard
-	armor = /obj/item/clothing/suit/roguetown/armor/chainmail
-	neck = /obj/item/clothing/neck/roguetown/chaincoif/iron
-	gloves = /obj/item/clothing/gloves/roguetown/chain
-	beltr = /obj/item/rogueweapon/sword/arming
-	backr = /obj/item/rogueweapon/polearm/spear
-	backpack_contents = list(/obj/item/rogueweapon/knife/dagger/steel/special)
+	armor = /obj/item/clothing/armor/chainmail
+	neck = /obj/item/clothing/neck/chaincoif/iron
+	gloves = /obj/item/clothing/gloves/chain
+	beltr = /obj/item/weapon/sword/arming
+	backr = /obj/item/weapon/polearm/spear
+	backpack_contents = list(/obj/item/weapon/knife/dagger/steel/special)
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/polearms, 4, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)

@@ -516,7 +516,7 @@
 	plane = -3
 	},
 /obj/effect/decal/cleanable/blood_neu/random,
-/obj/item/clothing/suit/roguetown/armor/chainmail/battered{
+/obj/item/clothing/roguetown/armor/chainmail/battered{
 	pixel_x = -12;
 	pixel_y = 5
 	},
@@ -550,7 +550,7 @@
 /turf/open/floor/rogue/concrete,
 /area/rogue/under/catacombs/dwarfoutpost/orcy)
 "Ku" = (
-/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/broken,
+/obj/item/clothing/roguetown/armor/chainmail/hauberk/broken,
 /obj/effect/decal/cleanable/blood_neu/tracks{
 	dir = 6
 	},

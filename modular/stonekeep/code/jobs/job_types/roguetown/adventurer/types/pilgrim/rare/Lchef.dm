@@ -16,14 +16,14 @@
 		"Dark Elf",
 		"Aasimar"
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/masterchef
+	outfit = /datum/outfit/job/adventurer/masterchef
 
 	maximum_possible_slots = 1
 	pickprob = 15
 	category_tags = list(CTAG_PILGRIM, CTAG_TOWNER)
 	apprentice_name = "Chef Apprentice"
 
-/datum/outfit/job/roguetown/adventurer/masterchef/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/masterchef/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.mind?.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
@@ -35,17 +35,17 @@
 	H.mind?.adjust_skillrank(/datum/skill/labor/butchering, 4, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/labor/taming, 2, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/craft/cooking, 6, TRUE)
-	belt = /obj/item/storage/belt/rogue/leather
-	pants = /obj/item/clothing/under/roguetown/tights/random
-	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/random
+	belt = /obj/item/storage/belt/leather
+	pants = /obj/item/clothing/pants/tights/random
+	shirt = /obj/item/clothing/shirt/shortshirt/random
 	cloak = /obj/item/clothing/cloak/apron
-	head = /obj/item/clothing/head/roguetown/cookhat/chef
-	shoes = /obj/item/clothing/shoes/roguetown/shortboots
-	backl = /obj/item/storage/backpack/rogue/backpack
-	neck = /obj/item/storage/belt/rogue/pouch/coins/mid
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+	head = /obj/item/clothing/head/cookhat/chef
+	shoes = /obj/item/clothing/shoes/shortboots
+	backl = /obj/item/storage/backpack/backpack
+	neck = /obj/item/storage/belt/pouch/coins/mid
+	wrists = /obj/item/clothing/wrists/bracers/leather
 	beltr = /obj/item/cooking/pan
-	beltl = /obj/item/rogueweapon/knife/cleaver
+	beltl = /obj/item/weapon/knife/cleaver
 	H.change_stat("intelligence", 3)
 	H.change_stat("constitution", 2)
 	if(H.age == AGE_OLD)
@@ -53,8 +53,8 @@
 	var/packcontents = pickweight(list("Honey" = 1, "Truffles" = 1, "Bacon" = 1)) // What is our special ingredient? Honey, truffles, or BACON?
 	switch(packcontents)
 		if("Honey")
-			backpack_contents = list(/obj/item/kitchen/rollingpin = 1, /obj/item/flint = 1, /obj/item/kitchen/spoon = 1, /obj/item/natural/cloth = 1, /obj/item/reagent_containers/peppermill = 1, /obj/item/reagent_containers/powder/flour = 2, /obj/item/reagent_containers/food/snacks/spiderhoney = 2, /obj/item/reagent_containers/powder/salt = 1, /obj/item/reagent_containers/food/snacks/butter = 1, /obj/item/reagent_containers/food/snacks/rogue/meat/salami = 1, /obj/item/reagent_containers/food/snacks/handpie = 1, /obj/item/book/rogue/yeoldecookingmanual = 1)
+			backpack_contents = list(/obj/item/kitchen/rollingpin = 1, /obj/item/flint = 1, /obj/item/kitchen/spoon = 1, /obj/item/natural/cloth = 1, /obj/item/reagent_containers/peppermill = 1, /obj/item/reagent_containers/powder/flour = 2, /obj/item/reagent_containers/food/snacks/spiderhoney = 2, /obj/item/reagent_containers/powder/salt = 1, /obj/item/reagent_containers/food/snacks/butter = 1, /obj/item/reagent_containers/food/snacks/meat/salami = 1, /obj/item/reagent_containers/food/snacks/handpie = 1, /obj/item/book/yeoldecookingmanual = 1)
 		if("Truffles")
-			backpack_contents = list(/obj/item/kitchen/rollingpin = 1, /obj/item/flint = 1, /obj/item/kitchen/spoon = 1, /obj/item/natural/cloth = 1, /obj/item/reagent_containers/peppermill = 1, /obj/item/reagent_containers/powder/flour = 2, /obj/item/reagent_containers/food/snacks/truffles = 2, /obj/item/reagent_containers/powder/salt = 1, /obj/item/reagent_containers/food/snacks/butter = 1, /obj/item/reagent_containers/food/snacks/rogue/meat/salami = 1, /obj/item/reagent_containers/food/snacks/handpie = 1, /obj/item/book/rogue/yeoldecookingmanual = 1)
+			backpack_contents = list(/obj/item/kitchen/rollingpin = 1, /obj/item/flint = 1, /obj/item/kitchen/spoon = 1, /obj/item/natural/cloth = 1, /obj/item/reagent_containers/peppermill = 1, /obj/item/reagent_containers/powder/flour = 2, /obj/item/reagent_containers/food/snacks/truffles = 2, /obj/item/reagent_containers/powder/salt = 1, /obj/item/reagent_containers/food/snacks/butter = 1, /obj/item/reagent_containers/food/snacks/meat/salami = 1, /obj/item/reagent_containers/food/snacks/handpie = 1, /obj/item/book/yeoldecookingmanual = 1)
 		if("Bacon")
-			backpack_contents = list(/obj/item/kitchen/rollingpin = 1, /obj/item/flint = 1, /obj/item/kitchen/spoon = 1, /obj/item/natural/cloth = 1, /obj/item/reagent_containers/peppermill = 1, /obj/item/reagent_containers/powder/flour = 2, /obj/item/reagent_containers/food/snacks/rogue/meat/fatty = 1, /obj/item/reagent_containers/powder/salt = 1, /obj/item/reagent_containers/food/snacks/butter = 1, /obj/item/reagent_containers/food/snacks/rogue/meat/salami = 1, /obj/item/reagent_containers/food/snacks/handpie = 1, /obj/item/book/rogue/yeoldecookingmanual = 1)
+			backpack_contents = list(/obj/item/kitchen/rollingpin = 1, /obj/item/flint = 1, /obj/item/kitchen/spoon = 1, /obj/item/natural/cloth = 1, /obj/item/reagent_containers/peppermill = 1, /obj/item/reagent_containers/powder/flour = 2, /obj/item/reagent_containers/food/snacks/meat/fatty = 1, /obj/item/reagent_containers/powder/salt = 1, /obj/item/reagent_containers/food/snacks/butter = 1, /obj/item/reagent_containers/food/snacks/meat/salami = 1, /obj/item/reagent_containers/food/snacks/handpie = 1, /obj/item/book/yeoldecookingmanual = 1)

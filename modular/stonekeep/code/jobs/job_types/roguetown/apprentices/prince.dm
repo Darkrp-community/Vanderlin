@@ -1,4 +1,4 @@
-/datum/job/roguetown/prince
+/datum/job/prince
 	title = "Prince"
 	f_title = "Princess"
 	flag = PRINCE
@@ -31,7 +31,7 @@
 	can_have_apprentices = FALSE
 
 
-/datum/job/roguetown/prince/after_spawn(mob/living/H, mob/M, latejoin)
+/datum/job/prince/after_spawn(mob/living/H, mob/M, latejoin)
 	. = ..()
 	SSfamilytree.AddRoyal(H, FAMILY_PROGENY)
 	if(ishuman(H))
@@ -46,20 +46,20 @@
 /datum/advclass/heir/daring
 	name = "Daring Twit"
 	tutorial = "You're a somebody, someone important. It only makes sense you want to make a name for yourself, to gain your own glory so people see how great you really are beyond your bloodline. Plus, if you're beloved by the people for your exploits you'll be chosen! Probably. Shame you're as useful and talented as a squire, despite your delusions to the contrary."
-	outfit = /datum/outfit/job/roguetown/heir/daring
+	outfit = /datum/outfit/job/heir/daring
 	category_tags = list(CTAG_HEIR)
 
-/datum/outfit/job/roguetown/heir/daring/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/heir/daring/pre_equip(mob/living/carbon/human/H)
 	..()
-	pants = /obj/item/clothing/under/roguetown/tights
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/guard
-	armor = /obj/item/clothing/suit/roguetown/armor/chainmail
-	shoes = /obj/item/clothing/shoes/roguetown/nobleboot
-	belt = /obj/item/storage/belt/rogue/leather
-	beltl = /obj/item/rogueweapon/sword
+	pants = /obj/item/clothing/pants/tights
+	shirt = /obj/item/clothing/shirt/undershirt/guard
+	armor = /obj/item/clothing/armor/chainmail
+	shoes = /obj/item/clothing/shoes/nobleboot
+	belt = /obj/item/storage/belt/leather
+	beltl = /obj/item/weapon/sword
 	beltr = /obj/item/key/manor
-	neck = /obj/item/storage/belt/rogue/pouch/coins/rich
-	backr = /obj/item/storage/backpack/rogue/satchel
+	neck = /obj/item/storage/belt/pouch/coins/rich
+	backr = /obj/item/storage/backpack/satchel
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/bows, 2, TRUE)
@@ -84,27 +84,27 @@
 /datum/advclass/heir/aristocrat
 	name = "Sheltered Aristocrat"
 	tutorial = "Life has been kind to you; you've an entire keep at your disposal, servants to wait on you, and a whole retinue of guards to guard you. You've nothing to prove; just live the good life and you'll be a lord someday, too. A lack of ambition translates into a lacking skillset beyond schooling, though, and your breaks from boredom consist of being a damsel or court gossip."
-	outfit = /datum/outfit/job/roguetown/heir/aristocrat
+	outfit = /datum/outfit/job/heir/aristocrat
 	category_tags = list(CTAG_HEIR)
 
-/datum/outfit/job/roguetown/heir/aristocrat/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/heir/aristocrat/pre_equip(mob/living/carbon/human/H)
 	..()
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
-	belt = /obj/item/storage/belt/rogue/leather
+	belt = /obj/item/storage/belt/leather
 	beltl = /obj/item/key/manor
-	beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
+	beltr = /obj/item/storage/belt/pouch/coins/rich
 	if(H.gender == MALE)
-		pants = /obj/item/clothing/under/roguetown/tights
-		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/royal/prince
-		belt = /obj/item/storage/belt/rogue/leather
-		shoes = /obj/item/clothing/shoes/roguetown/nobleboot
+		pants = /obj/item/clothing/pants/tights
+		shirt = /obj/item/clothing/shirt/dress/royal/prince
+		belt = /obj/item/storage/belt/leather
+		shoes = /obj/item/clothing/shoes/nobleboot
 	if(H.gender == FEMALE)
-		belt = /obj/item/storage/belt/rogue/leather/cloth/lady
-		head = /obj/item/clothing/head/roguetown/hennin
-		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/royal/princess
-		shoes = /obj/item/clothing/shoes/roguetown/shortboots
-		pants = /obj/item/clothing/under/roguetown/tights/random
+		belt = /obj/item/storage/belt/leather/cloth/lady
+		head = /obj/item/clothing/head/hennin
+		shirt = /obj/item/clothing/shirt/dress/royal/princess
+		shoes = /obj/item/clothing/shoes/shortboots
+		pants = /obj/item/clothing/pants/tights/random
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/crossbows, pick(0,1), TRUE)
@@ -127,28 +127,28 @@
 /datum/advclass/heir/inbred
 	name = "Inbred Wastrel"
 	tutorial = "Your bloodline ensures Psydon smiles upon you by divine right, the blessing of nobility... until you were born, anyway. You are a child forsaken, and even though your body boils as you go about your day, your spine creaks, and your drooling form needs to be waited on tirelessly you are still considered more important then the peasant that keeps the town fed and warm. Remind them of that fact when your lungs are particularly pus free."
-	outfit = /datum/outfit/job/roguetown/heir/inbred
+	outfit = /datum/outfit/job/heir/inbred
 	category_tags = list(CTAG_HEIR)
 
-/datum/outfit/job/roguetown/heir/inbred/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/heir/inbred/pre_equip(mob/living/carbon/human/H)
 	..()
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_CRITICAL_WEAKNESS, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
-	belt = /obj/item/storage/belt/rogue/leather
+	belt = /obj/item/storage/belt/leather
 	beltl = /obj/item/key/manor
-	beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
+	beltr = /obj/item/storage/belt/pouch/coins/rich
 	if(H.gender == MALE)
-		pants = /obj/item/clothing/under/roguetown/tights
-		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/royal/prince
-		belt = /obj/item/storage/belt/rogue/leather
-		shoes = /obj/item/clothing/shoes/roguetown/nobleboot
+		pants = /obj/item/clothing/pants/tights
+		shirt = /obj/item/clothing/shirt/dress/royal/prince
+		belt = /obj/item/storage/belt/leather
+		shoes = /obj/item/clothing/shoes/nobleboot
 	if(H.gender == FEMALE)
-		belt = /obj/item/storage/belt/rogue/leather/cloth/lady
-		head = /obj/item/clothing/head/roguetown/hennin
-		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/royal/princess
-		shoes = /obj/item/clothing/shoes/roguetown/shortboots
-		pants = /obj/item/clothing/under/roguetown/tights/random
+		belt = /obj/item/storage/belt/leather/cloth/lady
+		head = /obj/item/clothing/head/hennin
+		shirt = /obj/item/clothing/shirt/dress/royal/princess
+		shoes = /obj/item/clothing/shoes/shortboots
+		pants = /obj/item/clothing/pants/tights/random
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/crossbows, pick(0,1), TRUE)

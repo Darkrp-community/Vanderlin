@@ -16,23 +16,23 @@
 		"Ogrun",
 		"Undine"
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/abyssariad/onmyoji
+	outfit = /datum/outfit/job/adventurer/abyssariad/onmyoji
 	category_tags = list(CTAG_ADVENTURER)
 	maximum_possible_slots = 2
 
-/datum/outfit/job/roguetown/adventurer/abyssariad/onmyoji
+/datum/outfit/job/adventurer/abyssariad/onmyoji
 	allowed_patrons = list(/datum/patron/divine/abyssor)
 
-/datum/outfit/job/roguetown/adventurer/abyssariad/onmyoji/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/abyssariad/onmyoji/pre_equip(mob/living/carbon/human/H)
 	..()
-	shoes = /obj/item/clothing/shoes/roguetown/shortboots/cloudhead
-	belt = /obj/item/storage/belt/rogue/leather/rope
-	backr = /obj/item/storage/backpack/rogue/satchel
-	beltl = /obj/item/reagent_containers/glass/bottle/rogue/manapot
-	backl = /obj/item/rogueweapon/polearm/woodstaff/quarterstaff/bostaff
-	armor = /obj/item/clothing/suit/roguetown/shirt/kaizoku/robe
-	head = /obj/item/clothing/head/roguetown/wizhat/onmyoji/eboshi
-	pants = /obj/item/clothing/under/roguetown/trou/tobi/dark
+	shoes = /obj/item/clothing/shoes/shortboots/cloudhead
+	belt = /obj/item/storage/belt/leather/rope
+	backr = /obj/item/storage/backpack/satchel
+	beltl = /obj/item/reagent_containers/glass/bottle/manapot
+	backl = /obj/item/weapon/polearm/woodstaff/quarterstaff/bostaff
+	armor = /obj/item/clothing/shirt/kaizoku/robe
+	head = /obj/item/clothing/head/wizhat/onmyoji/eboshi
+	pants = /obj/item/clothing/pants/trou/tobi/dark
 
 	var/yesno = list("Yes. I am Iron-hearted.","No. I am Civilian.")
 	var/military = input("Sworn to the Fog Island ranks?", "Emperor's regiment?") as anything in yesno
@@ -41,21 +41,21 @@
 		if("Yes. I am Iron-hearted.") //Cooler clothing. Roleplay-wise, an champion-type, theme unique solely to Kaizoku as far I'm aware.
 			switch(background)
 				if("thunder")
-					armor = /obj/item/clothing/suit/roguetown/shirt/robe/wizard/guardian/thunder
-					head = /obj/item/clothing/head/roguetown/wizhat/onmyoji/thunder
-					pants = /obj/item/clothing/under/roguetown/trou/tobi/thunder
+					armor = /obj/item/clothing/shirt/robe/wizard/guardian/thunder
+					head = /obj/item/clothing/head/wizhat/onmyoji/thunder
+					pants = /obj/item/clothing/pants/trou/tobi/thunder
 				if("storm")
-					armor = /obj/item/clothing/suit/roguetown/shirt/robe/wizard/guardian/storm
-					head = /obj/item/clothing/head/roguetown/wizhat/onmyoji/storm
-					pants = /obj/item/clothing/under/roguetown/trou/tobi/storm
+					armor = /obj/item/clothing/shirt/robe/wizard/guardian/storm
+					head = /obj/item/clothing/head/wizhat/onmyoji/storm
+					pants = /obj/item/clothing/pants/trou/tobi/storm
 				if("ocean")
-					armor = /obj/item/clothing/suit/roguetown/shirt/robe/wizard/guardian/ocean
-					head = /obj/item/clothing/head/roguetown/wizhat/onmyoji/ocean
-					pants = /obj/item/clothing/under/roguetown/trou/tobi/ocean
+					armor = /obj/item/clothing/shirt/robe/wizard/guardian/ocean
+					head = /obj/item/clothing/head/wizhat/onmyoji/ocean
+					pants = /obj/item/clothing/pants/trou/tobi/ocean
 				if("island")
-					armor = /obj/item/clothing/suit/roguetown/shirt/robe/wizard/guardian/island
-					head = /obj/item/clothing/head/roguetown/wizhat/onmyoji/island
-					pants = /obj/item/clothing/under/roguetown/trou/tobi/island
+					armor = /obj/item/clothing/shirt/robe/wizard/guardian/island
+					head = /obj/item/clothing/head/wizhat/onmyoji/island
+					pants = /obj/item/clothing/pants/trou/tobi/island
 			H.set_blindness(0)
 		if("No. I am a Civilian.)") //Just continue and replace.
 			H.set_blindness(0)

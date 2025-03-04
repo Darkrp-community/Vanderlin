@@ -1,4 +1,4 @@
-/datum/job/roguetown/undertaker
+/datum/job/undertaker
 	title = "Gravekeeper"
 	flag = GRAVETENDER
 	department_flag = CHURCHMEN
@@ -17,27 +17,27 @@
 	tutorial = "As a servant of Necra, you embody the sanctity of her domain, ensuring the dead rest peacefully within the earth. You are the bane of grave robbers and necromancers, and your holy magic brings undead back into Necra's embrace: the only rightful place for lost souls."
 	allowed_patrons = list(/datum/patron/divine/necra)
 
-	outfit = /datum/outfit/job/roguetown/undertaker
+	outfit = /datum/outfit/job/undertaker
 	display_order = JDO_GRAVETENDER
 	give_bank_account = TRUE
 	min_pq = -25
 	bypass_lastclass = TRUE
 	cmode_music = 'sound/music/cmode/church/CombatGravekeeper.ogg'
 
-/datum/outfit/job/roguetown/undertaker
+/datum/outfit/job/undertaker
 	allowed_patrons = list(/datum/patron/divine/necra)
 
-/datum/outfit/job/roguetown/undertaker/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/undertaker/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = /obj/item/clothing/head/roguetown/padded/deathshroud
-	neck = /obj/item/clothing/neck/roguetown/psycross/silver/necra
-	pants = /obj/item/clothing/under/roguetown/trou/leather/mourning
-	armor = /obj/item/clothing/suit/roguetown/shirt/robe/necra
-	shoes = /obj/item/clothing/shoes/roguetown/boots
-	belt = /obj/item/storage/belt/rogue/leather
+	head = /obj/item/clothing/head/padded/deathshroud
+	neck = /obj/item/clothing/neck/psycross/silver/necra
+	pants = /obj/item/clothing/pants/trou/leather/mourning
+	armor = /obj/item/clothing/shirt/robe/necra
+	shoes = /obj/item/clothing/shoes/boots
+	belt = /obj/item/storage/belt/leather
 	beltl = /obj/item/storage/keyring/gravetender
-	beltr = /obj/item/storage/belt/rogue/pouch
-	backr = /obj/item/rogueweapon/shovel
+	beltr = /obj/item/storage/belt/pouch
+	backr = /obj/item/weapon/shovel
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/misc/sewing, 2, TRUE) // these are basically the acolyte skills with a bit of other stuff
 		H.mind.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)

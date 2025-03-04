@@ -10,22 +10,22 @@
 		"Tiefling",
 		"Dark Elf"
 	)
-	outfit = /datum/outfit/job/roguetown/bandit/sawbones
+	outfit = /datum/outfit/job/bandit/sawbones
 	category_tags = list(CTAG_BANDIT)
 	cmode_music = 'sound/music/cmode/antag/CombatBandit3.ogg'
 
-/datum/outfit/job/roguetown/bandit/sawbones/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/bandit/sawbones/pre_equip(mob/living/carbon/human/H)
 	..()
-	mask = /obj/item/clothing/mask/rogue/facemask/steel
-	head = /obj/item/clothing/head/roguetown/tophat
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/butcher
-	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt
-	belt = /obj/item/storage/belt/rogue/leather
-	beltr = /obj/item/rogueweapon/knife/cleaver /// proper self defense an tree aquiring
-	pants = /obj/item/clothing/under/roguetown/trou
-	shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
-	backr = /obj/item/storage/backpack/rogue/satchel
-	backl = /obj/item/storage/backpack/rogue/satchel/surgbag
+	mask = /obj/item/clothing/face/facemask/steel
+	head = /obj/item/clothing/head/tophat
+	armor = /obj/item/clothing/armor/leather/vest/butcher
+	shirt = /obj/item/clothing/shirt/shortshirt
+	belt = /obj/item/storage/belt/leather
+	beltr = /obj/item/weapon/knife/cleaver /// proper self defense an tree aquiring
+	pants = /obj/item/clothing/pants/trou
+	shoes = /obj/item/clothing/shoes/simpleshoes
+	backr = /obj/item/storage/backpack/satchel
+	backl = /obj/item/storage/backpack/satchel/surgbag
 	backpack_contents = list(/obj/item/natural/worms/leech = 1, /obj/item/natural/cloth = 2,)
 	H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)

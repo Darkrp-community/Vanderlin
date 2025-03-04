@@ -15,23 +15,23 @@
 		"Aasimar",
 		"Changeling"
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/physicker
+	outfit = /datum/outfit/job/adventurer/physicker
 	category_tags = list(CTAG_PILGRIM)
 	maximum_possible_slots = 2
 	apprentice_name = "Physicker Apprentice"
 
-/datum/outfit/job/roguetown/adventurer/physicker/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/physicker/pre_equip(mob/living/carbon/human/H)
 	..()
-	mask = /obj/item/clothing/mask/rogue/phys
-	head = /obj/item/clothing/head/roguetown/roguehood/phys
-	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/black
-	backr = /obj/item/storage/backpack/rogue/satchel
-	pants = /obj/item/clothing/under/roguetown/tights/random
-	gloves = /obj/item/clothing/gloves/roguetown/leather/phys
-	armor = /obj/item/clothing/suit/roguetown/shirt/robe/phys
-	neck = /obj/item/clothing/neck/roguetown/phys
-	r_hand = /obj/item/storage/backpack/rogue/satchel/surgbag
+	mask = /obj/item/clothing/face/phys
+	head = /obj/item/clothing/head/roguehood/phys
+	shoes = /obj/item/clothing/shoes/boots/leather
+	shirt = /obj/item/clothing/shirt/undershirt/black
+	backr = /obj/item/storage/backpack/satchel
+	pants = /obj/item/clothing/pants/tights/random
+	gloves = /obj/item/clothing/gloves/leather/phys
+	armor = /obj/item/clothing/shirt/robe/phys
+	neck = /obj/item/clothing/neck/phys
+	r_hand = /obj/item/storage/backpack/satchel/surgbag
 
 	H.mind?.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)

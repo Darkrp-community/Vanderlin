@@ -1,4 +1,4 @@
-/datum/job/roguetown/archivist
+/datum/job/archivist
 	title = "Archivist"
 	tutorial = "A well-traveled and well-learned seeker of knowledge, the Archivist's mind has been touched by Noc himself. They settled in Vanderlin some time ago, coming to the Isle of Enigma with the hope of unraveling its mysteries. If they can expand their library and teach the masses, Psydonia may yet enter a new age of enlightenment."
 	flag = ARCHIVIST
@@ -18,31 +18,31 @@
 	)
 	spells = list(/obj/effect/proc_holder/spell/self/learnspell, /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
 
-	outfit = /datum/outfit/job/roguetown/archivist
+	outfit = /datum/outfit/job/archivist
 	display_order = 19
 	give_bank_account = 100
 	min_pq = 0
 	allowed_patrons = list(/datum/patron/divine/noc)
 
-/datum/outfit/job/roguetown/archivist/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/archivist/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(H.dna.species.id == "Dwarf")
-		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/puritan
-		armor = /obj/item/clothing/suit/roguetown/armor/leather/jacket/apothecary
-		pants = /obj/item/clothing/under/roguetown/tights/black
+		shirt = /obj/item/clothing/shirt/undershirt/puritan
+		armor = /obj/item/clothing/armor/leather/jacket/apothecary
+		pants = /obj/item/clothing/pants/tights/black
 	else
 		if(H.gender == FEMALE)
-			armor = /obj/item/clothing/suit/roguetown/shirt/robe/archivist
+			armor = /obj/item/clothing/shirt/robe/archivist
 		else
-			shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/puritan
-			armor = /obj/item/clothing/suit/roguetown/shirt/robe/archivist
-			pants = /obj/item/clothing/under/roguetown/tights/black
+			shirt = /obj/item/clothing/shirt/undershirt/puritan
+			armor = /obj/item/clothing/shirt/robe/archivist
+			pants = /obj/item/clothing/pants/tights/black
 	H.virginity = TRUE
-	shoes = /obj/item/clothing/shoes/roguetown/boots
-	belt = /obj/item/storage/belt/rogue/leather/plaquesilver
+	shoes = /obj/item/clothing/shoes/boots
+	belt = /obj/item/storage/belt/leather/plaquesilver
 	beltl = /obj/item/storage/keyring/archivist
-	backl = /obj/item/storage/backpack/rogue/satchel
-	neck = /obj/item/clothing/neck/roguetown/psycross/noc
+	backl = /obj/item/storage/backpack/satchel
+	neck = /obj/item/clothing/neck/psycross/noc
 	backpack_contents = list(/obj/item/literary/apprentice = 1)
 
 	if(H.mind)

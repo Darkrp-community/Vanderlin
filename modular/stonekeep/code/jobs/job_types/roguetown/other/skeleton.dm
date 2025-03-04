@@ -1,4 +1,4 @@
-/datum/job/roguetown/skeleton
+/datum/job/skeleton
 	title = "Skeleton"
 	flag = SKELETON
 	department_flag = UNDEAD
@@ -19,11 +19,11 @@
 	)
 	tutorial = ""
 
-	outfit = /datum/outfit/job/roguetown/skeleton
+	outfit = /datum/outfit/job/skeleton
 	show_in_credits = FALSE
 	give_bank_account = FALSE
 
-/datum/job/roguetown/skeleton/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
+/datum/job/skeleton/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
 	if(L)
 		var/mob/living/carbon/human/H = L
@@ -81,66 +81,66 @@
 		H.silent = TRUE		// makes them unable to audible emote or speak, no more sexy moan zombies
 		H.grant_language(/datum/language/hellspeak)
 
-/datum/outfit/job/roguetown/skeleton/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/skeleton/pre_equip(mob/living/carbon/human/H)
 	..()
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+	wrists = /obj/item/clothing/wrists/bracers/leather
 	if(prob(50))
-		wrists = /obj/item/clothing/wrists/roguetown/bracers
-	belt = /obj/item/storage/belt/rogue/leather
+		wrists = /obj/item/clothing/wrists/bracers
+	belt = /obj/item/storage/belt/leather
 	if(prob(10))
-		armor = /obj/item/clothing/suit/roguetown/armor/gambeson/light
+		armor = /obj/item/clothing/armor/gambeson/light
 	if(prob(10))
-		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest
+		armor = /obj/item/clothing/armor/leather/vest
 	if(prob(10))
-		armor = /obj/item/clothing/suit/roguetown/armor/chainmail/iron
+		armor = /obj/item/clothing/armor/chainmail/iron
 	if(prob(10))
-		armor = /obj/item/clothing/suit/roguetown/armor/cuirass/copperchest
+		armor = /obj/item/clothing/armor/cuirass/copperchest
 	if(prob(10))
-		armor = /obj/item/clothing/suit/roguetown/armor/leather/hide
+		armor = /obj/item/clothing/armor/leather/hide
 	if(prob(10))
-		armor = /obj/item/clothing/suit/roguetown/armor/cuirass/iron/rust
+		armor = /obj/item/clothing/armor/cuirass/iron/rust
 
 	switch(pick(1,9))
 		if (1)
-			head = /obj/item/clothing/head/roguetown/helmet/kettle
+			head = /obj/item/clothing/head/helmet/kettle
 		if (2)
-			head = /obj/item/clothing/head/roguetown/helmet/winged
+			head = /obj/item/clothing/head/helmet/winged
 		if (3)
-			head = /obj/item/clothing/head/roguetown/helmet/leather/conical
+			head = /obj/item/clothing/head/helmet/leather/conical
 		if (4)
-			head = /obj/item/clothing/head/roguetown/helmet/coppercap
+			head = /obj/item/clothing/head/helmet/coppercap
 		if (5)
-			neck = /obj/item/clothing/neck/roguetown/coif/cloth
+			neck = /obj/item/clothing/neck/coif/cloth
 		if (6)
-			neck = /obj/item/clothing/neck/roguetown/coif
+			neck = /obj/item/clothing/neck/coif
 		if (7)
-			head = /obj/item/clothing/head/roguetown/helmet/horned
+			head = /obj/item/clothing/head/helmet/horned
 		if (8)
-			head = /obj/item/clothing/head/roguetown/helmet/skullcap
+			head = /obj/item/clothing/head/helmet/skullcap
 		if (9)
-			head = /obj/item/clothing/head/roguetown/helmet
+			head = /obj/item/clothing/head/helmet
 
 	if(prob(20))
-		backr = /obj/item/rogueweapon/shield/wood
+		backr = /obj/item/weapon/shield/wood
 
 	switch(pick(1,6))
 		if (1)
-			var/obj/item/rogueweapon/sword/short/P = new()
+			var/obj/item/weapon/sword/short/P = new()
 			H.put_in_hands(P, forced = TRUE)
 		if (2)
-			var/obj/item/rogueweapon/axe/copper/P = new()
+			var/obj/item/weapon/axe/copper/P = new()
 			H.put_in_hands(P, forced = TRUE)
 		if (3)
-			var/obj/item/rogueweapon/mace/P = new()
+			var/obj/item/weapon/mace/P = new()
 			H.put_in_hands(P, forced = TRUE)
 		if (4)
-			var/obj/item/rogueweapon/polearm/spear/P = new()
+			var/obj/item/weapon/polearm/spear/P = new()
 			H.put_in_hands(P, forced = TRUE)
 		if (5)
-			var/obj/item/rogueweapon/sword/long/rider/copper/P = new()
+			var/obj/item/weapon/sword/long/rider/copper/P = new()
 			H.put_in_hands(P, forced = TRUE)
 		if (6)
-			var/obj/item/rogueweapon/flail/militia/P = new()
+			var/obj/item/weapon/flail/militia/P = new()
 			H.put_in_hands(P, forced = TRUE)
 
 	H.TOTALSTR = rand(8,10)

@@ -233,7 +233,7 @@
 /obj/item/reagent_containers/glass/bottle/rogue/beer/voddena,
 /obj/item/clothing/cloak/cape/silk/random,
 /obj/structure/closet/crate/roguecloset/lord,
-/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk,
+/obj/item/clothing/roguetown/armor/chainmail/hauberk,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/under/catacombs/dwarfoutpost)
 "tX" = (

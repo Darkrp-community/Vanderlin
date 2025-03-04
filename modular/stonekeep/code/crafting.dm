@@ -9,7 +9,7 @@
 /*-----------------\
 | Crafting Recipes |
 \-----------------*/
-/datum/crafting_recipe/roguetown/structure/stonetable
+/datum/crafting_recipe/structure/stonetable
 	name = "stone table (long mid)"
 	result = /obj/structure/table/stone
 	reqs = list(/obj/item/natural/stone = 2)
@@ -19,11 +19,11 @@
 	time = 4 SECONDS
 	skillcraft = /datum/skill/craft/masonry
 	craftdiff = 3
-/datum/crafting_recipe/roguetown/structure/stonetable/end
+/datum/crafting_recipe/structure/stonetable/end
 	name = "stone table (long end)"
 	result = /obj/structure/table/stone_end
 
-/datum/crafting_recipe/roguetown/structure/stonetable/small
+/datum/crafting_recipe/structure/stonetable/small
 	name = "stone table (single)"
 	result = /obj/structure/table/stone_small
 
@@ -57,8 +57,8 @@
 	recipe_name = "a Studded Club"
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/copper
-	additional_items = list(/obj/item/rogueweapon/mace/woodclub)
-	created_item = /obj/item/rogueweapon/mace/copperbludgeon
+	additional_items = list(/obj/item/weapon/mace/woodclub)
+	created_item = /obj/item/weapon/mace/copperbludgeon
 	craftdiff = 0
 
 
@@ -83,20 +83,20 @@
 
 
 
-/datum/crafting_recipe/roguetown/woodflail
+/datum/crafting_recipe/woodflail
 	name = "wooden flail x2"
 	skillcraft = /datum/skill/craft/carpentry
-	reqs = list(/obj/item/rogueweapon/flail/towner = 1,
+	reqs = list(/obj/item/weapon/flail/towner = 1,
 			/obj/item/ingot/iron = 10)
-	tools = list(/obj/item/rogueweapon/hammer)
+	tools = list(/obj/item/weapon/hammer)
 	req_table = TRUE
 	craftdiff = 2
 
-/datum/crafting_recipe/roguetown/militia_flail
+/datum/crafting_recipe/militia_flail
 	name = "militia flail"
 	skillcraft = /datum/skill/craft/carpentry
-	reqs = list(/obj/item/rogueweapon/flail/towner = 1, /obj/item/ingot/iron = 10)
-	tools = list(/obj/item/rogueweapon/hammer)
+	reqs = list(/obj/item/weapon/flail/towner = 1, /obj/item/ingot/iron = 10)
+	tools = list(/obj/item/weapon/hammer)
 	req_table = TRUE
 	craftdiff = 3
 
@@ -107,14 +107,14 @@
 	recipe_name = "a saw for woodworking"
 	req_bar = /obj/item/ingot/iron
 	additional_items = list(/obj/item/grown/log/tree/stick)
-	created_item = /obj/item/rogueweapon/handsaw
+	created_item = /obj/item/weapon/handsaw
 	i_type = "Tools"
 
 /datum/anvil_recipe/tools/iron/chisel
 	name = "Chisel"
 	recipe_name = "a chisel for stoneworking"
 	req_bar = /obj/item/ingot/iron
-	created_item = /obj/item/rogueweapon/chisel
+	created_item = /obj/item/weapon/chisel
 	i_type = "Tools"
 
 
@@ -123,7 +123,7 @@
 	recipe_name = "a pair of Splint Chausses"
 	req_bar = /obj/item/ingot/iron
 	additional_items = list(/obj/item/ingot/iron, /obj/item/natural/hide, /obj/item/natural/hide)
-	created_item = /obj/item/clothing/under/roguetown/splintlegs
+	created_item = /obj/item/clothing/pants/splintlegs
 	craftdiff = 2
 
 
@@ -132,7 +132,7 @@
 	recipe_name = "a pair of Splint Vambraces"
 	req_bar = /obj/item/ingot/iron
 	additional_items = list(/obj/item/ingot/iron, /obj/item/natural/hide, /obj/item/natural/hide)
-	created_item = /obj/item/clothing/wrists/roguetown/bracers/splint
+	created_item = /obj/item/clothing/wrists/bracers/splint
 	craftdiff = 2
 
 
@@ -141,6 +141,6 @@
 	recipe_name = "a pair of Platemail Chausses"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel)
-	created_item = /obj/item/clothing/under/roguetown/chainlegs/reinforced
+	created_item = /obj/item/clothing/pants/chainlegs/reinforced
 	craftdiff = 3
 

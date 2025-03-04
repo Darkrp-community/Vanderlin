@@ -12,7 +12,7 @@
 		"Dark Elf",
 		"Aasimar"
 	)
-	outfit = /datum/outfit/job/roguetown/adventurer/zybantine
+	outfit = /datum/outfit/job/adventurer/zybantine
 	category_tags = list(CTAG_PILGRIM)
 	maximum_possible_slots = 1
 	pickprob = 30
@@ -20,25 +20,25 @@
 
 	cmode_music = 'sound/music/cmode/towner/combat_desertrider.ogg'
 
-/datum/outfit/job/roguetown/adventurer/zybantine/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/adventurer/zybantine/pre_equip(mob/living/carbon/human/H)
 	..()
-	shoes = /obj/item/clothing/shoes/roguetown/shalal
-	gloves = /obj/item/clothing/gloves/roguetown/leather
-	head = /obj/item/clothing/head/roguetown/crown/circlet
+	shoes = /obj/item/clothing/shoes/shalal
+	gloves = /obj/item/clothing/gloves/leather
+	head = /obj/item/clothing/head/crown/circlet
 	cloak = /obj/item/clothing/cloak/raincloak/purple
-	armor = /obj/item/clothing/suit/roguetown/armor/gambeson/arming
-	belt = /obj/item/storage/belt/rogue/leather/shalal
-	beltl = /obj/item/rogueweapon/sword/sabre/shalal
+	armor = /obj/item/clothing/armor/gambeson/arming
+	belt = /obj/item/storage/belt/leather/shalal
+	beltl = /obj/item/weapon/sword/sabre/shalal
 	beltr = /obj/item/flashlight/flare/torch/lantern
-	backr = /obj/item/storage/backpack/rogue/satchel
+	backr = /obj/item/storage/backpack/satchel
 	id = /obj/item/clothing/ring/gold/guild_mercator
-	shirt = /obj/item/clothing/suit/roguetown/shirt/tunic/purple
-	pants = /obj/item/clothing/under/roguetown/trou/leather
-	neck = /obj/item/clothing/neck/roguetown/shalal/emir
-	backpack_contents = list(/obj/item/storage/belt/rogue/pouch/coins/veryrich)
+	shirt = /obj/item/clothing/shirt/tunic/purple
+	pants = /obj/item/clothing/pants/trou/leather
+	neck = /obj/item/clothing/neck/shalal/emir
+	backpack_contents = list(/obj/item/storage/belt/pouch/coins/veryrich)
 	if(H.gender == FEMALE)
-//		armor = /obj/item/clothing/suit/roguetown/armor/leather/jacket/silk_coat
-		shirt = /obj/item/clothing/suit/roguetown/shirt/dress/silkdress/black
+//		armor = /obj/item/clothing/armor/leather/jacket/silk_coat
+		shirt = /obj/item/clothing/shirt/dress/silkdress/black
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)

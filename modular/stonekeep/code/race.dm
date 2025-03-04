@@ -155,7 +155,7 @@
 	specstats = list("strength" = 0, "perception" = 0, "intelligence" = 0, "constitution" = 1, "endurance" = 2, "speed" = 0, "fortune" = 1)
 	specstats_f = list("strength" = -1, "perception" = 1, "intelligence" = 0, "constitution" = 0, "endurance" = 0, "speed" = 1, "fortune" = 1)
 
-	limbs_icon_m = 'icons/roguetown/mob/bodies/m/mt.dmi'
+	limbs_icon_m = 'icons/mob/bodies/m/mt.dmi'
 	offset_features = list(OFFSET_ID = list(0,1), OFFSET_GLOVES = list(0,1), OFFSET_WRISTS = list(0,1),\
 	OFFSET_CLOAK = list(0,1), OFFSET_FACEMASK = list(0,1), OFFSET_HEAD = list(0,1), \
 	OFFSET_FACE = list(0,1), OFFSET_BELT = list(0,1), OFFSET_BACK = list(0,1), \

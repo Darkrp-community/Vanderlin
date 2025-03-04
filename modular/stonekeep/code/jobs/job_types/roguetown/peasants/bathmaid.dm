@@ -1,6 +1,6 @@
 /* Comments: Has the soap that gives unique mood boost & removes tired when used by Nitemaiden on person in a bath tile
 It´s pretty good. Also extra good mood boost for sex, but still a bit barebones. Expand a little cooking/serving? */
-/datum/job/roguetown/nitemaiden
+/datum/job/nitemaiden
 	title = "Nitemaiden"
 	flag = JESTER
 	department_flag = PEASANTS
@@ -20,25 +20,25 @@ It´s pretty good. Also extra good mood boost for sex, but still a bit barebones
 	tutorial = "You should not see this.."
 	allowed_sexes = list(FEMALE)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
-	outfit = /datum/outfit/job/roguetown/nitemaiden
+	outfit = /datum/outfit/job/nitemaiden
 	display_order = JDO_APOTHECARY // ROGTODO
 	give_bank_account = TRUE
 	min_pq = -25
 	can_random = FALSE
 	bypass_lastclass = TRUE
 
-/datum/outfit/job/roguetown/nitemaiden/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/nitemaiden/pre_equip(mob/living/carbon/human/H)
 	..()
-	shoes = /obj/item/clothing/shoes/roguetown/shortboots
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
-	armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/sexy
-	belt = /obj/item/storage/belt/rogue/leather/rope
+	shoes = /obj/item/clothing/shoes/shortboots
+	shirt = /obj/item/clothing/shirt/undershirt
+	armor = /obj/item/clothing/shirt/dress/gen/sexy
+	belt = /obj/item/storage/belt/leather/rope
 	beltr = /obj/item/key/nitemaiden
-	beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
+	beltl = /obj/item/storage/belt/pouch/coins/poor
 	r_hand = /obj/item/paper/feldsher_certificate/maybe
 	l_hand = /obj/item/soap
 	if(H.dna.species?.id == "abyssariad")
-		mask = /obj/item/clothing/mask/rogue/kaizoku/facemask/dishonor
+		mask = /obj/item/clothing/face/kaizoku/facemask/dishonor
 		H.burakumin = TRUE
 		to_chat(H, "<span class='userdanger'>In pursuit of hedonism and vices, I forfeited my honor and values of the Abyssal Tide. My soul can no longer claim the essence of an Abyssariad.</span>")
 		if(H.patron == /datum/patron/divine/abyssor)
@@ -46,9 +46,9 @@ It´s pretty good. Also extra good mood boost for sex, but still a bit barebones
 			to_chat(H, "<span class='warning'>The waters I once revered now scorn me - the rivers blistering my impure skin. I've failed Abyssor as his champion, and now I've bonded with [H.patron].")
 
 		if(H.wear_mask)
-			if(istype(H.wear_mask, /obj/item/clothing/mask/rogue/eyepatch || /obj/item/clothing/mask/rogue/eyepatch/left))
+			if(istype(H.wear_mask, /obj/item/clothing/face/eyepatch || /obj/item/clothing/face/eyepatch/left))
 				qdel(H.wear_mask)
-				mask = /obj/item/clothing/mask/rogue/kaizoku/facemask/dishonor
+				mask = /obj/item/clothing/face/kaizoku/facemask/dishonor
 
 	ADD_TRAIT(H, TRAIT_GOODLOVER, TRAIT_GENERIC)
 

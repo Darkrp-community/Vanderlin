@@ -1,4 +1,4 @@
-/datum/job/roguetown/scribe
+/datum/job/scribe
 	title = "Scribe"
 	flag = SCRIBE
 	department_flag = SERFS
@@ -7,22 +7,22 @@
 	spawn_positions = 0
 
 
-	outfit = /datum/outfit/job/roguetown/scribe
-	outfit_female = /datum/outfit/job/roguetown/scribe/female
+	outfit = /datum/outfit/job/scribe
+	outfit_female = /datum/outfit/job/scribe/female
 	display_order = 6
 
 
-/datum/outfit/job/roguetown/scribe
+/datum/outfit/job/scribe
 	name = "Scribe"
-	jobtype = /datum/job/roguetown/scribe
+	jobtype = /datum/job/scribe
 
-	pants = /obj/item/clothing/under/roguetown/tights
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
-	armor = /obj/item/clothing/suit/roguetown/shirt/rags
-	shoes = /obj/item/clothing/shoes/roguetown/boots
+	pants = /obj/item/clothing/pants/tights
+	shirt = /obj/item/clothing/shirt/undershirt
+	armor = /obj/item/clothing/shirt/rags
+	shoes = /obj/item/clothing/shoes/boots
 
-/datum/outfit/job/roguetown/scribe/female
+/datum/outfit/job/scribe/female
 	name = "Scribe"
-	jobtype = /datum/job/roguetown/scribe
+	jobtype = /datum/job/scribe
 
 	pants = null

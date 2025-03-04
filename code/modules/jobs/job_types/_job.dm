@@ -281,7 +281,7 @@ datum/job
 		return
 	var/icon/I = get_flat_human_icon(null, J, P, DUMMY_HUMAN_SLOT_MANIFEST, list(SOUTH))
 	if(I)
-		var/icon/female_s = icon("icon"='icons/mob/clothing/under/masking_helpers.dmi', "icon_state"="credits")
+		var/icon/female_s = icon("icon"='icons/mob/clothing/pants/masking_helpers.dmi', "icon_state"="credits")
 		I.Blend(female_s, ICON_MULTIPLY)
 		I.Scale(96,96)
 		GLOB.credits_icons[thename]["icon"] = I

@@ -3,7 +3,7 @@
 // The only ingridients these recipes can require is SILK and CLOTH
 // They all require a loom
 
-/datum/crafting_recipe/roguetown/weaving
+/datum/crafting_recipe/weaving
 	structurecraft = /obj/machinery/loom
 	skillcraft = /datum/skill/misc/sewing
 	subtype_reqs = TRUE // so you can use any subtype of fur
@@ -12,17 +12,17 @@
 
 /*========= SKILL LEVEL: 1 REQUIRED ==========*/
 
-/datum/crafting_recipe/roguetown/weaving/rags
+/datum/crafting_recipe/weaving/rags
 	name = "shirt (webbed)"
-	result = list(/obj/item/clothing/suit/roguetown/shirt/undershirt/webs)
+	result = list(/obj/item/clothing/shirt/undershirt/webs)
 
-/datum/crafting_recipe/roguetown/weaving/webbing
+/datum/crafting_recipe/weaving/webbing
 	name = "trousers (webbed leggings)"
-	result = list(/obj/item/clothing/under/roguetown/webs)
+	result = list(/obj/item/clothing/pants/webs)
 
-/datum/crafting_recipe/roguetown/weaving/shepardmask
+/datum/crafting_recipe/weaving/shepardmask
 	name = "mask (silk)"
-	result = list(/obj/item/clothing/mask/rogue/shepherd)
+	result = list(/obj/item/clothing/face/shepherd)
 	reqs = list(/obj/item/natural/silk = 1)
 	sellprice = 30
 
@@ -31,99 +31,99 @@
 /* craftdif of 2 = APPRENTICE */
 
 
-/datum/crafting_recipe/roguetown/weaving/shadowgloves
+/datum/crafting_recipe/weaving/shadowgloves
 	name = "gloves (shadow)"
-	result = list(/obj/item/clothing/gloves/roguetown/fingerless/shadowgloves)
+	result = list(/obj/item/clothing/gloves/fingerless/shadowgloves)
 	reqs = list(/obj/item/natural/silk = 1,
 				/obj/item/natural/fibers = 1)
 	craftdiff = 2
 
 
-/datum/crafting_recipe/roguetown/weaving/stockings_white_silk
+/datum/crafting_recipe/weaving/stockings_white_silk
 	name = "stockings (white silk)"
-	result = list(/obj/item/clothing/under/roguetown/tights/stockings/silk/white)
+	result = list(/obj/item/clothing/pants/tights/stockings/silk/white)
 	reqs = list(/obj/item/natural/silk = 1,
 				/obj/item/natural/fibers = 1)
 	craftdiff = 2
 
-/datum/crafting_recipe/roguetown/weaving/stockings_black_silk
+/datum/crafting_recipe/weaving/stockings_black_silk
 	name = "stockings (black silk)"
-	result = list(/obj/item/clothing/under/roguetown/tights/stockings/silk/black)
+	result = list(/obj/item/clothing/pants/tights/stockings/silk/black)
 	reqs = list(/obj/item/natural/silk = 1,
 				/obj/item/natural/fibers = 1)
 	craftdiff = 2
 
-/datum/crafting_recipe/roguetown/weaving/stockings_blue_silk
+/datum/crafting_recipe/weaving/stockings_blue_silk
 	name = "stockings (blue silk)"
-	result = list(/obj/item/clothing/under/roguetown/tights/stockings/silk/blue)
+	result = list(/obj/item/clothing/pants/tights/stockings/silk/blue)
 	reqs = list(/obj/item/natural/silk = 1,
 				/obj/item/natural/fibers = 1)
 	craftdiff = 2
 
-/datum/crafting_recipe/roguetown/weaving/stockings_red_silk
+/datum/crafting_recipe/weaving/stockings_red_silk
 	name = "stockings (red silk)"
-	result = list(/obj/item/clothing/under/roguetown/tights/stockings/silk/red)
+	result = list(/obj/item/clothing/pants/tights/stockings/silk/red)
 	reqs = list(/obj/item/natural/silk = 1,
 				/obj/item/natural/fibers = 1)
 	craftdiff = 2
 
-/datum/crafting_recipe/roguetown/weaving/stockings_purple_silk
+/datum/crafting_recipe/weaving/stockings_purple_silk
 	name = "stockings (purple silk)"
-	result = list(/obj/item/clothing/under/roguetown/tights/stockings/silk/purple)
+	result = list(/obj/item/clothing/pants/tights/stockings/silk/purple)
 	reqs = list(/obj/item/natural/silk = 1,
 				/obj/item/natural/fibers = 1)
 	craftdiff = 2
 
-/datum/crafting_recipe/roguetown/weaving/cloak
+/datum/crafting_recipe/weaving/cloak
 	name = "cloak (silk half cloak)"
 	result = list(/obj/item/clothing/cloak/half)
 	craftdiff = 2
 	sellprice = 19
 
-/datum/crafting_recipe/roguetown/weaving/bathrobe
+/datum/crafting_recipe/weaving/bathrobe
 	name = "bathrobe"
-	result = list(/obj/item/clothing/suit/roguetown/shirt/robe/bath)
+	result = list(/obj/item/clothing/shirt/robe/bath)
 	reqs = list(/obj/item/natural/silk = 2,
 				/obj/item/natural/fur = 1)
 	craftdiff = 2
 	sellprice = 10
 
-/datum/crafting_recipe/roguetown/weaving/mundies
+/datum/crafting_recipe/weaving/mundies
 	name = "masculine smallclothes"
 	result = list(/obj/item/undies)
 	craftdiff = 2
 	sellprice = 20
 
-/datum/crafting_recipe/roguetown/weaving/fundies
+/datum/crafting_recipe/weaving/fundies
 	name = "feminine smallclothes"
 	result = list(/obj/item/undies/f)
 	craftdiff = 2
 	sellprice = 20
 
-/datum/crafting_recipe/roguetown/weaving/chaperonesilk
+/datum/crafting_recipe/weaving/chaperonesilk
 	name = "hat (chaperone)"
-	result = list(/obj/item/clothing/head/roguetown/chaperon/greyscale/silk)
+	result = list(/obj/item/clothing/head/chaperon/greyscale/silk)
 	reqs = list(/obj/item/natural/cloth = 1,
 				/obj/item/natural/silk = 2)
 	craftdiff = 4
 
-/datum/crafting_recipe/roguetown/weaving/shadowcloak
+/datum/crafting_recipe/weaving/shadowcloak
 	name = "cloak (shadow)"
 	result = list(/obj/item/clothing/cloak/half/shadowcloak)
 	reqs = list(/obj/item/natural/cloth = 1,
 				/obj/item/natural/silk = 2)
 	craftdiff = 4
 
-/datum/crafting_recipe/roguetown/weaving/shadowshirt
+/datum/crafting_recipe/weaving/shadowshirt
 	name = "shirt (shadow)"
-	result = list(/obj/item/clothing/suit/roguetown/shirt/shadowshirt)
+	result = list(/obj/item/clothing/shirt/shadowshirt)
 	reqs = list(/obj/item/natural/cloth = 1,
 				/obj/item/natural/silk = 2)
 	craftdiff = 4
 
-/datum/crafting_recipe/roguetown/weaving/shadowpants
+/datum/crafting_recipe/weaving/shadowpants
 	name = "trousers (shadow)"
-	result = list(/obj/item/clothing/under/roguetown/trou/shadowpants)
+	result = list(/obj/item/clothing/pants/trou/shadowpants)
 	reqs = list(/obj/item/natural/cloth = 1,
 				/obj/item/natural/silk = 2)
 	craftdiff = 4
@@ -132,37 +132,37 @@
 
 /*========= SKILL LEVEL: 3 REQUIRED ==========*/
 
-/datum/crafting_recipe/roguetown/weaving/shirt
+/datum/crafting_recipe/weaving/shirt
 	name = "shirt (formal silks)"
-	result = list(/obj/item/clothing/suit/roguetown/shirt/undershirt/puritan)
+	result = list(/obj/item/clothing/shirt/undershirt/puritan)
 	craftdiff = 3
 	sellprice = 35
 
-/datum/crafting_recipe/roguetown/weaving/silkdress
+/datum/crafting_recipe/weaving/silkdress
 	name = "dress (chemise)"
-	result = list (/obj/item/clothing/suit/roguetown/shirt/dress/silkdress/random)
+	result = list (/obj/item/clothing/shirt/dress/silkdress/random)
 	craftdiff = 3
 	sellprice = 30
 
-/datum/crafting_recipe/roguetown/weaving/barmaid
+/datum/crafting_recipe/weaving/barmaid
 	name = "dress (innkeep)"
-	result = list (/obj/item/clothing/suit/roguetown/shirt/dress)
+	result = list (/obj/item/clothing/shirt/dress)
 	craftdiff = 3
 	sellprice = 27
 
-/datum/crafting_recipe/roguetown/weaving/valorian
+/datum/crafting_recipe/weaving/valorian
 	name = "dress (valorian)"
-	result = list(/obj/item/clothing/suit/roguetown/shirt/dress/valorian)
+	result = list(/obj/item/clothing/shirt/dress/valorian)
 	craftdiff = 3
 	sellprice = 20
 
-/datum/crafting_recipe/roguetown/weaving/silkpantaloons
+/datum/crafting_recipe/weaving/silkpantaloons
 	name = "trousers (silk pantaloons)"
-	result = list (/obj/item/clothing/under/roguetown/pantaloons/random)
+	result = list (/obj/item/clothing/pants/pantaloons/random)
 	craftdiff = 3
 	sellprice = 20
 
-/datum/crafting_recipe/roguetown/weaving/cape_silk
+/datum/crafting_recipe/weaving/cape_silk
 	name = "cloak (silk cape)"
 	result = list(/obj/item/clothing/cloak/cape/silk/random)
 	reqs = list(/obj/item/natural/silk = 3)
@@ -172,32 +172,32 @@
 
 /*========= SKILL LEVEL: 4 REQUIRED ==========*/
 
-/datum/crafting_recipe/roguetown/weaving/silkcoat
+/datum/crafting_recipe/weaving/silkcoat
 	name = "armor (silk coat)"
-	result = list (/obj/item/clothing/suit/roguetown/armor/leather/jacket/silk_coat)
+	result = list (/obj/item/clothing/armor/leather/jacket/silk_coat)
 	reqs = list(/obj/item/natural/silk = 4,
 				/obj/item/natural/cloth = 1)
 	craftdiff = 4
 	sellprice = 60
 
-/datum/crafting_recipe/roguetown/weaving/armordress
+/datum/crafting_recipe/weaving/armordress
 	name = "armor (padded dress)"
-	result = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy/dress
+	result = /obj/item/clothing/armor/gambeson/heavy/dress
 	reqs = list(/obj/item/natural/silk = 4,
 				/obj/item/natural/cloth = 1)
 	craftdiff = 4
 	sellprice = 80
 
-/datum/crafting_recipe/roguetown/weaving/eorastraps
+/datum/crafting_recipe/weaving/eorastraps
 	name = "robe (eora straps)"
-	result = list(/obj/item/clothing/suit/roguetown/shirt/robe/eora/alt)
+	result = list(/obj/item/clothing/shirt/robe/eora/alt)
 	reqs = list(/obj/item/natural/silk = 3)
 	craftdiff = 4
 	sellprice = 50
 
 /*========= SKILL LEVEL: 5 REQUIRED ==========*/
 
-/datum/crafting_recipe/roguetown/weaving/lordcloak
+/datum/crafting_recipe/weaving/lordcloak
 	name = "cloak (lord)"
 	result = list(/obj/item/clothing/cloak/lordcloak)
 	reqs = list(/obj/item/natural/fur = 2,
@@ -205,23 +205,23 @@
 	craftdiff = 5
 
 
-/datum/crafting_recipe/roguetown/weaving/gown
+/datum/crafting_recipe/weaving/gown
 	name = "gown (spring)"
-	result = /obj/item/clothing/suit/roguetown/shirt/dress/gown
+	result = /obj/item/clothing/shirt/dress/gown
 	reqs = list(/obj/item/natural/silk = 4)
 	craftdiff = 4
 
-/datum/crafting_recipe/roguetown/weaving/gown/summer
+/datum/crafting_recipe/weaving/gown/summer
 	name = "gown (summer)"
-	result = /obj/item/clothing/suit/roguetown/shirt/dress/gown/summergown
+	result = /obj/item/clothing/shirt/dress/gown/summergown
 
-/datum/crafting_recipe/roguetown/weaving/gown/fall
+/datum/crafting_recipe/weaving/gown/fall
 	name = "gown (fall)"
-	result = /obj/item/clothing/suit/roguetown/shirt/dress/gown/fallgown
+	result = /obj/item/clothing/shirt/dress/gown/fallgown
 
-/datum/crafting_recipe/roguetown/weaving/gown/winter
+/datum/crafting_recipe/weaving/gown/winter
 	name = "gown (winter)"
-	result = /obj/item/clothing/suit/roguetown/shirt/dress/gown/wintergown
+	result = /obj/item/clothing/shirt/dress/gown/wintergown
 	reqs = list(/obj/item/natural/silk = 3,
 				/obj/item/natural/fur/cabbit = 1)
 
